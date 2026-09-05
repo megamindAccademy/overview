@@ -506,27 +506,29 @@
 
     <!-- JavaScript Data & Logic -->
     <script>
-        // Tasks Data Model based on Meeting Record
+        // Tasks Data Model based on Updated Meeting Record
         const rawTasks = [
-            { id: 1, title: "مراجعة مواد مشروع المدينة الذكية (Smart City) والتنسيق مع م. خالد بشأن قطع الـ CNC", assignee: "Mega", category: "المهام التنفيذية", time: "01:07", priority: "عاجل", status: "in_progress" },
-            { id: 2, title: "إتمام تصميم كتاب/كتالوج الدورات بإخراج جرافيكي ورسومي احترافي", assignee: "Mega", category: "التصميم والتطوير", time: "12:25", priority: "متوسط", status: "pending" },
-            { id: 3, title: "مراجعة وتعديل محتوى كورس الذكاء الاصطناعي (AI) لموازنة الصعوبة والاستيعاب", assignee: "Mega", category: "المناهج والتعليم", time: "18:53", priority: "مرتفع", status: "pending" },
-            { id: 4, title: "دراسة إعادة هيكلة موضع دورة Unity أو تقليص مساحتها لمنع تسرب الطلاب", assignee: "Mega", category: "المناهج والتعليم", time: "27:35", priority: "مرتفع", status: "pending" },
-            { id: 5, title: "بحث هيكلية كورس البكالوريا وتحديد منهجية التطبيق العملي", assignee: "Mega", category: "المناهج والتعليم", time: "40:52", priority: "متوسط", status: "pending" },
-            { id: 6, title: "تنظيم اجتماع سيمينار لأولياء الأمور مع المدير التعليمي لشرح المناهج", assignee: "Mega", category: "التواصل والعملاء", time: "48:37", priority: "مرتفع", status: "pending" },
-            { id: 7, title: "تسجيل فيديو سيمينار دائم لأولياء الأمور الجدد للتعريف برؤية الأكاديمية", assignee: "Mega", category: "التواصل والعملاء", time: "53:06", priority: "متوسط", status: "pending" },
-            { id: 8, title: "إعداد بنك أسئلة وخيارات الاختبارات (MCQ) لكل دورة بصيغة نصية", assignee: "Mega", category: "نظام التقييم", time: "01:07:14", priority: "مرتفع", status: "pending" },
-            { id: 9, title: "التواصل مع خالد بخصوص تصميمات قطع الـ CNC المطلوبة للمدينة الذكية", assignee: "Mega", category: "المهام التنفيذية", time: "01:22:33", priority: "عاجل", status: "pending" },
-            { id: 10, title: "طلب قائمة الأدوات والمعدات المحدثة من خالد وتوثيقها رسمياً", assignee: "Mega", category: "المهام التنفيذية", time: "01:23:36", priority: "عاجل", status: "pending" },
-            { id: 11, title: "تسجيل 2 إلى 3 محاضرات أسبوعياً لدورة المدينة الذكية (Smart City)", assignee: "Khaled", category: "التسجيل والتدريب", time: "01:23:16", priority: "عاجل", status: "in_progress" },
-            { id: 12, title: "التنسيق مع ميجا وتجهيز قائمة أدوات وتصميمات CNC لمشروع المدينة الذكية", assignee: "Khaled", category: "المهام التنفيذية", time: "01:07", priority: "عاجل", status: "pending" },
-            { id: 13, title: "إنهاء تجهيز دورة الروبوتكس المستوى الأول (Level 1) بالكامل خلال شهر", assignee: "Team", category: "المناهج والتعليم", time: "03:55", priority: "عاجل", status: "in_progress" },
-            { id: 14, title: "تسليم المهام (Handover) للمهندس الجديد الأسبوع المقبل مع المواد المتاحة", assignee: "Team", category: "التدريب والتوثيق", time: "05:36", priority: "مرتفع", status: "pending" },
-            { id: 15, title: "فحص الشروحات والفيديوهات ذات الصوت المعتل وإعادة تسجيلها أو معالجتها", assignee: "Team", category: "ضمان الجودة", time: "05:32", priority: "متوسط", status: "pending" }
+            {
+                id: 1,
+                title: "تنظيم وتنسيق المواعيد المضغوطة (مثل يوم السبت) وتوزيع المهندسين",
+                assignee: "Khaled",
+                category: "التشغيل وخدمة العملاء",
+                time: "تنسيق أسبوعي",
+                priority: "عاجل",
+                status: "in_progress",
+                description: "معالجة المواعيد المضغوطة (مثل يوم السبت) التي تضطر الأكاديمية فيها لإضافة أو استقدام مهندس جديد. تم الاتفاق على أن ينسق الباشمهندس مع كيرو (خدمة العملاء) لضمان عدم الاستسهال وبحث مواعيد بديلة لتخفيف الضغط عن مواعيد محددة.",
+                links: [],
+                attachments: []
+            }
         ];
 
-        let tasksState = [...rawTasks];
+        // Load tasks from localStorage if available, otherwise fallback to rawTasks
+        let tasksState = JSON.parse(localStorage.getItem('megamind_tasks_state')) || [...rawTasks];
         let activeAssigneeFilter = 'all';
+
+        function saveTasksState() {
+            localStorage.setItem('megamind_tasks_state', JSON.stringify(tasksState));
+        }
 
         // Initialize Charts
         let assigneeChart, priorityChart, courseHealthChart;
@@ -580,6 +582,7 @@
             else if (task.status === 'in_progress') task.status = 'completed';
             else task.status = 'pending';
 
+            saveTasksState();
             renderTasks();
             updateKPIs();
             updateChartsData();
@@ -594,7 +597,9 @@
             const filtered = tasksState.filter(t => {
                 const matchesAssignee = activeAssigneeFilter === 'all' || t.assignee === activeAssigneeFilter;
                 const matchesPriority = priorityVal === 'all' || t.priority === priorityVal;
-                const matchesSearch = t.title.toLowerCase().includes(searchVal) || t.category.toLowerCase().includes(searchVal);
+                const matchesSearch = t.title.toLowerCase().includes(searchVal) || 
+                                      t.category.toLowerCase().includes(searchVal) || 
+                                      (t.description && t.description.toLowerCase().includes(searchVal));
                 return matchesAssignee && matchesPriority && matchesSearch;
             });
 
@@ -618,16 +623,41 @@
                 else if (task.status === 'in_progress') statusBadge = '<span class="cursor-pointer px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800 border border-amber-300 hover:bg-amber-200 transition">⏳ قيد التنفيذ</span>';
                 else statusBadge = '<span class="cursor-pointer px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-700 border border-slate-300 hover:bg-slate-200 transition">📋 في الانتظار</span>';
 
-                let assigneeLabel = task.assignee === 'Mega' ? 'ميجا (Mega)' : task.assignee === 'Khaled' ? 'م. خالد' : 'فريق العمل';
+                let assigneeLabel = task.assignee === 'Mega' ? 'ميجا (Mega)' : (task.assignee === 'Khaled' ? 'م. خالد / كيرو' : 'فريق العمل');
+
+                let descHtml = task.description ? `<p class="text-xs text-slate-600 leading-relaxed mb-3 bg-slate-50 p-3 rounded-xl border border-slate-200/70">${task.description}</p>` : '';
+
+                let linksHtml = '';
+                if (task.links && task.links.length > 0) {
+                    linksHtml = `
+                        <div class="mt-2 pt-2 border-t border-slate-100 flex flex-wrap gap-2 items-center">
+                            <span class="text-xs font-bold text-slate-500">🔗 الروابط:</span>
+                            ${task.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-700 bg-indigo-50 hover:bg-indigo-100 px-2.5 py-1 rounded-lg border border-indigo-200/80 transition">🌐 ${l.label}</a>`).join('')}
+                        </div>
+                    `;
+                }
+
+                let attachmentsHtml = '';
+                if (task.attachments && task.attachments.length > 0) {
+                    attachmentsHtml = `
+                        <div class="mt-2 flex flex-wrap gap-2 items-center">
+                            <span class="text-xs font-bold text-slate-500">📎 المرفقات:</span>
+                            ${task.attachments.map(a => `<a href="${a.url}" target="_blank" download class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 px-2.5 py-1 rounded-lg border border-emerald-200/80 transition">📄 ${a.name} ${a.size ? `<span class="text-[10px] text-emerald-600 font-normal">(${a.size})</span>` : ''}</a>`).join('')}
+                        </div>
+                    `;
+                }
 
                 return `
-                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-4">
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-3">
                         <div>
                             <div class="flex items-center justify-between mb-2">
                                 <span class="text-xs font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">${task.category}</span>
                                 <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">⏱️ ${task.time}</span>
                             </div>
                             <h4 class="font-bold text-slate-800 text-sm leading-snug mb-2">${task.title}</h4>
+                            ${descHtml}
+                            ${linksHtml}
+                            ${attachmentsHtml}
                         </div>
 
                         <div class="pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
