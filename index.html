@@ -247,14 +247,14 @@
             <div class="bg-amber-50 border-r-4 border-amber-600 p-4 rounded-xl text-amber-900">
                 <h2 class="font-bold text-lg mb-1">تطوير المناهج والمحتوى التعليمي</h2>
                 <p class="text-sm">
-                    ركز الاجتماع على مراجعة دقيقة لسلامة المناهج التعليمية وتعديل المقررات ذات التحديات التشغيلية (مثل Unity وبكالوريا) مع تعزيز تكامل الذكاء الاصطناعي وتطبيق نظام تقييم MCQ مؤتمت.
+                    استعراض المبادرات التنفيذية لتطوير المقررات الدراسية، مراجعة وتخفيف المناهج الصعبة، تحويل المناهج لمحتوى تفاعلي، وتوثيق كتيبات التعلم الذاتي.
                 </p>
             </div>
 
             <!-- Course Status & Risk Analysis Chart -->
             <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
-                <h3 class="text-base font-bold text-slate-800 mb-2">تقييم حالة المناهج والنقاط الحرجة</h3>
-                <p class="text-xs text-slate-500 mb-4">تحليل التدخلات المطلوبة لكل مقرر بناءً على ملاحظات الاجتماع</p>
+                <h3 class="text-base font-bold text-slate-800 mb-2">تقييم خطة تطوير المناهج وأولويات التدخل</h3>
+                <p class="text-xs text-slate-500 mb-4">أولويات التطوير والتنسيق الميداني بناءً على خطة المهام الحالية</p>
                 <div class="chart-container">
                     <canvas id="courseHealthChart"></canvas>
                 </div>
@@ -262,75 +262,75 @@
 
             <!-- Curriculum Directives Cards Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Card 1 -->
-                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-indigo-300 transition">
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">التوقيت: 08:58</span>
-                        <span class="text-xl">📖</span>
+                <!-- Card 1: Interactive Curriculum -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-emerald-300 transition space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md">✅ مكتملة وتسليم</span>
+                        <span class="text-xl">💻</span>
                     </div>
-                    <h4 class="font-bold text-slate-800 mb-2">كتالوج المقررات (Course Catalog Book)</h4>
+                    <h4 class="font-bold text-slate-800 text-sm">المحتوى التفاعلي للمناهج بالويب</h4>
                     <p class="text-xs text-slate-600 leading-relaxed">
-                        يجب ألا يقتصر الكتالوج على عناوين صماء، بل يشتمل لكل حصة على: شرح الأدوات والمفاهيم العلمية، التجارب العملية، وخطوات التركيب والفك بالتفصيل.
+                        تم تحويل المنهج من PDF إلى محتوى تفاعلي (Interactive Web Index) وضغطه مع الـ PDF وتسليمه للباشمهندس أحمد (CEO) لتنسيقه على المنصة.
                     </p>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-indigo-300 transition">
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">التوقيت: 24:21</span>
-                        <span class="text-xl">🤖</span>
-                    </div>
-                    <h4 class="font-bold text-slate-800 mb-2">دمج الذكاء الاصطناعي (AI Integration)</h4>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        عدم حصر مفاهيم الذكاء الاصطناعي في دورة واحدة منفصلة، بل دمج تطبيقاته وتطعيم كافة المسارات التعليمية الأخرى به لتعزيز الشمولية التكنولوجية.
-                    </p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-red-300 transition">
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="text-xs font-bold text-red-600 bg-red-50 px-2.5 py-1 rounded-md">التوقيت: 27:30</span>
-                        <span class="text-xl">⚠️</span>
-                    </div>
-                    <h4 class="font-bold text-slate-800 mb-2">أزمة كورس Unity (High Dropout)</h4>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        يتسبب الكورس في ارتفاع نسبة تسرب الطلاب وملاحظات حول الصعوبة. يلزم إعادة دراسة تموضعه في المسار أو تقليص مساحته بالمنهج فوراً.
-                    </p>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-indigo-300 transition">
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">التوقيت: 33:02</span>
-                        <span class="text-xl">📱</span>
-                    </div>
-                    <h4 class="font-bold text-slate-800 mb-2">تحديث كورس تطبيقات الهاتف</h4>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        تحديث البرمجيات والمكونات المستخدمة، مع إلزامية إضافة مشروع تخرج عملي متكامل يعتمد على الذكاء الاصطناعي بنهاية الدورة.
-                    </p>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-amber-300 transition">
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="text-xs font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md">التوقيت: 41:42</span>
+                <!-- Card 2: Learning Paths Overhaul -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-indigo-300 transition space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded-md">⏳ خلال أسبوع</span>
                         <span class="text-xl">🎓</span>
                     </div>
-                    <h4 class="font-bold text-slate-800 mb-2">تحويل كورس البكالوريا لطبيعة عملية</h4>
+                    <h4 class="font-bold text-slate-800 text-sm">تطوير مسارات التعلم (AI, Godot, Unity)</h4>
                     <p class="text-xs text-slate-600 leading-relaxed">
-                        الكورس يعاني حالياً من كونه نظرياً بحتاً بدون تطبيق برمجي، ويلزم إعادة إعداده ليصبح منهجاً تطبيقياً تفاعلياً.
+                        تعديل مناهج AI&ML و Godot، ونقل دورة Unity للمرحلة الثالثة (Expert) لتقليل الصعوبة ومنع تسرب الأطفال.
                     </p>
                 </div>
 
-                <!-- Card 6 -->
-                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-emerald-300 transition">
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md">التوقيت: 01:01:09</span>
-                        <span class="text-xl">📝</span>
+                <!-- Card 3: Smart City & CNC -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-emerald-300 transition space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md">✅ مكتملة وإنشاء جروب</span>
+                        <span class="text-xl">⚙️</span>
                     </div>
-                    <h4 class="font-bold text-slate-800 mb-2">نظام امتحانات MCQ والتغذية الراجعة</h4>
+                    <h4 class="font-bold text-slate-800 text-sm">دورة المدينة الذكية وقواطع الـ CNC</h4>
                     <p class="text-xs text-slate-600 leading-relaxed">
-                        اعتماد نظام الأسئلة الاختيارية للتصحيح التلقائي، مع توجيه الطالب تلقائياً للدرس المراد مراجعته عند الخطأ [01:10:12].
+                        الاتفاق مع م. خالد على تسجيل 2-3 جلسات أسبوعياً، وتنفيذ قطع CNC وإنشاء مجموعة العمل بمشاركة م. أحمد (CEO).
+                    </p>
+                </div>
+
+                <!-- Card 4: Self-Learning Robotics Book -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-blue-300 transition space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-md">⏳ خلال 4 أيام</span>
+                        <span class="text-xl">📘</span>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-sm">كتيب الروبوتكس للتعلّم الذاتي</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        إعداد كتيب شامل بالأدوات والشروحات والفيديوهات بالـ AI والديزاين، ليتمكن الطفل من التعلم الذاتي دون حاجة مستمرة للإنستراكتور.
+                    </p>
+                </div>
+
+                <!-- Card 5: Smart Home Sessions -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-amber-300 transition space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-md">⏳ قيد المتابعة</span>
+                        <span class="text-xl">🏠</span>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-sm">توثيق وإرشادات كورس Smart Home</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        مراجعة الجلستين الأخيرتين وتجهيز عرض توضيحي (Presentation/Instructions) يشرح توزيع الجلسات والتركيب والأخطاء للمهندسين.
+                    </p>
+                </div>
+
+                <!-- Card 6: Robotics Junior vs Senior Projects -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-purple-300 transition space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold text-purple-700 bg-purple-50 px-2.5 py-1 rounded-md">⏳ بانتظار م. ياسمين</span>
+                        <span class="text-xl">🤖</span>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-sm">منع تكرار مشاريع الروبوتكس</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        تنسيق مشروع مستقل لكورس Robot Junior Advanced بالتعاون مع م. ياسمين وتضمين م. أحمد (CEO) لبدء التنفيذ.
                     </p>
                 </div>
             </div>
@@ -339,60 +339,52 @@
         <!-- SECTION 3: TRAINING & DOCUMENTATION -->
         <div id="section-training" class="tab-content hidden space-y-8">
             <div class="bg-emerald-50 border-r-4 border-emerald-600 p-4 rounded-xl text-emerald-900">
-                <h2 class="font-bold text-lg mb-1">التدريب والتوثيق ونقل المعرفة</h2>
+                <h2 class="font-bold text-lg mb-1">التدريب والتوثيق وإدارة السياسات التشغيلية</h2>
                 <p class="text-sm">
-                    استعراض التكليفات الخاصة بإنتاج المواد التدريبية الاحترافية، معالجة المشكلات الصوتية، وتجهيز خطة التسليم والتسلم (Handover) للمهندسين الجدد.
+                    التوجيهات الخاصة باللوائح الإدارية للمهندسين، تنظيم المواعيد والتشغيل، ومعايير إنتاج الفيديوهات والشروحات الميدانية.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Left Box: Core Training Actions -->
                 <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-                    <h3 class="text-base font-bold text-slate-800 border-b border-slate-100 pb-3">إجراءات المناهج والتدريب الميداني</h3>
+                    <h3 class="text-base font-bold text-slate-800 border-b border-slate-100 pb-3">السياسات الإدارية والتشغيل</h3>
                     
                     <div class="flex items-start gap-3">
                         <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm shrink-0">1</div>
                         <div>
-                            <h4 class="text-sm font-bold text-slate-800">روبوتكس المستوى الأول (Robotics L1) <span class="text-xs font-normal text-slate-500">[03:55]</span></h4>
-                            <p class="text-xs text-slate-600 mt-1">الانتهاء كاملاً من جميع محتويات ومواد الدورة خلال شهر واحد فقط كحد أقصى لبدء إطلاقها.</p>
+                            <h4 class="text-sm font-bold text-slate-800">وثيقة سياسات المهندسين (Engineers Policy)</h4>
+                            <p class="text-xs text-slate-600 mt-1">إعداد لائحة الخصومات، والجزاءات، ونظام المكافآت والبونص (Bonus)، والتعليمات التشغيلية وتسليمها بنهاية الأسبوع.</p>
                         </div>
                     </div>
 
                     <div class="flex items-start gap-3">
                         <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm shrink-0">2</div>
                         <div>
-                            <h4 class="text-sm font-bold text-slate-800">تسليم المهام للمهندس الجديد (Handover) <span class="text-xs font-normal text-slate-500">[05:36]</span></h4>
-                            <p class="text-xs text-slate-600 mt-1">عقد جلسات وتسليم جماعي للمهندس الجديد خلال الأسبوع القادم باستخدام المواد المتوفرة.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm shrink-0">3</div>
-                        <div>
-                            <h4 class="text-sm font-bold text-slate-800">معالجة وتنقيتها من مشاكل الصوت <span class="text-xs font-normal text-slate-500">[05:32]</span></h4>
-                            <p class="text-xs text-slate-600 mt-1">حصر الشروحات والفيديوهات ذات جودة الصوت الضعيفة وإعادة تسجيلها أو معالجتها مهنياً.</p>
+                            <h4 class="text-sm font-bold text-slate-800">تنظيم المواعيد المضغوطة وتوزيع العمل</h4>
+                            <p class="text-xs text-slate-600 mt-1">متابعة المواعيد المضغوطة (مثل يوم السبت) بالتنسيق بين م. أحمد (CEO) وخدمة العملاء لمنع الاستسهال وبحث مواعيد بديلة.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Box: Video Quality Standards -->
+                <!-- Right Box: Video Quality & Self-Learning Standards -->
                 <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-                    <h3 class="text-base font-bold text-slate-800 border-b border-slate-100 pb-3">معايير تسجيل المناهج والتدريب</h3>
+                    <h3 class="text-base font-bold text-slate-800 border-b border-slate-100 pb-3">معايير التوثيق وجودة التسجيلات</h3>
                     
                     <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
                         <div class="flex items-center justify-between text-xs font-bold text-slate-700">
-                            <span>فصل الفيديوهات حسب Sessions</span>
-                            <span>⏱️ [04:07]</span>
+                            <span>تسجيلات Smart City وقطع الـ CNC</span>
+                            <span>⏱️ 2-3 جلسات/أسبوع</span>
                         </div>
-                        <p class="text-xs text-slate-600">تقسيم التسجيلات التدريبية إلى ملفات منفصلة لكل جلسة، مع توفير تطبيق عملي واضح من المدرب.</p>
+                        <p class="text-xs text-slate-600">تسجيل الجلسات الميدانية بانتظام والتأكد من عدم تعارض الشروحات المصورة مع خطوات تركيب الـ CNC.</p>
                     </div>
 
                     <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
                         <div class="flex items-center justify-between text-xs font-bold text-slate-700">
-                            <span>التحول للشرح الممنتج الاحترافي</span>
-                            <span>⏱️ [01:10:49]</span>
+                            <span>التوثيق الموحد ودليل التعلّم الذاتي</span>
+                            <span>📘 كتيب الروبوتكس</span>
                         </div>
-                        <p class="text-xs text-slate-600">الانتقال من الاعتماد على تسجيلات الحصص الخام غير المعدلة إلى إنتاج فيديوهات عالية الجودة مخصصة لتدريب المدربين.</p>
+                        <p class="text-xs text-slate-600">إتاحة الكتيب التعليمي الشامل والمواد التفاعلية كمرجع تدريبي جاهز ومراجع لجميع المهندسين والطلاب.</p>
                     </div>
                 </div>
             </div>
@@ -401,9 +393,9 @@
         <!-- SECTION 4: PARENT COMMUNICATION & RETENTION -->
         <div id="section-retention" class="tab-content hidden space-y-8">
             <div class="bg-blue-50 border-r-4 border-blue-600 p-4 rounded-xl text-blue-900">
-                <h2 class="font-bold text-lg mb-1">استبقاء الطلاب والتواصل مع أولياء الأمور</h2>
+                <h2 class="font-bold text-lg mb-1">استبقاء الطلاب، التقييم اللحظي، والتواصل مع أولياء الأمور</h2>
                 <p class="text-sm">
-                    ركزت توجيهات الإدارة على تعزيز الشفافية مع أولياء الأمور لتوضيح قيمة المناهج، وتفعيل آليات المتابعة الدورية لمنع تسرب الطلاب.
+                    تفعيل آليات التواصل الفعال مع الأسر، بناء نماذج الامتحانات التفاعلية المؤتمتة، وتحسين تجربة استخدام المنصة للطلاب.
                 </p>
             </div>
 
@@ -412,29 +404,29 @@
                     <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mx-auto text-2xl">
                         🗣️
                     </div>
-                    <h4 class="font-bold text-slate-800 text-sm">سيمينار أولياء الأمور</h4>
+                    <h4 class="font-bold text-slate-800 text-sm">استراتيجية سيمينار أولياء الأمور</h4>
                     <p class="text-xs text-slate-500">
-                        تنظيم سيمينار مباشر مع المدير التعليمي [48:37] بالإضافة لتسجيل فيديو تعريفي دائم [53:06] لتوضيح القيمة التعليمية ورؤية الأكاديمية.
+                        بحث محاور النقاش، والوسائل التفاعلية المساعدة، والجدولة الزمنية لعقد سيمينار أولياء الأمور وتجهيز التصور النهائي خلال يومين.
                     </p>
                 </div>
 
                 <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm text-center space-y-3">
                     <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mx-auto text-2xl">
-                        📋
+                        📝
                     </div>
-                    <h4 class="font-bold text-slate-800 text-sm">استبيانات الاستبقاء والرضا</h4>
+                    <h4 class="font-bold text-slate-800 text-sm">الاختبار الإلزامي والشهادات الذكية</h4>
                     <p class="text-xs text-slate-500">
-                        جمع آراء وانطباعات أولياء الأمور دورياً [34:53] لرصد أي مشكلات في المناهج أو استيعاب الطلاب وملافتها مبكراً قبل التسرب.
+                        تصميم نموذج اختبار تفاعلي (MCQ)، تصحيح لحظي، توجيه للدروس الواجب مراجعتها عند الخطأ، وإظهار الشهادة فور الاجتياز.
                     </p>
                 </div>
 
                 <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm text-center space-y-3">
                     <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mx-auto text-2xl">
-                        🎓
+                        📤
                     </div>
-                    <h4 class="font-bold text-slate-800 text-sm">إظهار الدرجات والشهادات</h4>
+                    <h4 class="font-bold text-slate-800 text-sm">آلية رفع الواجبات للطلاب</h4>
                     <p class="text-xs text-slate-500">
-                        يهتم ولي الأمر بتقييم درجات ابنه [42:57]، لذا يلزم تضمين النسبة المئوية والدرجة المستحقة في شهادة إتمام المقرر [01:03:51].
+                        دراسة الخيارات المناسبة لرفع الواجبات (صور/سكرين شوت أو ملفات) وسلاسة تجربة الاستخدام للأطفال على المنصة خلال يومين.
                     </p>
                 </div>
             </div>
@@ -445,48 +437,43 @@
             <div class="bg-slate-100 border-r-4 border-slate-600 p-4 rounded-xl text-slate-900">
                 <h2 class="font-bold text-lg mb-1">آليات العمل والثقافة الداخلية (Workflow & Culture)</h2>
                 <p class="text-sm">
-                    وضع القواعد التنظيمية لإدارة التحديثات التراكمية، ومزامنة المنصة الرقمية، وتطوير ثقافة العمل القائمة على تقديم الحلول المباشرة.
+                    التوجيهات القيادية المباشرة، إدارة التحديثات التراكمية للمناهج والمنصة، ومأسسة بيئة العمل القائمة على تقديم الحلول.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- System Updates Principles -->
                 <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-                    <h3 class="font-bold text-slate-800 text-base border-b border-slate-100 pb-2">ضوابط وتحديث المناهج والأنظمة</h3>
+                    <h3 class="font-bold text-slate-800 text-base border-b border-slate-100 pb-2">التنسيق والقيادة المباشرة</h3>
                     
                     <div class="space-y-3 text-xs text-slate-600">
                         <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                            <span class="font-bold text-slate-800 block mb-1">🔄 التحديث التراكمي (Incremental Updates) [40:57]</span>
-                            إجراء أي تعديل على المقررات بشكل مرحلي وتدريجي دون إيقاف الدراسة أو إحداث إرباك للطلاب الحاليين.
+                            <span class="font-bold text-slate-800 block mb-1">👑 القيادة المباشرة (CEO & Educational Director)</span>
+                            تمركز المهام والقرارات التنفيذية بين الباشمهندس أحمد (CEO) والمدير التعليمي والتنسيق التكالي عبر مجموعات العمل.
                         </div>
 
                         <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                            <span class="font-bold text-slate-800 block mb-1">🔗 المزامنة والتنسيق (Synchronization) [41:13]</span>
-                            ربط وتزامن تعديل ملفات الـ PDF مع التغييرات المطبقة على منصة التعلم لتجنب التضارب في المواد الموزعة.
-                        </div>
-
-                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                            <span class="font-bold text-slate-800 block mb-1">⚙️ النمذجة والمأسسة (Standardization) [01:11:43]</span>
-                            بناء إجراءات عمل معيارية موحدة لضمان ثبات الجودة وعدم تأثر العمل بالتفاوت الفردي.
+                            <span class="font-bold text-slate-800 block mb-1">🔄 التحديث التراكمي المرحلي</span>
+                            تطوير المناهج ونقل الكورسات (مثل Unity) بشكل تدريجي ومحسوب دون إحداث إرباك أو إيقاف لدراسة الطلاب الحالية.
                         </div>
                     </div>
                 </div>
 
                 <!-- Culture & Communication -->
                 <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-                    <h3 class="font-bold text-slate-800 text-base border-b border-slate-100 pb-2">ثقافة التواصل الداخلي [01:15:42]</h3>
+                    <h3 class="font-bold text-slate-800 text-base border-b border-slate-100 pb-2">مأسسة العمل وحلول التنفيذ</h3>
                     
                     <div class="p-4 bg-indigo-50 text-indigo-900 rounded-xl space-y-2">
-                        <h4 class="font-bold text-sm">الانتقال من "الشكوى" إلى "تقديم الحلول"</h4>
+                        <h4 class="font-bold text-sm">تقديم الحلول والخطط العملية</h4>
                         <p class="text-xs leading-relaxed">
-                            تم الاتفاق على أن تتركز النقاشات الداخلية وتواصل الفريق حول تقديم اقتراحات وحلول عملية قابلة للتنفيذ المباشر بدلاً من الانشغال بعرض المشكلات وتوجيه اللوم.
+                            التركيز على إعداد خطط محددة بمهل زمنية دقيقة (يومين، 4 أيام، أسبوع) وتقديم مقترحات جاهزة للتنفيذ المباشر.
                         </p>
                     </div>
 
                     <div class="p-4 bg-emerald-50 text-emerald-900 rounded-xl space-y-2">
-                        <h4 class="font-bold text-sm">المواكبة المستمرة المخططة [15:17]</h4>
+                        <h4 class="font-bold text-sm">التوثيق الجاهز والمعياري</h4>
                         <p class="text-xs leading-relaxed">
-                            المحافظة على تحديث المناهج بصفة دورية لملائمة سوق العمل ومتطلبات التكنولوجيا الحديثة من خلال خطط زمنية محددة ومدروسة.
+                            توثيق السياسات والكتيبات المراجعة علمياً لضمان ثبات جودة العمل وسهولة الاعتماد الذاتي.
                         </p>
                     </div>
                 </div>
@@ -863,17 +850,17 @@
             courseHealthChart = new Chart(ctxHealth, {
                 type: 'bar',
                 data: {
-                    labels: ['دورة Unity', 'البكالوريا', 'الذكاء الاصطناعي', 'المدينة الذكية', 'الروبوتكس L1', 'تطبيقات الهاتف'],
+                    labels: ['Unity (مرحلة Expert)', 'AI and Machine Learning', 'منهج Godot', 'المدينة الذكية و CNC', 'كورس Smart Home', 'كتيب الروبوتكس الذاتي'],
                     datasets: [{
-                        label: 'مستوى الأولوية والتدخل الميداني',
-                        data: [90, 80, 75, 95, 85, 60],
+                        label: 'مستوى التحديث والتقدم التنفيذي',
+                        data: [95, 85, 75, 100, 70, 90],
                         backgroundColor: [
                             'rgba(239, 68, 68, 0.85)',   // Unity (Red)
-                            'rgba(245, 158, 11, 0.85)',  // Baccalaureate
-                            'rgba(99, 102, 241, 0.85)',  // AI
-                            'rgba(16, 185, 129, 0.85)',  // Smart City
-                            'rgba(59, 130, 246, 0.85)',  // Robotics L1
-                            'rgba(107, 114, 128, 0.85)'   // Mobile Apps
+                            'rgba(99, 102, 241, 0.85)',  // AI & ML (Indigo)
+                            'rgba(245, 158, 11, 0.85)',  // Godot (Amber)
+                            'rgba(16, 185, 129, 0.85)',  // Smart City & CNC (Emerald)
+                            'rgba(59, 130, 246, 0.85)',  // Smart Home (Blue)
+                            'rgba(147, 51, 234, 0.85)'   // Robotics Book (Purple)
                         ],
                         borderRadius: 6
                     }]
@@ -888,12 +875,12 @@
                             callbacks: {
                                 label: function(ctx) {
                                     const details = [
-                                        'تدخل عاجل: خفض نسبة التسرب وصعوبة المحتوى',
-                                        'تحويل من نظري بحت إلى تطبيقي وعملي',
-                                        'موازنة العمق وتوزيع التطبيقات بكافة المسارات',
-                                        'إنتاج الشروحات وتصاميم CNC والتسجيل الأسبوعي',
-                                        'إنجاز تجهيز المنهج كاملاً خلال شهر',
-                                        'تحديث المكونات وإضافة مشروع الذكاء الاصطناعي'
+                                        'نقل الكورس للمرحلة 3 النهائية لمنع صعوبة البدايات وتسرب الطلاب',
+                                        'تطوير وتخفيف المحتوى وتغيير الأجزاء المعقدة مع مهندس متخصص',
+                                        'مراجعة وتطوير المنهج وتكييفه في المسار المعدل',
+                                        'إنجاز التنسيق، التسجيلات (2-3 جلسات/أسبوع)، وإنشاء الجروب مع م. أحمد وم. خالد',
+                                        'مراجعة الجلستين الأخيرتين وإعداد العرض الإرشادي للمهندسين',
+                                        'إعداد كتيب التعلّم الذاتي الشامل بالـ AI والتصميم الجرافيكي خلال 4 أيام'
                                     ];
                                     return `${ctx.dataset.label}: ${details[ctx.dataIndex]}`;
                                 }
