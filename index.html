@@ -68,27 +68,30 @@
     -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
-    <!-- Top Navigation Header -->
-    <header class="bg-indigo-900 text-white shadow-lg sticky top-0 z-50">
+    <!-- Top Navigation Header with Megamind Academy Orange Theme -->
+    <header class="bg-gradient-to-r from-slate-950 via-orange-950 to-orange-600 text-white shadow-xl sticky top-0 z-50 border-b border-orange-500/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div class="flex items-center space-x-3 space-x-reverse">
-                <div class="w-10 h-10 rounded-lg bg-indigo-600 flex items-center justify-center font-bold text-xl shadow-inner">
-                    📋
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-orange-500 to-amber-400 flex items-center justify-center font-extrabold text-2xl shadow-lg shadow-orange-500/30 text-white">
+                    🚀
                 </div>
                 <div>
-                    <h1 class="text-xl md:text-2xl font-bold tracking-tight">لوحة العمل التنفيذية - محضر الاجتماع</h1>
-                    <p class="text-xs text-indigo-200">الأكاديمية التعليمية • توثيق القرارات وتوزيع المهام</p>
+                    <div class="flex items-center gap-2">
+                        <h1 class="text-xl md:text-2xl font-black tracking-tight">Megamind Academy</h1>
+                        <span class="bg-orange-500/20 text-orange-200 text-[10px] font-bold px-2 py-0.5 rounded-full border border-orange-400/30">Kids Tech & Robotics</span>
+                    </div>
+                    <p class="text-xs text-orange-200/90 font-medium mt-0.5">لوحة العمل التنفيذية • متابعة المناهج والمهام القيادية</p>
                 </div>
             </div>
             
             <!-- Quick Progress Bar in Header -->
-            <div class="bg-indigo-950/60 p-3 rounded-xl border border-indigo-700/50 min-w-[280px]">
-                <div class="flex justify-between items-center text-xs font-semibold mb-1">
-                    <span class="text-indigo-200">نسبة إنجاز مهام الاجتماع</span>
-                    <span id="overall-progress-text" class="text-emerald-400">0%</span>
+            <div class="bg-slate-900/80 backdrop-blur-md p-3 rounded-2xl border border-orange-500/30 min-w-[280px]">
+                <div class="flex justify-between items-center text-xs font-bold mb-1.5">
+                    <span class="text-orange-200 flex items-center gap-1">⚡ نسبة إنجاز الخطة التنفيذية</span>
+                    <span id="overall-progress-text" class="text-orange-400 font-extrabold">0%</span>
                 </div>
-                <div class="w-full bg-indigo-950 rounded-full h-2.5 overflow-hidden">
-                    <div id="overall-progress-bar" class="bg-emerald-400 h-2.5 rounded-full transition-all duration-500" style="width: 0%"></div>
+                <div class="w-full bg-slate-950 rounded-full h-2.5 overflow-hidden border border-orange-900/40">
+                    <div id="overall-progress-bar" class="bg-gradient-to-r from-amber-400 to-orange-500 h-2.5 rounded-full transition-all duration-500 shadow-sm" style="width: 0%"></div>
                 </div>
             </div>
         </div>
@@ -99,76 +102,76 @@
 
         <!-- Executive KPI Cards -->
         <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+            <div class="bg-white p-5 rounded-2xl border border-orange-100 shadow-sm hover:shadow-md transition hover:border-orange-300">
                 <div class="flex items-center justify-between">
                     <div>
-                        <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">إجمالي المهام</p>
+                        <p class="text-xs font-bold text-orange-600 uppercase tracking-wider">إجمالي المهام</p>
                         <h3 id="kpi-total-tasks" class="text-3xl font-extrabold text-slate-800 mt-1">0</h3>
                     </div>
-                    <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl font-bold">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center text-xl font-bold border border-orange-100 shadow-inner">
                         📌
                     </div>
                 </div>
-                <p class="text-xs text-slate-500 mt-2">من مخرجات الاجتماع المسجل</p>
+                <p class="text-xs text-slate-500 mt-2">خطة العمل والمسارات الأكاديمية</p>
             </div>
 
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition hover:border-red-300">
                 <div class="flex items-center justify-between">
                     <div>
                         <p class="text-xs font-bold text-red-500 uppercase tracking-wider">المهام العاجلة</p>
                         <h3 id="kpi-urgent-tasks" class="text-3xl font-extrabold text-red-600 mt-1">0</h3>
                     </div>
-                    <div class="w-12 h-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center text-xl font-bold">
+                    <div class="w-12 h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center text-xl font-bold border border-red-100 shadow-inner">
                         🚨
                     </div>
                 </div>
-                <p class="text-xs text-slate-500 mt-2">تتطلب تنفيذاً فورياً وتنسيقاً</p>
+                <p class="text-xs text-slate-500 mt-2">تتطلب تنفيذاً ومتابعة فورية</p>
             </div>
 
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition hover:border-amber-300">
                 <div class="flex items-center justify-between">
                     <div>
                         <p class="text-xs font-bold text-amber-600 uppercase tracking-wider">قيد التنفيذ</p>
                         <h3 id="kpi-in-progress" class="text-3xl font-extrabold text-amber-600 mt-1">0</h3>
                     </div>
-                    <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl font-bold">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl font-bold border border-amber-100 shadow-inner">
                         ⏳
                     </div>
                 </div>
-                <p class="text-xs text-slate-500 mt-2">جاري العمل عليها حالياً</p>
+                <p class="text-xs text-slate-500 mt-2">جاري العمل والتطوير عليها</p>
             </div>
 
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition hover:border-emerald-300">
                 <div class="flex items-center justify-between">
                     <div>
                         <p class="text-xs font-bold text-emerald-600 uppercase tracking-wider">المهام المكتملة</p>
                         <h3 id="kpi-completed-tasks" class="text-3xl font-extrabold text-emerald-600 mt-1">0</h3>
                     </div>
-                    <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl font-bold">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl font-bold border border-emerald-100 shadow-inner">
                         ✅
                     </div>
                 </div>
-                <p class="text-xs text-slate-500 mt-2">تم إنهاؤها بنجاح</p>
+                <p class="text-xs text-slate-500 mt-2">تم إنهاؤها وتسليمها بنجاح</p>
             </div>
         </section>
 
         <!-- Dynamic Section Navigation (Index Bar) -->
         <div class="bg-white rounded-2xl p-2 border border-slate-200 shadow-sm mb-8">
             <nav class="flex flex-wrap gap-2 text-sm font-semibold" id="main-nav">
-                <button onclick="switchTab('tasks')" id="tab-tasks" class="tab-btn px-4 py-2.5 rounded-xl bg-indigo-600 text-white shadow-sm transition">
+                <button onclick="switchTab('tasks')" id="tab-tasks" class="tab-btn px-4 py-2.5 rounded-xl bg-orange-600 text-white shadow-md shadow-orange-600/20 transition">
                     1. لوحة المهام التفاعلية 📝
                 </button>
-                <button onclick="switchTab('curriculum')" id="tab-curriculum" class="tab-btn px-4 py-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition">
+                <button onclick="switchTab('curriculum')" id="tab-curriculum" class="tab-btn px-4 py-2.5 rounded-xl text-slate-600 hover:bg-orange-50 hover:text-orange-600 transition">
                     2. تطوير المناهج والمحتوى 📚
                 </button>
-                <button onclick="switchTab('training')" id="tab-training" class="tab-btn px-4 py-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition">
-                    3. التدريب ونقل المعرفة 🎓
+                <button onclick="switchTab('training')" id="tab-training" class="tab-btn px-4 py-2.5 rounded-xl text-slate-600 hover:bg-orange-50 hover:text-orange-600 transition">
+                    3. التدريب والسياسات 🎓
                 </button>
-                <button onclick="switchTab('retention')" id="tab-retention" class="tab-btn px-4 py-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition">
-                    4. الجودة والتواصل مع أولياء الأمور 👨‍👩‍👧‍👦
+                <button onclick="switchTab('retention')" id="tab-retention" class="tab-btn px-4 py-2.5 rounded-xl text-slate-600 hover:bg-orange-50 hover:text-orange-600 transition">
+                    4. التواصل مع أولياء الأمور 👨‍👩‍👧‍👦
                 </button>
-                <button onclick="switchTab('workflow')" id="tab-workflow" class="tab-btn px-4 py-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition">
-                    5. بيئة العمل والثقافة الداخلية ⚙️
+                <button onclick="switchTab('workflow')" id="tab-workflow" class="tab-btn px-4 py-2.5 rounded-xl text-slate-600 hover:bg-orange-50 hover:text-orange-600 transition">
+                    5. بيئة العمل والثقافة ⚙️
                 </button>
             </nav>
         </div>
@@ -177,10 +180,10 @@
         <div id="section-tasks" class="tab-content block space-y-8">
             
             <!-- Introductory Context Banner -->
-            <div class="bg-indigo-50 border-r-4 border-indigo-600 p-4 rounded-xl text-indigo-900">
-                <h2 class="font-bold text-lg mb-1">دليل لوحة المهام المباشرة</h2>
-                <p class="text-sm">
-                    تستعرض هذه اللوحة كل التكليفات المستخرجة من تسجيل الاجتماع. يمكنك تصفية المهام حسب المسؤول أو الأولوية، كما يمكنك الضغط على شارة الحالة الخاصة بأي مهمة لتغييرها فوراً (في الانتظار ➔ قيد التنفيذ ➔ مكتملة) لتحديث مؤشرات الإنجاز الرسمية بشكل حي.
+            <div class="bg-orange-50/70 border-r-4 border-orange-500 p-4 rounded-xl text-orange-950 border border-orange-100">
+                <h2 class="font-bold text-lg mb-1 flex items-center gap-2"><span>🧠</span> دليل لوحة التحكم المباشرة - Megamind Academy</h2>
+                <p class="text-sm text-slate-700 leading-relaxed">
+                    تستعرض هذه اللوحة التكليفات ومراحل تطوير المناهج والمسارات التعليمية للأطفال. يمكنك تصفية المهام حسب المسؤول أو الأولوية، والضغط على شارة حالة أي مهمة لتغييرها فوراً (في الانتظار ➔ قيد التنفيذ ➔ مكتملة) لتحديث المؤشرات والرسوم البيانية لحظياً.
                 </p>
             </div>
 
@@ -212,21 +215,21 @@
                 <div class="flex flex-col md:flex-row gap-4 justify-between items-stretch md:items-center">
                     <!-- Search Input -->
                     <div class="flex-1 min-w-[240px]">
-                        <input type="text" id="search-input" oninput="renderTasks()" placeholder="ابحث في تفاصيل المهام..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm">
+                        <input type="text" id="search-input" oninput="renderTasks()" placeholder="ابحث في تفاصيل المهام والمناهج..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm">
                     </div>
 
                     <!-- Assignee Filter Buttons -->
                     <div class="flex flex-wrap gap-2 items-center text-xs font-semibold">
                         <span class="text-slate-500 ml-1">المسؤول:</span>
-                        <button onclick="setFilterAssignee('all')" id="filter-assignee-all" class="px-3 py-1.5 rounded-lg bg-indigo-600 text-white">الكل</button>
-                        <button onclick="setFilterAssignee('Ahmed')" id="filter-assignee-Ahmed" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200">م. أحمد (CEO)</button>
-                        <button onclick="setFilterAssignee('EducationalDirector')" id="filter-assignee-EducationalDirector" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200">المدير التعليمي</button>
+                        <button onclick="setFilterAssignee('all')" id="filter-assignee-all" class="px-3 py-1.5 rounded-lg bg-orange-600 text-white font-semibold">الكل</button>
+                        <button onclick="setFilterAssignee('Ahmed')" id="filter-assignee-Ahmed" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-orange-50 hover:text-orange-600 transition">م. أحمد (CEO)</button>
+                        <button onclick="setFilterAssignee('EducationalDirector')" id="filter-assignee-EducationalDirector" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-orange-50 hover:text-orange-600 transition">المدير التعليمي</button>
                     </div>
 
                     <!-- Priority Filter Select -->
                     <div class="flex items-center gap-2 text-xs font-semibold">
                         <span class="text-slate-500 whitespace-nowrap">الأولوية:</span>
-                        <select id="priority-select" onchange="renderTasks()" class="px-3 py-2 rounded-xl border border-slate-300 text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <select id="priority-select" onchange="renderTasks()" class="px-3 py-2 rounded-xl border border-slate-300 text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-orange-500">
                             <option value="all">جميع الأولويات</option>
                             <option value="عاجل">عاجل 🚨</option>
                             <option value="مرتفع">مرتفع 🔥</option>
@@ -655,8 +658,8 @@
         function switchTab(tabId) {
             document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
             document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('bg-indigo-600', 'text-white', 'shadow-sm');
-                btn.classList.add('text-slate-600', 'hover:bg-slate-100');
+                btn.classList.remove('bg-orange-600', 'text-white', 'shadow-md', 'shadow-orange-600/20');
+                btn.classList.add('text-slate-600', 'hover:bg-orange-50', 'hover:text-orange-600');
             });
 
             const activeSection = document.getElementById(`section-${tabId}`);
@@ -664,8 +667,8 @@
 
             const activeTabBtn = document.getElementById(`tab-${tabId}`);
             if (activeTabBtn) {
-                activeTabBtn.classList.add('bg-indigo-600', 'text-white', 'shadow-sm');
-                activeTabBtn.classList.remove('text-slate-600', 'hover:bg-slate-100');
+                activeTabBtn.classList.add('bg-orange-600', 'text-white', 'shadow-md', 'shadow-orange-600/20');
+                activeTabBtn.classList.remove('text-slate-600', 'hover:bg-orange-50', 'hover:text-orange-600');
             }
         }
 
@@ -676,9 +679,9 @@
                 const btn = document.getElementById(`filter-assignee-${a}`);
                 if (btn) {
                     if (a === assignee) {
-                        btn.className = "px-3 py-1.5 rounded-lg bg-indigo-600 text-white font-semibold transition";
+                        btn.className = "px-3 py-1.5 rounded-lg bg-orange-600 text-white font-semibold shadow-sm transition";
                     } else {
-                        btn.className = "px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition";
+                        btn.className = "px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-orange-50 hover:text-orange-600 transition";
                     }
                 }
             });
@@ -746,7 +749,7 @@
                     linksHtml = `
                         <div class="mt-2 pt-2 border-t border-slate-100 flex flex-wrap gap-2 items-center">
                             <span class="text-xs font-bold text-slate-500">🔗 الروابط:</span>
-                            ${task.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-700 bg-indigo-50 hover:bg-indigo-100 px-2.5 py-1 rounded-lg border border-indigo-200/80 transition">🌐 ${l.label}</a>`).join('')}
+                            ${task.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-orange-700 bg-orange-50 hover:bg-orange-100 px-2.5 py-1 rounded-lg border border-orange-200 transition">🌐 ${l.label}</a>`).join('')}
                         </div>
                     `;
                 }
@@ -756,17 +759,17 @@
                     attachmentsHtml = `
                         <div class="mt-2 flex flex-wrap gap-2 items-center">
                             <span class="text-xs font-bold text-slate-500">📎 المرفقات:</span>
-                            ${task.attachments.map(a => `<a href="${a.url}" target="_blank" download class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 px-2.5 py-1 rounded-lg border border-emerald-200/80 transition">📄 ${a.name} ${a.size ? `<span class="text-[10px] text-emerald-600 font-normal">(${a.size})</span>` : ''}</a>`).join('')}
+                            ${task.attachments.map(a => `<a href="${a.url}" target="_blank" download class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 px-2.5 py-1 rounded-lg border border-emerald-200/80 shadow-sm transition">📄 ${a.name} ${a.size ? `<span class="text-[10px] text-emerald-600 font-normal">(${a.size})</span>` : ''}</a>`).join('')}
                         </div>
                     `;
                 }
 
                 return `
-                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-3">
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-orange-200 transition flex flex-col justify-between space-y-3">
                         <div>
                             <div class="flex items-center justify-between mb-2">
-                                <span class="text-xs font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">${task.category}</span>
-                                <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">⏱️ ${task.time}</span>
+                                <span class="text-xs font-bold text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded-lg border border-slate-200/60">${task.category}</span>
+                                <span class="text-xs font-bold text-orange-700 bg-orange-50 border border-orange-200/80 px-2 py-0.5 rounded-lg">⏱️ ${task.time}</span>
                             </div>
                             <h4 class="font-bold text-slate-800 text-sm leading-snug mb-2">${task.title}</h4>
                             ${descHtml}
