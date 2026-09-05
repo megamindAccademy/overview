@@ -219,10 +219,8 @@
                     <div class="flex flex-wrap gap-2 items-center text-xs font-semibold">
                         <span class="text-slate-500 ml-1">المسؤول:</span>
                         <button onclick="setFilterAssignee('all')" id="filter-assignee-all" class="px-3 py-1.5 rounded-lg bg-indigo-600 text-white">الكل</button>
+                        <button onclick="setFilterAssignee('Ahmed')" id="filter-assignee-Ahmed" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200">م. أحمد (CEO)</button>
                         <button onclick="setFilterAssignee('EducationalDirector')" id="filter-assignee-EducationalDirector" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200">المدير التعليمي</button>
-                        <button onclick="setFilterAssignee('Ahmed')" id="filter-assignee-Ahmed" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200">م. أحمد (Customer Care & Service)</button>
-                        <button onclick="setFilterAssignee('Khaled')" id="filter-assignee-Khaled" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200">م. خالد</button>
-                        <button onclick="setFilterAssignee('Team')" id="filter-assignee-Team" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200">الفريق / مشترك</button>
                     </div>
 
                     <!-- Priority Filter Select -->
@@ -507,17 +505,17 @@
 
     <!-- JavaScript Data & Logic -->
     <script>
-        // Tasks Data Model based on Updated Meeting Record
+        // Tasks Data Model based on Updated Leadership Assignments
         const rawTasks = [
             {
                 id: 1,
                 title: "تنظيم وتنسيق المواعيد المضغوطة (مثل يوم السبت) وتوزيع المهندسين",
                 assignee: "Ahmed",
-                category: "التشغيل وخدمة العملاء",
+                category: "التشغيل والقيادة",
                 time: "تنسيق أسبوعي",
                 priority: "عاجل",
                 status: "in_progress",
-                description: "معالجة المواعيد المضغوطة (مثل يوم السبت) التي تضطر الأكاديمية فيها لإضافة أو استقدام مهندس جديد. يقوم الباشمهندس أحمد بالتنسيق الكامل مع Customer Care & Customer Service لمنع الاستسهال وبحث مواعيد بديلة لتخفيف الضغط عن مواعيد محددة.",
+                description: "معالجة المواعيد المضغوطة (مثل يوم السبت) التي تضطر الأكاديمية فيها لإضافة أو استقدام مهندس جديد. يقوم الباشمهندس أحمد (CEO) بالتنسيق المباشر مع خدمة العملاء لضمان عدم الاستسهال وبحث مواعيد بديلة لتخفيف الضغط.",
                 links: [],
                 attachments: []
             },
@@ -573,7 +571,7 @@
         // Filter Assignee Handler
         function setFilterAssignee(assignee) {
             activeAssigneeFilter = assignee;
-            ['all', 'EducationalDirector', 'Mega', 'Ahmed', 'Khaled', 'Team'].forEach(a => {
+            ['all', 'Ahmed', 'EducationalDirector'].forEach(a => {
                 const btn = document.getElementById(`filter-assignee-${a}`);
                 if (btn) {
                     if (a === assignee) {
@@ -638,9 +636,7 @@
                 else if (task.status === 'in_progress') statusBadge = '<span class="cursor-pointer px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800 border border-amber-300 hover:bg-amber-200 transition">⏳ قيد التنفيذ</span>';
                 else statusBadge = '<span class="cursor-pointer px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-700 border border-slate-300 hover:bg-slate-200 transition">📋 في الانتظار</span>';
 
-                let assigneeLabel = (task.assignee === 'EducationalDirector' || task.assignee === 'Mega') ? 'المدير التعليمي (Educational Director)' : 
-                                    (task.assignee === 'Ahmed' ? 'م. أحمد (Customer Care & Service)' : 
-                                    (task.assignee === 'Khaled' ? 'م. خالد' : 'فريق العمل'));
+                let assigneeLabel = (task.assignee === 'EducationalDirector' || task.assignee === 'Mega') ? 'المدير التعليمي (Educational Director)' : 'م. أحمد (CEO)';
 
                 let descHtml = task.description ? `<p class="text-xs text-slate-600 leading-relaxed mb-3 bg-slate-50 p-3 rounded-xl border border-slate-200/70">${task.description}</p>` : '';
 
@@ -798,17 +794,15 @@
         }
 
         function getAssigneeChartData() {
-            const directorCount = tasksState.filter(t => t.assignee === 'EducationalDirector' || t.assignee === 'Mega').length;
             const ahmedCount = tasksState.filter(t => t.assignee === 'Ahmed').length;
-            const khaledCount = tasksState.filter(t => t.assignee === 'Khaled').length;
-            const teamCount = tasksState.filter(t => t.assignee === 'Team').length;
+            const directorCount = tasksState.filter(t => t.assignee === 'EducationalDirector' || t.assignee === 'Mega').length;
 
             return {
-                labels: ['المدير التعليمي', 'م. أحمد (Service)', 'م. خالد', 'الفريق / مشترك'],
+                labels: ['م. أحمد (CEO)', 'المدير التعليمي (Educational Director)'],
                 datasets: [{
                     label: 'عدد المهام',
-                    data: [directorCount, ahmedCount, khaledCount, teamCount],
-                    backgroundColor: ['#4f46e5', '#0284c7', '#0d9488', '#059669'],
+                    data: [ahmedCount, directorCount],
+                    backgroundColor: ['#0284c7', '#4f46e5'],
                     borderRadius: 8
                 }]
             };
