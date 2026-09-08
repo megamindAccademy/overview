@@ -212,29 +212,39 @@
 
             <!-- Task Filter Controls -->
             <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-                <div class="flex flex-col md:flex-row gap-4 justify-between items-stretch md:items-center">
+                <div class="flex flex-col lg:flex-row gap-4 justify-between items-stretch lg:items-center">
                     <!-- Search Input -->
-                    <div class="flex-1 min-w-[240px]">
-                        <input type="text" id="search-input" oninput="renderTasks()" placeholder="ابحث في تفاصيل المهام والمناهج..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm">
+                    <div class="flex-1 min-w-[220px]">
+                        <input type="text" id="search-input" oninput="renderTasks()" placeholder="ابحث في تفاصيل المهام والمناهج والتحديثات..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm">
                     </div>
 
-                    <!-- Assignee Filter Buttons -->
-                    <div class="flex flex-wrap gap-2 items-center text-xs font-semibold">
-                        <span class="text-slate-500 ml-1">المسؤول:</span>
-                        <button onclick="setFilterAssignee('all')" id="filter-assignee-all" class="px-3 py-1.5 rounded-lg bg-orange-600 text-white font-semibold">الكل</button>
-                        <button onclick="setFilterAssignee('Ahmed')" id="filter-assignee-Ahmed" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-orange-50 hover:text-orange-600 transition">م. أحمد (CEO)</button>
-                        <button onclick="setFilterAssignee('EducationalDirector')" id="filter-assignee-EducationalDirector" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-orange-50 hover:text-orange-600 transition">المدير التعليمي</button>
+                    <!-- Status Filter Buttons -->
+                    <div class="flex flex-wrap gap-1.5 items-center text-xs font-semibold">
+                        <span class="text-slate-500 ml-1 font-bold">حالة المهمة:</span>
+                        <button onclick="setFilterStatus('all')" id="filter-status-all" class="px-3 py-1.5 rounded-lg bg-orange-600 text-white font-bold shadow-xs transition">الكل</button>
+                        <button onclick="setFilterStatus('completed')" id="filter-status-completed" class="px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-300 hover:bg-emerald-600 hover:text-white transition font-bold">المكتملة والمعالجة ✅</button>
+                        <button onclick="setFilterStatus('in_progress')" id="filter-status-in_progress" class="px-3 py-1.5 rounded-lg bg-amber-50 text-amber-800 border border-amber-300 hover:bg-amber-600 hover:text-white transition font-bold">قيد التنفيذ ⏳</button>
+                        <button onclick="setFilterStatus('pending')" id="filter-status-pending" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 border border-slate-300 hover:bg-slate-700 hover:text-white transition font-bold">في الانتظار 📋</button>
                     </div>
 
-                    <!-- Priority Filter Select -->
-                    <div class="flex items-center gap-2 text-xs font-semibold">
-                        <span class="text-slate-500 whitespace-nowrap">الأولوية:</span>
-                        <select id="priority-select" onchange="renderTasks()" class="px-3 py-2 rounded-xl border border-slate-300 text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-orange-500">
-                            <option value="all">جميع الأولويات</option>
-                            <option value="عاجل">عاجل 🚨</option>
-                            <option value="مرتفع">مرتفع 🔥</option>
-                            <option value="متوسط">متوسط 📋</option>
-                        </select>
+                    <!-- Assignee & Priority Filters -->
+                    <div class="flex flex-wrap gap-3 items-center text-xs font-semibold">
+                        <div class="flex items-center gap-1">
+                            <span class="text-slate-500">المسؤول:</span>
+                            <button onclick="setFilterAssignee('all')" id="filter-assignee-all" class="px-2.5 py-1.5 rounded-lg bg-orange-600 text-white font-semibold">الكل</button>
+                            <button onclick="setFilterAssignee('Ahmed')" id="filter-assignee-Ahmed" class="px-2.5 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-orange-50 hover:text-orange-600 transition">م. أحمد</button>
+                            <button onclick="setFilterAssignee('EducationalDirector')" id="filter-assignee-EducationalDirector" class="px-2.5 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-orange-50 hover:text-orange-600 transition">المدير التعليمي</button>
+                        </div>
+
+                        <div class="flex items-center gap-1">
+                            <span class="text-slate-500 whitespace-nowrap">الأولوية:</span>
+                            <select id="priority-select" onchange="renderTasks()" class="px-2.5 py-1.5 rounded-xl border border-slate-300 text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                                <option value="all">الكل</option>
+                                <option value="عاجل">عاجل 🚨</option>
+                                <option value="مرتفع">مرتفع 🔥</option>
+                                <option value="متوسط">متوسط 📋</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -516,6 +526,7 @@
                 priority: "عاجل",
                 status: "in_progress",
                 description: "معالجة المواعيد المضغوطة (مثل يوم السبت) التي تضطر الأكاديمية فيها لإضافة أو استقدام مهندس جديد. يقوم الباشمهندس أحمد (CEO) بالتنسيق المباشر مع خدمة العملاء لضمان عدم الاستسهال وبحث مواعيد بديلة لتخفيف الضغط.",
+                latestUpdate: "جاري التنسيق الأسبوعي المستمر بين م. أحمد (CEO) وخدمة العملاء لإعادة توزيع مواعيد الطلاب ومنع الضغط في اليوم الواحد.",
                 links: [],
                 attachments: []
             },
@@ -528,6 +539,7 @@
                 priority: "مرتفع",
                 status: "in_progress",
                 description: "إعداد وثيقة سياسات وإرشادات العمل الخاصة بالمهندسين بشكل شامل، وتتضمن: لائحة الخصومات والجزاءات، نظام المكافآت والبونص (Bonus)، والتعليمات والإرشادات التشغيلية (Instructions). ميعاد التسليم المتوقع قبل أو بنهاية الأسبوع الحالي.",
+                latestUpdate: "جاري صياغة بنود لائحة الخصومات، والجزاءات، والمكافآت، ونظام الإرشادات التشغيلية الموحد للمهندسين للتسليم بنهاية الأسبوع.",
                 links: [],
                 attachments: []
             },
@@ -540,6 +552,7 @@
                 priority: "مرتفع",
                 status: "completed",
                 description: "تم الانتهاء كاملاً من تحويل المنهج إلى محتوى تفاعلي بالويب وضغطه مع الـ PDF وتسليمه للباشمهندس أحمد (CEO) لمتابعة وتحديد آلية التنسيق النهائية ورفعه للطلاب على المنصة.",
+                latestUpdate: "تم الإنجاز والتسليم! تم إنشاء وتطوير الملف التفاعلي (problemsolving.zip) بحجم 29.1MB وتسليمه رسمياً للباشمهندس أحمد.",
                 links: [],
                 attachments: [
                     {
@@ -558,6 +571,7 @@
                 priority: "مرتفع",
                 status: "in_progress",
                 description: "دراسة وبحث الخيارات المناسبة لرفع الواجبات من قِبل الطلاب عبر المنصة: تحديد صيغة الرفع (مثل التقاط صورة/Screenshot أو إرفاق ملفات/Upload)، وبحث أفضل تجربة مستخدم (UX) سهلة وسلسة مناسبة للأطفال. سيتم التوصل للنتائج والتوصيات خلال يومين كحد أقصى.",
+                latestUpdate: "بحث الخيارات المتاحة (صور/سكرين شوت أو ملفات) وملاءمة تجربة الاستخدام السلسة للأطفال على المنصة (المهلة: خلال يومين).",
                 links: [],
                 attachments: []
             },
@@ -570,6 +584,7 @@
                 priority: "مرتفع",
                 status: "in_progress",
                 description: "مراجعة الجلستين الأخيرتين لكورس Smart Home اللتين لا توجد لهما مادة حالياً، والتحقق إن كانتا مخصصتين للتأخير التعويضي أو تجهيز عرض توضيحي (Presentation/Instructions) يحدد توزيع العمل (مثل: الجلسة قبل الأخيرة لاستكمال التركيب، والأخيرة لمعالجة الأخطاء والأسئلة) لضمان وضوح الخطة لأي مهندس جديد.",
+                latestUpdate: "بانتظار رد المهندسة المسؤولة للتحقق من تفاصيل الجلستين الأخيرتين وإصدار دليل الشرح والعرض التوضيحي للمهندسين الجدد.",
                 links: [],
                 attachments: []
             },
@@ -582,6 +597,7 @@
                 priority: "مرتفع",
                 status: "completed",
                 description: "تمت معالجة مشكلة تكرار المشاريع بين كورس Robot Junior Advanced وكورس Robot Senior واكتملت كافة التحضيرات. المتبقي فقط تواصل الباشمهندس أحمد (CEO) لاختيار ورؤية المشروع الأنسب من بين المقترحات ليتم البدء فيه فوراً.",
+                latestUpdate: "تمت المعالجة كاملاً! اكتملت الدراسة وصياغة مشاريع Robot Junior Advanced المستقلة، وبانتظار اختيار م. أحمد للمشروع الأنسب لبدء التنفيذ.",
                 links: [],
                 attachments: []
             },
@@ -594,6 +610,7 @@
                 priority: "عاجل",
                 status: "completed",
                 description: "تم التواصل الفعال مع م. خالد والاتفاق على تسجيل من 2 إلى 3 جلسات أسبوعياً لكورس المدينة الذكية (Smart City). كما تم الاتفاق على تنفيذ وتصميم قطع الـ CNC، وتم إنشاء مجموعة العمل وتضمين الباشمهندس أحمد (CEO) وم. خالد لبدء التنفيذ المباشر ومتابعة الفيديوهات لضمان عدم التعارض.",
+                latestUpdate: "تمت المعالجة والتنسيق! الاتفاق مع م. خالد على تسجيل 2-3 جلسات أسبوعياً، تنفيذ تصاميم قواطع الـ CNC، وإنشاء مجموعة التنسيق.",
                 links: [],
                 attachments: []
             },
@@ -606,6 +623,7 @@
                 priority: "عاجل",
                 status: "in_progress",
                 description: "تعديل المناهج الثلاثة الرئيسية لرفع القيمة ومنع تسرب الطلاب خلال أسبوع: (1) تعديل وتطوير منهج الذكاء الاصطناعي وتعلم الآلة (AI and Machine Learning) بتصور جديد مع مهندس متخصص. (2) مراجعة وتطوير منهج محرك الألعاب Godot. (3) نقل دورة Unity إلى المرحلة الثالثة والنهائية من المسار (Expert) لتقليل صعوبة البدايات. (4) تقديم الهيكل المبدئي للمباشرة والتنفيذ بعد موافقة الباشمهندس أحمد (CEO).",
+                latestUpdate: "بدء التنسيق لتغيير أجزاء منهج AI مع مهندس متخصص، وتعديل Godot، ونقل Unity للمرحلة 3 (Expert) لمنع صعوبة البدايات وتسرب الطلاب (خلال أسبوع).",
                 links: [],
                 attachments: []
             },
@@ -618,6 +636,7 @@
                 priority: "مرتفع",
                 status: "in_progress",
                 description: "تحويل منهج الروبوتكس إلى كتيب تعليمي شامل ومستقل يُرسل للأطفال ويُمكنهم من التعلم والاستخدام دون الحاجة المستمرة للإنستراكتور: يشمل شرح مفصل للأدوات والمكونات وفيديوهات توضيحية للتركيب والفك. الخطة: (1) استخدام نماذج AI لاستخراج التصور الأولي لمحتوى الكتيب. (2) الاستعانة بمهندسة تصميم ملمة بالروبوتكس لإخراج الكتيب رسمياً بجودة جاهزة ومراجعة علمياً مباشرة. (3) التسليم المتوقع خلال 4 أيام.",
+                latestUpdate: "تجهيز الهيكل بالـ AI والاتفاق مع مهندسة تصميم روبوتكس لإخراج الكتيب رسمياً مرفقاً بالفيديوهات التوضيحية (خلال 4 أيام).",
                 links: [],
                 attachments: []
             },
@@ -630,6 +649,7 @@
                 priority: "مرتفع",
                 status: "in_progress",
                 description: "إعداد دراسة وبحث شامل لتنظيم سيمينار أولياء الأمور: (1) تحديد النقاط والمواضيع الأساسية للطرح والتحدث فيها مع أسر الطلاب لتوضيح رؤية وقيمة المناهج. (2) تحديد الأدوات والوسائل التفاعلية المساعدة لدعم العرض. (3) تحديد تكرار وجدولة السيمينار وآلية التنظيم الدائم. (4) تقديم التصور والنتائج النهائية لبدء التنفيذ واللقاءات خلال يومين.",
+                latestUpdate: "إعداد نقاط العرض والوسائل التفاعلية المساعدة وجدولة اللقاءات مع أولياء الأمور لعرض القيمة التعليمية (خلال يومين).",
                 links: [],
                 attachments: []
             },
@@ -642,6 +662,7 @@
                 priority: "مرتفع",
                 status: "in_progress",
                 description: "بناء نموذج تفاعلي (Web Prototype/Index) لنظام الاختبار الإلزامي المعمم لكافة كورسات المنصة: (1) واجهة أسئلة اختيار من متعدد (MCQ). (2) تصحيح تلقائي وعرض الدرجة والنسبة المئوية. (3) توجيه ذكي للأخطاء وإظهار الدروس الواجب مراجعتها. (4) ربط نتيجة الاجتياز بظهور شهادة التخرج. ميعاد التسليم المبدئي خلال 5 أيام إلى أسبوع.",
+                latestUpdate: "تصميم نموذج الـ Web Prototype لأسئلة MCQ والتصحيح الآلي، والربط الذكي بالشهادات والمراجعات (خلال 5-7 أيام).",
                 links: [],
                 attachments: []
             },
@@ -654,6 +675,7 @@
                 priority: "مرتفع",
                 status: "in_progress",
                 description: "إعداد وتصميم اقتراح شامل لمسابقات تنافسية محلية بين طلاب ومجموعات الأكاديمية (Local Group & Student Competitions): (1) صياغة أفكار مسابقات تنافسية في الروبوتكس والبرمجة. (2) تحديد آليات التقييم، التحديات، ونظام النقاط والجوائز. (3) تقديم التصور الكامل للباشمهندس أحمد (CEO) للموافقة وبدء التنفيذ خلال أسبوع.",
+                latestUpdate: "صياغة التحديات وآليات الجوائز ونظام النقاط للمسابقات التنافسية بين الفرق والعرض على م. أحمد (خلال أسبوع).",
                 links: [],
                 attachments: []
             }
@@ -662,6 +684,7 @@
         // Always sync rawTasks definitions for fresh updates
         let tasksState = [...rawTasks];
         let activeAssigneeFilter = 'all';
+        let activeStatusFilter = 'all';
 
         function saveTasksState() {
             localStorage.setItem('megamind_tasks_state', JSON.stringify(tasksState));
@@ -701,9 +724,31 @@
                 const btn = document.getElementById(`filter-assignee-${a}`);
                 if (btn) {
                     if (a === assignee) {
-                        btn.className = "px-3 py-1.5 rounded-lg bg-orange-600 text-white font-semibold shadow-sm transition";
+                        btn.className = "px-2.5 py-1.5 rounded-lg bg-orange-600 text-white font-semibold shadow-xs";
                     } else {
-                        btn.className = "px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-orange-50 hover:text-orange-600 transition";
+                        btn.className = "px-2.5 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-orange-50 hover:text-orange-600 transition";
+                    }
+                }
+            });
+            renderTasks();
+        }
+
+        // Filter Status Handler
+        function setFilterStatus(status) {
+            activeStatusFilter = status;
+            ['all', 'completed', 'in_progress', 'pending'].forEach(s => {
+                const btn = document.getElementById(`filter-status-${s}`);
+                if (btn) {
+                    if (s === status) {
+                        if (s === 'completed') btn.className = "px-3 py-1.5 rounded-lg bg-emerald-600 text-white font-bold shadow-sm transition";
+                        else if (s === 'in_progress') btn.className = "px-3 py-1.5 rounded-lg bg-amber-600 text-white font-bold shadow-sm transition";
+                        else if (s === 'pending') btn.className = "px-3 py-1.5 rounded-lg bg-slate-700 text-white font-bold shadow-sm transition";
+                        else btn.className = "px-3 py-1.5 rounded-lg bg-orange-600 text-white font-bold shadow-sm transition";
+                    } else {
+                        if (s === 'completed') btn.className = "px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-300 hover:bg-emerald-600 hover:text-white transition font-bold";
+                        else if (s === 'in_progress') btn.className = "px-3 py-1.5 rounded-lg bg-amber-50 text-amber-800 border border-amber-300 hover:bg-amber-600 hover:text-white transition font-bold";
+                        else if (s === 'pending') btn.className = "px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 border border-slate-300 hover:bg-slate-700 hover:text-white transition font-bold";
+                        else btn.className = "px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-orange-50 transition font-bold";
                     }
                 }
             });
@@ -731,16 +776,27 @@
             const searchVal = document.getElementById('search-input').value.toLowerCase().trim();
             const priorityVal = document.getElementById('priority-select').value;
 
-            const filtered = tasksState.filter(t => {
+            let filtered = tasksState.filter(t => {
                 const matchesAssignee = activeAssigneeFilter === 'all' || 
-                                      t.assignee === activeAssigneeFilter || 
-                                      (activeAssigneeFilter === 'EducationalDirector' && (t.assignee === 'EducationalDirector' || t.assignee === 'Mega'));
+                                       t.assignee === activeAssigneeFilter || 
+                                       (activeAssigneeFilter === 'EducationalDirector' && (t.assignee === 'EducationalDirector' || t.assignee === 'Mega'));
                 const matchesPriority = priorityVal === 'all' || t.priority === priorityVal;
+                const matchesStatus = activeStatusFilter === 'all' || t.status === activeStatusFilter;
                 const matchesSearch = t.title.toLowerCase().includes(searchVal) || 
                                       t.category.toLowerCase().includes(searchVal) || 
-                                      (t.description && t.description.toLowerCase().includes(searchVal));
-                return matchesAssignee && matchesPriority && matchesSearch;
+                                      (t.description && t.description.toLowerCase().includes(searchVal)) ||
+                                      (t.latestUpdate && t.latestUpdate.toLowerCase().includes(searchVal));
+                return matchesAssignee && matchesPriority && matchesStatus && matchesSearch;
             });
+
+            // Group / Sort: Completed tasks placed at the top when viewing 'all'
+            if (activeStatusFilter === 'all') {
+                filtered.sort((a, b) => {
+                    if (a.status === 'completed' && b.status !== 'completed') return -1;
+                    if (a.status !== 'completed' && b.status === 'completed') return 1;
+                    return a.id - b.id;
+                });
+            }
 
             if (filtered.length === 0) {
                 container.innerHTML = `
@@ -752,19 +808,47 @@
             }
 
             container.innerHTML = filtered.map(task => {
+                const isCompleted = task.status === 'completed';
+
                 let priorityBadge = '';
                 if (task.priority === 'عاجل') priorityBadge = '<span class="px-2.5 py-1 rounded-md text-xs font-bold bg-red-100 text-red-700 border border-red-200">عاجل 🚨</span>';
                 else if (task.priority === 'مرتفع') priorityBadge = '<span class="px-2.5 py-1 rounded-md text-xs font-bold bg-amber-100 text-amber-800 border border-amber-200">مرتفع 🔥</span>';
                 else priorityBadge = '<span class="px-2.5 py-1 rounded-md text-xs font-bold bg-blue-100 text-blue-700 border border-blue-200">متوسط 📋</span>';
 
                 let statusBadge = '';
-                if (task.status === 'completed') statusBadge = '<span class="cursor-pointer px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 hover:bg-emerald-200 transition">✅ مكتملة</span>';
-                else if (task.status === 'in_progress') statusBadge = '<span class="cursor-pointer px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800 border border-amber-300 hover:bg-amber-200 transition">⏳ قيد التنفيذ</span>';
-                else statusBadge = '<span class="cursor-pointer px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-700 border border-slate-300 hover:bg-slate-200 transition">📋 في الانتظار</span>';
+                if (isCompleted) statusBadge = '<span class="cursor-pointer px-3 py-1 rounded-full text-xs font-extrabold bg-emerald-600 text-white shadow-xs hover:bg-emerald-700 transition">✅ تمت المعالجة بنجاح</span>';
+                else if (task.status === 'in_progress') statusBadge = '<span class="cursor-pointer px-3 py-1 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300 hover:bg-amber-200 transition">⏳ قيد التنفيذ</span>';
+                else statusBadge = '<span class="cursor-pointer px-3 py-1 rounded-full text-xs font-extrabold bg-slate-100 text-slate-700 border border-slate-300 hover:bg-slate-200 transition">📋 في الانتظار</span>';
 
                 let assigneeLabel = (task.assignee === 'EducationalDirector' || task.assignee === 'Mega') ? 'المدير التعليمي (Educational Director)' : 'م. أحمد (CEO)';
 
-                let descHtml = task.description ? `<p class="text-xs text-slate-600 leading-relaxed mb-3 bg-slate-50 p-3 rounded-xl border border-slate-200/70">${task.description}</p>` : '';
+                let descHtml = task.description ? `<p class="text-xs text-slate-600 leading-relaxed mb-2 bg-slate-50 p-3 rounded-xl border border-slate-200/70">${task.description}</p>` : '';
+
+                // Prominent Latest Update Callout Box
+                let updateBox = '';
+                if (task.latestUpdate) {
+                    if (isCompleted) {
+                        updateBox = `
+                            <div class="mt-3 p-3 rounded-xl bg-emerald-100/90 border border-emerald-300 text-emerald-950 font-medium text-xs flex items-start gap-2 shadow-xs">
+                                <span class="text-base shrink-0">💡</span>
+                                <div>
+                                    <strong class="font-bold text-emerald-950 block mb-0.5">الإجراء المتخذ والتحديث الأخير:</strong>
+                                    <p class="text-xs leading-relaxed font-semibold text-emerald-950">${task.latestUpdate}</p>
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        updateBox = `
+                            <div class="mt-3 p-3 rounded-xl bg-amber-50/90 border border-amber-200 text-amber-950 font-medium text-xs flex items-start gap-2">
+                                <span class="text-base shrink-0">📌</span>
+                                <div>
+                                    <strong class="font-bold text-amber-950 block mb-0.5">أحدث التحديثات ومسار التنفيذ:</strong>
+                                    <p class="text-xs leading-relaxed text-amber-900 font-medium">${task.latestUpdate}</p>
+                                </div>
+                            </div>
+                        `;
+                    }
+                }
 
                 let linksHtml = '';
                 if (task.links && task.links.length > 0) {
@@ -786,15 +870,23 @@
                     `;
                 }
 
+                const cardClass = isCompleted
+                    ? "bg-gradient-to-br from-emerald-50/50 via-white to-emerald-50/20 p-5 rounded-2xl border-2 border-emerald-400 shadow-md shadow-emerald-500/5 hover:shadow-lg transition flex flex-col justify-between space-y-3"
+                    : "bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-orange-200 transition flex flex-col justify-between space-y-3";
+
                 return `
-                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-orange-200 transition flex flex-col justify-between space-y-3">
+                    <div class="${cardClass}">
                         <div>
                             <div class="flex items-center justify-between mb-2">
-                                <span class="text-xs font-bold text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded-lg border border-slate-200/60">${task.category}</span>
+                                <span class="text-xs font-bold ${isCompleted ? 'text-emerald-800 bg-emerald-100 border border-emerald-300' : 'text-slate-600 bg-slate-100 border border-slate-200/60'} px-2.5 py-0.5 rounded-lg">${task.category}</span>
                                 <span class="text-xs font-bold text-orange-700 bg-orange-50 border border-orange-200/80 px-2 py-0.5 rounded-lg">⏱️ ${task.time}</span>
                             </div>
-                            <h4 class="font-bold text-slate-800 text-sm leading-snug mb-2">${task.title}</h4>
+                            <h4 class="font-bold text-slate-800 text-sm leading-snug mb-2 flex items-center justify-between gap-2">
+                                <span>${task.title}</span>
+                                ${isCompleted ? '<span class="text-emerald-600 text-base shrink-0">✨</span>' : ''}
+                            </h4>
                             ${descHtml}
+                            ${updateBox}
                             ${linksHtml}
                             ${attachmentsHtml}
                         </div>
