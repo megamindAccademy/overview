@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megminds Academy - Python Level 1 Session 1 Homework 🐍</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fredoka', 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        .block-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+        @keyframes bounce-short {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-bounce-short {
+            animation: bounce-short 1s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="min-h-screen py-10 px-4 sm:px-6 lg:px-8">
+
+    <div class="max-w-3xl mx-auto">
+        <header class="bg-white rounded-3xl p-6 mb-8 block-shadow border-4 border-emerald-400 text-center relative overflow-hidden">
+            <!-- Language Switcher Button -->
+            <div class="absolute top-4 right-4 z-10">
+                <button onclick="toggleLanguage()" id="lang-btn" class="bg-emerald-600 text-white font-bold px-4 py-2 rounded-xl text-sm shadow hover:bg-emerald-700 transition flex items-center gap-2">
+                    🌐 <span id="lang-text">العربية</span>
+                </button>
+            </div>
+
+            <div class="absolute -left-6 -bottom-6 text-7xl opacity-20">🐍</div>
+            <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider" data-i18n="badge">Megminds Academy</span>
+            <h1 class="text-3xl sm:text-4xl font-black text-emerald-950 mt-2 mb-1" data-i18n="title">Python Level 1 - Session 1 Homework 🚀</h1>
+            <p class="text-gray-600 font-semibold text-lg" data-i18n="subtitle">Introduction to Python & Variables Adventure 💡</p>
+            <div class="mt-4 inline-flex items-center gap-2 bg-amber-100 text-amber-900 px-4 py-2 rounded-full font-bold text-sm">
+                <span data-i18n="warning">💡 Note: Wrong answers will deduct points from your final score even if corrected later!</span>
+            </div>
+        </header>
+
+        <main id="quiz-container" class="space-y-6">
+            
+            <!-- Question 1 -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 block-shadow border-2 border-emerald-100 transition-all duration-300 hover:border-emerald-300" data-question="1">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-emerald-600 text-white w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">1</span>
+                    <h2 class="text-xl font-bold text-gray-800" data-i18n="q1_title">What is Python? 🐍</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                    <button onclick="selectAnswer(1, 'A', false)" class="option-btn-1 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-emerald-50 hover:border-emerald-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">🎮</span> <span data-i18n="q1_optA">A) A hardware processor chip</span>
+                    </button>
+                    <button onclick="selectAnswer(1, 'B', true)" class="option-btn-1 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-emerald-50 hover:border-emerald-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">💻</span> <span data-i18n="q1_optB">B) A simple, popular, interpreted programming language</span>
+                    </button>
+                    <button onclick="selectAnswer(1, 'C', false)" class="option-btn-1 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-emerald-50 hover:border-emerald-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">🌐</span> <span data-i18n="q1_optC">C) A web browser application</span>
+                    </button>
+                    <button onclick="selectAnswer(1, 'D', false)" class="option-btn-1 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-emerald-50 hover:border-emerald-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">⌨️</span> <span data-i18n="q1_optD">D) An external keyboard brand</span>
+                    </button>
+                </div>
+                <div id="feedback-1" class="mt-4 hidden p-3 rounded-xl font-bold text-sm"></div>
+                <div id="explanation-1" class="hidden mt-4 p-4 rounded-2xl bg-emerald-50 border-2 border-emerald-200 text-emerald-950 text-sm"></div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 block-shadow border-2 border-emerald-100 transition-all duration-300 hover:border-emerald-300" data-question="2">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-emerald-600 text-white w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">2</span>
+                    <h2 class="text-xl font-bold text-gray-800" data-i18n="q2_title">Which function is used to print messages to the screen in Python? 🖥️</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                    <button onclick="selectAnswer(2, 'A', false)" class="option-btn-2 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-emerald-50 hover:border-emerald-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">📤</span> <span data-i18n="q2_optA">A) send()</span>
+                    </button>
+                    <button onclick="selectAnswer(2, 'B', false)" class="option-btn-2 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-emerald-50 hover:border-emerald-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">📥</span> <span data-i18n="q2_optB">B) input()</span>
+                    </button>
+                    <button onclick="selectAnswer(2, 'C', true)" class="option-btn-2 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-emerald-50 hover:border-emerald-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">🖨️</span> <span data-i18n="q2_optC">C) print()</span>
+                    </button>
+                    <button onclick="selectAnswer(2, 'D', false)" class="option-btn-2 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-emerald-50 hover:border-emerald-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">✍️</span> <span data-i18n="q2_optD">D) write()</span>
+                    </button>
+                </div>
+                <div id="feedback-2" class="mt-4 hidden p-3 rounded-xl font-bold text-sm"></div>
+                <div id="explanation-2" class="hidden mt-4 p-4 rounded-2xl bg-emerald-50 border-2 border-emerald-200 text-emerald-950 text-sm"></div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 block-shadow border-2 border-emerald-100 transition-all duration-300 hover:border-emerald-300" data-question="3">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-emerald-600 text-white w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">3</span>
+                    <h2 class="text-xl font-bold text-gray-800" data-i18n="q3_title">What are Variables in Python? 📦</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                    <button onclick="selectAnswer(3, 'A', true)" class="option-btn-3 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-emerald-50 hover:border-emerald-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">📦</span> <span data-i18n="q3_optA">A) Containers for storing data values</span>
+                    </button>
+                    <button onclick="selectAnswer(3, 'B', false)" class="option-btn-3 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-emerald-50 hover:border-emerald-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">❌</span> <span data-i18n="q3_optB">B) Mathematical errors in the code</span>
+                    </button>
+                    <button onclick="selectAnswer(3, 'C', false)" class="option-btn-3 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-emerald-50 hover:border-emerald-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">🎮</span> <span data-i18n="q3_optC">C) Game controllers</span>
+                    </button>
+                    <button onclick="selectAnswer(3, 'D', false)" class="option-btn-3 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-emerald-50 hover:border-emerald-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">🎨</span> <span data-i18n="q3_optD">D) Image design tools</span>
+                    </button>
+                </div>
+                <div id="feedback-3" class="mt-4 hidden p-3 rounded-xl font-bold text-sm"></div>
+                <div id="explanation-3" class="hidden mt-4 p-4 rounded-2xl bg-emerald-50 border-2 border-emerald-200 text-emerald-950 text-sm"></div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 block-shadow border-2 border-emerald-100 transition-all duration-300 hover:border-emerald-300" data-question="4">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-emerald-600 text-white w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">4</span>
+                    <h2 class="text-xl font-bold text-gray-800" data-i18n="q4_title">Which of the following is a correct rule for naming variables? 🏷️</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                    <button onclick="selectAnswer(4, 'A', false)" class="option-btn-4 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-emerald-50 hover:border-emerald-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">🔢</span> <span data-i18n="q4_optA">A) Must start with a number</span>
+                    </button>
+                    <button onclick="selectAnswer(4, 'B', true)" class="option-btn-4 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-emerald-50 hover:border-emerald-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">🔤</span> <span data-i18n="q4_optB">B) Must start with a letter (character)</span>
+                    </button>
+                    <button onclick="selectAnswer(4, 'C', false)" class="option-btn-4 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-emerald-50 hover:border-emerald-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">⚠️</span> <span data-i18n="q4_optC">C) Can use reserved keywords like if</span>
+                    </button>
+                    <button onclick="selectAnswer(4, 'D', false)" class="option-btn-4 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-emerald-50 hover:border-emerald-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">🔣</span> <span data-i18n="q4_optD">D) Can include spaces inside the name</span>
+                    </button>
+                </div>
+                <div id="feedback-4" class="mt-4 hidden p-3 rounded-xl font-bold text-sm"></div>
+                <div id="explanation-4" class="hidden mt-4 p-4 rounded-2xl bg-emerald-50 border-2 border-emerald-200 text-emerald-950 text-sm"></div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 block-shadow border-2 border-emerald-100 transition-all duration-300 hover:border-emerald-300" data-question="5">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-emerald-600 text-white w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">5</span>
+                    <h2 class="text-xl font-bold text-gray-800" data-i18n="q5_title">How do we combine a variable with text in a print statement? ➕</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                    <button onclick="selectAnswer(5, 'A', false)" class="option-btn-5 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-emerald-50 hover:border-emerald-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">✖️</span> <span data-i18n="q5_optA">A) Using multiplication (*)</span>
+                    </button>
+                    <button onclick="selectAnswer(5, 'B', false)" class="option-btn-5 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-emerald-50 hover:border-emerald-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">➗</span> <span data-i18n="q5_optB">B) Using division (/)</span>
+                    </button>
+                    <button onclick="selectAnswer(5, 'C', true)" class="option-btn-5 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-emerald-50 hover:border-emerald-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">➕</span> <span data-i18n="q5_optC">C) Using concatenation (+)</span>
+                    </button>
+                    <button onclick="selectAnswer(5, 'D', false)" class="option-btn-5 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-emerald-50 hover:border-emerald-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">➖</span> <span data-i18n="q5_optD">D) Using subtraction (-)</span>
+                    </button>
+                </div>
+                <div id="feedback-5" class="mt-4 hidden p-3 rounded-xl font-bold text-sm"></div>
+                <div id="explanation-5" class="hidden mt-4 p-4 rounded-2xl bg-emerald-50 border-2 border-emerald-200 text-emerald-950 text-sm"></div>
+            </div>
+
+            <div class="text-center pt-6">
+                <button onclick="checkFinalResult()" class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-black text-xl px-10 py-4 rounded-2xl block-shadow hover:opacity-90 transition transform hover:scale-105" data-i18n="submit_btn">
+                    Submit Homework & Get Final Score! 🏆
+                </button>
+            </div>
+
+        </main>
+
+        <div id="result-modal" class="hidden mt-8 bg-white rounded-3xl p-8 block-shadow border-4 border-emerald-400 text-center animate-bounce-short">
+            <div class="text-7xl mb-4" id="result-emoji">🎉</div>
+            <h3 id="result-title" class="text-3xl font-black text-gray-800 mb-2">Awesome Champion!</h3>
+            <p id="result-desc" class="text-lg text-gray-600 mb-4"></p>
+            <div class="text-4xl font-black text-emerald-600" id="final-score-display"></div>
+        </div>
+
+    </div>
+
+    <script>
+        let currentLang = 'en';
+
+        const translations = {
+            en: {
+                badge: "Megminds Academy",
+                title: "Python Level 1 - Session 1 Homework 🚀",
+                subtitle: "Introduction to Python & Variables Adventure 💡",
+                warning: "💡 Note: Wrong answers will deduct points from your final score even if corrected later!",
+                
+                q1_title: "What is Python? 🐍",
+                q1_optA: "A) A hardware processor chip",
+                q1_optB: "B) A simple, popular, interpreted programming language",
+                q1_optC: "C) A web browser application",
+                q1_optD: "D) An external keyboard brand",
+
+                q2_title: "Which function is used to print messages to the screen in Python? 🖥️",
+                q2_optA: "A) send()",
+                q2_optB: "B) input()",
+                q2_optC: "C) print()",
+                q2_optD: "D) write()",
+
+                q3_title: "What are Variables in Python? 📦",
+                q3_optA: "A) Containers for storing data values",
+                q3_optB: "B) Mathematical errors in the code",
+                q3_optC: "C) Game controllers",
+                q3_optD: "D) Image design tools",
+
+                q4_title: "Which of the following is a correct rule for naming variables? 🏷️",
+                q4_optA: "A) Must start with a number",
+                q4_optB: "B) Must start with a letter (character)",
+                q4_optC: "C) Can use reserved keywords like if",
+                q4_optD: "D) Can include spaces inside the name",
+
+                q5_title: "How do we combine a variable with text in a print statement? ➕",
+                q5_optA: "A) Using multiplication (*)",
+                q5_optB: "B) Using division (/)",
+                q5_optC: "C) Using concatenation (+)",
+                q5_optD: "D) Using subtraction (-)",
+
+                submit_btn: "Submit Homework & Get Final Score! 🏆",
+                alert_msg: "Please answer all 5 questions before submitting your homework! 📝🚀",
+
+                exp1: "💡 Explanation: Python is a simple, popular, interpreted, high-level programming language that feels like reading English.",
+                exp2: "💡 Explanation: The print() function prints the specified message or value to the screen in Python.",
+                exp3: "💡 Explanation: Variables are essentially containers used for storing data values like numbers and text strings.",
+                exp4: "💡 Explanation: Variable names in Python must start with a letter (character) and cannot use reserved keywords or spaces.",
+                exp5: "💡 Explanation: We use the concatenation operator (+) to join text strings and variables together inside print functions."
+            },
+            ar: {
+                badge: "أكاديمية ميجميندز",
+                title: "واجب بايثون المستوى 1 - الجلسة الأولى 🚀",
+                subtitle: "مقدمة في لغة بايثون والمتغيرات البرمجية 💡",
+                warning: "💡 ملحوظة: الإجابات الخاطئة تخصم درجات من مجموعك النهائي حتى لو قمت بتصحيحها لاحقاً!",
+                
+                q1_title: "ما هي لغة بايثون (Python)؟ 🐍",
+                q1_optA: "أ) رقاقة معالج أجهزة الكمبيوتر",
+                q1_optB: "ب) لغة برمجة بسيطة ومحبوبة ومفسرة",
+                q1_optC: "ج) تطبيق متصفح إنترنت",
+                q1_optD: "د) ماركة لوحة مفاتيح خارجية",
+
+                q2_title: "ما هي الدالة المستخدمة لعرض أو طباعة الرسائل على الشاشة في بايثون؟ 🖥️",
+                q2_optA: "أ) send()",
+                q2_optB: "ب) input()",
+                q2_optC: "ج) print()",
+                q2_optD: "د) write()",
+
+                q3_title: "ما هي المتغيرات (Variables) في بايثون؟ 📦",
+                q3_optA: "أ) حاويات لتخزين قيم البيانات",
+                q3_optB: "ب) أخطاء رياضية في الكود",
+                q3_optC: "ج) وحدات تحكم الألعاب",
+                q3_optD: "د) أدوات تصميم الصور",
+
+                q4_title: "أي مما يلي يُعد قاعدة صحيحة لتسمية المتغيرات؟ 🏷️",
+                q4_optA: "أ) يجب أن يبدأ برقم",
+                q4_optB: "ب) يجب أن يبدأ بحرف (character)",
+                q4_optC: "ج) يمكن استخدام الكلمات المحجوزة مثل if",
+                q4_optD: "د) يمكن أن يحتوي على مسافات بداخله",
+
+                q5_title: "كيف نقوم بدمج متغير مع نص داخل دالة الطباعة؟ ➕",
+                q5_optA: "أ) باستخدام الضرب (*)",
+                q5_optB: "ب) باستخدام القسمة (/)",
+                q5_optC: "ج) باستخدام علامة الجمع (+) للربط",
+                q5_optD: "د) باستخدام الطرح (-)",
+
+                submit_btn: "إرسال الواجب والحصول على النتيجة النهائية! 🏆",
+                alert_msg: "من فضلك أجب عن جميع الأسئلة الـ 5 قبل إرسال الواجب! 📝🚀",
+
+                exp1: "💡 الشرح: بايثون هي لغة برمجة عالية المستوى بسيطة وسهلة الفهم وكأنك تقرأ اللغة الإنجليزية.",
+                exp2: "💡 الشرح: الدالة print() هي المسؤولة عن طباعة وإظهار النصوص والنتائج للمستخدم على الشاشة.",
+                exp3: "💡 الشرح: المتغيرات بمثابة صناديق أو حاويات نضع بداخلها القيم والبيانات لنستخدمها لاحقاً.",
+                exp4: "💡 الشرح: أسماء المتغيرات يجب أن تبدأ بحرف ولا تقبل المسافات أو الكلمات المحجوزة في لغة البرمجة.",
+                exp5: "💡 الشرح: نستخدم علامة الجمع (+) لربط ودمج النصوص مع المتغيرات البرمجية بجانب بعضها."
+            }
+        };
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'ar' : 'en';
+            const root = document.getElementById('html-root');
+            const langText = document.getElementById('lang-text');
+
+            if (currentLang === 'ar') {
+                root.setAttribute('dir', 'rtl');
+                root.setAttribute('lang', 'ar');
+                langText.innerHTML = 'English';
+            } else {
+                root.setAttribute('dir', 'ltr');
+                root.setAttribute('lang', 'en');
+                langText.innerHTML = 'العربية';
+            }
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.innerHTML = translations[currentLang][key];
+                }
+            });
+        }
+
+        const questionStates = {
+            1: { answered: false, correct: false, penalized: false },
+            2: { answered: false, correct: false, penalized: false },
+            3: { answered: false, correct: false, penalized: false },
+            4: { answered: false, correct: false, penalized: false },
+            5: { answered: false, correct: false, penalized: false }
+        };
+
+        function selectAnswer(questionNum, optionKey, isCorrect) {
+            const state = questionStates[questionNum];
+            const feedbackEl = document.getElementById(`feedback-${questionNum}`);
+            const buttons = document.querySelectorAll(`.option-btn-${questionNum}`);
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-emerald-100', 'border-emerald-600', 'text-emerald-950', 'bg-red-50', 'border-red-400');
+                btn.classList.add('bg-gray-50', 'border-gray-200', 'text-gray-700');
+            });
+
+            const clickedBtn = event.currentTarget;
+
+            if (isCorrect) {
+                clickedBtn.classList.remove('bg-gray-50', 'border-gray-200', 'text-gray-700');
+                clickedBtn.classList.add('bg-emerald-100', 'border-emerald-600', 'text-emerald-950');
+
+                feedbackEl.classList.remove('hidden');
+                if (!state.answered) {
+                    state.answered = true;
+                    state.correct = true;
+                    feedbackEl.className = "mt-4 p-3 rounded-2xl font-bold text-sm bg-green-100 text-green-900 border-2 border-green-300";
+                    feedbackEl.innerHTML = currentLang === 'ar' ? "🌟 تم تسجيل إجابتك!" : "🌟 Your answer has been recorded!";
+                } else if (!state.correct) {
+                    state.correct = true;
+                    feedbackEl.className = "mt-4 p-3 rounded-2xl font-bold text-sm bg-amber-100 text-amber-900 border-2 border-amber-300";
+                    feedbackEl.innerHTML = currentLang === 'ar' ? "⚠️ تم التعديل (تذكر: تم خصم درجة بسبب الخطأ الأول)." : "⚠️ Updated (Remember: a point was deducted for the initial mistake).";
+                }
+            } else {
+                clickedBtn.classList.remove('bg-gray-50', 'border-gray-200', 'text-gray-700');
+                clickedBtn.classList.add('bg-red-50', 'border-red-400', 'text-red-900');
+
+                feedbackEl.classList.remove('hidden');
+                feedbackEl.className = "mt-4 p-3 rounded-2xl font-bold text-sm bg-red-100 text-red-900 border-2 border-red-300";
+                feedbackEl.innerHTML = currentLang === 'ar' ? "❌ إجابة خاطئة! (ملاحظة: سيتم خصم نقطة من نتيجتك النهائية لهذا الخطأ)" : "❌ Wrong answer! (Note: A point will be deducted from your final score for this mistake)";
+
+                if (!state.penalized) {
+                    state.penalized = true;
+                    state.correct = false;
+                    state.answered = true;
+                }
+            }
+        }
+
+        function checkFinalResult() {
+            let attemptedCount = 0;
+            let calculatedScore = 5;
+
+            for (let q in questionStates) {
+                if (questionStates[q].answered) {
+                    attemptedCount++;
+                }
+                if (questionStates[q].penalized) {
+                    calculatedScore--;
+                }
+            }
+
+            if (calculatedScore < 0) calculatedScore = 0;
+
+            if (attemptedCount < 5) {
+                alert(translations[currentLang].alert_msg);
+                return;
+            }
+
+            // Reveal explanations for all questions after submit
+            for (let i = 1; i <= 5; i++) {
+                const expEl = document.getElementById(`explanation-${i}`);
+                expEl.classList.remove('hidden');
+                expEl.innerHTML = translations[currentLang][`exp${i}`];
+            }
+
+            const modal = document.getElementById('result-modal');
+            const scoreDisplay = document.getElementById('final-score-display');
+            const titleEl = document.getElementById('result-title');
+            const descEl = document.getElementById('result-desc');
+            const emojiEl = document.getElementById('result-emoji');
+
+            modal.classList.remove('hidden');
+            scoreDisplay.innerHTML = currentLang === 'ar' ? `نتيجتك النهائية: ${calculatedScore} / 5 ⭐` : `Your Final Score: ${calculatedScore} / 5 ⭐`;
+
+            if (calculatedScore === 5) {
+                emojiEl.innerHTML = "🏆👑";
+                titleEl.innerHTML = currentLang === 'ar' ? "عبقري بايثون!" : "Python Genius!";
+                descEl.innerHTML = currentLang === 'ar' ? "أداء مبهر ورائع! لقد أجبت على كل شيء من المحاولة الأولى ودون أي أخطاء!" : "Flawless performance! You got everything right on the first try without any penalties!";
+            } else if (calculatedScore >= 3) {
+                emojiEl.innerHTML = "👍🚀";
+                titleEl.innerHTML = currentLang === 'ar' ? "عمل رائع!" : "Great Job!";
+                descEl.innerHTML = currentLang === 'ar' ? "جهد طيب! راجع شرح الإجابات بالأعلى لضمان العلامة الكاملة في المرة القادمة." : "Good effort! Review the explanations above to secure full marks next time.";
+            } else {
+                emojiEl.innerHTML = "💪🌱";
+                titleEl.innerHTML = currentLang === 'ar' ? "واصل التدريب!" : "Keep Practicing!";
+                descEl.innerHTML = currentLang === 'ar' ? "لا تستسلم! الأخطاء تعلمنا الكثير. أعد قراءة الدرس وشروح الأسئلة وجرب مرة أخرى." : "Don't give up! Mistakes help us learn. Re-read the lesson and explanations and try again.";
+            }
+
+            modal.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
