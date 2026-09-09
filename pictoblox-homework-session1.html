@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megminds Academy - PictoBlox Session 1 Homework 🌟</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fredoka', 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #f0fdf4 0%, #dbeafe 100%);
+        }
+        .block-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+        @keyframes bounce-short {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-bounce-short {
+            animation: bounce-short 1s ease-in-out infinite;
+        }
+        .lang-ar { font-family: 'Cairo', sans-serif; }
+    </style>
+</head>
+<body class="min-h-screen py-10 px-4 sm:px-6 lg:px-8">
+
+    <div class="max-w-3xl mx-auto">
+        <header class="bg-white rounded-3xl p-6 mb-8 block-shadow border-4 border-amber-400 text-center relative overflow-hidden">
+            <!-- Language Switcher Button -->
+            <div class="absolute top-4 right-4 z-10">
+                <button onclick="toggleLanguage()" id="lang-btn" class="bg-indigo-600 text-white font-bold px-4 py-2 rounded-xl text-sm shadow hover:bg-indigo-700 transition flex items-center gap-2">
+                    🌐 <span id="lang-text">العربية</span>
+                </button>
+            </div>
+
+            <div class="absolute -left-6 -bottom-6 text-7xl opacity-20">🚀</div>
+            <span class="bg-indigo-100 text-indigo-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider" data-i18n="badge">Megminds Academy</span>
+            <h1 class="text-3xl sm:text-4xl font-black text-indigo-900 mt-2 mb-1" data-i18n="title">PictoBlox Level 1 - Session 1 Homework 🌟</h1>
+            <p class="text-gray-600 font-semibold text-lg" data-i18n="subtitle">Animal Racing & Blocks Adventure 🏁🐾</p>
+            <div class="mt-4 inline-flex items-center gap-2 bg-amber-100 text-amber-800 px-4 py-2 rounded-full font-bold text-sm">
+                <span data-i18n="warning">💡 Note: Wrong answers will deduct points from your final score even if corrected later!</span>
+            </div>
+        </header>
+
+        <main id="quiz-container" class="space-y-6">
+            
+            <!-- Question 1 -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 block-shadow border-2 border-indigo-100 transition-all duration-300 hover:border-indigo-300" data-question="1">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-indigo-600 text-white w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">1</span>
+                    <h2 class="text-xl font-bold text-gray-800" data-i18n="q1_title">Which block is used to start scripts when you click the Green Flag? 🟢🚩</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                    <button onclick="selectAnswer(1, 'A', true)" class="option-btn-1 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-indigo-50 hover:border-indigo-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">🏁</span> <span data-i18n="q1_optA">A) when ⚑ clicked (Events)</span>
+                    </button>
+                    <button onclick="selectAnswer(1, 'B', false)" class="option-btn-1 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-indigo-50 hover:border-indigo-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">🏃‍♂️</span> <span data-i18n="q1_optB">B) move 10 steps (Motion)</span>
+                    </button>
+                    <button onclick="selectAnswer(1, 'C', false)" class="option-btn-1 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-indigo-50 hover:border-indigo-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">💬</span> <span data-i18n="q1_optC">C) say Hello! for 2 secs (Looks)</span>
+                    </button>
+                    <button onclick="selectAnswer(1, 'D', false)" class="option-btn-1 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-indigo-50 hover:border-indigo-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">🔊</span> <span data-i18n="q1_optD">D) start sound Grunt (Sound)</span>
+                    </button>
+                </div>
+                <div id="feedback-1" class="mt-4 hidden p-3 rounded-xl font-bold text-sm"></div>
+                <!-- Explanation Box (Hidden until submit) -->
+                <div id="explanation-1" class="hidden mt-4 p-4 rounded-2xl bg-indigo-50 border-2 border-indigo-200 text-indigo-900 text-sm"></div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 block-shadow border-2 border-indigo-100 transition-all duration-300 hover:border-indigo-300" data-question="2">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-indigo-600 text-white w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">2</span>
+                    <h2 class="text-xl font-bold text-gray-800" data-i18n="q2_title">Which block sets the Sprite's exact X and Y coordinates instantly? 📍</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                    <button onclick="selectAnswer(2, 'A', false)" class="option-btn-2 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-indigo-50 hover:border-indigo-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">🔄</span> <span data-i18n="q2_optA">A) repeat 10 times (Control)</span>
+                    </button>
+                    <button onclick="selectAnswer(2, 'B', true)" class="option-btn-2 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-indigo-50 hover:border-indigo-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">📍</span> <span data-i18n="q2_optB">B) go to x: 10 y: 15 (Motion)</span>
+                    </button>
+                    <button onclick="selectAnswer(2, 'C', false)" class="option-btn-2 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-indigo-50 hover:border-indigo-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">⏱️</span> <span data-i18n="q2_optC">C) glide 1 secs to x: 15 y: 25</span>
+                    </button>
+                    <button onclick="selectAnswer(2, 'D', false)" class="option-btn-2 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-indigo-50 hover:border-indigo-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">🐾</span> <span data-i18n="q2_optD">D) next costume (Looks)</span>
+                    </button>
+                </div>
+                <div id="feedback-2" class="mt-4 hidden p-3 rounded-xl font-bold text-sm"></div>
+                <div id="explanation-2" class="hidden mt-4 p-4 rounded-2xl bg-indigo-50 border-2 border-indigo-200 text-indigo-900 text-sm"></div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 block-shadow border-2 border-indigo-100 transition-all duration-300 hover:border-indigo-300" data-question="3">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-indigo-600 text-white w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">3</span>
+                    <h2 class="text-xl font-bold text-gray-800" data-i18n="q3_title">What does the glide 1 secs to x: y: block do? 🏃‍♂️✨</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                    <button onclick="selectAnswer(3, 'A', false)" class="option-btn-3 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-indigo-50 hover:border-indigo-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">🔊</span> <span data-i18n="q3_optA">A) Plays a music sound</span>
+                    </button>
+                    <button onclick="selectAnswer(3, 'B', false)" class="option-btn-3 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-indigo-50 hover:border-indigo-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">🎨</span> <span data-i18n="q3_optB">B) Changes background color</span>
+                    </button>
+                    <button onclick="selectAnswer(3, 'C', true)" class="option-btn-3 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-indigo-50 hover:border-indigo-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">⛷️</span> <span data-i18n="q3_optC">C) Smoothly slides the Sprite to position over time</span>
+                    </button>
+                    <button onclick="selectAnswer(3, 'D', false)" class="option-btn-3 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-indigo-50 hover:border-indigo-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">❌</span> <span data-i18n="q3_optD">D) Deletes the Sprite from the Stage</span>
+                    </button>
+                </div>
+                <div id="feedback-3" class="mt-4 hidden p-3 rounded-xl font-bold text-sm"></div>
+                <div id="explanation-3" class="hidden mt-4 p-4 rounded-2xl bg-indigo-50 border-2 border-indigo-200 text-indigo-900 text-sm"></div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 block-shadow border-2 border-indigo-100 transition-all duration-300 hover:border-indigo-300" data-question="4">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-indigo-600 text-white w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">4</span>
+                    <h2 class="text-xl font-bold text-gray-800" data-i18n="q4_title">Where do we see our characters (like Tobi the Bear, Horse, Cat) in PictoBlox? 📺</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                    <button onclick="selectAnswer(4, 'A', false)" class="option-btn-4 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-indigo-50 hover:border-indigo-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">🗂️</span> <span data-i18n="q4_optA">A) In the Blocks Palette menu</span>
+                    </button>
+                    <button onclick="selectAnswer(4, 'B', true)" class="option-btn-4 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-indigo-50 hover:border-indigo-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">🎬</span> <span data-i18n="q4_optB">B) On the Stage area</span>
+                    </button>
+                    <button onclick="selectAnswer(4, 'C', false)" class="option-btn-4 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-indigo-50 hover:border-indigo-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">⚙️</span> <span data-i18n="q4_optC">C) In the Firmware Upload tab</span>
+                    </button>
+                    <button onclick="selectAnswer(4, 'D', false)" class="option-btn-4 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-indigo-50 hover:border-indigo-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">📝</span> <span data-i18n="q4_optD">D) In the File Save menu</span>
+                    </button>
+                </div>
+                <div id="feedback-4" class="mt-4 hidden p-3 rounded-xl font-bold text-sm"></div>
+                <div id="explanation-4" class="hidden mt-4 p-4 rounded-2xl bg-indigo-50 border-2 border-indigo-200 text-indigo-900 text-sm"></div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 block-shadow border-2 border-indigo-100 transition-all duration-300 hover:border-indigo-300" data-question="5">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-indigo-600 text-white w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">5</span>
+                    <h2 class="text-xl font-bold text-gray-800" data-i18n="q5_title">Which block gives a Sprite a speech bubble with text? 💬</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                    <button onclick="selectAnswer(5, 'A', false)" class="option-btn-5 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-indigo-50 hover:border-indigo-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">🎵</span> <span data-i18n="q5_optA">A) start sound Grunt</span>
+                    </button>
+                    <button onclick="selectAnswer(5, 'B', false)" class="option-btn-5 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-indigo-50 hover:border-indigo-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">🔁</span> <span data-i18n="q5_optB">B) repeat 10 times</span>
+                    </button>
+                    <button onclick="selectAnswer(5, 'C', true)" class="option-btn-5 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-indigo-50 hover:border-indigo-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">🗣️</span> <span data-i18n="q5_optC">C) say Hello! for 2 seconds (Looks)</span>
+                    </button>
+                    <button onclick="selectAnswer(5, 'D', false)" class="option-btn-5 text-left p-4 rounded-2xl border-2 border-gray-200 bg-gray-50 hover:bg-indigo-50 hover:border-indigo-400 font-bold text-gray-700 transition flex items-center gap-3">
+                        <span class="text-2xl">🚩</span> <span data-i18n="q5_optD">D) when flag clicked</span>
+                    </button>
+                </div>
+                <div id="feedback-5" class="mt-4 hidden p-3 rounded-xl font-bold text-sm"></div>
+                <div id="explanation-5" class="hidden mt-4 p-4 rounded-2xl bg-indigo-50 border-2 border-indigo-200 text-indigo-900 text-sm"></div>
+            </div>
+
+            <div class="text-center pt-6">
+                <button onclick="checkFinalResult()" class="bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-black text-xl px-10 py-4 rounded-2xl block-shadow hover:opacity-90 transition transform hover:scale-105" data-i18n="submit_btn">
+                    Submit Homework & Get Final Score! 🏆
+                </button>
+            </div>
+
+        </main>
+
+        <!-- Result Modal Box -->
+        <div id="result-modal" class="hidden mt-8 bg-white rounded-3xl p-8 block-shadow border-4 border-green-400 text-center animate-bounce-short">
+            <div class="text-7xl mb-4" id="result-emoji">🎉</div>
+            <h3 id="result-title" class="text-3xl font-black text-gray-800 mb-2">Awesome Champion!</h3>
+            <p id="result-desc" class="text-lg text-gray-600 mb-4"></p>
+            <div class="text-4xl font-black text-indigo-600" id="final-score-display"></div>
+        </div>
+
+    </div>
+
+    <script>
+        let currentLang = 'en';
+
+        const translations = {
+            en: {
+                badge: "Megminds Academy",
+                title: "PictoBlox Level 1 - Session 1 Homework 🌟",
+                subtitle: "Animal Racing & Blocks Adventure 🏁🐾",
+                warning: "💡 Note: Wrong answers will deduct points from your final score even if corrected later!",
+                
+                q1_title: "Which block is used to start scripts when you click the Green Flag? 🟢🚩",
+                q1_optA: "A) when ⚑ clicked (Events)",
+                q1_optB: "B) move 10 steps (Motion)",
+                q1_optC: "C) say Hello! for 2 secs (Looks)",
+                q1_optD: "D) start sound Grunt (Sound)",
+
+                q2_title: "Which block sets the Sprite's exact X and Y coordinates instantly? 📍",
+                q2_optA: "A) repeat 10 times (Control)",
+                q2_optB: "B) go to x: 10 y: 15 (Motion)",
+                q2_optC: "C) glide 1 secs to x: 15 y: 25",
+                q2_optD: "D) next costume (Looks)",
+
+                q3_title: "What does the glide 1 secs to x: y: block do? 🏃‍♂️✨",
+                q3_optA: "A) Plays a music sound",
+                q3_optB: "B) Changes background color",
+                q3_optC: "C) Smoothly slides the Sprite to position over time",
+                q3_optD: "D) Deletes the Sprite from the Stage",
+
+                q4_title: "Where do we see our characters (like Tobi the Bear, Horse, Cat) in PictoBlox? 📺",
+                q4_optA: "A) In the Blocks Palette menu",
+                q4_optB: "B) On the Stage area",
+                q4_optC: "C) In the Firmware Upload tab",
+                q4_optD: "D) In the File Save menu",
+
+                q5_title: "Which block gives a Sprite a speech bubble with text? 💬",
+                q5_optA: "A) start sound Grunt",
+                q5_optB: "B) repeat 10 times",
+                q5_optC: "C) say Hello! for 2 seconds (Looks)",
+                q5_optD: "D) when flag clicked",
+
+                submit_btn: "Submit Homework & Get Final Score! 🏆",
+                alert_msg: "Please answer all 5 questions before submitting your homework! 📝🚀",
+
+                exp1: "💡 Explanation: The 'when ⚑ clicked' block belongs to the Events category and starts running scripts whenever the green flag is pressed.",
+                exp2: "💡 Explanation: The 'go to x: y:' block in Motion instantly teleports the sprite to the specified X and Y coordinates.",
+                exp3: "💡 Explanation: The 'glide' block moves the sprite smoothly and gradually to a new location over a chosen duration in seconds.",
+                exp4: "💡 Explanation: The Stage is the main visual area where all characters (Sprites) and backgrounds appear and perform actions.",
+                exp5: "💡 Explanation: The 'say for 2 seconds' block in Looks creates a classic speech bubble above the character's head."
+            },
+            ar: {
+                badge: "أكاديمية ميجميندز",
+                title: "واجب بيكتوبلوكس المستوى 1 - الجلسة الأولى 🌟",
+                subtitle: "مغامرة سباق الحيوانات والبلوكات البرمجية 🏁🐾",
+                warning: "💡 ملحوظة: الإجابات الخاطئة تخصم درجات من مجموعك النهائي حتى لو قمت بتصحيحها لاحقاً!",
+                
+                q1_title: "أي بلوك يُستخدم لبدء الأكواد عند النقر على العلم الأخضر؟ 🟢🚩",
+                q1_optA: "أ) عند النقر على العلم ⚑ (الأحداث Events)",
+                q1_optB: "ب) تحرك 10 خطوات (الحركة Motion)",
+                q1_optC: "ج) قل مرحباً لمدة ثانتين (المظهر Looks)",
+                q1_optD: "د) تشغيل صوت (الصوت Sound)",
+
+                q2_title: "أي بلوك يضبط إحداثيات X و Y للكائن فوراً وبدقة؟ 📍",
+                q2_optA: "أ) تكرار 10 مرات (التحكم Control)",
+                q2_optB: "ب) اذهب إلى الموضع x: 10 y: 15 (الحركة)",
+                q2_optC: "ج) انزلق لمدة ثانية إلى x: 15 y: 25",
+                q2_optD: "د) المظهر التالي (Looks)",
+
+                q3_title: "ماذا يفعل بلوك الانزلاق glide 1 secs to x: y:؟ 🏃‍♂️✨",
+                q3_optA: "أ) يشغل مقطعاً موسيقياً",
+                q3_optB: "ب) يغير لون خلفية المنصة",
+                q3_optC: "ج) يحرك الكائن بسلاسة وانزلاق للموضع المحدد",
+                q3_optD: "د) يحذف الكائن من المنصة نهائياً",
+
+                q4_title: "أين تظهر شخصياتنا (مثل الدب توبي، الحصان، والقطة) في برنامج بيكتوبلوكس؟ 📺",
+                q4_optA: "أ) في قائمة لوحة البلوكات",
+                q4_optB: "ب) على منطقة المنصة (Stage area)",
+                q4_optC: "ج) في تبويب رفع البرامج الثابتة",
+                q4_optD: "د) في قائمة حفظ الملفات",
+
+                q5_title: "أي بلوك يمنح الكائن فقاعة كلام تحتوي على نص؟ 💬",
+                q5_optA: "أ) تشغيل صوت",
+                q5_optB: "ب) تكرار 10 مرات",
+                q5_optC: "ج) قل مرحباً لمدة ثانيتين (المظهر Looks)",
+                q5_optD: "د) عندما يُنقَر على العلم",
+
+                submit_btn: "إرسال الواجب والحصول على النتيجة النهائية! 🏆",
+                alert_msg: "من فضلك أجب عن جميع الأسئلة الـ 5 قبل إرسال الواجب! 📝🚀",
+
+                exp1: "💡 الشرح: بلوك 'عند النقر على العلم' ينتمي لفئة الأحداث (Events) وهو المسؤول عن تشغيل الأكواد فور الضغط على زر التشغيل الأخضر.",
+                exp2: "💡 الشرح: بلوك 'اذهب إلى x و y' يقوم بنقل الكائن فوراً وللحظتها إلى الإحداثيات المحددة على المنصة دون انزلاق تدريجي.",
+                exp3: "💡 الشرح: بلوك الانزلاق (glide) يجعل الكائن ينتقل من مكانه الحالي إلى الموضع الجديد ببطء وسلاسة خلال وقت محدد.",
+                exp4: "💡 الشرح: المنصة (Stage) هي الشاشة أو المساحة المرئية التي تظهر فيها الشخصيات (Sprites) وتتحرك أمام المستخدم.",
+                exp5: "💡 الشرح: بلوك 'قل مرحباً' الموجود في فئة المظهر (Looks) يعرض فقاعة كلام تحتوي على النص المكتوب فوق رأس الكائن."
+            }
+        };
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'ar' : 'en';
+            const root = document.getElementById('html-root');
+            const langText = document.getElementById('lang-text');
+
+            if (currentLang === 'ar') {
+                root.setAttribute('dir', 'rtl');
+                root.setAttribute('lang', 'ar');
+                langText.innerHTML = 'English';
+            } else {
+                root.setAttribute('dir', 'ltr');
+                root.setAttribute('lang', 'en');
+                langText.innerHTML = 'العربية';
+            }
+
+            // Update text contents
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.innerHTML = translations[currentLang][key];
+                }
+            });
+        }
+
+        const questionStates = {
+            1: { answered: false, correct: false, penalized: false },
+            2: { answered: false, correct: false, penalized: false },
+            3: { answered: false, correct: false, penalized: false },
+            4: { answered: false, correct: false, penalized: false },
+            5: { answered: false, correct: false, penalized: false }
+        };
+
+        function selectAnswer(questionNum, optionKey, isCorrect) {
+            const state = questionStates[questionNum];
+            const feedbackEl = document.getElementById(`feedback-${questionNum}`);
+            const buttons = document.querySelectorAll(`.option-btn-${questionNum}`);
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-indigo-100', 'border-indigo-600', 'text-indigo-900', 'bg-red-50', 'border-red-400');
+                btn.classList.add('bg-gray-50', 'border-gray-200', 'text-gray-700');
+            });
+
+            const clickedBtn = event.currentTarget;
+
+            if (isCorrect) {
+                clickedBtn.classList.remove('bg-gray-50', 'border-gray-200', 'text-gray-700');
+                clickedBtn.classList.add('bg-indigo-100', 'border-indigo-600', 'text-indigo-900');
+
+                feedbackEl.classList.remove('hidden');
+                if (!state.answered) {
+                    state.answered = true;
+                    state.correct = true;
+                    feedbackEl.className = "mt-4 p-3 rounded-2xl font-bold text-sm bg-green-100 text-green-800 border-2 border-green-300";
+                    feedbackEl.innerHTML = currentLang === 'ar' ? "🌟 إجابة صحيحة من المحاولة الأولى! ممتاز يا بطل!" : "🌟 Correct from the first try! Excellent job, champion!";
+                } else if (!state.correct) {
+                    state.correct = true;
+                    feedbackEl.className = "mt-4 p-3 rounded-2xl font-bold text-sm bg-amber-100 text-amber-800 border-2 border-amber-300";
+                    feedbackEl.innerHTML = currentLang === 'ar' ? "⚠️ لقد قمت بتصحيحها، ولكن تذكر: تم خصم درجة بسبب خطأك الأول!" : "⚠️ You corrected it, but remember: a point was deducted for your initial mistake!";
+                }
+            } else {
+                clickedBtn.classList.remove('bg-gray-50', 'border-gray-200', 'text-gray-700');
+                clickedBtn.classList.add('bg-red-50', 'border-red-400', 'text-red-900');
+
+                feedbackEl.classList.remove('hidden');
+                feedbackEl.className = "mt-4 p-3 rounded-2xl font-bold text-sm bg-red-100 text-red-800 border-2 border-red-300";
+                feedbackEl.innerHTML = currentLang === 'ar' ? "❌ إجابة خاطئة! حاول مرة أخرى. (ملاحظة: سيتم خصم نقطة من نتيجتك النهائية بسبب هذا الخطأ)" : "❌ Wrong answer! Try again. (Note: A point will be deducted from your final score for this mistake!)";
+
+                if (!state.penalized) {
+                    state.penalized = true;
+                    state.correct = false;
+                    state.answered = true;
+                }
+            }
+        }
+
+        function checkFinalResult() {
+            let attemptedCount = 0;
+            let calculatedScore = 5;
+
+            for (let q in questionStates) {
+                if (questionStates[q].answered) {
+                    attemptedCount++;
+                }
+                if (questionStates[q].penalized) {
+                    calculatedScore--;
+                }
+            }
+
+            if (calculatedScore < 0) calculatedScore = 0;
+
+            if (attemptedCount < 5) {
+                alert(translations[currentLang].alert_msg);
+                return;
+            }
+
+            // Reveal explanations for all questions after submit
+            for (let i = 1; i <= 5; i++) {
+                const expEl = document.getElementById(`explanation-${i}`);
+                expEl.classList.remove('hidden');
+                expEl.innerHTML = translations[currentLang][`exp${i}`];
+            }
+
+            const modal = document.getElementById('result-modal');
+            const scoreDisplay = document.getElementById('final-score-display');
+            const titleEl = document.getElementById('result-title');
+            const descEl = document.getElementById('result-desc');
+            const emojiEl = document.getElementById('result-emoji');
+
+            modal.classList.remove('hidden');
+            scoreDisplay.innerHTML = currentLang === 'ar' ? `نتيجتك النهائية: ${calculatedScore} / 5 ⭐` : `Your Final Score: ${calculatedScore} / 5 ⭐`;
+
+            if (calculatedScore === 5) {
+                emojiEl.innerHTML = "🏆👑";
+                titleEl.innerHTML = currentLang === 'ar' ? "عبقري البرمجة!" : "Coding Genius!";
+                descEl.innerHTML = currentLang === 'ar' ? "أداء مبهر ورائع! لقد أجبت على كل شيء من المحاولة الأولى ودون أي أخطاء!" : "Flawless performance! You got everything right on the first try without any penalties!";
+            } else if (calculatedScore >= 3) {
+                emojiEl.innerHTML = "👍🚀";
+                titleEl.innerHTML = currentLang === 'ar' ? "عمل رائع!" : "Great Job!";
+                descEl.innerHTML = currentLang === 'ar' ? "جهد طيب! راجع شرح الإجابات بالأعلى لضمان العلامة الكاملة في المرة القادمة." : "Good effort! Review the explanations above to secure full marks next time.";
+            } else {
+                emojiEl.innerHTML = "💪🌱";
+                titleEl.innerHTML = currentLang === 'ar' ? "واصل التدريب!" : "Keep Practicing!";
+                descEl.innerHTML = currentLang === 'ar' ? "لا تستسلم! الأخطاء تعلمنا الكثير. أعد قراءة الدرس وشروح الأسئلة وجرب مرة أخرى." : "Don't give up! Mistakes help us learn. Re-read the lesson and explanations and try again.";
+            }
+
+            modal.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
