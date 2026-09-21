@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كتيب الروبوتكس الشامل والداعم للتعلّم الذاتي - Megamind Academy</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cairo & Fredoka -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .font-fredoka { font-family: 'Fredoka', sans-serif; }
+        .slide-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .slide-card.hidden-slide {
+            display: none;
+            opacity: 0;
+            transform: scale(0.97);
+        }
+        .slide-card.active-slide {
+            display: block;
+            opacity: 1;
+            transform: scale(1);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #ea580c;
+        }
+        .badge-glow {
+            box-shadow: 0 0 15px rgba(234, 88, 12, 0.35);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased selection:bg-orange-500 selection:text-white">
+
+    <!-- Top Header -->
+    <header class="bg-slate-900/90 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <a href="./index.html" class="w-10 h-10 rounded-xl bg-orange-600/20 text-orange-400 hover:bg-orange-600 hover:text-white flex items-center justify-center font-bold text-lg border border-orange-500/30 transition shadow-inner" title="العودة للوحة التحكم">
+                    ➔
+                </a>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <h1 class="text-lg md:text-xl font-black text-white tracking-tight">Megamind Academy</h1>
+                        <span class="bg-orange-500/20 text-orange-300 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full border border-orange-400/30">Robotics Self-Learning Book</span>
+                    </div>
+                    <p class="text-xs text-slate-400 font-medium mt-0.5">تصور وتصميم كتيب الروبوتكس الشامل والداعم للتعلّم الذاتي (16 صفحة تفاعلية)</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3 text-xs font-bold">
+                <a href="./index.html" class="px-3.5 py-2 rounded-xl bg-slate-800 text-slate-200 hover:bg-slate-700 border border-slate-700 transition flex items-center gap-1.5">
+                    📌 لوحة التحكم الرئيسية
+                </a>
+                <button onclick="window.print()" class="px-3.5 py-2 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-extrabold transition shadow-lg shadow-orange-600/20 flex items-center gap-1.5">
+                    🖨️ طباعة / تصدير PDF
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full space-y-8">
+
+        <!-- Executive Summary Banner -->
+        <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-orange-950 p-6 md:p-8 rounded-3xl border border-orange-500/30 shadow-2xl space-y-4">
+            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+                <div class="space-y-2 max-w-3xl">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 text-orange-400 text-xs font-bold border border-orange-400/20">
+                        📘 وثيقة التصميم التعليمي للكتيب
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-black text-white">دليل الروبوتكس للتعلّم الذاتي الشامل (Robotics Master Book)</h2>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        تمت دراسة كافة محاضرات ومكونات كورس الروبوتكس بالأكاديمية (Senior Level) وتحويلها إلى <strong>كتيب تعليمي مصور ومستقل 100%</strong> يُمكن الطالب من فهم وتطبيق الدوائر الإلكترونية، الحساسات، الأردوينو والمشاريع دون الحاجة المستمرة للمهندس.
+                    </p>
+                </div>
+
+                <!-- Cover Image Preview Box -->
+                <div class="shrink-0 bg-slate-950/80 p-3 rounded-2xl border border-orange-500/40 shadow-xl max-w-[200px] text-center space-y-2">
+                    <img src="./cover.png" alt="غلاف الكتيب الرسمي" class="w-full h-auto rounded-xl shadow-md border border-slate-800 object-cover">
+                    <span class="text-[11px] font-bold text-orange-300 block">📘 نموذج غلاف الكتيب الأصلي</span>
+                </div>
+            </div>
+
+            <!-- Architectural Division Pills -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+                <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800 text-center space-y-1">
+                    <span class="text-lg">💡</span>
+                    <strong class="text-xs font-bold text-white block">1. المقدمة والأساسيات</strong>
+                    <p class="text-[11px] text-slate-400">مفهوم الروبوت والكهرباء</p>
+                </div>
+                <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800 text-center space-y-1">
+                    <span class="text-lg">🔌</span>
+                    <strong class="text-xs font-bold text-white block">2. دليل التولز والسنسورز</strong>
+                    <p class="text-[11px] text-slate-400">صور وشرح جميع الأجزاء</p>
+                </div>
+                <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800 text-center space-y-1">
+                    <span class="text-lg">🎯</span>
+                    <strong class="text-xs font-bold text-white block">3. المسارات والمستويات</strong>
+                    <p class="text-[11px] text-slate-400">التدرج من Level 1 إلى 3</p>
+                </div>
+                <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800 text-center space-y-1">
+                    <span class="text-lg">🤖</span>
+                    <strong class="text-xs font-bold text-white block">4. المشاريع والتجميع</strong>
+                    <p class="text-[11px] text-slate-400">خطوات بناء وتكويد الروبوت</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- INTERACTIVE BOOK READER SECTION (16 SLIDES) -->
+        <section class="bg-slate-900 rounded-3xl border border-slate-800 p-6 md:p-8 shadow-2xl space-y-6">
+            
+            <!-- Book Reader Top Toolbar -->
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-slate-800 pb-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-orange-600 text-white flex items-center justify-center font-bold text-lg shadow-lg">
+                        📖
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-white text-base">المستعرض التفاعلي لصفحات الكتيب (Interactive Book Reader)</h3>
+                        <p class="text-xs text-slate-400">استعرض 16 صفحة تفاعلية تشرح التصور النهائي الكامل لمحتوى وسلايدات الكتيب</p>
+                    </div>
+                </div>
+
+                <!-- Page Progress Indicator & Controls -->
+                <div class="flex items-center gap-3">
+                    <button onclick="prevSlide()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-orange-600 text-white font-bold transition flex items-center justify-center disabled:opacity-40" id="btn-prev">
+                        ◀
+                    </button>
+                    <span class="text-xs font-bold bg-slate-950 px-3 py-1.5 rounded-xl border border-slate-700 text-orange-400 font-mono" id="slide-indicator">
+                        الصفحة 1 من 16
+                    </span>
+                    <button onclick="nextSlide()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-orange-600 text-white font-bold transition flex items-center justify-center disabled:opacity-40" id="btn-next">
+                        ▶
+                    </button>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="w-full bg-slate-950 rounded-full h-2 overflow-hidden border border-slate-800">
+                <div id="slide-progress" class="bg-gradient-to-r from-amber-500 to-orange-600 h-2 rounded-full transition-all duration-300" style="width: 6.25%"></div>
+            </div>
+
+            <!-- SLIDES DISPLAY AREA -->
+            <div class="min-h-[460px] bg-slate-950 rounded-2xl border border-slate-800 p-6 md:p-8 flex flex-col justify-between shadow-inner relative overflow-hidden">
+
+                <!-- SLIDE 1: COVER -->
+                <div class="slide-card active-slide space-y-6" id="slide-1">
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                        <div class="md:col-span-5 text-center">
+                            <div class="p-3 bg-slate-900 rounded-2xl border-2 border-orange-500/50 shadow-2xl inline-block max-w-[260px]">
+                                <img src="./cover.png" alt="غلاف الكتيب" class="w-full h-auto rounded-xl shadow-lg">
+                            </div>
+                        </div>
+                        <div class="md:col-span-7 space-y-4 text-right">
+                            <span class="px-3 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-bold border border-orange-500/30">الصفحة 1: غلاف الكتيب الرسمي</span>
+                            <h2 class="text-2xl md:text-3xl font-black text-white leading-tight">كتيب الروبوتكس الشامل والداعم للتعلّم الذاتي</h2>
+                            <p class="text-xs text-slate-300 leading-relaxed bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+                                هذا الكتيب مُصمم خصيصاً لطلاب **Megamind Academy** بالاستعانة بتقنيات الذكاء الاصطناعي والتصميم الجرافيكي، ليرافق الطفل خطوة بخطوة في رحلته من الصفر وحتى إنجاز روبوت تفادي العوائق وتتبع الخط المتقدم.
+                            </p>
+                            <div class="grid grid-cols-2 gap-3 text-xs font-bold">
+                                <div class="p-3 bg-slate-900 rounded-xl border border-slate-800">📌 إعداد: فريق الإدارة التعليمية</div>
+                                <div class="p-3 bg-slate-900 rounded-xl border border-slate-800">🎯 الفئة العمرية: 10 - 16 سنة</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 2: WELCOME & MINDSET -->
+                <div class="slide-card hidden-slide space-y-6" id="slide-2">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <span class="px-3 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-bold">الصفحة 2: كلمة الترحيب وعقلية التعلّم الذاتي</span>
+                        <span class="text-xs text-slate-500 font-bold">الجزء الأول: المقدمة والأساسيات</span>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold text-white flex items-center gap-2"><span>🚀</span> مرحباً بك في عالم مهندسي المستقبل!</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed bg-slate-900 p-4 rounded-xl border border-slate-800">
+                            عزيزي المهندس الصغير، الروبوت ليس سحراً! الروبوت هو آلة آمنة تفكر وتنفذ ما تطلبه منها. هدف هذا الكتيب هو أن تكتشف بنفسك كيف تعمل الحساسات، وكيف تبني الدوائر الإلكترونية، وكيف تكتب كود الأردوينو بثقة وبمفردك.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-semibold">
+                            <div class="p-4 bg-emerald-950/40 border border-emerald-800/50 rounded-xl text-emerald-200">
+                                <strong class="block text-emerald-400 mb-1 font-bold text-sm">🔍 1. استكشف بنفسك</strong>
+                                اقرأ خطوة بخطوة وانظر للصور التوضيحية قبل بدء التوصيل.
+                            </div>
+                            <div class="p-4 bg-amber-950/40 border border-amber-800/50 rounded-xl text-amber-200">
+                                <strong class="block text-amber-400 mb-1 font-bold text-sm">💡 2. لا تخف من الأخطاء</strong>
+                                التجربة والخطأ هما سر نجاح أي مخترع وروبوتي.
+                            </div>
+                            <div class="p-4 bg-indigo-950/40 border border-indigo-800/50 rounded-xl text-indigo-200">
+                                <strong class="block text-indigo-400 mb-1 font-bold text-sm">🛠️ 3. الأمان أولاً</strong>
+                                تأكد من إيقاف الطاقة قبل توصيل أو فك أي سلك.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 3: TABLE OF CONTENTS -->
+                <div class="slide-card hidden-slide space-y-6" id="slide-3">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <span class="px-3 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-bold">الصفحة 3: جدول المحتويات والمسار التعليمي</span>
+                        <span class="text-xs text-slate-500 font-bold">خريطة الكتاب</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-medium">
+                        <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 space-y-2">
+                            <span class="text-orange-400 font-bold block">📘 الفصل الأول: الأساسيات والكتالوج</span>
+                            <ul class="space-y-1.5 text-slate-300">
+                                <li>• ص 4: ما هو الروبوتكس وكيف تفكر الروبوتات؟</li>
+                                <li>• ص 5-8: دليل التولز والسنسورز والأجزاء الإلكترونية.</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 space-y-2">
+                            <span class="text-orange-400 font-bold block">🎓 الفصل الثاني: المستويات والدروس</span>
+                            <ul class="space-y-1.5 text-slate-300">
+                                <li>• ص 9: Level 1 - الإلكترونيات وقانون أوم.</li>
+                                <li>• ص 10: Level 2 - قراءة وتوصيل الحساسات.</li>
+                                <li>• ص 11: Level 3 - برمجة ومتحكمات الأردوينو.</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 space-y-2">
+                            <span class="text-orange-400 font-bold block">🤖 الفصل الثالث: المشاريع العملية والتجميع</span>
+                            <ul class="space-y-1.5 text-slate-300">
+                                <li>• ص 12: مشروع أنظمة الإنذار الذكية.</li>
+                                <li>• ص 13: مشروع قياس المسافات وشاشة LCD.</li>
+                                <li>• ص 14: مشروع الروبوت الذكي النهائي.</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 space-y-2">
+                            <span class="text-orange-400 font-bold block">🛠️ الفصل الرابع: الصيانة والتخرج</span>
+                            <ul class="space-y-1.5 text-slate-300">
+                                <li>• ص 15: دليل كشف واستكشاف الأعطال (Troubleshooting).</li>
+                                <li>• ص 16: قائمة التقييم الذاتي وشهادة الإنجاز.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 4: WHAT IS ROBOTICS -->
+                <div class="slide-card hidden-slide space-y-6" id="slide-4">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <span class="px-3 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-bold">الصفحة 4: ما هو الروبوتكس وكيف تفكر الروبوتات؟</span>
+                        <span class="text-xs text-slate-500 font-bold">أساسيات الروبوتكس</span>
+                    </div>
+                    <div class="space-y-4 text-xs leading-relaxed">
+                        <p class="text-slate-300 bg-slate-900 p-3.5 rounded-xl border border-slate-800">
+                            الروبوت هو نظام يجمع بين **الميكانيكا (الهيكل)، الإلكترونيات (العصب)، والبرمجة (العقل)**. يعمل أي روبوت في العالم بناءً على الدورة الثلاثية التالية:
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-center">
+                            <div class="p-4 bg-blue-950/40 border border-blue-800 rounded-xl space-y-1">
+                                <span class="text-2xl">📡</span>
+                                <strong class="text-blue-300 block font-bold">1. المدخلات (Inputs)</strong>
+                                <p class="text-[11px] text-slate-400">الحساسات تجمع البيانات من البيئة (ضوء، مسافة، حرارة).</p>
+                            </div>
+                            <div class="p-4 bg-purple-950/40 border border-purple-800 rounded-xl space-y-1">
+                                <span class="text-2xl">🧠</span>
+                                <strong class="text-purple-300 block font-bold">2. المعالجة (Processing)</strong>
+                                <p class="text-[11px] text-slate-400">الأردوينو يحلل البيانات ويتخذ القرار بناءً على كودك.</p>
+                            </div>
+                            <div class="p-4 bg-emerald-950/40 border border-emerald-800 rounded-xl space-y-1">
+                                <span class="text-2xl">⚙️</span>
+                                <strong class="text-emerald-300 block font-bold">3. المخرجات (Outputs)</strong>
+                                <p class="text-[11px] text-slate-400">المحركات، الإضاءة، وصوت البيزر ينفذون الحركة والنتيجة.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 5: HARDWARE CATALOG 1 -->
+                <div class="slide-card hidden-slide space-y-6" id="slide-5">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <span class="px-3 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-bold">الصفحة 5: دليل المكونات (1) - الأردوينو واللوحة ولوحة التجارب</span>
+                        <span class="text-xs text-slate-500 font-bold">كتالوج الأدوات</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-10 h-10 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-lg">🧠</div>
+                            <h4 class="font-bold text-white text-sm">Arduino Uno Board</h4>
+                            <p class="text-slate-400 text-[11px]">العقل المباشر للروبوت، يحتوي على 14 منفذ رقمي (Digital) و6 منافذ تماثلية (Analog).</p>
+                            <span class="text-[10px] font-bold text-indigo-300 bg-indigo-950 px-2 py-0.5 rounded block">جهد التشغيل: 5V DC</span>
+                        </div>
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-10 h-10 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-lg">🍞</div>
+                            <h4 class="font-bold text-white text-sm">Breadboard (لوحة التجارب)</h4>
+                            <p class="text-slate-400 text-[11px]">تُستخدم لتوصيل الدوائر الإلكترونية واختبارها بسهولة دون الحاجة للحام.</p>
+                            <span class="text-[10px] font-bold text-amber-300 bg-amber-950 px-2 py-0.5 rounded block">خطوط الطاقة والتعامد</span>
+                        </div>
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg">🏃</div>
+                            <h4 class="font-bold text-white text-sm">PIR Motion Sensor</h4>
+                            <p class="text-slate-400 text-[11px]">حساس حركة يستخدم الأسطح بالأشعة تحت الحمراء لكشف وجود أي جسم متحرك.</p>
+                            <span class="text-[10px] font-bold text-emerald-300 bg-emerald-950 px-2 py-0.5 rounded block">مدى الكشف: حتى 7 أمتار</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 6: HARDWARE CATALOG 2 -->
+                <div class="slide-card hidden-slide space-y-6" id="slide-6">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <span class="px-3 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-bold">الصفحة 6: دليل المكونات (2) - المحركات والمشغلات</span>
+                        <span class="text-xs text-slate-500 font-bold">كتالوج الأدوات</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-10 h-10 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-lg">⚙️</div>
+                            <h4 class="font-bold text-white text-sm">DC Geared Motors</h4>
+                            <p class="text-slate-400 text-[11px]">محركات التيار المستمر المزودة بصندوق تروس لمنح الروبوت العزم والحركة السلسة.</p>
+                            <span class="text-[10px] font-bold text-amber-300 bg-amber-950 px-2 py-0.5 rounded block">السرعة والعزم مع التروس</span>
+                        </div>
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-10 h-10 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-lg">🦾</div>
+                            <h4 class="font-bold text-white text-sm">Servo Motor (SG90)</h4>
+                            <p class="text-slate-400 text-[11px]">محرك دقيق يدور بزوايا محدودة (0 إلى 180 درجة) لتوجيه الحساسات والأذرع.</p>
+                            <span class="text-[10px] font-bold text-blue-300 bg-blue-950 px-2 py-0.5 rounded block">تحكم بالدرجات والزوايا</span>
+                        </div>
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-10 h-10 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-lg">🔌</div>
+                            <h4 class="font-bold text-white text-sm">L298N Motor Driver Module</h4>
+                            <p class="text-slate-400 text-[11px]">دائرة قيادة المحركات للتحكم في اتجاه وسرعة محركين DC باستغلال إشارات الأردوينو.</p>
+                            <span class="text-[10px] font-bold text-purple-300 bg-purple-950 px-2 py-0.5 rounded block">Dual H-Bridge Driver</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 7: HARDWARE CATALOG 3 -->
+                <div class="slide-card hidden-slide space-y-6" id="slide-7">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <span class="px-3 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-bold">الصفحة 7: دليل المكونات (3) - مستشعرات المسافة واللهب والضوء</span>
+                        <span class="text-xs text-slate-500 font-bold">كتالوج الأدوات</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-10 h-10 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-lg">📡</div>
+                            <h4 class="font-bold text-white text-sm">HC-SR04 Ultrasonic Sensor</h4>
+                            <p class="text-slate-400 text-[11px]">حساس الموجات فوق الصوتية يرسل واستقبل الصوت لقياس مسافة العوائق بدقة بالموجات.</p>
+                            <span class="text-[10px] font-bold text-blue-300 bg-blue-950 px-2 py-0.5 rounded block">دقة القياس: 2cm - 400cm</span>
+                        </div>
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-10 h-10 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center font-bold text-lg">🔥</div>
+                            <h4 class="font-bold text-white text-sm">Flame Sensor Module</h4>
+                            <p class="text-slate-400 text-[11px]">حساس لهب يكشف وجود النيران والأشعة تحت الحمراء الصادرة من النيران المباشرة.</p>
+                            <span class="text-[10px] font-bold text-red-300 bg-red-950 px-2 py-0.5 rounded block">طول الموجة: 760nm - 1100nm</span>
+                        </div>
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-10 h-10 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-lg">☀️</div>
+                            <h4 class="font-bold text-white text-sm">LDR Photoresistor</h4>
+                            <p class="text-slate-400 text-[11px]">مقاومة ضوئية تتغير قيمتها بحسب شدة الإضاءة المحيطة بها للتحكم بالإنارة الآلية.</p>
+                            <span class="text-[10px] font-bold text-amber-300 bg-amber-950 px-2 py-0.5 rounded block">قراءة تماثلية (Analog Read)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 8: HARDWARE CATALOG 4 -->
+                <div class="slide-card hidden-slide space-y-6" id="slide-8">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <span class="px-3 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-bold">الصفحة 8: دليل المكونات (4) - الشاشات والتنبيهات الصوتية</span>
+                        <span class="text-xs text-slate-500 font-bold">كتالوج الأدوات</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg">📺</div>
+                            <h4 class="font-bold text-white text-sm">LCD Display 16x2</h4>
+                            <p class="text-slate-400 text-[11px]">شاشة نصية تعرض سطراً بكل سطر 16 حرفاً لإظهار قراءات الحساسات والرسائل للطلاب.</p>
+                            <span class="text-[10px] font-bold text-emerald-300 bg-emerald-950 px-2 py-0.5 rounded block">I2C Interfacing Compatible</span>
+                        </div>
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-10 h-10 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-lg">🔔</div>
+                            <h4 class="font-bold text-white text-sm">Piezo Buzzer & LEDs</h4>
+                            <p class="text-slate-400 text-[11px]">عناصر الإنذار والتفاعل: جرس بيزر لإطلاق النغمات والإنذارات، وإضاءات LED ملونة.</p>
+                            <span class="text-[10px] font-bold text-purple-300 bg-purple-950 px-2 py-0.5 rounded block">Tone Melody Function</span>
+                        </div>
+                        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2">
+                            <div class="w-10 h-10 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-lg">🔘</div>
+                            <h4 class="font-bold text-white text-sm">Push Buttons & Keypad</h4>
+                            <p class="text-slate-400 text-[11px]">مفاتيح الضغط ومصفوفات المفاتيح لإدخال الأوامر والتحكم في إعدادات الروبوت.</p>
+                            <span class="text-[10px] font-bold text-blue-300 bg-blue-950 px-2 py-0.5 rounded block">Digital Pull-Up Inputs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 9: LEVEL 1 -->
+                <div class="slide-card hidden-slide space-y-6" id="slide-9">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <span class="px-3 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-bold">الصفحة 9: Level 1 - أساسيات الدوائر الإلكترونية وقانون أوم</span>
+                        <span class="text-xs text-slate-500 font-bold">الجزء الثاني: المستويات التعليمية</span>
+                    </div>
+                    <div class="space-y-4 text-xs leading-relaxed">
+                        <h3 class="text-lg font-bold text-white">⚡ ما ستتعلمه في المستوى الأول:</h3>
+                        <p class="text-slate-300 bg-slate-900 p-3.5 rounded-xl border border-slate-800">
+                            فهم الجهد الكهربي (Voltage)، التيار (Current)، والمقاومة (Resistance)، وتطبيق قانون أوم $V = I \times R$ لتحديد قيمة المقاومات المناسبة لحماية الـ LEDs والدوائر.
+                        </p>
+                        <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 space-y-2">
+                            <span class="text-orange-400 font-bold block">💡 تمرين عملي في الصفحة:</span>
+                            <p class="text-slate-300 text-[11px]">احسب المقاومة المطلوبة لإنارة LED أحمر يعمل بجهد 2V وتيار 20mA عند توصيله بمصدر 5V:</p>
+                            <div class="p-2.5 bg-slate-950 rounded-lg border border-slate-800 font-mono text-emerald-400 text-[11px]">
+                                R = (5V - 2V) / 0.02A = 150 Ohm
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 10: LEVEL 2 -->
+                <div class="slide-card hidden-slide space-y-6" id="slide-10">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <span class="px-3 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-bold">الصفحة 10: Level 2 - قراءة وفهم بيانات الحساسات</span>
+                        <span class="text-xs text-slate-500 font-bold">الجزء الثاني: المستويات التعليمية</span>
+                    </div>
+                    <div class="space-y-4 text-xs leading-relaxed">
+                        <h3 class="text-lg font-bold text-white">📡 التوصيل الذكي وقواعد الحساسات:</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 space-y-2">
+                                <span class="text-blue-400 font-bold block">1. التوصيل الرقمي (Digital Read)</span>
+                                <p class="text-slate-300">يُعطي حالتين فقط (HIGH / LOW) مثل مستشعر الحركة PIR أو مفتاح الضغط.</p>
+                            </div>
+                            <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 space-y-2">
+                                <span class="text-amber-400 font-bold block">2. التوصيل التماثلي (Analog Read)</span>
+                                <p class="text-slate-300">يُعطي مدى متدرج من القيم (0 إلى 1023) مثل مستشعر الضوء LDR أو حساس الحرارة.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 11: LEVEL 3 -->
+                <div class="slide-card hidden-slide space-y-6" id="slide-11">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <span class="px-3 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-bold">الصفحة 11: Level 3 - برمجة ومتحكمات الأردوينو</span>
+                        <span class="text-xs text-slate-500 font-bold">الجزء الثاني: المستويات التعليمية</span>
+                    </div>
+                    <div class="space-y-4 text-xs leading-relaxed">
+                        <h3 class="text-lg font-bold text-white">💻 هيكل كود الأردوينو الأساسي:</h3>
+                        <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 font-mono text-xs text-emerald-400 space-y-2">
+                            <div><span class="text-purple-400">void</span> <span class="text-blue-400">setup</span>() {</div>
+                            <div class="pl-4 text-slate-400">// تُنفذ مرة واحدة عند التغذية: ضبط اتجاه المنافذ pinMode</div>
+                            <div class="pl-4"><span class="text-yellow-400">pinMode</span>(13, <span class="text-orange-400">OUTPUT</span>);</div>
+                            <div>}</div>
+                            <br>
+                            <div><span class="text-purple-400">void</span> <span class="text-blue-400">loop</span>() {</div>
+                            <div class="pl-4 text-slate-400">// تُكرر بشكل مستمر: الأوامر البرمجية الحية</div>
+                            <div class="pl-4"><span class="text-yellow-400">digitalWrite</span>(13, <span class="text-orange-400">HIGH</span>);</div>
+                            <div class="pl-4"><span class="text-yellow-400">delay</span>(1000);</div>
+                            <div>}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 12: PROJECT 1 -->
+                <div class="slide-card hidden-slide space-y-6" id="slide-12">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <span class="px-3 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-bold">الصفحة 12: مشروع عملي (1) - نظام إنذار الحريق والحركة الذكي</span>
+                        <span class="text-xs text-slate-500 font-bold">الجزء الثالث: المشاريع التطبيقية</span>
+                    </div>
+                    <div class="space-y-4 text-xs leading-relaxed">
+                        <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 space-y-2">
+                            <h4 class="font-bold text-white text-sm">🎯 الهدف من المشروع:</h4>
+                            <p class="text-slate-300">بناء نظام أمان متكامل يستشعر حركات الدخلاء بالـ PIR أو وجود نيران بحساس الـ Flame ويطلق صفارة إنذار بالـ Buzzer وإضاءة حمراء فوراً.</p>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[11px]">
+                            <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 text-slate-300">
+                                <strong class="text-orange-400 block mb-1">🔌 مخطط التوصيل:</strong>
+                                PIR Pin Out ➔ Arduino D2 | Flame Out ➔ D3 | Buzzer Pin ➔ D8
+                            </div>
+                            <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 text-slate-300">
+                                <strong class="text-emerald-400 block mb-1">💡 فكرة الكود:</strong>
+                                إذا قرأ D2 أو D3 قيمة HIGH ➔ تشغيل D8 ونطق نغمة الإنذار.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 13: PROJECT 2 -->
+                <div class="slide-card hidden-slide space-y-6" id="slide-13">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <span class="px-3 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-bold">الصفحة 13: مشروع عملي (2) - جهاز قياس المسافات على شاشة LCD</span>
+                        <span class="text-xs text-slate-500 font-bold">الجزء الثالث: المشاريع التطبيقية</span>
+                    </div>
+                    <div class="space-y-4 text-xs leading-relaxed">
+                        <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 space-y-2">
+                            <h4 class="font-bold text-white text-sm">📡 جهاز القياس الرقمي بالموجات:</h4>
+                            <p class="text-slate-300">ربط حساس الـ Ultrasonic بشاشة الـ LCD 16x2 لإظهار مسافة أي جسم مقابل بالمتر والسنتيمتر بوضوح مجهري.</p>
+                        </div>
+                        <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 font-mono text-[11px] text-blue-300">
+                            // معادلة تحويل زمن الصوت إلى مسافة بالسنتيمتر:<br>
+                            distance = (duration * 0.0343) / 2;<br>
+                            lcd.print("Dist: "); lcd.print(distance); lcd.print(" cm");
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 14: FINAL PROJECT -->
+                <div class="slide-card hidden-slide space-y-6" id="slide-14">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <span class="px-3 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-bold">الصفحة 14: المشروع النهائي - روبوت تفادي العوائق وتتبع الخط</span>
+                        <span class="text-xs text-slate-500 font-bold">المشروع النهائي التجميعي</span>
+                    </div>
+                    <div class="space-y-4 text-xs leading-relaxed">
+                        <div class="p-4 bg-gradient-to-r from-orange-950/60 to-slate-900 border border-orange-500/40 rounded-xl space-y-2">
+                            <h4 class="font-bold text-orange-400 text-sm">🤖 هيكل وتجميع الروبوت الذكي النهائي:</h4>
+                            <p class="text-slate-200">تجمع في هذا المشروع كل ما تعلمته! تجميع الهيكل الميكانيكي، محركين DC مع قائد L298N، السيرفو في الأمام يحمل الـ Ultrasonic للبحث عن المسار المفتوح.</p>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-center text-[11px]">
+                            <div class="p-3 bg-slate-900 rounded-xl border border-slate-800">1. تجميع الهيكل وتثبيت المحركات</div>
+                            <div class="p-3 bg-slate-900 rounded-xl border border-slate-800">2. توصيل الشيلد والأردوينو</div>
+                            <div class="p-3 bg-slate-900 rounded-xl border border-slate-800">3. رفع كود المناورة والتفادي</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 15: TROUBLESHOOTING -->
+                <div class="slide-card hidden-slide space-y-6" id="slide-15">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <span class="px-3 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-bold">الصفحة 15: دليل استكشاف وتصحيح الأعطال (Troubleshooting)</span>
+                        <span class="text-xs text-slate-500 font-bold">الجزء الرابع: الصيانة والتنقيح</span>
+                    </div>
+                    <div class="space-y-3 text-xs">
+                        <div class="p-3.5 bg-red-950/40 border border-red-800/60 rounded-xl space-y-1">
+                            <strong class="text-red-400 block font-bold">❌ المشكلة: المحركات تدور في اتجاه عكسي!</strong>
+                            <p class="text-slate-300 text-[11px]">💡 الحل: اعكس أسلاك المحرك في منفذ الـ L298N، أو اعكس قيم HIGH/LOW الخاصة بتلك القناة في الكود.</p>
+                        </div>
+                        <div class="p-3.5 bg-amber-950/40 border border-amber-800/60 rounded-xl space-y-1">
+                            <strong class="text-amber-400 block font-bold">⚠️ المشكلة: الأردوينو يعيد التشغيل عند تشغيل المحركات!</strong>
+                            <p class="text-slate-300 text-[11px]">💡 الحل: فصل تغذية المحركات عن الأردوينو وتوصيل بطارية خارجية 9V/12V لقائد المحركات L298N مع ربط الأرضي (GND) بينهما.</p>
+                        </div>
+                        <div class="p-3.5 bg-blue-950/40 border border-blue-800/60 rounded-xl space-y-1">
+                            <strong class="text-blue-400 block font-bold">ℹ️ المشكلة: قراءة الـ Ultrasonic ثابتة على صفر!</strong>
+                            <p class="text-slate-300 text-[11px]">💡 الحل: تأكد من عدم تبديل منفذي Trig و Echo والتأكد من التغذية الصحيحة 5V.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 16: GRADUATION & CHECKLIST -->
+                <div class="slide-card hidden-slide space-y-6" id="slide-16">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <span class="px-3 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-bold">الصفحة 16: قائمة التقييم الذاتي وشهادة الإنجاز</span>
+                        <span class="text-xs text-slate-500 font-bold">التخرج والإنجاز</span>
+                    </div>
+                    <div class="text-center space-y-4">
+                        <div class="w-16 h-16 rounded-3xl bg-gradient-to-tr from-amber-500 to-orange-500 text-white flex items-center justify-center text-3xl font-black mx-auto shadow-xl badge-glow">
+                            🏆
+                        </div>
+                        <h3 class="text-xl font-extrabold text-white">مبارك! لقد أتممت مسار التعلّم الذاتي للروبوتكس بنجاح</h3>
+                        <p class="text-xs text-slate-300 max-w-xl mx-auto leading-relaxed">
+                            أصبحت الآن ملمّاً بجميع المفاهيم الأساسية، قادراً على قراءة كتالوج الحساسات والمكونات، وتصميم وتكويد مشاريعك الروبوتية بكل ثقة واستقلالية.
+                        </p>
+                        <div class="inline-flex items-center gap-2 bg-emerald-950 border border-emerald-700 px-4 py-2 rounded-xl text-emerald-300 text-xs font-bold">
+                            ✅ جاهز للاختبار النهائى وإصدار شهادة التخرج من Megamind Academy
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Slide Thumbnails Strip -->
+            <div class="space-y-2">
+                <span class="text-xs font-bold text-slate-400 block">📑 شريط الانتهاء والانتقال السريع للصفحات:</span>
+                <div class="flex items-center gap-2 overflow-x-auto custom-scrollbar pb-2" id="thumbnails-container">
+                    <!-- Thumbnails generated dynamically -->
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 text-slate-500 text-xs py-6 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-2">
+            <p>كتيب الروبوتكس للتعلّم الذاتي • تصميم وتوثيق الإدارة التعليمية بالأكاديمية © 2026</p>
+            <p class="text-slate-600">Megamind Academy • All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic for Slider & Thumbnails -->
+    <script>
+        const totalSlides = 16;
+        let currentSlide = 1;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderThumbnails();
+            updateSlideView();
+        });
+
+        function renderThumbnails() {
+            const container = document.getElementById('thumbnails-container');
+            let html = '';
+            for (let i = 1; i <= totalSlides; i++) {
+                html += `
+                    <button onclick="goToSlide(${i})" id="thumb-${i}" class="shrink-0 px-3 py-2 rounded-xl text-xs font-bold border transition text-center min-w-[75px] ${i === 1 ? 'bg-orange-600 text-white border-orange-500 shadow-md' : 'bg-slate-950 text-slate-400 border-slate-800 hover:bg-slate-800 hover:text-slate-200'}">
+                        ص ${i}
+                    </button>
+                `;
+            }
+            container.innerHTML = html;
+        }
+
+        function goToSlide(slideNum) {
+            if (slideNum < 1 || slideNum > totalSlides) return;
+            currentSlide = slideNum;
+            updateSlideView();
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                updateSlideView();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                updateSlideView();
+            }
+        }
+
+        function updateSlideView() {
+            // Hide all slides
+            for (let i = 1; i <= totalSlides; i++) {
+                const slide = document.getElementById(`slide-${i}`);
+                if (slide) {
+                    slide.classList.remove('active-slide');
+                    slide.classList.add('hidden-slide');
+                }
+                const thumb = document.getElementById(`thumb-${i}`);
+                if (thumb) {
+                    if (i === currentSlide) {
+                        thumb.className = "shrink-0 px-3 py-2 rounded-xl text-xs font-bold border transition text-center min-w-[75px] bg-orange-600 text-white border-orange-500 shadow-md";
+                    } else {
+                        thumb.className = "shrink-0 px-3 py-2 rounded-xl text-xs font-bold border transition text-center min-w-[75px] bg-slate-950 text-slate-400 border-slate-800 hover:bg-slate-800 hover:text-slate-200";
+                    }
+                }
+            }
+
+            // Show active slide
+            const activeSlide = document.getElementById(`slide-${currentSlide}`);
+            if (activeSlide) {
+                activeSlide.classList.remove('hidden-slide');
+                activeSlide.classList.add('active-slide');
+            }
+
+            // Update Header Indicator & Progress Bar
+            document.getElementById('slide-indicator').innerText = `الصفحة ${currentSlide} من ${totalSlides}`;
+            const percent = (currentSlide / totalSlides) * 100;
+            document.getElementById('slide-progress').style.width = `${percent}%`;
+
+            // Enable/disable buttons
+            document.getElementById('btn-prev').disabled = currentSlide === 1;
+            document.getElementById('btn-next').disabled = currentSlide === totalSlides;
+        }
+
+        // Keyboard Arrow Navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') prevSlide();
+            if (e.key === 'ArrowRight') nextSlide();
+        });
+    </script>
+</body>
+</html>
