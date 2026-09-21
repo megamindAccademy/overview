@@ -22,7 +22,7 @@
         /* Book Presentation Slide Layout Container */
         .slide-card {
             transition: all 0.35s ease-in-out;
-            min-height: 540px;
+            min-height: 560px;
         }
         .slide-card.hidden-slide {
             display: none;
@@ -44,6 +44,16 @@
             position: relative;
             overflow: hidden;
         }
+
+        .img-card-preview {
+            border: 2px solid #334155;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+            transition: transform 0.2s ease;
+        }
+        .img-card-preview:hover {
+            transform: scale(1.03);
+            border-color: #ea580c;
+        }
         
         .custom-scrollbar::-webkit-scrollbar {
             width: 6px;
@@ -63,10 +73,6 @@
         .step-badge {
             background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
         }
-        .tech-box {
-            background: rgba(15, 23, 42, 0.75);
-            border: 1px solid rgba(51, 65, 85, 0.8);
-        }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased selection:bg-orange-500 selection:text-white">
@@ -83,7 +89,7 @@
                         <h1 class="text-lg md:text-xl font-black text-white tracking-tight">Megamind Academy</h1>
                         <span class="bg-orange-500/20 text-orange-300 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full border border-orange-400/30">Robotics Master Handbook</span>
                     </div>
-                    <p class="text-xs text-slate-400 font-medium mt-0.5">تصميم الكتيب التعليمي التفاعلي بالخطوات والصور والمكونات (16 سلايد/صفحة)</p>
+                    <p class="text-xs text-slate-400 font-medium mt-0.5">الشكل الداخلي لكتيب الروبوتكس بالصور الحقيقية والتفاصيل وخطوات الطالب (16 سلايد)</p>
                 </div>
             </div>
 
@@ -105,12 +111,12 @@
         <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-orange-950 p-6 rounded-3xl border border-orange-500/30 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-6">
             <div class="space-y-2">
                 <div class="flex items-center gap-2">
-                    <span class="px-2.5 py-0.5 rounded-full bg-orange-500/20 text-orange-300 text-[11px] font-bold border border-orange-400/30">📘 التخيل النهائي لصفحات الكتيب</span>
-                    <span class="text-xs text-slate-400 font-semibold">• محتوى تفصيلي وشامل لكل درس</span>
+                    <span class="px-2.5 py-0.5 rounded-full bg-orange-500/20 text-orange-300 text-[11px] font-bold border border-orange-400/30">📘 التصميم الداخلي المصور للكتيب</span>
+                    <span class="text-xs text-slate-400 font-semibold">• محتوى وشرح مصور ومفصل لخطوات الطالب</span>
                 </div>
                 <h2 class="text-xl md:text-2xl font-black text-white">كتيب الروبوتكس للتعلّم الذاتي (Robotics Master Book)</h2>
                 <p class="text-xs text-slate-300 leading-relaxed max-w-3xl">
-                    يستعرض هذا التصميم السلايدات والصفحات الداخلية للكتيب كما سيتلقاها الطالب: تشمل **المكونات الإلكترونية بالصور، خطوات الطالب المحددة، التوصيلات، خطوط الأكواد، واستكشاف الأعطال**.
+                    تم إدراج **الصور الحقيقية للمكونات الإلكترونية وحساسات الكورس** داخل السلايدات مع توضيح **خطوات العمل التي سيتبعها الطالب** في كل درس (المكونات ➔ التوصيل ➔ الكود ➔ الصيانة).
                 </p>
             </div>
             <div class="shrink-0 flex items-center gap-3 bg-slate-950/80 p-3 rounded-2xl border border-orange-500/40">
@@ -132,8 +138,8 @@
                         📖
                     </div>
                     <div>
-                        <h3 class="font-bold text-white text-sm">مستعرض صفحات الكتيب التفاعلي (16 سلايد كاملة)</h3>
-                        <p class="text-xs text-slate-400">تصفح السلايدات والدروس بالأسهم أو بالأزرار لرؤية تفاصيل خطوات الطالب والصور</p>
+                        <h3 class="font-bold text-white text-sm">مستعرض صفحات الكتيب التفاعلي بالصور الحقيقية (16 سلايد)</h3>
+                        <p class="text-xs text-slate-400">تصفح السلايدات لرؤية الشكل الداخلي الحقيقي للدروس والتول والسنسورز والخطوات</p>
                     </div>
                 </div>
 
@@ -161,7 +167,6 @@
 
                 <!-- SLIDE 1: OFFICIAL COVER SPREAD -->
                 <div class="slide-card active-slide" id="slide-1">
-                    <!-- Slide Header Bar -->
                     <div class="flex items-center justify-between border-b border-slate-700/60 pb-3 mb-6">
                         <div class="flex items-center gap-2">
                             <span class="px-2.5 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-extrabold border border-orange-500/30">سلايد 1 / 16</span>
@@ -172,15 +177,15 @@
 
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                         <div class="lg:col-span-5 text-center">
-                            <div class="p-4 bg-slate-900/90 rounded-2xl border-2 border-orange-500/40 shadow-2xl inline-block max-w-[280px]">
+                            <div class="p-3 bg-slate-900 rounded-2xl border-2 border-orange-500/50 shadow-2xl inline-block max-w-[280px] img-card-preview">
                                 <img src="./cover.png" alt="غلاف الكتيب الأصلي" class="w-full h-auto rounded-xl shadow-lg border border-slate-800 object-cover">
                             </div>
                         </div>
                         <div class="lg:col-span-7 space-y-4">
-                            <span class="px-3 py-1 rounded-lg bg-orange-500/20 text-orange-300 text-xs font-bold border border-orange-500/30">دليل التعلّم الذاتي الشامل</span>
+                            <span class="px-3 py-1 rounded-lg bg-orange-500/20 text-orange-300 text-xs font-bold border border-orange-500/30">دليل التعلّم الذاتي المصور</span>
                             <h2 class="text-2xl md:text-3xl font-black text-white leading-tight">كتيب الروبوتكس الشامل والداعم للتعلّم الذاتي</h2>
                             <p class="text-xs text-slate-300 leading-relaxed bg-slate-900/80 p-4 rounded-xl border border-slate-800">
-                                دليل متكامل ومصمم بطريقة **الـ Visual Step-by-Step** ليُمكن الطالب من بناء وتكويد مشاريع الأردوينو والروبوتكس بمفرده. يحتوي على كافة الصور، المخططات، خطوط الأكواد، واستكشاف الأعطال.
+                                هذا الكتيب هو مرجع الطالب الشامل! مصمم بنظام **الخطوات العملية المصورة (Visual Step-by-Step)** ومرفق به كافة الصور، المخططات، شروحات الأكواد، وقائمة الأعطال ليُمكن الطفل من بناء الروبوت وتجربته بنفسه.
                             </p>
                             <div class="grid grid-cols-2 gap-3 text-xs font-bold">
                                 <div class="p-3 bg-slate-900/90 rounded-xl border border-slate-800 text-slate-300">
@@ -189,7 +194,7 @@
                                 </div>
                                 <div class="p-3 bg-slate-900/90 rounded-xl border border-slate-800 text-slate-300">
                                     <span class="text-emerald-400 block mb-1">🛠️ نظام العمل:</span>
-                                    تعلم ذاتي + تطبيقات عملية
+                                    تعلم ذاتي مصور + خطوة بخطوة
                                 </div>
                             </div>
                         </div>
@@ -207,31 +212,31 @@
                     </div>
 
                     <div class="space-y-4">
-                        <h3 class="text-lg font-black text-white flex items-center gap-2"><span>📌</span> كيف تستخدم هذا الكتيب لتصبح مخترعاً محترفاً؟</h3>
+                        <h3 class="text-lg font-black text-white flex items-center gap-2"><span>📌</span> خطوات العمل الأربعة التي سيطبقها الطالب في كل درس:</h3>
                         <p class="text-xs text-slate-300 leading-relaxed bg-slate-900/80 p-3.5 rounded-xl border border-slate-800">
-                            في كل درس أو مشروع داخل الكتيب، عليك اتباع الخطوات الأربع التالية بالترتيب لضمان النجاح بدون أخطاء:
+                            في كل صفحة من صفحات الدروس، ستجد الترتيب التالي مصوراً وموضحاً بالتفصيل لضمان التنفيذ الصحيح دون حاجة مستمرة للمساعد:
                         </p>
 
                         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs">
                             <div class="p-4 bg-slate-900 rounded-2xl border border-orange-500/30 space-y-2 relative">
                                 <span class="w-7 h-7 rounded-lg step-badge text-white flex items-center justify-center font-black text-xs">1</span>
-                                <h4 class="font-bold text-white">المكونات والتجهيز</h4>
-                                <p class="text-slate-400 text-[11px]">تأكد من توفير الأدوات المطلوبة الموضحة بالصور في بداية كل درس.</p>
+                                <h4 class="font-bold text-white">1. التجهيز والمكونات</h4>
+                                <p class="text-slate-400 text-[11px]">مراجعة صور المكونات المطلوبة على طاولة العمل وتجهيزها قبل البدء.</p>
                             </div>
                             <div class="p-4 bg-slate-900 rounded-2xl border border-blue-500/30 space-y-2 relative">
                                 <span class="w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center font-black text-xs">2</span>
-                                <h4 class="font-bold text-white">التوصيل الكهربائي</h4>
-                                <p class="text-slate-400 text-[11px]">اتبع رسمة المنافذ والمخطط المرفق ووصل الأسلاك قبل التغذية.</p>
+                                <h4 class="font-bold text-white">2. التوصيل والمخطط</h4>
+                                <p class="text-slate-400 text-[11px]">اتبع رسم جدول المنافذ وصور التوصيل على الـ Breadboard خطوة بخطوة.</p>
                             </div>
                             <div class="p-4 bg-slate-900 rounded-2xl border border-purple-500/30 space-y-2 relative">
                                 <span class="w-7 h-7 rounded-lg bg-purple-600 text-white flex items-center justify-center font-black text-xs">3</span>
-                                <h4 class="font-bold text-white">كتابة الكود وفهمه</h4>
-                                <p class="text-slate-400 text-[11px]">اكتب الأكواد في Arduino IDE واقرأ الشرح التوضيحي المكتوب لكل سطر.</p>
+                                <h4 class="font-bold text-white">3. البرمجة والتحميل</h4>
+                                <p class="text-slate-400 text-[11px]">اكتب الأكواد الموضحة واقرأ الشرح السطري المرفق لمعرفة عمل الكود.</p>
                             </div>
                             <div class="p-4 bg-slate-900 rounded-2xl border border-emerald-500/30 space-y-2 relative">
                                 <span class="w-7 h-7 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-black text-xs">4</span>
-                                <h4 class="font-bold text-white">التجربة والصيانة</h4>
-                                <p class="text-slate-400 text-[11px]">اختبر مشروعك، وإذا حدث عطل راجع جدول Troubleshooting في ص 15.</p>
+                                <h4 class="font-bold text-white">4. الاختبار والتنقيح</h4>
+                                <p class="text-slate-400 text-[11px]">اختبر مشروعك، وفي حالة وجود عطل ارجع لدليل Troubleshooting في ص 15.</p>
                             </div>
                         </div>
                     </div>
@@ -251,31 +256,31 @@
                         <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 space-y-2">
                             <span class="text-orange-400 font-bold block text-sm">📘 الجزء الأول: الأساسيات والكتالوج المصور</span>
                             <ul class="space-y-2 text-slate-300">
-                                <li class="p-2 bg-slate-950 rounded-lg">ص 4: ما هو الروبوتكس وكيف تفكر الروبوتات؟</li>
-                                <li class="p-2 bg-slate-950 rounded-lg">ص 5-8: كتالوج الأدوات والحساسات والمشغلات بالصور الشاملة.</li>
+                                <li class="p-2 bg-slate-950 rounded-lg">• ص 4: ما هو الروبوتكس وكيف تفكر الروبوتات؟</li>
+                                <li class="p-2 bg-slate-950 rounded-lg">• ص 5-8: كتالوج الأدوات والحساسات والمشغلات بالصور الحقيقية.</li>
                             </ul>
                         </div>
                         <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 space-y-2">
                             <span class="text-emerald-400 font-bold block text-sm">🎓 الجزء الثاني: المستويات والدروس بالتفصيل</span>
                             <ul class="space-y-2 text-slate-300">
-                                <li class="p-2 bg-slate-950 rounded-lg">ص 9: Level 1 - الإلكترونيات وقانون أوم والمقاومات.</li>
-                                <li class="p-2 bg-slate-950 rounded-lg">ص 10: Level 2 - قراءة وتوصيل الحساسات الرقمية والتماثلية.</li>
-                                <li class="p-2 bg-slate-950 rounded-lg">ص 11: Level 3 - برمجة الأردوينو والأوامر.</li>
+                                <li class="p-2 bg-slate-950 rounded-lg">• ص 9: Level 1 - الإلكترونيات وقانون أوم وحساب المقاومات.</li>
+                                <li class="p-2 bg-slate-950 rounded-lg">• ص 10: Level 2 - قراءة الحساسات الرقمية والتماثلية.</li>
+                                <li class="p-2 bg-slate-950 rounded-lg">• ص 11: Level 3 - برمجة ومتحكمات الأردوينو.</li>
                             </ul>
                         </div>
                         <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 space-y-2">
                             <span class="text-blue-400 font-bold block text-sm">🤖 الجزء الثالث: المشاريع التطبيقية والتجميع</span>
                             <ul class="space-y-2 text-slate-300">
-                                <li class="p-2 bg-slate-950 rounded-lg">ص 12: مشروع أنظمة الإنذار الذكية (Flame & PIR).</li>
-                                <li class="p-2 bg-slate-950 rounded-lg">ص 13: مشروع جهاز قياس المسافات وشاشة LCD.</li>
-                                <li class="p-2 bg-slate-950 rounded-lg">ص 14: مشروع الروبوت النهائي تفادي العوائق.</li>
+                                <li class="p-2 bg-slate-950 rounded-lg">• ص 12: مشروع أنظمة الإنذار الذكية (Flame & PIR).</li>
+                                <li class="p-2 bg-slate-950 rounded-lg">• ص 13: مشروع رادار المسافات وشاشة LCD 16x2.</li>
+                                <li class="p-2 bg-slate-950 rounded-lg">• ص 14: مشروع الروبوت النهائي تفادي العوائق وتتبع الخط.</li>
                             </ul>
                         </div>
                         <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 space-y-2">
                             <span class="text-purple-400 font-bold block text-sm">🛠️ الجزء الرابع: الصيانة والتقييم الذاتي</span>
                             <ul class="space-y-2 text-slate-300">
-                                <li class="p-2 bg-slate-950 rounded-lg">ص 15: دليل كشف واستكشاف الأعطال (Troubleshooting).</li>
-                                <li class="p-2 bg-slate-950 rounded-lg">ص 16: قائمة التقييم الذاتي وشهادة الإنجاز.</li>
+                                <li class="p-2 bg-slate-950 rounded-lg">• ص 15: دليل كشف واستكشاف الأعطال (Troubleshooting).</li>
+                                <li class="p-2 bg-slate-950 rounded-lg">• ص 16: قائمة التقييم الذاتي وشهادة التخرج.</li>
                             </ul>
                         </div>
                     </div>
@@ -294,14 +299,13 @@
                     <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center text-xs">
                         <div class="md:col-span-7 space-y-3">
                             <h3 class="text-base font-bold text-white">🧠 دورة عمل أي نظام روبوتي في العالم:</h3>
-                            <p class="text-slate-300 bg-slate-900 p-3 rounded-xl border border-slate-800 leading-relaxed">
-                                يتعلم الطالب أن أي روبوت يعتمد على 3 مراحل رئيسية: جمع البيانات بواسطة الحساسات (Inputs)، معالجة البيانات بكود الأردوينو (Processing)، ثم تنمية الاستجابة في المحركات والإضاءات (Outputs).
+                            <p class="text-slate-300 bg-slate-900 p-3.5 rounded-xl border border-slate-800 leading-relaxed">
+                                يتعلّم الطالب أن الروبوت آلة تجمع بين **الميكانيكا (الهيكل)، الإلكترونيات (الأعصاب)، والبرمجة (العقل)**، وتعمل وفق الدورة الثلاثية التالية:
                             </p>
 
-                            <!-- Student Action Step -->
                             <div class="p-3 bg-orange-950/40 border border-orange-800 rounded-xl space-y-1 text-orange-200">
                                 <strong class="text-orange-400 block font-bold text-xs">📝 خطوة الطالب في المعمل:</strong>
-                                قبل بناء أي روبوت، حدد في ورقة خارجية: ما هي مدخلات روبوتك؟ وما هي المخرجات المطلوبة منه؟
+                                قبل البدء في التوصيل، ارسم دورتك الثلاثية: ما هو الحساس المستخدم؟ وما المخرج المطلوب تحريكه؟
                             </div>
                         </div>
 
@@ -325,243 +329,232 @@
                     </div>
                 </div>
 
-                <!-- SLIDE 5: CATALOG 1 - ARDUINO & BREADBOARD -->
+                <!-- SLIDE 5: CATALOG 1 - ARDUINO & BREADBOARD WITH REAL PHOTO -->
                 <div class="slide-card hidden-slide" id="slide-5">
                     <div class="flex items-center justify-between border-b border-slate-700/60 pb-3 mb-6">
                         <div class="flex items-center gap-2">
                             <span class="px-2.5 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-extrabold border border-orange-500/30">سلايد 5 / 16</span>
-                            <h3 class="text-xs font-bold text-slate-300">كتالوج الأدوات (1) - الأردوينو ولوحة التجارب</h3>
+                            <h3 class="text-xs font-bold text-slate-300">كتالوج الأدوات (1) - الأردوينو ولوحة التجارب بالصور الحقيقية</h3>
                         </div>
                         <span class="text-[11px] font-bold text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">كتالوج المكونات المصور</span>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
-                        <!-- Arduino Item Box -->
-                        <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800 space-y-3">
-                            <div class="flex items-center justify-between">
-                                <h4 class="font-bold text-white text-sm">🧠 لوحة الأردوينو (Arduino Uno)</h4>
-                                <span class="bg-indigo-950 text-indigo-300 text-[10px] px-2 py-0.5 rounded font-bold border border-indigo-800">Main Board</span>
-                            </div>
-                            <p class="text-slate-300 leading-relaxed text-[11px]">
-                                العقل المفكر للروبوت. يحتوي على 14 منفذاً رقمياً (Digital Pins 0-13) و6 منافذ تماثلية (Analog Pins A0-A5)، ويُغذي الدوائر بجهد 5V.
-                            </p>
-                            <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 text-slate-400 space-y-1">
-                                <strong class="text-slate-200 block font-bold text-[11px]">📌 منافذ هامة:</strong>
-                                <span>• 5V & GND: تغذية الحساسات بالكهرباء.</span><br>
-                                <span>• Digital Pins (2-13): قراءة وتشغيل المخرجات والحساسات.</span>
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center text-xs">
+                        <div class="md:col-span-5 text-center">
+                            <div class="p-2 bg-slate-900 rounded-2xl border border-slate-800 img-card-preview inline-block">
+                                <img src="./images/arduino_uno.jpg" alt="Arduino Uno Board Photo" class="w-full h-48 object-cover rounded-xl shadow-lg">
+                                <span class="text-[10px] text-orange-400 font-bold block mt-2">📷 صورة لوحة Arduino Uno الحقيقية</span>
                             </div>
                         </div>
 
-                        <!-- Breadboard Item Box -->
-                        <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800 space-y-3">
-                            <div class="flex items-center justify-between">
-                                <h4 class="font-bold text-white text-sm">🍞 لوحة التجارب (Breadboard)</h4>
-                                <span class="bg-amber-950 text-amber-300 text-[10px] px-2 py-0.5 rounded font-bold border border-amber-800">Prototyping</span>
+                        <div class="md:col-span-7 space-y-3">
+                            <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2">
+                                <h4 class="font-bold text-white text-sm">🧠 تفاصيل لوحة الأردوينو (Arduino Uno):</h4>
+                                <p class="text-slate-300 leading-relaxed text-[11px]">
+                                    تحتوي اللوحة على الشريحة الرئيسية **ATmega328P**، و14 منافذاً رقمياً (Digital 0-13) و6 منافذ تماثلية (Analog A0-A5)، ومخرج مصدر طاقة **5V** و **GND**.
+                                </p>
                             </div>
-                            <p class="text-slate-300 leading-relaxed text-[11px]">
-                                لوحة توصيل سريعة تتيح لك توصيل الحساسات والمقاومات مع الأردوينو بدون لحام. الصفوف الطويلة على الأطراف مخصصة للتغذية (+ 5V و - GND).
-                            </p>
-                            <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 text-slate-400 space-y-1">
-                                <strong class="text-slate-200 block font-bold text-[11px]">📌 خطوة الطالب:</strong>
-                                <span>وصل خط VCC بالخط الأحمر (+) وخط GND بالخط الأزرق (-) في الـ Breadboard لسهولة التوزيع.</span>
+                            
+                            <div class="p-3.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1.5">
+                                <strong class="text-emerald-400 block font-bold text-xs">📝 خطوات الطالب مع الأردوينو:</strong>
+                                <span class="text-slate-300 block">• صل كابل الـ USB بفتحة الكمبيوتر لتغذية الأردوينو وتنزيل الأكواد.</span>
+                                <span class="text-slate-300 block">• لا تقم بتوصيل جهد أعلى من 5V بالمنافذ الرقمية لمنع الاحتراق.</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- SLIDE 6: CATALOG 2 - MOTORS & DRIVER -->
+                <!-- SLIDE 6: CATALOG 2 - SERVO & MOTORS WITH REAL PHOTO -->
                 <div class="slide-card hidden-slide" id="slide-6">
                     <div class="flex items-center justify-between border-b border-slate-700/60 pb-3 mb-6">
                         <div class="flex items-center gap-2">
                             <span class="px-2.5 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-extrabold border border-orange-500/30">سلايد 6 / 16</span>
-                            <h3 class="text-xs font-bold text-slate-300">كتالوج الأدوات (2) - المحركات وقائد المحركات L298N</h3>
+                            <h3 class="text-xs font-bold text-slate-300">كتالوج الأدوات (2) - محركات السيرفو والمحركات وقائد L298N</h3>
                         </div>
                         <span class="text-[11px] font-bold text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">كتالوج المكونات المصور</span>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
-                        <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800 space-y-2">
-                            <span class="text-2xl block">⚙️</span>
-                            <h4 class="font-bold text-white text-sm">DC Geared Motors</h4>
-                            <p class="text-slate-300 text-[11px]">محركات حركة العجلات. صندوق التروس يزيد العزم لتشغيل عجلات الروبوت بسلاسة.</p>
-                            <div class="p-2 bg-slate-950 rounded text-slate-400 text-[10px]">التغذية: 3V - 9V DC</div>
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center text-xs">
+                        <div class="md:col-span-5 text-center">
+                            <div class="p-2 bg-slate-900 rounded-2xl border border-slate-800 img-card-preview inline-block">
+                                <img src="./images/servo.jpg" alt="Servo Motor SG90 Photo" class="w-full h-48 object-cover rounded-xl shadow-lg">
+                                <span class="text-[10px] text-blue-400 font-bold block mt-2">📷 صورة محرك السيرفو SG90 الحقيقي</span>
+                            </div>
                         </div>
 
-                        <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800 space-y-2">
-                            <span class="text-2xl block">🦾</span>
-                            <h4 class="font-bold text-white text-sm">Servo Motor SG90</h4>
-                            <p class="text-slate-300 text-[11px]">محرك يدور بزوايا دقيقة (0-180°). يُستخدم لتوجيه الحساسات والأذرع الروبوتية.</p>
-                            <div class="p-2 bg-slate-950 rounded text-slate-400 text-[10px]">التحكم: مكتبة Servo.h عبر الأردوينو</div>
-                        </div>
+                        <div class="md:col-span-7 space-y-3">
+                            <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2">
+                                <h4 class="font-bold text-white text-sm">🦾 محرك السيرفو SG90 وقائد L298N:</h4>
+                                <p class="text-slate-300 leading-relaxed text-[11px]">
+                                    محرك السيرفو يدور في زوايا دقيقة (0-180 درجة) لتوجيه الحساسات. بينما يقوم قائد L298N بتشغيل محركات حركة العجلات DC في اتجاهين مخلتفين.
+                                </p>
+                            </div>
 
-                        <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800 space-y-2">
-                            <span class="text-2xl block">🔌</span>
-                            <h4 class="font-bold text-white text-sm">L298N Motor Driver</h4>
-                            <p class="text-slate-300 text-[11px]">دائرة قيادة المحركات. تتحكم في سرعة واتجاه محركين DC باستقبال أوامر الأردوينو.</p>
-                            <div class="p-2 bg-slate-950 rounded text-slate-400 text-[10px]">منافذ: IN1, IN2, IN3, IN4</div>
+                            <div class="p-3.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1.5">
+                                <strong class="text-blue-400 block font-bold text-xs">📝 خطوات الطالب لتوصيل السيرفو:</strong>
+                                <span class="text-slate-300 block">• السلك البني (GND) ➔ وصله بالأرضي.</span>
+                                <span class="text-slate-300 block">• السلك الأحمر (VCC) ➔ وصله بمخرج 5V.</span>
+                                <span class="text-slate-300 block">• السلك الأصفر/البرتقالي (Signal) ➔ وصله بالمنفذ الرقمي D10.</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- SLIDE 7: CATALOG 3 - SENSORS -->
+                <!-- SLIDE 7: CATALOG 3 - ULTRASONIC WITH REAL PHOTO -->
                 <div class="slide-card hidden-slide" id="slide-7">
                     <div class="flex items-center justify-between border-b border-slate-700/60 pb-3 mb-6">
                         <div class="flex items-center gap-2">
                             <span class="px-2.5 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-extrabold border border-orange-500/30">سلايد 7 / 16</span>
-                            <h3 class="text-xs font-bold text-slate-300">كتالوج الأدوات (3) - حساسات المسافة واللهب والضوء</h3>
+                            <h3 class="text-xs font-bold text-slate-300">كتالوج الأدوات (3) - حساس المسافة Ultrasonic وحساسات الضوء واللهب</h3>
                         </div>
                         <span class="text-[11px] font-bold text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">كتالوج المكونات المصور</span>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
-                        <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800 space-y-2">
-                            <span class="text-2xl block">📡</span>
-                            <h4 class="font-bold text-white text-sm">HC-SR04 Ultrasonic</h4>
-                            <p class="text-slate-300 text-[11px]">حساس الموجات فوق الصوتية. يرسل موجة من Trig ويستقبلها من Echo لحساب المسافة.</p>
-                            <div class="p-2 bg-slate-950 rounded text-slate-400 text-[10px]">المنافذ: VCC, Trig, Echo, GND</div>
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center text-xs">
+                        <div class="md:col-span-5 text-center">
+                            <div class="p-2 bg-slate-900 rounded-2xl border border-slate-800 img-card-preview inline-block">
+                                <img src="./images/ultrasonic.jpg" alt="Ultrasonic Sensor Photo" class="w-full h-48 object-cover rounded-xl shadow-lg">
+                                <span class="text-[10px] text-blue-400 font-bold block mt-2">📷 صورة حساس HC-SR04 الحقيقي</span>
+                            </div>
                         </div>
 
-                        <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800 space-y-2">
-                            <span class="text-2xl block">🔥</span>
-                            <h4 class="font-bold text-white text-sm">Flame Sensor Module</h4>
-                            <p class="text-slate-300 text-[11px]">مستشعر النيران يكشف الضوء والأشعة تحت الحمراء الناتجة من اللهب لإطلاق الإنذار.</p>
-                            <div class="p-2 bg-slate-950 rounded text-slate-400 text-[10px]">المنافذ: VCC, GND, DO (Digital Out)</div>
-                        </div>
+                        <div class="md:col-span-7 space-y-3">
+                            <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2">
+                                <h4 class="font-bold text-white text-sm">📡 مستشعر الموجات فوق الصوتية HC-SR04:</h4>
+                                <p class="text-slate-300 leading-relaxed text-[11px]">
+                                    يستخدم عيني الصوت (Trig لإرسال الموجة الصوتية، و Echo لاستقبال الموجة المرتدة) لحساب المسافة الدقيقة بين الروبوت والعوائق.
+                                </p>
+                            </div>
 
-                        <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800 space-y-2">
-                            <span class="text-2xl block">☀️</span>
-                            <h4 class="font-bold text-white text-sm">LDR Photoresistor</h4>
-                            <p class="text-slate-300 text-[11px]">مقاومة ضوئية تتغير قيمتها بالضوء. تُستخدم لإنارة الكشافات تلقائياً في الظلام.</p>
-                            <div class="p-2 bg-slate-950 rounded text-slate-400 text-[10px]">القراءة: منفذ Analog A0</div>
+                            <div class="p-3.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1.5">
+                                <strong class="text-blue-400 block font-bold text-xs">📝 منافذ الحساس وخطوات التوصيل:</strong>
+                                <span class="text-slate-300 block">• VCC ➔ 5V | GND ➔ GND</span>
+                                <span class="text-slate-300 block">• Trig Pin ➔ المنفذ الرقمي D9 | Echo Pin ➔ المنفذ الرقمي D10</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- SLIDE 8: CATALOG 4 - DISPLAY & ACTUATORS WITH REAL IMAGES -->
+                <!-- SLIDE 8: CATALOG 4 - COMPONENT GALLERY WITH REAL PHOTOS -->
                 <div class="slide-card hidden-slide" id="slide-8">
                     <div class="flex items-center justify-between border-b border-slate-700/60 pb-3 mb-6">
                         <div class="flex items-center gap-2">
                             <span class="px-2.5 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-extrabold border border-orange-500/30">سلايد 8 / 16</span>
-                            <h3 class="text-xs font-bold text-slate-300">كتالوج الأدوات (4) - الشاشات وعناصر التفاعل مع صور المكونات</h3>
+                            <h3 class="text-xs font-bold text-slate-300">كتالوج الأدوات (4) - معرض صور المكونات والتفاعل بالمعمل</h3>
                         </div>
-                        <span class="text-[11px] font-bold text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">كتالوج المكونات المصور</span>
+                        <span class="text-[11px] font-bold text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">معرض الصور الحقيقية</span>
                     </div>
 
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs">
-                        <div class="bg-slate-900 p-3 rounded-2xl border border-slate-800 text-center space-y-2">
-                            <img src="./images/led.png" alt="LED" class="w-16 h-16 object-contain mx-auto rounded-lg bg-slate-950 p-1 border border-slate-800">
+                        <div class="bg-slate-900 p-3 rounded-2xl border border-slate-800 text-center space-y-2 img-card-preview">
+                            <img src="./images/led.png" alt="LED Light" class="w-20 h-20 object-contain mx-auto rounded-xl bg-slate-950 p-2 border border-slate-800">
                             <h4 class="font-bold text-white text-xs">LED Light</h4>
-                            <p class="text-[10px] text-slate-400">دايود مشع للضوء له طرف موجب طويل وطرف سالب قصير.</p>
+                            <p class="text-[10px] text-slate-400">طرف موجب طويل (+) وطرف سالب قصير (-).</p>
                         </div>
-                        <div class="bg-slate-900 p-3 rounded-2xl border border-slate-800 text-center space-y-2">
-                            <img src="./images/buzzer.jpg" alt="Buzzer" class="w-16 h-16 object-contain mx-auto rounded-lg bg-slate-950 p-1 border border-slate-800">
+                        <div class="bg-slate-900 p-3 rounded-2xl border border-slate-800 text-center space-y-2 img-card-preview">
+                            <img src="./images/buzzer.jpg" alt="Piezo Buzzer" class="w-20 h-20 object-contain mx-auto rounded-xl bg-slate-950 p-2 border border-slate-800">
                             <h4 class="font-bold text-white text-xs">Piezo Buzzer</h4>
-                            <p class="text-[10px] text-slate-400">جرس تنبيه يصدر نغمات وأصوات إنذار عند إعطائه إشارة HIGH.</p>
+                            <p class="text-[10px] text-slate-400">جرس تنبيه وتوليد نغمات موسيقية بالكود.</p>
                         </div>
-                        <div class="bg-slate-900 p-3 rounded-2xl border border-slate-800 text-center space-y-2">
-                            <img src="./images/push_button.jpg" alt="Push Button" class="w-16 h-16 object-contain mx-auto rounded-lg bg-slate-950 p-1 border border-slate-800">
-                            <h4 class="font-bold text-white text-xs">Push Button Switch</h4>
-                            <p class="text-[10px] text-slate-400">مفتاح ضغط لإرسال إشارة للبدء أو إيقاف الأوامر للأردوينو.</p>
+                        <div class="bg-slate-900 p-3 rounded-2xl border border-slate-800 text-center space-y-2 img-card-preview">
+                            <img src="./images/push_button.jpg" alt="Push Button" class="w-20 h-20 object-contain mx-auto rounded-xl bg-slate-950 p-2 border border-slate-800">
+                            <h4 class="font-bold text-white text-xs">Push Button</h4>
+                            <p class="text-[10px] text-slate-400">مفتاح إدخال الأوامر بالضغط اليدوي.</p>
                         </div>
-                        <div class="bg-slate-900 p-3 rounded-2xl border border-slate-800 text-center space-y-2">
-                            <img src="./images/7segment.png" alt="7 Segment" class="w-16 h-16 object-contain mx-auto rounded-lg bg-slate-950 p-1 border border-slate-800">
+                        <div class="bg-slate-900 p-3 rounded-2xl border border-slate-800 text-center space-y-2 img-card-preview">
+                            <img src="./images/7segment.png" alt="7 Segment Display" class="w-20 h-20 object-contain mx-auto rounded-xl bg-slate-950 p-2 border border-slate-800">
                             <h4 class="font-bold text-white text-xs">7-Segment Display</h4>
-                            <p class="text-[10px] text-slate-400">شاشة أرقام ثنائية لعرض الأرقام والعدادات بشكل مبسط.</p>
+                            <p class="text-[10px] text-slate-400">شاشة أرقام ثنائية لعرض الأرقام والعدادات.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- SLIDE 9: LEVEL 1 LESSON -->
+                <!-- SLIDE 9: LEVEL 1 LESSON & STEPS -->
                 <div class="slide-card hidden-slide" id="slide-9">
                     <div class="flex items-center justify-between border-b border-slate-700/60 pb-3 mb-6">
                         <div class="flex items-center gap-2">
                             <span class="px-2.5 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-extrabold border border-orange-500/30">سلايد 9 / 16</span>
-                            <h3 class="text-xs font-bold text-slate-300">Level 1 - أساسيات الدوائر وقانون أوم</h3>
+                            <h3 class="text-xs font-bold text-slate-300">Level 1 - أساسيات الدوائر الإلكترونية وقانون أوم</h3>
                         </div>
                         <span class="text-[11px] font-bold text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">المستويات التعليمية</span>
                     </div>
 
                     <div class="space-y-4 text-xs leading-relaxed">
-                        <h3 class="text-base font-bold text-white">⚡ قانون أوم وحماية المكونات الإلكترونية:</h3>
+                        <h3 class="text-base font-bold text-white">⚡ حساب وتوصيل المقاومات لحماية العناصر:</h3>
                         <p class="text-slate-300 bg-slate-900 p-3 rounded-xl border border-slate-800">
-                            يتعلم الطالب حساب المقاومة الكربونية لحماية الـ LED من التلف. معادلة أوم: $V = I \times R$ حيث $V$ الجهد، $I$ التيار بالأمبير، و $R$ المقاومة بالأوم.
+                            معادلة أوم الأساسية: $V = I \times R$. عند توصيل LED يعمل بجهد 2V على مصدر الأردوينو 5V، يلزم وضع مقاومة لحمايته من الاحتراق.
                         </p>
 
-                        <div class="p-4 bg-slate-900 rounded-2xl border border-slate-800 space-y-2 font-mono text-emerald-400 text-[11px]">
-                            <strong class="text-white font-sans block text-xs mb-1">📝 خطوات الطالب لحساب المقاومة:</strong>
-                            1. مصدر الجهد V_source = 5V<br>
-                            2. جهد الـ LED V_led = 2V ، التيار المطلوب I = 0.02A (20mA)<br>
-                            3. قيمة المقاومة R = (5 - 2) / 0.02 = 150 Ohm ➔ نستخدم مقاومة 220 Ohm للتأمين.
+                        <div class="p-4 bg-slate-950 rounded-2xl border border-slate-800 space-y-2 font-mono text-emerald-400 text-[11px]">
+                            <strong class="text-white font-sans block text-xs mb-1">📝 خطوات حساب المقاومة للطالب:</strong>
+                            1. V_source = 5V | V_led = 2V<br>
+                            2. فرق الجهد على المقاومة = 5V - 2V = 3V<br>
+                            3. التيار المسموح I = 0.02A (20mA)<br>
+                            4. قيمة المقاومة R = 3V / 0.02A = 150 Ohm ➔ نختار مقاومة 220 Ohm.
                         </div>
                     </div>
                 </div>
 
-                <!-- SLIDE 10: LEVEL 2 LESSON -->
+                <!-- SLIDE 10: LEVEL 2 LESSON & STEPS -->
                 <div class="slide-card hidden-slide" id="slide-10">
                     <div class="flex items-center justify-between border-b border-slate-700/60 pb-3 mb-6">
                         <div class="flex items-center gap-2">
                             <span class="px-2.5 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-extrabold border border-orange-500/30">سلايد 10 / 16</span>
-                            <h3 class="text-xs font-bold text-slate-300">Level 2 - قراءة وفهم بيانات الحساسات</h3>
+                            <h3 class="text-xs font-bold text-slate-300">Level 2 - قراءة وتوصيل الحساسات الرقمية والتماثلية</h3>
                         </div>
                         <span class="text-[11px] font-bold text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">المستويات التعليمية</span>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
                         <div class="p-4 bg-slate-900 rounded-2xl border border-blue-800/60 space-y-2">
-                            <span class="text-blue-400 font-bold block text-sm">1. الحساسات الرقمية (Digital Inputs)</span>
+                            <span class="text-blue-400 font-bold block text-sm">1. قراءة الحساسات الرقمية (Digital Read)</span>
                             <p class="text-slate-300 leading-relaxed text-[11px]">
-                                تقرأ حالتين فقط: إما HIGH (5V) أو LOW (0V). مثال: حساس الحركة PIR، حساس لهب ديجيتال، زر الضغط.
+                                الحساس الديجيتال يعطي قيمتين فقط (HIGH أو LOW). مثل حساس الحركة PIR عند كشف الأشخاص.
                             </p>
-                            <div class="p-2 bg-slate-950 rounded text-blue-300 font-mono text-[10px]">
-                                int state = digitalRead(PIR_PIN);
+                            <div class="p-2.5 bg-slate-950 rounded-lg text-blue-300 font-mono text-[10px]">
+                                int motion = digitalRead(2);
                             </div>
                         </div>
 
                         <div class="p-4 bg-slate-900 rounded-2xl border border-amber-800/60 space-y-2">
-                            <span class="text-amber-400 font-bold block text-sm">2. الحساسات التماثلية (Analog Inputs)</span>
+                            <span class="text-amber-400 font-bold block text-sm">2. قراءة الحساسات التماثلية (Analog Read)</span>
                             <p class="text-slate-300 leading-relaxed text-[11px]">
-                                تقرأ مدى متدرجاً من القيم بين 0 إلى 1023. مثال: حساس الضوء LDR، مستشعر الحرارة.
+                                الحساس الأنالوج يعطي قيم متدرجة بين 0 إلى 1023. مثل المقاومة الضوئية LDR لقياس شدة الضوء.
                             </p>
-                            <div class="p-2 bg-slate-950 rounded text-amber-300 font-mono text-[10px]">
-                                int value = analogRead(A0);
+                            <div class="p-2.5 bg-slate-950 rounded-lg text-amber-300 font-mono text-[10px]">
+                                int lightVal = analogRead(A0);
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- SLIDE 11: LEVEL 3 LESSON -->
+                <!-- SLIDE 11: LEVEL 3 LESSON & STEPS -->
                 <div class="slide-card hidden-slide" id="slide-11">
                     <div class="flex items-center justify-between border-b border-slate-700/60 pb-3 mb-6">
                         <div class="flex items-center gap-2">
                             <span class="px-2.5 py-1 rounded-md bg-orange-500/20 text-orange-400 text-xs font-extrabold border border-orange-500/30">سلايد 11 / 16</span>
-                            <h3 class="text-xs font-bold text-slate-300">Level 3 - برمجة ومتحكمات الأردوينو</h3>
+                            <h3 class="text-xs font-bold text-slate-300">Level 3 - كتابة الكود في Arduino IDE وتجربته</h3>
                         </div>
                         <span class="text-[11px] font-bold text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">المستويات التعليمية</span>
                     </div>
 
                     <div class="space-y-4 text-xs">
-                        <h3 class="text-base font-bold text-white">💻 خطوات الطالب البرمجية داخل Arduino IDE:</h3>
-                        <div class="p-4 bg-slate-950 rounded-2xl border border-slate-800 font-mono text-emerald-400 space-y-1 text-[11px]">
-                            <div><span class="text-purple-400">const int</span> LED_PIN = 13;</div>
-                            <div><span class="text-purple-400">const int</span> SENSOR_PIN = 2;</div>
-                            <br>
+                        <h3 class="text-base font-bold text-white">💻 الأوامر البرمجية الأساسية في الكتيب:</h3>
+                        <div class="p-4 bg-slate-950 rounded-2xl border border-slate-800 font-mono text-emerald-400 space-y-1.5 text-[11px]">
                             <div><span class="text-purple-400">void</span> <span class="text-blue-400">setup</span>() {</div>
-                            <div class="pl-4"><span class="text-yellow-400">pinMode</span>(LED_PIN, <span class="text-orange-400">OUTPUT</span>);</div>
-                            <div class="pl-4"><span class="text-yellow-400">pinMode</span>(SENSOR_PIN, <span class="text-orange-400">INPUT</span>);</div>
+                            <div class="pl-4"><span class="text-yellow-400">pinMode</span>(13, <span class="text-orange-400">OUTPUT</span>); <span class="text-slate-500">// تحديد المنفذ كمخرج</span></div>
+                            <div class="pl-4"><span class="text-yellow-400">pinMode</span>(2, <span class="text-orange-400">INPUT</span>);   <span class="text-slate-500">// تحديد المنفذ كمدخل لحساس</span></div>
                             <div>}</div>
                             <br>
                             <div><span class="text-purple-400">void</span> <span class="text-blue-400">loop</span>() {</div>
-                            <div class="pl-4"><span class="text-purple-400">if</span> (<span class="text-yellow-400">digitalRead</span>(SENSOR_PIN) == <span class="text-orange-400">HIGH</span>) {</div>
-                            <div class="pl-8"><span class="text-yellow-400">digitalWrite</span>(LED_PIN, <span class="text-orange-400">HIGH</span>);</div>
-                            <div class="pl-4">} <span class="text-purple-400">else</span> {</div>
-                            <div class="pl-8"><span class="text-yellow-400">digitalWrite</span>(LED_PIN, <span class="text-orange-400">LOW</span>);</div>
-                            <div class="pl-4">}</div>
+                            <div class="pl-4"><span class="text-yellow-400">digitalWrite</span>(13, <span class="text-orange-400">HIGH</span>); <span class="text-slate-500">// تشغيل 5V</span></div>
+                            <div class="pl-4"><span class="text-yellow-400">delay</span>(1000);                <span class="text-slate-500">// الانتظار لثانية واحدة</span></div>
                             <div>}</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- SLIDE 12: PROJECT 1 DETAILED GUIDE -->
+                <!-- SLIDE 12: PROJECT 1 DETAILED STEPS -->
                 <div class="slide-card hidden-slide" id="slide-12">
                     <div class="flex items-center justify-between border-b border-slate-700/60 pb-3 mb-6">
                         <div class="flex items-center gap-2">
@@ -574,7 +567,7 @@
                     <div class="space-y-4 text-xs">
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
                             <div class="p-3 bg-slate-900 rounded-xl border border-slate-800 space-y-1">
-                                <strong class="text-orange-400 block font-bold text-xs">1. الأدوات المطلوبة:</strong>
+                                <strong class="text-orange-400 block font-bold text-xs">1. المكونات المطلوبة:</strong>
                                 <span>Arduino, Breadboard, PIR Sensor, Flame Sensor, Buzzer, Red LED.</span>
                             </div>
                             <div class="p-3 bg-slate-900 rounded-xl border border-slate-800 space-y-1">
@@ -587,8 +580,8 @@
                             </div>
                         </div>
 
-                        <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 font-mono text-[10px] text-emerald-300">
-                            // منطق الكود في الكتيب:<br>
+                        <div class="p-3.5 bg-slate-950 rounded-xl border border-slate-800 font-mono text-[10px] text-emerald-300">
+                            // كود المشروع في الكتيب:<br>
                             if (digitalRead(2) == HIGH || digitalRead(3) == HIGH) {<br>
                             &nbsp;&nbsp;digitalWrite(13, HIGH); tone(8, 1000);<br>
                             } else { digitalWrite(13, LOW); noTone(8); }
@@ -596,7 +589,7 @@
                     </div>
                 </div>
 
-                <!-- SLIDE 13: PROJECT 2 DETAILED GUIDE -->
+                <!-- SLIDE 13: PROJECT 2 DETAILED STEPS -->
                 <div class="slide-card hidden-slide" id="slide-13">
                     <div class="flex items-center justify-between border-b border-slate-700/60 pb-3 mb-6">
                         <div class="flex items-center gap-2">
@@ -608,12 +601,12 @@
 
                     <div class="space-y-4 text-xs leading-relaxed">
                         <div class="p-4 bg-slate-900 rounded-2xl border border-slate-800 space-y-2">
-                            <h4 class="font-bold text-white text-sm">📡 خطوات الطالب للتوصيل والبرمجة:</h4>
+                            <h4 class="font-bold text-white text-sm">📡 خطوات الطالب للتوصيل وحساب المسافة:</h4>
                             <p class="text-slate-300 text-[11px]">
                                 يوصل الطالب منافذ Ultrasonic (Trig ➔ D9, Echo ➔ D10) ومنافذ LCD، ثم يحسب الكود سرعة الموجات الصوتية لإظهار المسافة بالسنتيمتر على الشاشة.
                             </p>
                         </div>
-                        <div class="p-3.5 bg-slate-950 rounded-xl border border-slate-800 font-mono text-blue-300 text-[11px]">
+                        <div class="p-3.5 bg-slate-950 rounded-xl border border-slate-800 font-mono text-blue-300 text-[10px]">
                             // معادلة قياس المسافة بالموجات فوق الصوتية:<br>
                             digitalWrite(9, LOW); delayMicroseconds(2);<br>
                             digitalWrite(9, HIGH); delayMicroseconds(10); digitalWrite(9, LOW);<br>
@@ -624,7 +617,7 @@
                     </div>
                 </div>
 
-                <!-- SLIDE 14: FINAL ROBOT ASSEMBLY -->
+                <!-- SLIDE 14: FINAL ROBOT ASSEMBLY STEPS -->
                 <div class="slide-card hidden-slide" id="slide-14">
                     <div class="flex items-center justify-between border-b border-slate-700/60 pb-3 mb-6">
                         <div class="flex items-center gap-2">
@@ -636,7 +629,7 @@
 
                     <div class="space-y-4 text-xs">
                         <div class="p-4 bg-gradient-to-r from-orange-950/60 to-slate-900 border border-orange-500/40 rounded-2xl space-y-2">
-                            <h4 class="font-bold text-orange-400 text-sm">🤖 تجميع هيكل ومحركات الروبوت الذكي:</h4>
+                            <h4 class="font-bold text-orange-400 text-sm">🤖 تجميع وتعديل الروبوت الذكي النهائي:</h4>
                             <p class="text-slate-200 text-[11px]">
                                 يدمج الطالب جميع المهارات! تجميع الشاسي، توصيل المحركين بقائد L298N، وتثبيت مستشعر الـ Ultrasonic فوق محرك السيرفو للبحث عن الاتجاه المفتوح.
                             </p>
