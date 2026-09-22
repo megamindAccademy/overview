@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقرير اختبار المنصة الجديدة وتوثيق سيناريوهات التست - Megamind Academy</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #0b1120;
+            color: #f8fafc;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #ea580c;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased selection:bg-orange-500 selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="bg-slate-900/90 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <a href="./index.html" class="w-10 h-10 rounded-xl bg-orange-600/20 text-orange-400 hover:bg-orange-600 hover:text-white flex items-center justify-center font-bold text-lg border border-orange-500/30 transition shadow-inner" title="العودة للوحة التحكم">
+                    ➔
+                </a>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <h1 class="text-lg md:text-xl font-black text-white tracking-tight">Megamind Academy</h1>
+                        <span class="bg-orange-500/20 text-orange-300 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full border border-orange-400/30">New Platform QA Audit</span>
+                    </div>
+                    <p class="text-xs text-slate-400 font-medium mt-0.5">تقرير اختبار سيناريوهات المنصة الجديدة وتوثيق الأداء والملاحظات التنفيذية</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3 text-xs font-bold">
+                <a href="./index.html" class="px-3.5 py-2 rounded-xl bg-slate-800 text-slate-200 hover:bg-slate-700 border border-slate-700 transition flex items-center gap-1.5">
+                    📌 لوحة التحكم الرئيسية
+                </a>
+                <button onclick="window.print()" class="px-3.5 py-2 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-extrabold transition shadow-lg shadow-orange-600/20 flex items-center gap-1.5">
+                    🖨️ طباعة / تصدير PDF
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full space-y-8">
+
+        <!-- Executive Summary Banner -->
+        <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-orange-950 p-6 md:p-8 rounded-3xl border border-orange-500/30 shadow-2xl space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-500/20 border border-orange-400/30 flex items-center justify-center text-2xl shadow-inner">
+                        🧪
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-orange-400 uppercase tracking-widest bg-orange-500/10 px-3 py-1 rounded-full border border-orange-400/20">تقرير فحص المنصة الجديدة (Platform Test Audit)</span>
+                        <h2 class="text-xl md:text-2xl font-black text-white mt-1">ملخص نتائج وملاحظات اختبار المنصة الجديدة للسيشنز وحسابات المهندسين</h2>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs font-extrabold bg-blue-500/20 text-blue-300 border border-blue-400/30 px-3 py-1.5 rounded-xl">
+                        ⚙️ تم التست على 6 جلسات & 6 مهندسين
+                    </span>
+                    <span class="text-xs font-extrabold bg-amber-500/20 text-amber-300 border border-amber-400/30 px-3 py-1.5 rounded-xl">
+                        ⚠️ يحتوي على 8 ملاحظات واستفسارات برمجية
+                    </span>
+                </div>
+            </div>
+            <p class="text-xs md:text-sm text-slate-300 leading-relaxed max-w-4xl">
+                يقدم هذا التقرير توثيقاً شاملاً للاختبارات التشغيلية التي تم إجراؤها على المنصة الجديدة عبر حسابات <strong>الأدمن (Admin)، خدمة العملاء (Care)، الجودة (Quality)، والمدير (Director)</strong>. شمل الاختبار إنشاء 6 جلسات تجريبية وتوزيع المواعيد والسلوتس، وتقييم أداء وحسابات 6 مهندسين في 3 مسارات أكاديمية (برمجة، جرافيك، وروبوتكس)، ورصد السلوكيات البرمجية والمحظورات التي تتطلب مراجعة واعتماد الإدارة.
+            </p>
+        </div>
+
+        <!-- Section 1: Test Cases & Sessions Matrix -->
+        <section class="space-y-4">
+            <div class="flex items-center justify-between">
+                <h3 class="text-lg font-black text-white flex items-center gap-2">
+                    <span>📊</span> أولاً: جدول حالات الاختبار للجلسات والمهندسين (6 Test Sessions)
+                </h3>
+                <span class="text-xs text-slate-400">تغطية مسارات البرمجة، الجرافيك، والروبوتكس</span>
+            </div>
+
+            <div class="glass-card rounded-2xl overflow-hidden border border-slate-800 shadow-xl">
+                <div class="overflow-x-auto custom-scrollbar">
+                    <table class="w-full text-right text-xs">
+                        <thead class="bg-slate-900/90 text-slate-300 font-bold border-b border-slate-800">
+                            <tr>
+                                <th class="p-3.5">#</th>
+                                <th class="p-3.5">المسار الأكاديمي</th>
+                                <th class="p-3.5">اسم المهندس/ة</th>
+                                <th class="p-3.5">السيناريو والإجراء المُنقّذ</th>
+                                <th class="p-3.5">نتيجة الأرباح (Earnings)</th>
+                                <th class="p-3.5">مسار الجودة والدايريكتور (Quality & Director)</th>
+                                <th class="p-3.5">حالة التست</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800/60 font-medium text-slate-300">
+                            <!-- Session 1 -->
+                            <tr class="hover:bg-slate-800/40 transition">
+                                <td class="p-3.5 font-bold text-orange-400">1</td>
+                                <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 font-bold">Programming 🐍</span></td>
+                                <td class="p-3.5 font-bold text-white">م. أماني</td>
+                                <td class="p-3.5">إضافة مواعيد (Slots) من الأدمن، تنفيذ الجلسة رقم 1 بشكل طبيعي، إرسال الريكورد والملخص.</td>
+                                <td class="p-3.5 font-bold text-emerald-400">إضافة الأرباح بنجاح للمحفظة ✅</td>
+                                <td class="p-3.5">ظهرت لدى الكواليتي وتقييم الجلسة بنجاح 🟢</td>
+                                <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold">ناجح (Normal)</span></td>
+                            </tr>
+                            <!-- Session 2 -->
+                            <tr class="hover:bg-slate-800/40 transition">
+                                <td class="p-3.5 font-bold text-orange-400">2</td>
+                                <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 font-bold">Programming 🐍</span></td>
+                                <td class="p-3.5 font-bold text-white">م. يوسف ➔ م. أماني</td>
+                                <td class="p-3.5">إلغاء جلسة م. يوسف وتحويل الجروب إلى م. أماني عبر حساب الكير (Care). أدت أماني الجلسة 2.</td>
+                                <td class="p-3.5 font-bold text-emerald-400">زيادة أرباح م. أماني للجلسة الثانية ✅</td>
+                                <td class="p-3.5"><strong class="text-red-400">ملاحظة:</strong> إلغاء سيشن يوسف أرسله مباشرة لـ "Ready for Director" ودون المرور بالجودة 🚨</td>
+                                <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-bold">تحويل ناجح + ملاحظة</span></td>
+                            </tr>
+                            <!-- Session 3 -->
+                            <tr class="hover:bg-slate-800/40 transition">
+                                <td class="p-3.5 font-bold text-orange-400">3</td>
+                                <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 font-bold">Programming 🐍</span></td>
+                                <td class="p-3.5 font-bold text-white">م. يوسف (سيشن 2)</td>
+                                <td class="p-3.5">إنشاء جلسة جديدة لـ يوسف بنفس الجروب وتعديل الميعاد لنفس اليوم عبر الكير. أدى الجلسة ورفع الريكورد.</td>
+                                <td class="p-3.5 font-bold text-emerald-400">زيادة أرباح م. يوسف بنجاح ✅</td>
+                                <td class="p-3.5"><strong class="text-red-400">خلل:</strong> لم يظهر يوسف لدى الكواليتي وظل مجههاً للدايريكتور بسبب إلغاء السيشن الأولى! ⚠️</td>
+                                <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-red-500/20 text-red-300 font-bold">باي باس الكواليتي</span></td>
+                            </tr>
+                            <!-- Session 4 -->
+                            <tr class="hover:bg-slate-800/40 transition">
+                                <td class="p-3.5 font-bold text-orange-400">4</td>
+                                <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30 font-bold">Graphics 🎨</span></td>
+                                <td class="p-3.5 font-bold text-white">م. سارة ➔ م. ريهام</td>
+                                <td class="p-3.5">توزيع مواعيد الجرافيك واختيار مهندسة سارة وتجربة تحويل السيشن وتعديل الموعد عبر الكير.</td>
+                                <td class="p-3.5 font-bold text-emerald-400">احتساب المستحقات بانتظام ✅</td>
+                                <td class="p-3.5">معالجة التقييمات وفق مسار الجودة المعتاد 🟢</td>
+                                <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold">ناجح</span></td>
+                            </tr>
+                            <!-- Session 5 -->
+                            <tr class="hover:bg-slate-800/40 transition">
+                                <td class="p-3.5 font-bold text-orange-400">5</td>
+                                <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30 font-bold">Graphics 🎨</span></td>
+                                <td class="p-3.5 font-bold text-white">م. ريهام أبو لبن</td>
+                                <td class="p-3.5">تحديد الموعد وأداء الجلسة الجرافيكية الأولى ورفع الريكورد والملخص.</td>
+                                <td class="p-3.5 font-bold text-emerald-400">إضافة أرباح السيشن ✅</td>
+                                <td class="p-3.5">ظهور الجلسة لدى الكواليتي وتقييمها 🟢</td>
+                                <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold">ناجح</span></td>
+                            </tr>
+                            <!-- Session 6 -->
+                            <tr class="hover:bg-slate-800/40 transition">
+                                <td class="p-3.5 font-bold text-orange-400">6</td>
+                                <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-orange-500/20 text-orange-300 border border-orange-500/30 font-bold">Robotics 🤖</span></td>
+                                <td class="p-3.5 font-bold text-white">م. منة الله & م. ياسمينة</td>
+                                <td class="p-3.5">تجهيز جلسات الروبوتكس، تحديد السلوتس، وتجربة أداء السيشن وتقييم الجودة والدايريكتور.</td>
+                                <td class="p-3.5 font-bold text-emerald-400">تحديث المحفظة والأرباح ✅</td>
+                                <td class="p-3.5">ظهور الجلسات وااختفائها من الكواليتي بعد الاعتماد 🟢</td>
+                                <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold">ناجح</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Quality & Instructor Performance Evaluation -->
+        <section class="space-y-4">
+            <h3 class="text-lg font-black text-white flex items-center gap-2">
+                <span>⭐</span> ثانياً: توثيق أداء المحاضرين ودورة تقييم الجودة (Quality & Director Audit)
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Quality View Audit -->
+                <div class="glass-card p-6 rounded-2xl space-y-3 border border-slate-800">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <h4 class="font-bold text-white text-sm flex items-center gap-2">
+                            <span>🔍</span> سلوك شاشة الكواليتي (Quality Dashboard)
+                        </h4>
+                        <span class="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded-full font-bold">ملاحظة تشغيلية</span>
+                    </div>
+                    <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed list-disc list-inside">
+                        <li>أدت <strong>مهندسة أماني</strong> جلستين، وظهرت بالفعل الجلستان في قائمة الكواليتي بانتظام.</li>
+                        <li>عندما قامت الكواليتي بتقييم جلسة واحدة، اختفت الجلسة المُقيمة فوراً من شاشة الكواليتي.</li>
+                        <li><strong class="text-amber-400">قيد هائل:</strong> بمجرد إجراء الكواليتي لتقييم المهندس، لا تستطيع تقييم أي جلسة أخرى لنفس المهندس مرة ثانية إلا في نهاية الشهر، مما يضطر الكواليتي لتأخير التقييمات حتى آخر الشهر!</li>
+                    </ul>
+                </div>
+
+                <!-- Director View Audit -->
+                <div class="glass-card p-6 rounded-2xl space-y-3 border border-slate-800">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <h4 class="font-bold text-white text-sm flex items-center gap-2">
+                            <span>👑</span> سلوك شاشة المدير (Director Dashboard)
+                        </h4>
+                        <span class="text-[10px] bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded-full font-bold">رؤية الإدارة</span>
+                    </div>
+                    <ul class="space-y-2.5 text-xs text-slate-300 leading-relaxed list-disc list-inside">
+                        <li>عند تقييم الكواليتي للسيشن، يظهر عند الدايريكتور عدد الجلسات المكتملة وإجمالي المستحقات.</li>
+                        <li><strong class="text-red-400">نقص التفاصيل:</strong> لا تظهر للدايريكتور التفاصيل التفصيلية لبنود التقييم أو تفاصيل الجلسة.</li>
+                        <li><strong class="text-red-400">اختفاء التقارير:</strong> بمجرد أن يقوم الدايريكتور بعمل قفل (Lock) للتقارير، تختفي التقارير تماماً من عنده بدلاً من أن تظل ظاهرة للعرض والإحصاء.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: 8 Critical Observations & System Bugs -->
+        <section class="space-y-4">
+            <div class="flex items-center justify-between">
+                <h3 class="text-lg font-black text-white flex items-center gap-2">
+                    <span>🚨</span> ثالثاً: التقرير التنفيذي للملاحظات والعيوب البرمجية (8 Critical Issues)
+                </h3>
+                <span class="text-xs text-slate-400">ملاحظات تتطلب مراجعة برمجية واتخاذ قرار قيادي</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Issue 1 -->
+                <div class="glass-card p-5 rounded-2xl border-r-4 border-r-red-500 border-slate-800 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-black text-red-400 bg-red-500/10 px-2.5 py-1 rounded-lg border border-red-500/20">الملاحظة 1 🔴</span>
+                        <span class="text-xs font-bold text-slate-400">قوائم اختيار المهندسين</span>
+                    </div>
+                    <h4 class="font-bold text-white text-sm">عدم ظهور بعض المهندسين في القوائم (Missing Engineers in Dropdowns)</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        عند البحث واختيار مهندسين محددين (مثل مهندسة ريهام بكري ومهندسة ريناد)، لم يظهرن في قائمة الاختيار. هل هذا بسبب تصنيف الحسابات القديمة أم خلل في فلترة داتابيز قائمة القوائم المنسدلة؟
+                    </p>
+                </div>
+
+                <!-- Issue 2 -->
+                <div class="glass-card p-5 rounded-2xl border-r-4 border-r-amber-500 border-slate-800 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-black text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-lg border border-amber-500/20">الملاحظة 2 ⚠️</span>
+                        <span class="text-xs font-bold text-slate-400">ضوابط دفع الطلاب وازدواجية الكورسات</span>
+                    </div>
+                    <h4 class="font-bold text-white text-sm">عدم وضوح حالة دفع الطلاب وتعارض مواعيد تسجيل الكورسات</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        غير موضح في النظام من هم الطلاب الذين دافعين ومن لم يدفعوا. تمت تجربة اختيار الطالب (محمد طه) المسجل كـ "دافع" في كافة الكورسات، وتم السماح بتسجيله في كورسات متعددة تتداخل أوقاتها تماماً! هل يفترض منع الطالب المالي من اختيار كورس الـ 4 شهور أو قفل التعارض عبر الكير؟
+                    </p>
+                </div>
+
+                <!-- Issue 3 -->
+                <div class="glass-card p-5 rounded-2xl border-r-4 border-r-amber-500 border-slate-800 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-black text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-lg border border-amber-500/20">الملاحظة 3 ⚠️</span>
+                        <span class="text-xs font-bold text-slate-400">استقرار الواجهة (UI Lag)</span>
+                    </div>
+                    <h4 class="font-bold text-white text-sm">تعليق واجهة إضافة المجموعات وعدم الثبات في المرة الأولى</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        عند إنشاء المجموعات وتجهيزها، لاحظنا أن المجموعة لا تظهر فوراً وتتطلب الرجوع للخلف وإعادة إضافتها مرة أخرى لتثبيتها في الواجهة.
+                    </p>
+                </div>
+
+                <!-- Issue 4 -->
+                <div class="glass-card p-5 rounded-2xl border-r-4 border-r-red-500 border-slate-800 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-black text-red-400 bg-red-500/10 px-2.5 py-1 rounded-lg border border-red-500/20">الملاحظة 4 🔴</span>
+                        <span class="text-xs font-bold text-slate-400">تنبيهات قسم الكير (Care Notifications)</span>
+                    </div>
+                    <h4 class="font-bold text-white text-sm">غياب الشارات والإشعارات الرقمية لقسم الكير عند اعتذار المهندس</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        عند اعتذار أو إلغاء المهندس للسيشن، تذهب الجلسة إلى قسم الكيرات (Care) في سكشن الاعتذارات، ولكن لا توجد أي شارة تنبيهية أو عداد رقمي (مثل <span class="text-red-400 font-bold font-mono">🔴 1</span>) بجانب السكشن للتنبيه المباشر.
+                    </p>
+                </div>
+
+                <!-- Issue 5 -->
+                <div class="glass-card p-5 rounded-2xl border-r-4 border-r-blue-500 border-slate-800 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-black text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-lg border border-blue-500/20">الملاحظة 5 🔵</span>
+                        <span class="text-xs font-bold text-slate-400">قواعد بدء الجلسات</span>
+                    </div>
+                    <h4 class="font-bold text-white text-sm">قصر بدء الجلسات على نفس اليوم وتنسيق التعديل عبر الكير</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        لا يمكن بدء أي سيشن إلا إذا كانت مبرمجة في نفس تاريخ اليوم. أي تغيير أو تقديم في الموعد يستلزم التنسيق والتعديل المباشر من خلال الكيرات (Care).
+                    </p>
+                </div>
+
+                <!-- Issue 6 -->
+                <div class="glass-card p-5 rounded-2xl border-r-4 border-r-red-500 border-slate-800 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-black text-red-400 bg-red-500/10 px-2.5 py-1 rounded-lg border border-red-500/20">الملاحظة 6 🔴 (حرجة جداً)</span>
+                        <span class="text-xs font-bold text-slate-400">قيود تقييم الكواليتي</span>
+                    </div>
+                    <h4 class="font-bold text-white text-sm">قفل تقييم الكواليتي للمهندس وعدم إمكانية التقييم المرحلي</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        بمجرد أن تقوم الكواليتي بعمل تقييم لمهندس معّين، لا تستطيع تقييم أي سيشن إضافية لهذا المهندس مرة أخرى، مما يجبر الكواليتي على تجميع كافة السيشنز والتقييم في آخر الشهر فقط، وهذا يسبب اختناقاً وتأخيراً في التقييم الميداني.
+                    </p>
+                </div>
+
+                <!-- Issue 7 -->
+                <div class="glass-card p-5 rounded-2xl border-r-4 border-r-red-500 border-slate-800 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-black text-red-400 bg-red-500/10 px-2.5 py-1 rounded-lg border border-red-500/20">الملاحظة 7 🔴 (خلل مسار)</span>
+                        <span class="text-xs font-bold text-slate-400">تحويل الملغيات وااختفاء التقارير</span>
+                    </div>
+                    <h4 class="font-bold text-white text-sm">الجلسات الملغاة تذهب للدايريكتور وتتخطي الكواليتي + اختفاء التقارير بعد الإغلاق</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        1. المهندس الذي ينفذ إلغاء للجلسة لا تظهر جلساته في تقارير الكواليتي بل تذهب مباشرة لـ Director (Ready for Director).
+                        <br>
+                        2. لماذا تختفي التقارير تماماً من عند الدايريكتور بعد عمل Lock لها؟ يفترض أن تظل ممرشرة ومتاحة للعرض فقط لمتابعة الأعداد والإحصائيات.
+                    </p>
+                </div>
+
+                <!-- Issue 8 -->
+                <div class="glass-card p-5 rounded-2xl border-r-4 border-r-red-500 border-slate-800 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-black text-red-400 bg-red-500/10 px-2.5 py-1 rounded-lg border border-red-500/20">الملاحظة 8 🔴 (خلل برمجي)</span>
+                        <span class="text-xs font-bold text-slate-400">نظام الخصومات والجزاءات</span>
+                    </div>
+                    <h4 class="font-bold text-white text-sm">عدم خصم الخصومات المالية/النقاط من حساب المحاضر</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        عند تطبيق خصم على مهندس (نقاط أو مبلغ مالي بقيمة 20 ج مثلاً)، لم يتم خصمه إطلاقاً من حساب أو محفظة المحاضر. هل الخصم غير مفعل برمجياً أم يتطلب رفع طلب موافقة للمانجر أولاً قبل الاعتماد؟
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 4: Recommended Action Items for Director & Dev Team -->
+        <section class="bg-gradient-to-br from-slate-900 to-slate-950 p-6 md:p-8 rounded-3xl border border-orange-500/30 space-y-4 shadow-xl">
+            <h3 class="text-lg font-black text-white flex items-center gap-2">
+                <span>🎯</span> رابعاً: توصيات وخطة المعالجة المقترحة لفريق التطوير والإدارة
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                    <span class="font-bold text-orange-400 block">1. التعديلات البرمجية العاجلة (Dev Fixes)</span>
+                    <p class="text-slate-300 leading-relaxed">
+                        تفعيل نظام الخصومات فوراً، وإيقاف تخطي الجلسات الملغاة للكواليتي، وإتاحة تقييم الكواليتي للسيشنز المتعددة بشكل مرحلي.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                    <span class="font-bold text-blue-400 block">2. تحسينات تجربة المستخدم (UI/UX)</span>
+                    <p class="text-slate-300 leading-relaxed">
+                        إضافة شارة التنبيهات الحمراء (Badge Counter) لحسابات الكير، وإصلاح عدم ثبات إضافة المجموعات من المرة الأولى.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                    <span class="font-bold text-purple-400 block">3. صلاحيات وشاشات الدايريكتور</span>
+                    <p class="text-slate-300 leading-relaxed">
+                        عرض التفاصيل التفصيلية لبنود التقييم لدى الدايريكتور، وإبقاء التقارير المغلقة (Locked Reports) للأرشيف والإحصائيات.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-6 text-center text-xs text-slate-500">
+        <p>Megamind Academy Executive Dashboard • Quality Assurance & Platform Testing Report 2026</p>
+    </footer>
+
+</body>
+</html>
