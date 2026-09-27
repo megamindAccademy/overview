@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مراجعة وتقييم منصات الاجتماعات والتسجيل - Megamind Academy</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #0b1120;
+            color: #f8fafc;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #ea580c;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased selection:bg-orange-500 selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="bg-slate-900/90 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <a href="./index.html" class="w-10 h-10 rounded-xl bg-orange-600/20 text-orange-400 hover:bg-orange-600 hover:text-white flex items-center justify-center font-bold text-lg border border-orange-500/30 transition shadow-inner" title="العودة للوحة التحكم">
+                    ➔
+                </a>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <h1 class="text-lg md:text-xl font-black text-white tracking-tight">Megamind Academy</h1>
+                        <span class="bg-orange-500/20 text-orange-300 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full border border-orange-400/30">Video Infrastructure Audit</span>
+                    </div>
+                    <p class="text-xs text-slate-400 font-medium mt-0.5">دراسة مقارنة خطط منصات الاجتماعات وتقييم المخاطر التشغيلية لـ MS Teams</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3 text-xs font-bold">
+                <a href="./index.html" class="px-3.5 py-2 rounded-xl bg-slate-800 text-slate-200 hover:bg-slate-700 border border-slate-700 transition flex items-center gap-1.5">
+                    📌 لوحة التحكم الرئيسية
+                </a>
+                <button onclick="window.print()" class="px-3.5 py-2 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-extrabold transition shadow-lg shadow-orange-600/20 flex items-center gap-1.5">
+                    🖨️ طباعة / تصدير PDF
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full space-y-8">
+
+        <!-- Executive Summary Banner -->
+        <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-orange-950 p-6 md:p-8 rounded-3xl border border-orange-500/30 shadow-2xl space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-500/20 border border-orange-400/30 flex items-center justify-center text-2xl shadow-inner">
+                        📹
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-orange-400 uppercase tracking-widest bg-orange-500/10 px-3 py-1 rounded-full border border-orange-400/20">تقرير البنية التحتية لمنصات الاجتماعات والتسجيل</span>
+                        <h2 class="text-xl md:text-2xl font-black text-white mt-1">دراسة ومقارنة خطط المنصات (Teams vs Google Meet vs Zoom vs BigBlueButton)</h2>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs font-extrabold bg-blue-500/20 text-blue-300 border border-blue-400/30 px-3 py-1.5 rounded-xl">
+                        📊 مقارنة 4 منصات عالمية
+                    </span>
+                    <span class="text-xs font-extrabold bg-red-500/20 text-red-300 border border-red-400/30 px-3 py-1.5 rounded-xl">
+                        🚨 تحذير ثغرة Teams التشغيلية
+                    </span>
+                </div>
+            </div>
+            <p class="text-xs md:text-sm text-slate-300 leading-relaxed max-w-4xl">
+                تستعرض هذه الدراسة مقارنة تقنية ومالية شاملة للخطط الأولى (Entry-Level Paid Plans) لمنصات البث المباشر والتسجيل للأكاديمية. تهدف الوثيقة لتحديد خيارات التخزين والسعر والاجتماعات التزامنية، وتحليل ممارسات الأكاديميات المنافسة (مثل iSchool)، بالإضافة لرصد المخاطر التشغيلية العالية الناتجة عن الاعتماد على ثغرة فتح عدة اجتماعات بنفس أكونت Teams والتخطيط للبديل الفوري.
+            </p>
+        </div>
+
+        <!-- Section 1: Detailed Platform Comparison Matrix Table -->
+        <section class="space-y-4">
+            <div class="flex items-center justify-between">
+                <h3 class="text-lg font-black text-white flex items-center gap-2">
+                    <span>📊</span> أولاً: جدول مقارنة الخطط الأولى (Entry-Level Paid Plans) للمنصات الأربع
+                </h3>
+                <span class="text-xs text-slate-400">مقارنة الأسعار والتخزين والاجتماعات التزامنية</span>
+            </div>
+
+            <div class="glass-card rounded-2xl overflow-hidden border border-slate-800 shadow-xl">
+                <div class="overflow-x-auto custom-scrollbar">
+                    <table class="w-full text-right text-xs">
+                        <thead class="bg-slate-900/90 text-slate-300 font-bold border-b border-slate-800">
+                            <tr>
+                                <th class="p-3.5">المنصة والبرنامج</th>
+                                <th class="p-3.5">اسم الخطة الأولى (Paid Tier 1)</th>
+                                <th class="p-3.5">التكلفة السعرية (Price / User)</th>
+                                <th class="p-3.5">مساحة التخزين (Storage)</th>
+                                <th class="p-3.5">الاجتماعات التزامنية الحقيقية (Concurrent Meetings)</th>
+                                <th class="p-3.5">سعة المشاركين (Max Participants)</th>
+                                <th class="p-3.5">أقصى مدة للسيشن</th>
+                                <th class="p-3.5">التسجيل والربط (Recording & API)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800/60 font-medium text-slate-300">
+                            <!-- MS Teams -->
+                            <tr class="hover:bg-slate-800/40 transition">
+                                <td class="p-3.5 font-bold text-white flex items-center gap-2">
+                                    <span class="w-6 h-6 rounded bg-blue-600/20 text-blue-400 flex items-center justify-center font-bold text-xs border border-blue-500/30">T</span>
+                                    <span>Microsoft Teams</span>
+                                </td>
+                                <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700 font-bold">Business Basic / Essentials</span></td>
+                                <td class="p-3.5 font-bold text-emerald-400">~$4.00 - $6.00 / مستخدم / شهرياً</td>
+                                <td class="p-3.5 font-bold text-slate-200">10 GB - 1 TB للمستخدم (SharePoint/OneDrive)</td>
+                                <td class="p-3.5">
+                                    <strong class="text-red-400 block mb-0.5">اجتماع واحد نشط فقط رسمياً (1 Meeting/License)</strong>
+                                    <span class="text-[10px] text-amber-300 leading-tight block">(ملاحظة: فتح أكثر من اجتماع حالياً مجرد ثغرة/Glitch)</span>
+                                </td>
+                                <td class="p-3.5 font-bold text-slate-200">300 مشارك</td>
+                                <td class="p-3.5">30 ساعة</td>
+                                <td class="p-3.5 text-slate-300">تسجيل سحابي تلقائي + تقارير الحضور + ربط Office 365</td>
+                            </tr>
+                            <!-- Google Meet -->
+                            <tr class="hover:bg-slate-800/40 transition">
+                                <td class="p-3.5 font-bold text-white flex items-center gap-2">
+                                    <span class="w-6 h-6 rounded bg-emerald-600/20 text-emerald-400 flex items-center justify-center font-bold text-xs border border-emerald-500/30">M</span>
+                                    <span>Google Meet</span>
+                                </td>
+                                <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700 font-bold">Workspace Business Starter</span></td>
+                                <td class="p-3.5 font-bold text-emerald-400">~$6.00 / مستخدم / شهرياً</td>
+                                <td class="p-3.5 font-bold text-slate-200">30 GB للمستخدم (Google Drive)</td>
+                                <td class="p-3.5"><strong class="text-slate-300">اجتماع واحد نشط رسمياً لكل حساب</strong></td>
+                                <td class="p-3.5 font-bold text-slate-200">100 مشارك</td>
+                                <td class="p-3.5">24 ساعة</td>
+                                <td class="p-3.5 text-slate-300">التسجيل السحابي يتطلب ترقية Business Standard (~$12) + مزامنة Drive</td>
+                            </tr>
+                            <!-- Zoom Meetings -->
+                            <tr class="hover:bg-slate-800/40 transition">
+                                <td class="p-3.5 font-bold text-white flex items-center gap-2">
+                                    <span class="w-6 h-6 rounded bg-sky-600/20 text-sky-400 flex items-center justify-center font-bold text-xs border border-sky-500/30">Z</span>
+                                    <span>Zoom Meetings</span>
+                                </td>
+                                <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700 font-bold">Zoom Pro</span></td>
+                                <td class="p-3.5 font-bold text-emerald-400">~$13.33 - $15.99 / مستخدم / شهرياً</td>
+                                <td class="p-3.5 font-bold text-slate-200">5 GB سحابي لكل ترخيص (+ تسجيل محلي لا محدود)</td>
+                                <td class="p-3.5"><strong class="text-slate-300">اجتماع واحد نشط لكل ترخيص Host</strong></td>
+                                <td class="p-3.5 font-bold text-slate-200">100 مشارك (قابلة للتوسعة لـ 300)</td>
+                                <td class="p-3.5">30 ساعة</td>
+                                <td class="p-3.5 text-slate-300">تسجيل سحابي ومحلي ممتازة + Breakout Rooms + ربط API/LMS قوي جداً</td>
+                            </tr>
+                            <!-- BigBlueButton (BBB) -->
+                            <tr class="hover:bg-slate-800/40 transition">
+                                <td class="p-3.5 font-bold text-white flex items-center gap-2">
+                                    <span class="w-6 h-6 rounded bg-orange-600/20 text-orange-400 flex items-center justify-center font-bold text-xs border border-orange-500/30">B</span>
+                                    <span>BigBlueButton (BBB)</span>
+                                </td>
+                                <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-orange-500/20 text-orange-300 border border-orange-500/30 font-bold">Self-Hosted / Managed VPS</span></td>
+                                <td class="p-3.5 font-bold text-emerald-400">سيرفر خاص ~$20 - $50 / شهرياً كلياً (أو ~$0.10/طالب)</td>
+                                <td class="p-3.5 font-bold text-slate-200">حسب مساحة السيرفر (100 GB - 500 GB SSD)</td>
+                                <td class="p-3.5 font-bold text-emerald-400">غير محدود (فتح عدة غرف واجتماعات متوازية حسب قوة السيرفر) ✅</td>
+                                <td class="p-3.5 font-bold text-slate-200">100 - 300+ مشارك إجمالي على السيرفر</td>
+                                <td class="p-3.5">مفتوح بدون حد أقسى</td>
+                                <td class="p-3.5 text-slate-300">مصمم خصيصاً للتعليم + السبورة التفاعلية Multi-user + تسجيل MP4 سحابي + ربط LMS كامل</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Competitor Benchmarking & Market Practice (iSchool Model) -->
+        <section class="space-y-4">
+            <h3 class="text-lg font-black text-white flex items-center gap-2">
+                <span>🏫</span> ثانياً: دراسة ممارسات السوق والأكاديميات المنافسة (نموذج آي سكول - iSchool)
+            </h3>
+
+            <div class="glass-card p-6 rounded-2xl border border-slate-800 space-y-4">
+                <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-xl font-bold border border-sky-400/30">
+                            💡
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">تخصيص أكونت Zoom مدفوع مستمر لكل مهندس (Dedicated Host Account Model)</h4>
+                            <p class="text-xs text-slate-400">آلية العمل المتبعة لدى الأكاديميات الكبرى مثل iSchool</p>
+                        </div>
+                    </div>
+                    <span class="text-xs bg-sky-500/20 text-sky-300 border border-sky-400/30 px-3 py-1 rounded-full font-extrabold">الممارسة المعيارية بالسوق</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs leading-relaxed text-slate-300">
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                        <strong class="text-sky-300 font-bold block">📌 كيف تعمل الأكاديميات المنافسة (مثل iSchool)؟</strong>
+                        <p>
+                            تقوم الأكاديمية بتقديم **أكونت زوم خاص ومستقل (Individual Dedicated Zoom Account)** لكل مهندس محاضر بصفة دائمة. يستلم المهندس بيانات الدخول الخاصة بترخيصه ويبدأ الجلسات مباشرة دون الحاجة لمشاركة الحساب مع مهندسين آخرين.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                        <strong class="text-emerald-300 font-bold block">✨ المزايا الفنية والتشغيلية لهذا النظام:</strong>
+                        <ul class="list-disc list-inside space-y-1 text-slate-300">
+                            <li>منع تعارض المواعيد وتضارب الجلسات (No Scheduling Collisions).</li>
+                            <li>تخصيص روابط التسجيل السحابية لكل محاضر على حدة لسهولة المراجعة.</li>
+                            <li>ضمان عدم توقف العمل عند حدوث مشكلة في حساب مهندس واحد (Isolation of Failure).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Critical Technical Risk & Teams Concurrent Glitch Alert -->
+        <section class="space-y-4">
+            <div class="flex items-center justify-between">
+                <h3 class="text-lg font-black text-white flex items-center gap-2">
+                    <span>🚨</span> ثالثاً: التقرير التنفيذي للمخاطر وتحذير ثغرة Microsoft Teams الحالية
+                </h3>
+                <span class="text-xs text-red-400 font-bold">تنبيه عاجل لخطورة الاعتماد على الوضع الحالي</span>
+            </div>
+
+            <div class="glass-card p-6 md:p-8 rounded-3xl border-2 border-red-500/40 space-y-5 bg-gradient-to-br from-slate-900 via-red-950/20 to-slate-900 shadow-2xl">
+                
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-red-500/20 border border-red-500/40 text-red-400 flex items-center justify-center text-2xl font-bold shrink-0 shadow-inner">
+                        ⚠️
+                    </div>
+                    <div class="space-y-1">
+                        <h4 class="text-base md:text-lg font-black text-white">حقيقة اشتراك MS Teams: فتح عدة اجتماعات حالياً مجرد خلل/ثغرة تقنية (Un-enforced Policy Bug)</h4>
+                        <p class="text-xs md:text-sm text-red-200/90 font-medium">الاشتراك الرسمي لـ Teams مخصص لاجتماع واحد نشط فقط للحساب الواحد.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                    <!-- Issue Explanation -->
+                    <div class="bg-slate-900/90 p-5 rounded-2xl border border-red-500/30 space-y-3">
+                        <h5 class="font-bold text-amber-300 text-xs flex items-center gap-1.5">
+                            <span>🔍</span> ما الذي يحدث حالياً في تشغيل الأكاديمية؟
+                        </h5>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            يعتقد البعض أن Microsoft Teams رخيص أو اقتصادي لأنه يتيح لنا حالياً فتح **أكثر من Meeting في نفس الوقت ومن نفس الحساب**. ولكن من الناحية التقنية الرسمية لـ Microsoft، فإن ترخيص المستخدم الواحد يتيح **اجتماعاً واحداً فقط في نفس الوقت (1 Active Meeting Per License)**.
+                        </p>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            إمكانية فتح عدة اجتماعات بالتوازي من نفس أكونت Teams حالياً هي مجرد **خلل تقني أو عدم إنفاذ للسياسة (Un-enforced Bug/Glitch)** في سيرفرات مايكروسوفت يتيح لنا ذلك مؤقتاً.
+                        </p>
+                    </div>
+
+                    <!-- Risk & Stoppage Threat -->
+                    <div class="bg-slate-900/90 p-5 rounded-2xl border border-red-500/30 space-y-3">
+                        <h5 class="font-bold text-red-400 text-xs flex items-center gap-1.5">
+                            <span>💥</span> خطورة الخلل وعواقب الإغلاق المفاجئ:
+                        </h5>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            في حال قامت مايكروسوفت بتحديث النظام أو سد هذه الثغرة وتطبيق سياسة (1 Active Meeting) في أي لحظة وبدون إنذار مسبق، فإن **جميع الجلسات المتوازية للأكاديمية ستتوقف وتفشل فوراً**، مما يتسبب في **عائق تشغيلي كبير وتوقف مفاجئ لعمل الكورسات بكاملها مرة واحدة**.
+                        </p>
+                        <div class="p-3 rounded-xl bg-red-950/60 border border-red-500/40 text-red-200 font-extrabold text-xs">
+                            💡 <strong>القرار الإستراتيجي اللازم:</strong> حتى في حال الاستمرار المؤقت على MS Teams، يجب إعداد وتوفير **خطة وبديل جاهز فوراً (Backup Plan)** لتفادي أي توقف مفاجئ للجلسات.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 4: Strategic Recommendations & Action Plan -->
+        <section class="bg-gradient-to-br from-slate-900 to-slate-950 p-6 md:p-8 rounded-3xl border border-orange-500/30 space-y-4 shadow-xl">
+            <h3 class="text-lg font-black text-white flex items-center gap-2">
+                <span>🎯</span> رابعاً: التوصيات وخطة العمل التنفيذية للإدارة (Actionable Recommendations)
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                    <span class="font-bold text-orange-400 block">1. إعداد البديل الفوري (Emergency Backup)</span>
+                    <p class="text-slate-300 leading-relaxed">
+                        توفير أكونتات زوم احتياطية أو سيرفر BigBlueButton تجريبي طوارئ ليتم تفعيله فوراً إذا تم غلق ثغرة MS Teams المتعددة.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                    <span class="font-bold text-blue-400 block">2. دراسة نموذج أكونت لكل مهندس (Dedicated Licensing)</span>
+                    <p class="text-slate-300 leading-relaxed">
+                        حساب الجدوى المالية لتخصيص أكونت Zoom Pro أو Meet مستقل لكل مهندس (كما في iSchool) وضمه لترخيص مؤسسي موحد.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                    <span class="font-bold text-purple-400 block">3. تقييم سيرفر BigBlueButton الأكاديمي</span>
+                    <p class="text-slate-300 leading-relaxed">
+                        تجربة سيرفر BigBlueButton خاص بالأكاديمية (VPS ~$30/mo) لربطه مباشرة بالمنصة وتوفير تسجيلات سحابية واجتماعات متوازية لا محدودة.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-6 text-center text-xs text-slate-500">
+        <p>Megamind Academy Executive Dashboard • Video Platform Infrastructure Comparison Report 2026</p>
+    </footer>
+
+</body>
+</html>

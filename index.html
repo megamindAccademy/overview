@@ -373,15 +373,20 @@
                 </div>
 
                 <!-- Card 8: Meeting & Streaming Platforms Review -->
-                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-indigo-300 transition space-y-2">
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded-md">⏳ بحث ومقارنة جارية</span>
-                        <span class="text-xl">📹</span>
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-indigo-300 transition space-y-2 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded-md">📹 تم إعداد دراسة المقارنة والتحذير</span>
+                            <span class="text-xl">📹</span>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-sm">مقارنة منصات الاجتماعات وحساب مخاطر Teams</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed mt-1">
+                            دراسة مقارنة لـ (Teams, Meet, Zoom, BBB)، وتوضيح نموذج أكونت لكل مهندس (iSchool)، وتحذير خطورة ثغرة MS Teams الحالية.
+                        </p>
                     </div>
-                    <h4 class="font-bold text-slate-800 text-sm">تقييم منصات الاجتماعات والتسجيل (Teams vs Zoom vs BigBlueButton)</h4>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        مراجعة برنامج Microsoft Teams المستغّل حالياً وبحث وتقييم Zoom وBigBlueButton لاختيار المنصة الأفضل والأعلى جودة في التسجيلات والربط.
-                    </p>
+                    <a href="./meeting-platforms-comparison.html" target="_blank" rel="noopener noreferrer" class="mt-2 text-xs font-bold text-indigo-800 bg-indigo-50 hover:bg-indigo-100 px-3 py-1.5 rounded-xl border border-indigo-200 shadow-2xs transition flex items-center justify-center gap-1.5 w-full">
+                        📹 استعراض جدول مقارنة المنصات وتقارير المخاطر
+                    </a>
                 </div>
 
                 <!-- Card 9: New Platform QA Test Report -->
@@ -1038,12 +1043,17 @@
                 title: "مراجعة وتقييم منصات التسجيل والاجتماعات (Microsoft Teams vs Zoom vs BigBlueButton)",
                 assignee: "EducationalDirector",
                 category: "البنية التحتية والمنصة",
-                time: "جاري البحث والمقارنة ⏳",
+                time: "تم توثيق دراسة المقارنة والتحذير 📹",
                 priority: "مرتفع",
                 status: "in_progress",
-                description: "إعداد دراسة ومقارنة تقنية شاملة لبدائل برنامج التسجيل والاجتماعات حالياً (Microsoft Teams): البحث والتقييم التفصيلي لمنصة Zoom ومنصة BigBlueButton لاختيار البرنامج الأفضل لربطه بالجلسات وتيسير التسجيل والرفع.",
-                latestUpdate: "جاري الفحص والمقارنة بين Zoom وBigBlueButton وتقييم الإمكانيات الفنية وجودة التسجيل وسهولة الاستخدام لبحث البديل الأنسب بدلاً من Microsoft Teams.",
-                links: [],
+                description: "إعداد دراسة ومقارنة تقنية شاملة لخطط منصات البث المباشر (Teams, Google Meet, Zoom, BigBlueButton) من حيث التخزين والسعر والاجتماعات التزامنية. تتضمن الدراسة توثيق الممارسات المعيارية للأكاديميات المنافسة (مثل iSchool بتسليم أكونت زوم خاص لكل مهندس)، وتحذيراً تنفيذياً من مخاطر الاعتماد الحالي على ثغرة فتح عدة اجتماعات بنفس حساب Teams وضرورة تجهيز البديل الفوري.",
+                latestUpdate: "تم الانتهاء من إعداد جدول المقارنة الشامل للمنصات الأربع وتوثيق نموذج iSchool والتحذير من خطورة غلق ثغرة MS Teams المتعددة في التقرير التنفيذي المرفق.",
+                links: [
+                    {
+                        label: "📹 جدول مقارنة منصات الاجتماعات والتقرير التنفيذي لـ Teams Glitch",
+                        url: "./meeting-platforms-comparison.html"
+                    }
+                ],
                 attachments: []
             },
             {
