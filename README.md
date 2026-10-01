@@ -55,9 +55,10 @@
 
 | اسم المستند / الصفحة | الوصف والهدف التشغيلي | الرابط المباشر |
 | :--- | :--- | :---: |
-| 📘 **كتيب أساسيات الروبوتكس والإلكترونيات** | الكتيب التعليمي المصور للتعلّم الذاتي المعتمد عبر Google Notebook | [عرض الكتيب 🌐](https://notebook.google.com/notebook/ba068196-9886-49eb-bca3-f33718919c77/artifact/8c2b324a-d227-4a20-a025-a06a442c6c7a) |
+| 📖 **كتيب التعليم الذاتي للروبوتكس (الصفحة الداخلية)** | الكتيب التعليمي التفاعلي الشامل (7 مستويات + أكواد + إجابات) | [robotics-book-demo.html](./robotics-book-demo.html) |
+| 📘 **كتيب أساسيات الروبوتكس (Google Notebook)** | الكتيب التعليمي المصور للتعلّم الذاتي المعتمد عبر Google Notebook | [عرض الكتيب 🌐](https://notebook.google.com/notebook/ba068196-9886-49eb-bca3-f33718919c77/artifact/8c2b324a-d227-4a20-a025-a06a442c6c7a) |
 | 🧪 **تقرير فحص وتست المنصة الجديدة** | تقرير تفصيلي لـ 6 جلسات تست (6 مهندسين) وتوثيق 8 ملاحظات وعيوب برمجية | [platform-test-report.html](./platform-test-report.html) |
-| 📹 **دراسة مقارنة منصات الفيديو والميزانيات** | مقارنة (Teams, Meet, Zoom, BBB)، وحساب تكلفة 60 مهندس vs 30 مجموعة وسيرفر BBB | [meeting-platforms-comparison.html](./meeting-platforms-comparison.html) |
+| 📹 **دراسة منصات الفيديو وتجربة Google Meet Pro** | مقارنة (Teams, Meet Pro, Zoom, BBB)، وتقييم Remote Desktop و Drive 5TB الميداني | [meeting-platforms-comparison.html](./meeting-platforms-comparison.html) |
 | 🌐 **موقع سياسات وإرشادات المهندسين** | وثيقة اللوائح والجزاءات ونظام البونص والحوافز للمهندسين | [موقع السياسات 🌐](https://megamindaccademy.github.io/Engineering-policy/) |
 | 🎮 **مقترح واجب PictoBlox التفاعلي** | نموذج تفاعلي لكويز الواجبات الفورية (MCQ) ثنائي اللغة لشعبة PictoBlox | [pictoblox-homework-session1.html](./pictoblox-homework-session1.html) |
 | 🐍 **مقترح واجب Python التفاعلي** | نموذج تفاعلي لكويز الواجبات الفورية (MCQ) ثنائي اللغة لشعبة البايثون | [python-homework-session1.html](./python-homework-session1.html) |
@@ -72,12 +73,12 @@ flowchart TD
     A --> C["🎓 التدريب والسياسات"]
     A --> D["👨‍👩‍👧‍👦 التواصل والاستبقاء"]
     
-    B --> B1["Robotics Notebook Book"]
+    B --> B1["Robotics Senior Self-Learning Booklet"]
     B --> B2["Platform Test Audit Report"]
     B --> B3["Robotics Junior Simplified Projects"]
     
     C --> C1["Engineering Policy Website"]
-    C --> C2["MS Teams vs Zoom/BBB Budget Analysis"]
+    C --> C2["Google Meet Pro vs MS Teams/Zoom/BBB"]
     C --> C3["Session Duration 1.5h & 5-6 Kids Policy"]
     
     D --> D1["Interactive Homework MCQ Prototypes"]
@@ -89,9 +90,9 @@ flowchart TD
 
 1. **وثيقة وسياسات المهندسين (Engineering Policy):** تم الإنجاز بالكامل والموقع التفاعلي جاهز.
 2. **المحتوى التفاعلي للمناهج (Interactive Web Curriculum):** تم تسليم ملف `problemsolving.zip` بحجم 29.1MB.
-3. **دراسة مقارنة البنية التحتية لمنصات الاجتماعات:** تم إعداد تقرير الأسعار والميزانيات لـ 60 ترخيص Zoom vs 30 مجموعة وسيرفر BBB.
+3. **دراسة وتجربة منصات الاجتماعات وGoogle Meet Pro:** تم فحص التجربة الميدانية لـ Google Meet Pro وتحديد تحديات Remote Desktop و 5TB Drive وحفظ الفيديوهات وثغرة الميتنجات المتزامنة.
 4. **فحص واختبار المنصة الجديدة (QA Audit):** تم توثيق تقرير الـ 6 جلسات ورصد 8 عيوب برمجية عاجلة.
-5. **كتيب أساسيات الروبوتكس والإلكترونيات (Task 9):** اعتمد رابط Google Notebook المباشر وهو **قيد المتابعة والتعديل المستمر ⏳**.
+5. **كتيب أساسيات الروبوتكس والإلكترونيات (Task 9):** تم تسليم الصفحة التفاعلية الشاملة (`robotics-book-demo.html`) واكتملت المهمة ✅.
 6. **مراجعة مدة الجلسات وسعة المجموعات (Task 16):** تعديل مدة السيشن لـ **1.5 ساعة** وسعة المجموعة لـ **5-6 أطفال** (قيد التنسيق ⏳).
 
 ---
