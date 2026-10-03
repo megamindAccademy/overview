@@ -59,6 +59,7 @@
 | 📘 **كتيب أساسيات الروبوتكس (Google Notebook)** | الكتيب التعليمي المصور للتعلّم الذاتي المعتمد عبر Google Notebook | [عرض الكتيب 🌐](https://notebook.google.com/notebook/ba068196-9886-49eb-bca3-f33718919c77/artifact/8c2b324a-d227-4a20-a025-a06a442c6c7a) |
 | 🧪 **تقرير فحص وتست المنصة الجديدة** | تقرير تفصيلي لـ 6 جلسات تست (6 مهندسين) وتوثيق 8 ملاحظات وعيوب برمجية | [platform-test-report.html](./platform-test-report.html) |
 | 📹 **دراسة منصات الفيديو وتجربة Google Meet Pro** | مقارنة (Teams, Meet Pro, Zoom, BBB)، وتقييم Remote Desktop و Drive 5TB الميداني | [meeting-platforms-comparison.html](./meeting-platforms-comparison.html) |
+| 📜 **وثيقة وسياسات المهندسين (الصفحة الداخلية)** | اللائحة التفاعلية الجديدة وتعديلات بروتوكول غياب الطلاب والسيستم | [engineers-policy.html](./engineers-policy.html) |
 | 🌐 **موقع سياسات وإرشادات المهندسين** | وثيقة اللوائح والجزاءات ونظام البونص والحوافز للمهندسين | [موقع السياسات 🌐](https://megamindaccademy.github.io/Engineering-policy/) |
 | 🎮 **مقترح واجب PictoBlox التفاعلي** | نموذج تفاعلي لكويز الواجبات الفورية (MCQ) ثنائي اللغة لشعبة PictoBlox | [pictoblox-homework-session1.html](./pictoblox-homework-session1.html) |
 | 🐍 **مقترح واجب Python التفاعلي** | نموذج تفاعلي لكويز الواجبات الفورية (MCQ) ثنائي اللغة لشعبة البايثون | [python-homework-session1.html](./python-homework-session1.html) |
