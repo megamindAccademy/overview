@@ -62,6 +62,7 @@
 | 🌐 **موقع سياسات وإرشادات المهندسين** | وثيقة اللوائح والجزاءات ونظام البونص والحوافز للمهندسين | [موقع السياسات 🌐](https://megamindaccademy.github.io/Engineering-policy/) |
 | 🎮 **مقترح واجب PictoBlox التفاعلي** | نموذج تفاعلي لكويز الواجبات الفورية (MCQ) ثنائي اللغة لشعبة PictoBlox | [pictoblox-homework-session1.html](./pictoblox-homework-session1.html) |
 | 🐍 **مقترح واجب Python التفاعلي** | نموذج تفاعلي لكويز الواجبات الفورية (MCQ) ثنائي اللغة لشعبة البايثون | [python-homework-session1.html](./python-homework-session1.html) |
+| 📊 **دراسة مقارنة الأكاديميات التنافسية** | دراسة معيارية لـ (Megamind vs 3C School vs iSchool) بالمناهج والأسعار والاعتمادات | [academies-comparison.html](./academies-comparison.html) |
 
 ---
 
@@ -76,6 +77,7 @@ flowchart TD
     B --> B1["Robotics Senior Self-Learning Booklet"]
     B --> B2["Platform Test Audit Report"]
     B --> B3["Robotics Junior Simplified Projects"]
+    B --> B4["Competitor Academies Benchmark"]
     
     C --> C1["Engineering Policy Website"]
     C --> C2["Google Meet Pro vs MS Teams/Zoom/BBB"]
@@ -96,6 +98,7 @@ flowchart TD
 6. **مراجعة مدة الجلسات وسعة المجموعات (Task 16):** تعديل مدة السيشن لـ **1.5 ساعة** وسعة المجموعة لـ **5-6 أطفال** (قيد التنسيق ⏳).
 7. **جدولة وتكليف المحاضرين بتوليد اختبارات الـ Forms (Task 17):** جدولة وإسناد مهام صياغة وتوليد النماذج الاختبارية والتقييمات للمناهج كـ Forms لكبار المحاضرين (Instructors) لبدء تفعيلها على موقع المنصة المخصص للطلبة (جاري الجدولة والتكليف ⏳).
 8. **فحص وتعديل مناهج مرحلة الجونيور (Task 18):** مراجعة وتدقيق مناهج الجونيور لتحديد النقاط الواجب تعديلها وتسهيلها للأطفال والموضوعات الواجب إيقافها مؤقتاً (جاري الفحص والتدقيق ⏳).
+9. **دراسة مقارنة الأكاديميات المنافسة (Task 19):** إعداد دراسة مقارنة شاملة ومفصلة لـ (Megamind vs 3C School vs iSchool) بالمناهج والأسعار والاعتمادات والتوصيات التنافسية (`academies-comparison.html`) (جاهزة للمعاينة 📊).
 
 ---
 

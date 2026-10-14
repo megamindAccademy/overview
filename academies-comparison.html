@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دراسة مقارنة الأكاديميات التقنية للأطفال - Megamind vs 3C School vs iSchool</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #0b1120;
+            color: #f8fafc;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #ea580c;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hover-card:hover {
+            transform: translateY(-2px);
+            transition: all 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased selection:bg-orange-500 selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="bg-slate-900/90 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <a href="./index.html" class="w-10 h-10 rounded-xl bg-orange-600/20 text-orange-400 hover:bg-orange-600 hover:text-white flex items-center justify-center font-bold text-lg border border-orange-500/30 transition shadow-inner" title="العودة للوحة التحكم">
+                    ➔
+                </a>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <h1 class="text-lg md:text-xl font-black text-white tracking-tight">Megamind Academy</h1>
+                        <span class="bg-blue-500/20 text-blue-300 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full border border-blue-400/30">Competitive Analysis 📊</span>
+                    </div>
+                    <p class="text-xs text-slate-400 font-medium mt-0.5">دراسة مقارنة الأكاديميات الرائدة (Megamind vs 3C Coding School vs iSchool): المناهج، الأسعار، والاعتمادات</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3 text-xs font-bold">
+                <a href="./index.html" class="px-3.5 py-2 rounded-xl bg-slate-800 text-slate-200 hover:bg-slate-700 border border-slate-700 transition flex items-center gap-1.5">
+                    📌 لوحة التحكم الرئيسية
+                </a>
+                <button onclick="window.print()" class="px-3.5 py-2 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-extrabold transition shadow-lg shadow-orange-600/20 flex items-center gap-1.5">
+                    🖨️ طباعة التقرير
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 flex-1">
+
+        <!-- Executive Banner -->
+        <div class="rounded-3xl bg-gradient-to-r from-slate-900 via-indigo-950/80 to-slate-900 border border-indigo-500/30 p-6 md:p-8 shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-12 -left-12 w-48 h-48 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-12 -right-12 w-48 h-48 bg-orange-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="relative z-10 space-y-3">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-extrabold border border-indigo-400/30">
+                    <span>🎯</span> تقرير المقارنة التنافسية للأكاديميات المتخصصة (EdTech Kids & Teens)
+                </div>
+                <h2 class="text-2xl md:text-3xl font-black text-white leading-tight">
+                    تحليل السوق والمقارنة المعيارية الشاملة للأكاديميات التقنية للأطفال
+                </h2>
+                <p class="text-xs md:text-sm text-slate-300 leading-relaxed max-w-4xl">
+                    تهدف هذه الدراسة الصادرة عن الإدارة التعليمية إلى فحص وتحليل النماذج التعليمية لثلاث من كبرى المنصات في مصر والشرق الأوسط:
+                    <strong class="text-orange-400 font-bold">Megaminds Academy</strong>،
+                    <strong class="text-emerald-400 font-bold">3C Coding School</strong>،
+                    و<strong class="text-blue-400 font-bold">iSchool Tech</strong>.
+                    تركز الدراسة على فحص تفصيلي للمناهج والمسارات، خطط الأسعار والاشتراكات، والاعتمادات الدولية، واستخلاص التوصيات الاستراتيجية لتطوير Megamind.
+                </p>
+            </div>
+        </div>
+
+        <!-- Executive KPI Scorecards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- KPI 1 -->
+            <div class="glass-card rounded-2xl p-5 border border-slate-800 hover-card space-y-2">
+                <div class="flex items-center justify-between text-slate-400">
+                    <span class="text-xs font-bold">الأكاديميات المدروسة</span>
+                    <span class="text-lg">🏢</span>
+                </div>
+                <div class="text-2xl font-black text-white">3 أكاديميات كبرى</div>
+                <p class="text-[11px] text-slate-400 font-medium">Megamind • 3C School • iSchool</p>
+            </div>
+
+            <!-- KPI 2 -->
+            <div class="glass-card rounded-2xl p-5 border border-slate-800 hover-card space-y-2">
+                <div class="flex items-center justify-between text-slate-400">
+                    <span class="text-xs font-bold">الشريحة العمرية المستهدفة</span>
+                    <span class="text-lg">🧒</span>
+                </div>
+                <div class="text-2xl font-black text-emerald-400">6 إلى 18 سنة</div>
+                <p class="text-[11px] text-slate-400 font-medium">Junior (6-10) • Teens (11-14) • Senior (15-18)</p>
+            </div>
+
+            <!-- KPI 3 -->
+            <div class="glass-card rounded-2xl p-5 border border-slate-800 hover-card space-y-2">
+                <div class="flex items-center justify-between text-slate-400">
+                    <span class="text-xs font-bold">نطاق تسعير الحصة الجماعية</span>
+                    <span class="text-lg">💰</span>
+                </div>
+                <div class="text-2xl font-black text-amber-400">150 - 550 ج.م</div>
+                <p class="text-[11px] text-slate-400 font-medium">iSchool الأعلى (~550ج) • Megamind الأكثر تنافسية</p>
+            </div>
+
+            <!-- KPI 4 -->
+            <div class="glass-card rounded-2xl p-5 border border-slate-800 hover-card space-y-2">
+                <div class="flex items-center justify-between text-slate-400">
+                    <span class="text-xs font-bold">معايير الاعتماد الدولية</span>
+                    <span class="text-lg">🎖️</span>
+                </div>
+                <div class="text-2xl font-black text-indigo-400">STEM & ISO & IAIDL</div>
+                <p class="text-[11px] text-slate-400 font-medium">STEM.org • ISO 21001 • Finland EdTech • ISTE</p>
+            </div>
+        </div>
+
+        <!-- Master Comparison Table -->
+        <div class="glass-card rounded-3xl border border-slate-800 p-6 shadow-2xl space-y-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+                <div>
+                    <h3 class="text-lg md:text-xl font-black text-white flex items-center gap-2">
+                        <span>📊</span> جدول المقارنة المعيارية الشامل (Master Comparison Matrix)
+                    </h3>
+                    <p class="text-xs text-slate-400 mt-1">مقارنة محاور: الرابط الرسمي، المناهج والمسارات، خطط الأسعار، والاعتمادات الدولية</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs font-bold px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+                        تحديث معتمد: أكتوبر 2026
+                    </span>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto custom-scrollbar">
+                <table class="w-full text-right text-xs md:text-sm border-collapse">
+                    <thead>
+                        <tr class="bg-slate-900/90 text-slate-200 border-b border-slate-800 text-xs">
+                            <th class="p-4 rounded-tr-2xl w-44 font-black">وجه المقارنة</th>
+                            <th class="p-4 bg-orange-950/20 border-x border-orange-500/20 text-orange-300 font-black">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-orange-500 inline-block"></span>
+                                    <span>Megaminds Academy</span>
+                                </div>
+                            </th>
+                            <th class="p-4 bg-emerald-950/20 border-l border-emerald-500/20 text-emerald-300 font-black">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
+                                    <span>3C Coding School</span>
+                                </div>
+                            </th>
+                            <th class="p-4 bg-blue-950/20 rounded-tl-2xl text-blue-300 font-black">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-blue-500 inline-block"></span>
+                                    <span>iSchool Tech</span>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800 text-slate-300 font-medium">
+                        <!-- Row 1: Website & Origin -->
+                        <tr class="hover:bg-slate-900/50 transition">
+                            <td class="p-4 font-bold text-white bg-slate-900/30">
+                                🌐 الموقع الرسمي وتاريخ التأسيس
+                            </td>
+                            <td class="p-4 bg-orange-950/10 border-x border-orange-500/10">
+                                <a href="https://megaminds-academy.com/" target="_blank" rel="noopener noreferrer" class="text-orange-400 font-bold hover:underline inline-flex items-center gap-1">
+                                    megaminds-academy.com ↗
+                                </a>
+                                <p class="text-[11px] text-slate-400 mt-1">تأسست في مصر مع توسع سريع نحو أسواق الخليج (السعودية، الإمارات، قطر، الكويت).</p>
+                            </td>
+                            <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10">
+                                <a href="https://3cschool.net/" target="_blank" rel="noopener noreferrer" class="text-emerald-400 font-bold hover:underline inline-flex items-center gap-1">
+                                    3cschool.net ↗
+                                </a>
+                                <p class="text-[11px] text-slate-400 mt-1">تأسست عام 2015 في مصر على يد م. حسام حسني وأحمد خلاف، مع توسع خليجي واستثمار 3M$.</p>
+                            </td>
+                            <td class="p-4 bg-blue-950/10">
+                                <a href="https://ischooltech.com/" target="_blank" rel="noopener noreferrer" class="text-blue-400 font-bold hover:underline inline-flex items-center gap-1">
+                                    ischooltech.com ↗
+                                </a>
+                                <p class="text-[11px] text-slate-400 mt-1">تأسست عام 2018 في مصر، الكيان الأكبر استثمارياً وتمويلياً بـ 8+ دول عربية وإقليمية.</p>
+                            </td>
+                        </tr>
+
+                        <!-- Row 2: Target Age Groups -->
+                        <tr class="hover:bg-slate-900/50 transition">
+                            <td class="p-4 font-bold text-white bg-slate-900/30">
+                                👶 الفئات العمرية المستهدفة
+                            </td>
+                            <td class="p-4 bg-orange-950/10 border-x border-orange-500/10">
+                                <span class="px-2.5 py-1 rounded-md bg-orange-500/20 text-orange-300 font-bold text-xs">6 - 18 سنة</span>
+                                <p class="text-[11px] text-slate-400 mt-1.5">مقسمة لمراحل Junior و Teens و Advanced مع تفريد التعليم بحسب سن وقدرات الطفل.</p>
+                            </td>
+                            <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10">
+                                <span class="px-2.5 py-1 rounded-md bg-emerald-500/20 text-emerald-300 font-bold text-xs">6 - 18 سنة</span>
+                                <p class="text-[11px] text-slate-400 mt-1.5">نظام المستويات: Standard Level (المبتدئين) إلى Professional Level (المتقدمين).</p>
+                            </td>
+                            <td class="p-4 bg-blue-950/10">
+                                <span class="px-2.5 py-1 rounded-md bg-blue-500/20 text-blue-300 font-bold text-xs">6 - 18 سنة</span>
+                                <p class="text-[11px] text-slate-400 mt-1.5">تحديد دقيق ثنائي السنوات: (6-7), (8-9), (10-11), (12-13), (14-15), (16-18).</p>
+                            </td>
+                        </tr>
+
+                        <!-- Row 3: Curricula & Tracks -->
+                        <tr class="hover:bg-slate-900/50 transition">
+                            <td class="p-4 font-bold text-white bg-slate-900/30">
+                                📚 المناهج والمسارات التعليمية (Curricula)
+                            </td>
+                            <td class="p-4 bg-orange-950/10 border-x border-orange-500/10 space-y-1.5">
+                                <div class="font-bold text-orange-300">مسارات تقنية متكاملة برمجية وهندسية:</div>
+                                <ul class="list-disc pr-4 space-y-1 text-xs text-slate-300">
+                                    <li><strong class="text-white">الروبوتكس والإلكترونيات الذكية:</strong> Arduino, Smart Home, Robot Junior/Senior, Smart City, وبوابات الرادار الحقيقية.</li>
+                                    <li><strong class="text-white">البرمجة بالبلوكس:</strong> PictoBlox, Scratch, Game Design للأطفال.</li>
+                                    <li><strong class="text-white">البرمجة النصية:</strong> Python بمستويات تطبيقية لحل المشكلات.</li>
+                                    <li><strong class="text-white">الذكاء الاصطناعي (AI & ML):</strong> تعلم الآلة وتحليل البيانات للناشئين.</li>
+                                    <li><strong class="text-white">تطوير الألعاب المتقدمة:</strong> محركات Godot و Unity 3D.</li>
+                                    <li><strong class="text-white">الموشن جرافيكس والجرافيك:</strong> تصميم رقمي ورسوم متحركة.</li>
+                                </ul>
+                                <div class="p-2 rounded-lg bg-orange-500/10 border border-orange-500/20 text-[11px] text-orange-200 mt-2 font-semibold">
+                                    💡 <strong class="text-white">الميزة الفريدة:</strong> توفير الكيتات الهندسية الحقيقية (Hardware Kits) وشحنها للطلاب لتركيبها يدوياً.
+                                </div>
+                            </td>
+                            <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10 space-y-1.5">
+                                <div class="font-bold text-emerald-300">مسارات برمجية وحاسوبية مكثفة:</div>
+                                <ul class="list-disc pr-4 space-y-1 text-xs text-slate-300">
+                                    <li><strong class="text-white">Visual Programming:</strong> Scratch, MIT App Inventor.</li>
+                                    <li><strong class="text-white">Text-Based Coding:</strong> Python للبرمجة العامة وحل المشكلات.</li>
+                                    <li><strong class="text-white">Web Development:</strong> HTML, CSS, JavaScript, وتطوير المواقع Full-Stack.</li>
+                                    <li><strong class="text-white">تطبيقات الموبايل:</strong> بناء تطبيقات الهواتف الذكية.</li>
+                                    <li><strong class="text-white">الذكاء الاصطناعي والأمن السيبراني:</strong> AI/ML & Cybersecurity.</li>
+                                    <li><strong class="text-white">ريادة الأعمال والعمل الحر:</strong> تأهيل الناشئين لبيئة المشروعات وسوق العمل.</li>
+                                </ul>
+                                <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-[11px] text-emerald-200 mt-2">
+                                    ⚠️ تركيز أساسي على البرمجة السحابية والافتراضية مع قلة الاعتماد على الهاردوير الفيزيائي.
+                                </div>
+                            </td>
+                            <td class="p-4 bg-blue-950/10 space-y-1.5">
+                                <div class="font-bold text-blue-300">منهج K-12 معتمد عالمياً ومقسم عمرياً:</div>
+                                <ul class="list-disc pr-4 space-y-1 text-xs text-slate-300">
+                                    <li><strong class="text-white">Code to Craft (6-7 سنوات):</strong> البرمجة التفاعلية داخل عالم Minecraft.</li>
+                                    <li><strong class="text-white">صنّاع الألعاب والـ AI (8-9 سنوات):</strong> تصميم الألعاب التفاعلية وبناء مساعد ذكي.</li>
+                                    <li><strong class="text-white">Python (10-11 سنة):</strong> لغة بايثون ومفاهيم الخوارزميات.</li>
+                                    <li><strong class="text-white">تطوير تطبيقات الموبايل (12-13 سنة):</strong> بناء تطبيقات الهواتف والأجهزة الذكية.</li>
+                                    <li><strong class="text-white">تطوير الويب والأمن السيبراني (14-15 سنة):</strong> مواقع Full-Stack وحمايتها.</li>
+                                    <li><strong class="text-white">AR Game Dev with Unity (16-18 سنة):</strong> ألعاب الواقع المعزز بلغة C# و Unity.</li>
+                                </ul>
+                                <div class="p-2 rounded-lg bg-blue-500/10 border border-blue-500/20 text-[11px] text-blue-200 mt-2">
+                                    ℹ️ تركيز سوفتوير وبرمجة وألعاب قوي جداً مع غياب مسارات الروبوتكس الهندسية كالأردوينو.
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Row 4: Pricing & Packages -->
+                        <tr class="hover:bg-slate-900/50 transition">
+                            <td class="p-4 font-bold text-white bg-slate-900/30">
+                                💵 الأسعار وباقات الاشتراك (Pricing)
+                            </td>
+                            <td class="p-4 bg-orange-950/10 border-x border-orange-500/10 space-y-2">
+                                <div class="font-bold text-orange-300 text-xs">نموذج تسعير مرن وتنافسي للغاية:</div>
+                                <div class="space-y-1 text-xs">
+                                    <p>• <strong class="text-white">الحصص الجماعية:</strong> اشتراكات شهرية متوسطها <span class="text-orange-400 font-bold">~800 إلى 1,200 ج.م / شهرياً</span> (متوسط 200 - 250 ج.م للحصة).</p>
+                                    <p>• <strong class="text-white">الحصص الفردية (Private):</strong> باقات مخصصة (تتراوح بين 1,800 - 2,500 ج.م شهرياً).</p>
+                                    <p>• <strong class="text-white">باقات الكيت الهندسية:</strong> حقائب أدوات ومكونات الروبوتكس (توفير بسعر التكلفة أو مدمجة ضمن الكورس).</p>
+                                    <p>• <strong class="text-white">المرونة المالية:</strong> دفع شهري ميسر دون إلزام باشتراكات ربع سنوية طويلة وضخمة.</p>
+                                </div>
+                            </td>
+                            <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10 space-y-2">
+                                <div class="font-bold text-emerald-300 text-xs">تسعير مخصص غير معلن علناً:</div>
+                                <div class="space-y-1 text-xs">
+                                    <p>• <strong class="text-white">سياسة التسعير:</strong> لا يتم عرض الأسعار على الموقع العام، بل بعد ملء استمارة وتحديد مستوى الطفل (Placement Test).</p>
+                                    <p>• <strong class="text-white">متوسط الأسعار الميداني:</strong> يتراوح بين <span class="text-emerald-400 font-bold">~1,200 إلى 2,200 ج.م شهرياً</span> حسب المسار والمستوى.</p>
+                                    <p>• <strong class="text-white">نظام الدفع:</strong> باقات متعددة المستويات، عروض موسمية صيفية، وتسهيلات دفع بنكية.</p>
+                                </div>
+                            </td>
+                            <td class="p-4 bg-blue-950/10 space-y-2">
+                                <div class="font-bold text-blue-300 text-xs">باقات ربع سنوية وسنوية معلنة صراحة (الأعلى سعراً):</div>
+                                <div class="space-y-1 text-xs">
+                                    <p>• <strong class="text-white">باقة المبتدئين (3 شهور - 12 حصة جماعية):</strong> <span class="text-blue-400 font-bold">~6,600 ج.م</span> (سعر الحصة تقريباً <strong class="text-white">550 ج.م</strong>).</p>
+                                    <p>• <strong class="text-white">باقة 6 شهور (24 حصة جماعية):</strong> <span class="text-blue-400 font-bold">~11,900 ج.م</span> بعد الخصم (سعر الحصة ~495 ج.م).</p>
+                                    <p>• <strong class="text-white">الحصص الفردية (مدرس خاص 1-on-1):</strong> باقات خاصة تفوق <span class="text-blue-400 font-bold">12,000 - 18,000 ج.م</span> لـ 3 شهور.</p>
+                                    <p>• <strong class="text-white">باقات دول الخليج:</strong> تسعير بالريال والدولار (~300 إلى 600 ريال سعودي شهرياً).</p>
+                                    <p>• <strong class="text-white">التسهيلات:</strong> تقسيط بدون فوائد عبر تطبيقات (فرصة / فاليو)، حصة تجريبية مجانية، رصيدين تجميد ورصيدين إعادة جدولة.</p>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Row 5: Accreditations & Certifications -->
+                        <tr class="hover:bg-slate-900/50 transition">
+                            <td class="p-4 font-bold text-white bg-slate-900/30">
+                                🎖️ الاعتمادات والشراكات الدولية (Accreditations)
+                            </td>
+                            <td class="p-4 bg-orange-950/10 border-x border-orange-500/10 space-y-2">
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="px-2 py-0.5 rounded bg-orange-500/20 text-orange-300 text-[11px] font-bold">شهادة معتمدة لكل مستوى</span>
+                                    <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[11px] font-bold">مشروع تخرج تطبيقي</span>
+                                    <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 text-[11px] font-bold">مستهدف: STEM.org</span>
+                                </div>
+                                <p class="text-xs text-slate-300 leading-relaxed">
+                                    تمنح Megamind شهادات إتمام معتمدة تبرز ساعات التدريب وإنجاز مشاريع الروبوتكس والبرمجة، وربط الطلاب بالمسابقات المحلية والإقليمية، مع استهداف التقدم للاعتماد الدولي.
+                                </p>
+                            </td>
+                            <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10 space-y-2">
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[11px] font-bold">STEM.org Accredited</span>
+                                    <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[11px] font-bold">ISO 21001 Certified</span>
+                                </div>
+                                <p class="text-xs text-slate-300 leading-relaxed">
+                                    حاصلة على اعتماد **STEM.org** الأمريكي للتعليم التكنولوجي، وشهادة الأيزو الدولية لنظم إدارة المؤسسات التعليمية **ISO 21001**.
+                                </p>
+                            </td>
+                            <td class="p-4 bg-blue-950/10 space-y-2">
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[11px] font-bold">STEM.org</span>
+                                    <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[11px] font-bold">IAIDL (AI License)</span>
+                                    <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[11px] font-bold">Education Alliance Finland</span>
+                                    <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[11px] font-bold">EdTech Impact</span>
+                                    <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[11px] font-bold">ISTE Seal 2026-2028</span>
+                                </div>
+                                <p class="text-xs text-slate-300 leading-relaxed">
+                                    أوسع محفظة اعتمادات تسويقية في المنطقة، مع شراكات حكومية بمصر ومبادرات برعاية وزارة الاتصالات ومؤسسات دولية مثل سيسكو ومايكروسوفت.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Row 6: Class Model & Experience -->
+                        <tr class="hover:bg-slate-900/50 transition">
+                            <td class="p-4 font-bold text-white bg-slate-900/30">
+                                👥 حجم المجموعة ومدة الحصة وتجربة التعليم
+                            </td>
+                            <td class="p-4 bg-orange-950/10 border-x border-orange-500/10 text-xs space-y-1">
+                                <p>• <strong class="text-white">حجم المجموعة:</strong> مجموعات صغيرة مركزة (4 طلاب، وتعديل مستهدف لـ 5-6 طلاب كحد أقصى).</p>
+                                <p>• <strong class="text-white">مدة الجلسة:</strong> 1.5 ساعة (90 دقيقة) تضمن التوازن بين الشرح والتطبيق العملي.</p>
+                                <p>• <strong class="text-white">التجربة:</strong> تركيب يدوي فيزيائي ومشاريع تفاعلية وتواصل عبر المنصة والجروبات الرسمية.</p>
+                            </td>
+                            <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10 text-xs space-y-1">
+                                <p>• <strong class="text-white">حجم المجموعة:</strong> مجموعات صغيرة ومتوسطة (4 إلى 8 طلاب حسب المستوى).</p>
+                                <p>• <strong class="text-white">مدة الجلسة:</strong> ساعة إلى ساعة ونصف (أسبوعياً).</p>
+                                <p>• <strong class="text-white">التجربة:</strong> منصة داخلية لمتابعة إنجازات وتكليفات الطلاب (Student Dashboard) وتقييم بعد كل حصة.</p>
+                            </td>
+                            <td class="p-4 bg-blue-950/10 text-xs space-y-1">
+                                <p>• <strong class="text-white">حجم المجموعة:</strong> 4 إلى 5 طلاب في الحصص الجماعية، أو طالب واحد (1-on-1).</p>
+                                <p>• <strong class="text-white">مدة الجلسة:</strong> 1.5 ساعة (90 دقيقة) أسبوعياً.</p>
+                                <p>• <strong class="text-white">التجربة:</strong> منصة LMS متقدمة، نظام التنبيهات، تقارير تقدم أسبوعية للأهل، وحساب ولي أمر مستقل.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Deep Dive Profile Cards Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+            <!-- Card 1: Megaminds Academy -->
+            <div class="glass-card rounded-3xl p-6 border-2 border-orange-500/40 shadow-xl space-y-5 flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl pointer-events-none"></div>
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="px-3 py-1 rounded-full text-xs font-black bg-orange-500/20 text-orange-400 border border-orange-500/30">
+                            أكاديميتنا 🚀
+                        </span>
+                        <span class="text-xs text-slate-400 font-bold">Kids & Robotics</span>
+                    </div>
+
+                    <h3 class="text-xl font-black text-white">Megaminds Academy</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed mt-2">
+                        الأكاديمية المتخصصة في الدمج الفريد بين البرمجة النظرية والروبوتكس التطبيقي الفعلي بالأردوينو والكيتات الذكية، مع توفير تجربة تعليمية ممتعة وسعر اقتصادي في متناول الأسر العربية.
+                    </p>
+
+                    <div class="mt-4 space-y-3 pt-3 border-t border-slate-800 text-xs">
+                        <div>
+                            <span class="font-bold text-orange-300 block mb-1">🌟 أبرز نقاط القوة (Strengths):</span>
+                            <ul class="list-disc pr-4 space-y-1 text-slate-300">
+                                <li><strong>الهاردوير والروبوتكس التطبيقي:</strong> تفوق كاسح على المنافسين بمشاريع حقيقية (Smart Home, Smart Car, Radar Gate).</li>
+                                <li><strong>السعر التنافسي والمرونة:</strong> اشتراكات شهرية ميسرة بعيداً عن أعباء الدفع لـ 6 أشهر مقدماً.</li>
+                                <li><strong>سعة المجموعات الصغيرة:</strong> تركيز عالٍ على استيعاب كل طفل وتفريد التعليم.</li>
+                                <li><strong>كتيبات ومحتوى تفاعلي:</strong> توفير منصات تفاعلية وكتيبات للتعلم الذاتي.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <span class="font-bold text-amber-300 block mb-1">🎯 أولويات التطوير (Action Items):</span>
+                            <ul class="list-disc pr-4 space-y-1 text-slate-400">
+                                <li>الحصول على اعتماد دولي رسمي (مثل STEM.org) لرفع القوة التسويقية.</li>
+                                <li>تفعيل نظام التقييمات الآلية الذكية والـ Forms (المهمة رقم 17).</li>
+                                <li>إتاحة مسارات اشتراك ربع سنوية وسنوية مع خيارات تقسيط ميسرة.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t border-slate-800">
+                    <a href="https://megaminds-academy.com/" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-extrabold text-xs transition flex items-center justify-center gap-2 shadow-lg shadow-orange-600/20">
+                        زيارة موقع Megaminds Academy 🌐
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2: 3C Coding School -->
+            <div class="glass-card rounded-3xl p-6 border border-emerald-500/30 shadow-xl space-y-5 flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="px-3 py-1 rounded-full text-xs font-black bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                            المنافس الثاني 💻
+                        </span>
+                        <span class="text-xs text-slate-400 font-bold">تأسست 2015</span>
+                    </div>
+
+                    <h3 class="text-xl font-black text-white">3C Coding School</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed mt-2">
+                        مدرسة تكنولوجية عريقة تأسست في مصر عام 2015 ونجحت في جذب استثمارات دولية للتوسع بالسعودية، وتركز على بناء العقلية البرمجية وريادة الأعمال وتطوير الويب والأمن السيبراني.
+                    </p>
+
+                    <div class="mt-4 space-y-3 pt-3 border-t border-slate-800 text-xs">
+                        <div>
+                            <span class="font-bold text-emerald-300 block mb-1">🌟 أبرز نقاط القوة (Strengths):</span>
+                            <ul class="list-disc pr-4 space-y-1 text-slate-300">
+                                <li><strong>الاعتمادات الموثوقة:</strong> حاصلة على اعتماد STEM.org الأمريكي وشهادة ISO 21001.</li>
+                                <li><strong>الخبرة والسمعة الطويلة:</strong> أقدمية في السوق المصري منذ عام 2015.</li>
+                                <li><strong>تنوع المناهج البرمجية:</strong> من لغات Scratch حتى Full-Stack Web والأمن السيبراني.</li>
+                                <li><strong>تمويل واستثمار قوي:</strong> جولة استثمارية 3M$ لدعم المنصة والتوسع الإقليمي.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <span class="font-bold text-rose-300 block mb-1">⚠️ نقاط الضعف والمحدوديات (Weaknesses):</span>
+                            <ul class="list-disc pr-4 space-y-1 text-slate-400">
+                                <li><strong>غياب شفافية التسعير:</strong> إخفاء الأسعار وإلزام ولي الأمر بملء فورم وانتظار المبيعات.</li>
+                                <li><strong>ضعف مسار الروبوتكس التطبيقي:</strong> الاعتماد شبه التام على البرمجة النظرية والشاشات.</li>
+                                <li><strong>تحديات في الدومين:</strong> مشاكل تقنية حديثة في بعض نطاقات الموقع البديلة.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t border-slate-800">
+                    <a href="https://3cschool.net/" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-emerald-600 text-white font-extrabold text-xs transition flex items-center justify-center gap-2 border border-slate-700">
+                        زيارة موقع 3C Coding School 🌐
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3: iSchool Tech -->
+            <div class="glass-card rounded-3xl p-6 border border-blue-500/30 shadow-xl space-y-5 flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl pointer-events-none"></div>
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="px-3 py-1 rounded-full text-xs font-black bg-blue-500/20 text-blue-400 border border-blue-500/30">
+                            المنافس الأكبر تسويقاً 🚀
+                        </span>
+                        <span class="text-xs text-slate-400 font-bold">+130,000 طالب</span>
+                    </div>
+
+                    <h3 class="text-xl font-black text-white">iSchool Tech</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed mt-2">
+                        المنصة الأكثر تمويلاً وانتشاراً إقليمياً في الشرق الأوسط وشمال أفريقيا، ذات آلة تسويقية ضخمة، وحزم اعتمادات دولية واسعة، وباقات اشتراك معلنة مسبقاً بنظام الكورسات الربع سنوية.
+                    </p>
+
+                    <div class="mt-4 space-y-3 pt-3 border-t border-slate-800 text-xs">
+                        <div>
+                            <span class="font-bold text-blue-300 block mb-1">🌟 أبرز نقاط القوة (Strengths):</span>
+                            <ul class="list-disc pr-4 space-y-1 text-slate-300">
+                                <li><strong>ترسانة اعتمادات دولية:</strong> STEM.org, IAIDL, Finland EdTech, ISTE, EdTech Impact.</li>
+                                <li><strong>منظومة LMS ومتابعة فائقة:</strong> تطبيق ولي أمر، تقارير دورية، ورصيد تجميد وإعادة جدولة.</li>
+                                <li><strong>تدرج منهجي K-12 دقيق:</strong> ربط كل مرحلة عمرية بأدوات محببة (Minecraft, Unity AR).</li>
+                                <li><strong>تسويق هائل وتسهيلات دفع:</strong> شراكات تقسيط بنكية وحصص تجريبية مجانية.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <span class="font-bold text-rose-300 block mb-1">⚠️ نقاط الضعف والمحدوديات (Weaknesses):</span>
+                            <ul class="list-disc pr-4 space-y-1 text-slate-400">
+                                <li><strong>الأسعار المرتفعة جداً:</strong> 6,600 ج.م لـ 3 شهور تمثل عبئاً مالياً ثقيلاً على معظم الأسر المصرية.</li>
+                                <li><strong>اشتراط باقات طويلة:</strong> لا يوجد خيار الاشتراك الشهري المرن لتقليل المخاطرة المالية.</li>
+                                <li><strong>انعدام الروبوتكس الحقيقي:</strong> تعليم البرمجة يتم عبر شاشات الحاسوب دون كيتات تركيب هاردوير.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t border-slate-800">
+                    <a href="https://ischooltech.com/" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-blue-600 text-white font-extrabold text-xs transition flex items-center justify-center gap-2 border border-slate-700">
+                        زيارة موقع iSchool Tech 🌐
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Strategic Recommendations for Megamind Academy -->
+        <div class="glass-card rounded-3xl border border-orange-500/30 p-6 md:p-8 shadow-2xl space-y-6">
+            <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+                <span class="text-2xl p-2 rounded-2xl bg-orange-600/20 text-orange-400 border border-orange-500/30">💡</span>
+                <div>
+                    <h3 class="text-lg md:text-xl font-black text-white">التوصيات الاستراتيجية والفرص التنافسية لـ Megaminds Academy</h3>
+                    <p class="text-xs text-slate-400">خارطة طريق تنفيذية مقترحة للإدارة التعليمية والقيادة (CEO & Educational Director) لاقتناص الحصة السوقية</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-xs text-slate-300">
+                <!-- Rec 1 -->
+                <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+                    <div class="flex items-center gap-2 text-orange-400 font-bold text-sm">
+                        <span>1️⃣</span> سلاح التفوق الحصري: الروبوتكس التطبيقي
+                    </div>
+                    <p class="leading-relaxed">
+                        التركيز في الحملات التسويقية ومناهجنا على <strong class="text-white">الهاردوير والكيتات الهندسية الحقيقية</strong>، لأن كلاً من iSchool و 3C يفتقران إلى تدريس الروبوتكس بالأردوينو والكيتات الفعلية ويكتفيان بالبرمجة الافتراضية.
+                    </p>
+                </div>
+
+                <!-- Rec 2 -->
+                <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+                    <div class="flex items-center gap-2 text-emerald-400 font-bold text-sm">
+                        <span>2️⃣</span> التسعير الاقتصادي الذكي (Best Value for Money)
+                    </div>
+                    <p class="leading-relaxed">
+                        استغلال ارتفاع أسعار iSchool الكبيرة (6,600 ج لكل 3 شهور)، وتقديم Megamind كـ <strong class="text-white">البديل الأذكى والأعلى قيمة وأوفر سعراً</strong> مع مرونة الاشتراك الشهري وسهولة التجديد دون مخاطرة مالية لولي الأمر.
+                    </p>
+                </div>
+
+                <!-- Rec 3 -->
+                <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+                    <div class="flex items-center gap-2 text-indigo-400 font-bold text-sm">
+                        <span>3️⃣</span> اقتناص اعتماد STEM.org و ISO 21001
+                    </div>
+                    <p class="leading-relaxed">
+                        التقدم الرسمي للجهات الدولية للحصول على ختم اعتماد <strong class="text-white">STEM.org</strong> وشهادة الجودة التعليمية <strong class="text-white">ISO 21001</strong>، مما يحيد نقطة القوة التسويقية الرئيسية لدى iSchool و 3C School.
+                    </p>
+                </div>
+
+                <!-- Rec 4 -->
+                <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+                    <div class="flex items-center gap-2 text-blue-400 font-bold text-sm">
+                        <span>4️⃣</span> ميكنة التقييمات والاختبارات (Forms & LMS)
+                    </div>
+                    <p class="leading-relaxed">
+                        سرعة تنفيذ <strong class="text-white">المهمة رقم 17</strong> بتوليد نماذج اختبارات الـ Forms الإلزامية وربطها بنظام شهادات ذكية تصدر تلقائياً للطلاب بعد كل مستوى، لتعزيز انطباع الاحترافية والجودة.
+                    </p>
+                </div>
+
+                <!-- Rec 5 -->
+                <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+                    <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+                        <span>5️⃣</span> سياسة التجميد والجدولة المريحة (Flexibility)
+                    </div>
+                    <p class="leading-relaxed">
+                        تقديم سياسة واضحة ومعلنة تمنح ولي الأمر <strong class="text-white">رصيد لتجميد الجلسات أو إعادة الجدولة</strong> عند الطوارئ، مما يزيل قلق أولياء الأمور من ضياع المقابل المالي عند الغياب المشروع.
+                    </p>
+                </div>
+
+                <!-- Rec 6 -->
+                <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+                    <div class="flex items-center gap-2 text-purple-400 font-bold text-sm">
+                        <span>6️⃣</span> باقات تقسيط عبر التطبيقات الحديثة
+                    </div>
+                    <p class="leading-relaxed">
+                        التعاقد مع بوابات التقسيط والتمويل الاستهلاكي (مثل ValU، فرصة، سهولة) لإتاحة خيار دفع الكورسات والمستويات الطويلة بدون فوائد للأهالي الراغبين في ذلك.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 text-slate-500 text-xs py-6 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-2">
+            <p>دراسة مقارنة الأكاديميات التقنية • تم إعداد التقرير الميداني والتحليلي لصالح الإدارة التعليمية والقيادة التنفيذية</p>
+            <p class="text-slate-600">Megamind Academy © 2026 • جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+</body>
+</html>
