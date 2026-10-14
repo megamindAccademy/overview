@@ -42,7 +42,7 @@
 <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased selection:bg-orange-500 selection:text-white">
 
     <!-- Header Navigation -->
-    <header class="bg-slate-900/90 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50 shadow-2xl">
+    <header class="bg-slate-900/95 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50 shadow-2xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-col md:flex-row items-center justify-between gap-4">
             <div class="flex items-center gap-3">
                 <a href="./index.html" class="w-10 h-10 rounded-xl bg-orange-600/20 text-orange-400 hover:bg-orange-600 hover:text-white flex items-center justify-center font-bold text-lg border border-orange-500/30 transition shadow-inner" title="العودة للوحة التحكم">
@@ -53,11 +53,14 @@
                         <h1 class="text-lg md:text-xl font-black text-white tracking-tight">Megamind Academy</h1>
                         <span class="bg-blue-500/20 text-blue-300 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full border border-blue-400/30">Competitive Analysis 📊</span>
                     </div>
-                    <p class="text-xs text-slate-400 font-medium mt-0.5">دراسة مقارنة الأكاديميات الرائدة (Megamind vs 3C Coding School vs iSchool): المناهج، الأسعار، والاعتمادات</p>
+                    <p class="text-xs text-slate-400 font-medium mt-0.5">دراسة مقارنة الأكاديميات الرائدة (Megamind vs 3C Coding School vs iSchool) - التركيز التفصيلي على المناهج والمسارات</p>
                 </div>
             </div>
 
             <div class="flex items-center gap-3 text-xs font-bold">
+                <a href="#curricula-deep-dive" class="px-3 py-2 rounded-xl bg-indigo-950/80 text-indigo-300 hover:bg-indigo-900 border border-indigo-700/40 transition flex items-center gap-1.5">
+                    📚 تفاصيل المناهج
+                </a>
                 <a href="./index.html" class="px-3.5 py-2 rounded-xl bg-slate-800 text-slate-200 hover:bg-slate-700 border border-slate-700 transition flex items-center gap-1.5">
                     📌 لوحة التحكم الرئيسية
                 </a>
@@ -68,87 +71,28 @@
         </div>
     </header>
 
-    <!-- Main Content Container -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 flex-1">
+    <!-- Main Content Container: Direct Start with Comparison Table without intro -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-8 flex-1">
 
-        <!-- Executive Banner -->
-        <div class="rounded-3xl bg-gradient-to-r from-slate-900 via-indigo-950/80 to-slate-900 border border-indigo-500/30 p-6 md:p-8 shadow-2xl relative overflow-hidden">
-            <div class="absolute -top-12 -left-12 w-48 h-48 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute -bottom-12 -right-12 w-48 h-48 bg-orange-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
-            <div class="relative z-10 space-y-3">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-extrabold border border-indigo-400/30">
-                    <span>🎯</span> تقرير المقارنة التنافسية للأكاديميات المتخصصة (EdTech Kids & Teens)
-                </div>
-                <h2 class="text-2xl md:text-3xl font-black text-white leading-tight">
-                    تحليل السوق والمقارنة المعيارية الشاملة للأكاديميات التقنية للأطفال
-                </h2>
-                <p class="text-xs md:text-sm text-slate-300 leading-relaxed max-w-4xl">
-                    تهدف هذه الدراسة الصادرة عن الإدارة التعليمية إلى فحص وتحليل النماذج التعليمية لثلاث من كبرى المنصات في مصر والشرق الأوسط:
-                    <strong class="text-orange-400 font-bold">Megaminds Academy</strong>،
-                    <strong class="text-emerald-400 font-bold">3C Coding School</strong>،
-                    و<strong class="text-blue-400 font-bold">iSchool Tech</strong>.
-                    تركز الدراسة على فحص تفصيلي للمناهج والمسارات، خطط الأسعار والاشتراكات، والاعتمادات الدولية، واستخلاص التوصيات الاستراتيجية لتطوير Megamind.
-                </p>
-            </div>
-        </div>
-
-        <!-- Executive KPI Scorecards -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <!-- KPI 1 -->
-            <div class="glass-card rounded-2xl p-5 border border-slate-800 hover-card space-y-2">
-                <div class="flex items-center justify-between text-slate-400">
-                    <span class="text-xs font-bold">الأكاديميات المدروسة</span>
-                    <span class="text-lg">🏢</span>
-                </div>
-                <div class="text-2xl font-black text-white">3 أكاديميات كبرى</div>
-                <p class="text-[11px] text-slate-400 font-medium">Megamind • 3C School • iSchool</p>
-            </div>
-
-            <!-- KPI 2 -->
-            <div class="glass-card rounded-2xl p-5 border border-slate-800 hover-card space-y-2">
-                <div class="flex items-center justify-between text-slate-400">
-                    <span class="text-xs font-bold">الشريحة العمرية المستهدفة</span>
-                    <span class="text-lg">🧒</span>
-                </div>
-                <div class="text-2xl font-black text-emerald-400">6 إلى 18 سنة</div>
-                <p class="text-[11px] text-slate-400 font-medium">Junior (6-10) • Teens (11-14) • Senior (15-18)</p>
-            </div>
-
-            <!-- KPI 3 -->
-            <div class="glass-card rounded-2xl p-5 border border-slate-800 hover-card space-y-2">
-                <div class="flex items-center justify-between text-slate-400">
-                    <span class="text-xs font-bold">نطاق تسعير الحصة الجماعية</span>
-                    <span class="text-lg">💰</span>
-                </div>
-                <div class="text-2xl font-black text-amber-400">150 - 550 ج.م</div>
-                <p class="text-[11px] text-slate-400 font-medium">iSchool الأعلى (~550ج) • Megamind الأكثر تنافسية</p>
-            </div>
-
-            <!-- KPI 4 -->
-            <div class="glass-card rounded-2xl p-5 border border-slate-800 hover-card space-y-2">
-                <div class="flex items-center justify-between text-slate-400">
-                    <span class="text-xs font-bold">معايير الاعتماد الدولية</span>
-                    <span class="text-lg">🎖️</span>
-                </div>
-                <div class="text-2xl font-black text-indigo-400">STEM & ISO & IAIDL</div>
-                <p class="text-[11px] text-slate-400 font-medium">STEM.org • ISO 21001 • Finland EdTech • ISTE</p>
-            </div>
-        </div>
-
-        <!-- Master Comparison Table -->
-        <div class="glass-card rounded-3xl border border-slate-800 p-6 shadow-2xl space-y-6">
+        <!-- 1. MASTER COMPARISON TABLE (Direct on Top) -->
+        <div class="glass-card rounded-3xl border border-slate-800 p-6 shadow-2xl space-y-5">
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
                 <div>
-                    <h3 class="text-lg md:text-xl font-black text-white flex items-center gap-2">
-                        <span>📊</span> جدول المقارنة المعيارية الشامل (Master Comparison Matrix)
-                    </h3>
-                    <p class="text-xs text-slate-400 mt-1">مقارنة محاور: الرابط الرسمي، المناهج والمسارات، خطط الأسعار، والاعتمادات الدولية</p>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 text-orange-400 text-xs font-bold border border-orange-500/20 mb-2">
+                        <span>📊</span> جدول المقارنة المعيارية الشامل المباشر
+                    </div>
+                    <h2 class="text-xl md:text-2xl font-black text-white tracking-tight">
+                        مقارنة الأكاديميات الثلاث: Megaminds Academy vs 3C Coding School vs iSchool Tech
+                    </h2>
+                    <p class="text-xs text-slate-400 mt-1">مقارنة شاملة للموقع الرسمي، ملخص المناهج، خطط الأسعار والاشتراكات، والاعتمادات الدولية</p>
                 </div>
-                <div class="flex items-center gap-2">
+                <div class="flex flex-wrap items-center gap-2">
                     <span class="text-xs font-bold px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
-                        تحديث معتمد: أكتوبر 2026
+                        تحديث: أكتوبر 2026
                     </span>
+                    <a href="#curricula-deep-dive" class="text-xs font-extrabold px-3 py-1 rounded-full bg-orange-600 hover:bg-orange-500 text-white transition">
+                        انتقل للتفصيل الكامل للمناهج ↓
+                    </a>
                 </div>
             </div>
 
@@ -181,25 +125,25 @@
                         <!-- Row 1: Website & Origin -->
                         <tr class="hover:bg-slate-900/50 transition">
                             <td class="p-4 font-bold text-white bg-slate-900/30">
-                                🌐 الموقع الرسمي وتاريخ التأسيس
+                                🌐 الموقع وتاريخ التأسيس
                             </td>
                             <td class="p-4 bg-orange-950/10 border-x border-orange-500/10">
                                 <a href="https://megaminds-academy.com/" target="_blank" rel="noopener noreferrer" class="text-orange-400 font-bold hover:underline inline-flex items-center gap-1">
                                     megaminds-academy.com ↗
                                 </a>
-                                <p class="text-[11px] text-slate-400 mt-1">تأسست في مصر مع توسع سريع نحو أسواق الخليج (السعودية، الإمارات، قطر، الكويت).</p>
+                                <p class="text-[11px] text-slate-400 mt-1">تأسست في مصر مع توسع سريع نحو الخليج (السعودية، الإمارات، قطر، الكويت).</p>
                             </td>
                             <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10">
                                 <a href="https://3cschool.net/" target="_blank" rel="noopener noreferrer" class="text-emerald-400 font-bold hover:underline inline-flex items-center gap-1">
                                     3cschool.net ↗
                                 </a>
-                                <p class="text-[11px] text-slate-400 mt-1">تأسست عام 2015 في مصر على يد م. حسام حسني وأحمد خلاف، مع توسع خليجي واستثمار 3M$.</p>
+                                <p class="text-[11px] text-slate-400 mt-1">تأسست عام 2015 في مصر على يد م. حسام حسني وأحمد خلاف، مع توسع بالسعودية واستثمار 3M$.</p>
                             </td>
                             <td class="p-4 bg-blue-950/10">
                                 <a href="https://ischooltech.com/" target="_blank" rel="noopener noreferrer" class="text-blue-400 font-bold hover:underline inline-flex items-center gap-1">
                                     ischooltech.com ↗
                                 </a>
-                                <p class="text-[11px] text-slate-400 mt-1">تأسست عام 2018 في مصر، الكيان الأكبر استثمارياً وتمويلياً بـ 8+ دول عربية وإقليمية.</p>
+                                <p class="text-[11px] text-slate-400 mt-1">تأسست عام 2018 في مصر، الكيان الأكبر استثمارياً وتمويلياً بـ 8+ دول عربية.</p>
                             </td>
                         </tr>
 
@@ -222,146 +166,104 @@
                             </td>
                         </tr>
 
-                        <!-- Row 3: Curricula & Tracks -->
+                        <!-- Row 3: Curricula Overview -->
                         <tr class="hover:bg-slate-900/50 transition">
                             <td class="p-4 font-bold text-white bg-slate-900/30">
-                                📚 المناهج والمسارات التعليمية (Curricula)
+                                📚 ملخص المسارات التعليمية
                             </td>
-                            <td class="p-4 bg-orange-950/10 border-x border-orange-500/10 space-y-1.5">
-                                <div class="font-bold text-orange-300">مسارات تقنية متكاملة برمجية وهندسية:</div>
-                                <ul class="list-disc pr-4 space-y-1 text-xs text-slate-300">
-                                    <li><strong class="text-white">الروبوتكس والإلكترونيات الذكية:</strong> Arduino, Smart Home, Robot Junior/Senior, Smart City, وبوابات الرادار الحقيقية.</li>
-                                    <li><strong class="text-white">البرمجة بالبلوكس:</strong> PictoBlox, Scratch, Game Design للأطفال.</li>
-                                    <li><strong class="text-white">البرمجة النصية:</strong> Python بمستويات تطبيقية لحل المشكلات.</li>
-                                    <li><strong class="text-white">الذكاء الاصطناعي (AI & ML):</strong> تعلم الآلة وتحليل البيانات للناشئين.</li>
-                                    <li><strong class="text-white">تطوير الألعاب المتقدمة:</strong> محركات Godot و Unity 3D.</li>
-                                    <li><strong class="text-white">الموشن جرافيكس والجرافيك:</strong> تصميم رقمي ورسوم متحركة.</li>
-                                </ul>
-                                <div class="p-2 rounded-lg bg-orange-500/10 border border-orange-500/20 text-[11px] text-orange-200 mt-2 font-semibold">
-                                    💡 <strong class="text-white">الميزة الفريدة:</strong> توفير الكيتات الهندسية الحقيقية (Hardware Kits) وشحنها للطلاب لتركيبها يدوياً.
-                                </div>
+                            <td class="p-4 bg-orange-950/10 border-x border-orange-500/10 space-y-1">
+                                <span class="text-orange-300 font-bold">هاردوير فيزيائي وروبوتكس + برمجة وألعاب:</span>
+                                <p class="text-xs text-slate-300">روبوتكس أردوينو عملي، Smart Home، Smart City، PictoBlox، Python، Godot، Unity، والذكاء الاصطناعي.</p>
+                                <span class="inline-block mt-1 text-[11px] text-amber-300 font-bold">⭐ شحن كيتات حقيقية فيزيائية</span>
                             </td>
-                            <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10 space-y-1.5">
-                                <div class="font-bold text-emerald-300">مسارات برمجية وحاسوبية مكثفة:</div>
-                                <ul class="list-disc pr-4 space-y-1 text-xs text-slate-300">
-                                    <li><strong class="text-white">Visual Programming:</strong> Scratch, MIT App Inventor.</li>
-                                    <li><strong class="text-white">Text-Based Coding:</strong> Python للبرمجة العامة وحل المشكلات.</li>
-                                    <li><strong class="text-white">Web Development:</strong> HTML, CSS, JavaScript, وتطوير المواقع Full-Stack.</li>
-                                    <li><strong class="text-white">تطبيقات الموبايل:</strong> بناء تطبيقات الهواتف الذكية.</li>
-                                    <li><strong class="text-white">الذكاء الاصطناعي والأمن السيبراني:</strong> AI/ML & Cybersecurity.</li>
-                                    <li><strong class="text-white">ريادة الأعمال والعمل الحر:</strong> تأهيل الناشئين لبيئة المشروعات وسوق العمل.</li>
-                                </ul>
-                                <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-[11px] text-emerald-200 mt-2">
-                                    ⚠️ تركيز أساسي على البرمجة السحابية والافتراضية مع قلة الاعتماد على الهاردوير الفيزيائي.
-                                </div>
+                            <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10 space-y-1">
+                                <span class="text-emerald-300 font-bold">برمجيات وحوسبة وريادة أعمال:</span>
+                                <p class="text-xs text-slate-300">Scratch، App Inventor، بايثون، مواقع Full-Stack، تطبيقات الموبايل، أمن سيبراني، وريادة الأعمال.</p>
+                                <span class="inline-block mt-1 text-[11px] text-slate-400">⚠️ تركيز سوفتوير بدون كيتات هاردوير</span>
                             </td>
-                            <td class="p-4 bg-blue-950/10 space-y-1.5">
-                                <div class="font-bold text-blue-300">منهج K-12 معتمد عالمياً ومقسم عمرياً:</div>
-                                <ul class="list-disc pr-4 space-y-1 text-xs text-slate-300">
-                                    <li><strong class="text-white">Code to Craft (6-7 سنوات):</strong> البرمجة التفاعلية داخل عالم Minecraft.</li>
-                                    <li><strong class="text-white">صنّاع الألعاب والـ AI (8-9 سنوات):</strong> تصميم الألعاب التفاعلية وبناء مساعد ذكي.</li>
-                                    <li><strong class="text-white">Python (10-11 سنة):</strong> لغة بايثون ومفاهيم الخوارزميات.</li>
-                                    <li><strong class="text-white">تطوير تطبيقات الموبايل (12-13 سنة):</strong> بناء تطبيقات الهواتف والأجهزة الذكية.</li>
-                                    <li><strong class="text-white">تطوير الويب والأمن السيبراني (14-15 سنة):</strong> مواقع Full-Stack وحمايتها.</li>
-                                    <li><strong class="text-white">AR Game Dev with Unity (16-18 سنة):</strong> ألعاب الواقع المعزز بلغة C# و Unity.</li>
-                                </ul>
-                                <div class="p-2 rounded-lg bg-blue-500/10 border border-blue-500/20 text-[11px] text-blue-200 mt-2">
-                                    ℹ️ تركيز سوفتوير وبرمجة وألعاب قوي جداً مع غياب مسارات الروبوتكس الهندسية كالأردوينو.
-                                </div>
+                            <td class="p-4 bg-blue-950/10 space-y-1">
+                                <span class="text-blue-300 font-bold">منهج K-12 معتمد دولياً (سوفتوير):</span>
+                                <p class="text-xs text-slate-300">Minecraft، صناع الألعاب، بايثون، تطبيقات الموبايل، ويب وسيبراني، وواقع معزز AR Unity.</p>
+                                <span class="inline-block mt-1 text-[11px] text-slate-400">⚠️ تركيز برمجة وشاشات فقط</span>
                             </td>
                         </tr>
 
                         <!-- Row 4: Pricing & Packages -->
                         <tr class="hover:bg-slate-900/50 transition">
                             <td class="p-4 font-bold text-white bg-slate-900/30">
-                                💵 الأسعار وباقات الاشتراك (Pricing)
+                                💵 خطط الأسعار والاشتراكات
                             </td>
-                            <td class="p-4 bg-orange-950/10 border-x border-orange-500/10 space-y-2">
-                                <div class="font-bold text-orange-300 text-xs">نموذج تسعير مرن وتنافسي للغاية:</div>
-                                <div class="space-y-1 text-xs">
-                                    <p>• <strong class="text-white">الحصص الجماعية:</strong> اشتراكات شهرية متوسطها <span class="text-orange-400 font-bold">~800 إلى 1,200 ج.م / شهرياً</span> (متوسط 200 - 250 ج.م للحصة).</p>
-                                    <p>• <strong class="text-white">الحصص الفردية (Private):</strong> باقات مخصصة (تتراوح بين 1,800 - 2,500 ج.م شهرياً).</p>
-                                    <p>• <strong class="text-white">باقات الكيت الهندسية:</strong> حقائب أدوات ومكونات الروبوتكس (توفير بسعر التكلفة أو مدمجة ضمن الكورس).</p>
-                                    <p>• <strong class="text-white">المرونة المالية:</strong> دفع شهري ميسر دون إلزام باشتراكات ربع سنوية طويلة وضخمة.</p>
-                                </div>
+                            <td class="p-4 bg-orange-950/10 border-x border-orange-500/10 space-y-1.5">
+                                <p class="font-bold text-orange-300">الأكثر توفيراً ومرونة مالية:</p>
+                                <p class="text-xs">• شهرياً: <strong class="text-white">~800 إلى 1,200 ج.م</strong> (~200 - 250 ج للحصة).</p>
+                                <p class="text-xs">• الحصص الفردية: <strong class="text-white">1,800 - 2,500 ج.م</strong> شهرياً.</p>
+                                <p class="text-[11px] text-slate-300">• توفير الكيتات بأسعار التكلفة ودون إلزام بمدد طويلة.</p>
                             </td>
-                            <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10 space-y-2">
-                                <div class="font-bold text-emerald-300 text-xs">تسعير مخصص غير معلن علناً:</div>
-                                <div class="space-y-1 text-xs">
-                                    <p>• <strong class="text-white">سياسة التسعير:</strong> لا يتم عرض الأسعار على الموقع العام، بل بعد ملء استمارة وتحديد مستوى الطفل (Placement Test).</p>
-                                    <p>• <strong class="text-white">متوسط الأسعار الميداني:</strong> يتراوح بين <span class="text-emerald-400 font-bold">~1,200 إلى 2,200 ج.م شهرياً</span> حسب المسار والمستوى.</p>
-                                    <p>• <strong class="text-white">نظام الدفع:</strong> باقات متعددة المستويات، عروض موسمية صيفية، وتسهيلات دفع بنكية.</p>
-                                </div>
+                            <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10 space-y-1.5">
+                                <p class="font-bold text-emerald-300">تسعير مخصص غير معلن مسبقاً:</p>
+                                <p class="text-xs">• بعد ملء الاستمارة واختبار تحديد المستوى.</p>
+                                <p class="text-xs">• متوسط ميداني: <strong class="text-white">~1,200 إلى 2,200 ج.م</strong> شهرياً.</p>
+                                <p class="text-[11px] text-slate-300">• باقات موسمية وعروض صيفية متعددة.</p>
                             </td>
-                            <td class="p-4 bg-blue-950/10 space-y-2">
-                                <div class="font-bold text-blue-300 text-xs">باقات ربع سنوية وسنوية معلنة صراحة (الأعلى سعراً):</div>
-                                <div class="space-y-1 text-xs">
-                                    <p>• <strong class="text-white">باقة المبتدئين (3 شهور - 12 حصة جماعية):</strong> <span class="text-blue-400 font-bold">~6,600 ج.م</span> (سعر الحصة تقريباً <strong class="text-white">550 ج.م</strong>).</p>
-                                    <p>• <strong class="text-white">باقة 6 شهور (24 حصة جماعية):</strong> <span class="text-blue-400 font-bold">~11,900 ج.م</span> بعد الخصم (سعر الحصة ~495 ج.م).</p>
-                                    <p>• <strong class="text-white">الحصص الفردية (مدرس خاص 1-on-1):</strong> باقات خاصة تفوق <span class="text-blue-400 font-bold">12,000 - 18,000 ج.م</span> لـ 3 شهور.</p>
-                                    <p>• <strong class="text-white">باقات دول الخليج:</strong> تسعير بالريال والدولار (~300 إلى 600 ريال سعودي شهرياً).</p>
-                                    <p>• <strong class="text-white">التسهيلات:</strong> تقسيط بدون فوائد عبر تطبيقات (فرصة / فاليو)، حصة تجريبية مجانية، رصيدين تجميد ورصيدين إعادة جدولة.</p>
-                                </div>
+                            <td class="p-4 bg-blue-950/10 space-y-1.5">
+                                <p class="font-bold text-blue-300">الأعلى سعراً بالماركت (باقات دورية):</p>
+                                <p class="text-xs">• 3 شهور (12 حصة): <strong class="text-blue-400 font-bold">~6,600 ج.م</strong> (~550 ج للحصة).</p>
+                                <p class="text-xs">• 6 شهور (24 حصة): <strong class="text-blue-400 font-bold">~11,900 ج.م</strong>.</p>
+                                <p class="text-xs">• الحصص الفردية: تفوق <strong class="text-white">12,000 - 18,000 ج.م</strong>.</p>
+                                <p class="text-[11px] text-slate-300">• تقسيط بدون فوائد (فرصة/فاليو) وتجربة أولى مجانية.</p>
                             </td>
                         </tr>
 
-                        <!-- Row 5: Accreditations & Certifications -->
+                        <!-- Row 5: Accreditations -->
                         <tr class="hover:bg-slate-900/50 transition">
                             <td class="p-4 font-bold text-white bg-slate-900/30">
-                                🎖️ الاعتمادات والشراكات الدولية (Accreditations)
+                                🎖️ الاعتمادات والشراكات
                             </td>
-                            <td class="p-4 bg-orange-950/10 border-x border-orange-500/10 space-y-2">
-                                <div class="flex flex-wrap gap-1.5">
-                                    <span class="px-2 py-0.5 rounded bg-orange-500/20 text-orange-300 text-[11px] font-bold">شهادة معتمدة لكل مستوى</span>
-                                    <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[11px] font-bold">مشروع تخرج تطبيقي</span>
-                                    <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 text-[11px] font-bold">مستهدف: STEM.org</span>
+                            <td class="p-4 bg-orange-950/10 border-x border-orange-500/10 space-y-1.5">
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="px-2 py-0.5 rounded bg-orange-500/20 text-orange-300 text-[10px] font-bold">شهادة معتمدة لكل مستوى</span>
+                                    <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[10px] font-bold">مشاريع تخرج عملية</span>
+                                    <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 text-[10px] font-bold">مستهدف: STEM.org</span>
                                 </div>
-                                <p class="text-xs text-slate-300 leading-relaxed">
-                                    تمنح Megamind شهادات إتمام معتمدة تبرز ساعات التدريب وإنجاز مشاريع الروبوتكس والبرمجة، وربط الطلاب بالمسابقات المحلية والإقليمية، مع استهداف التقدم للاعتماد الدولي.
-                                </p>
+                                <p class="text-[11px] text-slate-400">توثيق ساعات التدريب والتأهيل لمسابقات الروبوتكس المحلية والإقليمية.</p>
                             </td>
-                            <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10 space-y-2">
-                                <div class="flex flex-wrap gap-1.5">
-                                    <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[11px] font-bold">STEM.org Accredited</span>
-                                    <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[11px] font-bold">ISO 21001 Certified</span>
+                            <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10 space-y-1.5">
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[10px] font-bold">STEM.org Accredited</span>
+                                    <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[10px] font-bold">ISO 21001 Certified</span>
                                 </div>
-                                <p class="text-xs text-slate-300 leading-relaxed">
-                                    حاصلة على اعتماد **STEM.org** الأمريكي للتعليم التكنولوجي، وشهادة الأيزو الدولية لنظم إدارة المؤسسات التعليمية **ISO 21001**.
-                                </p>
+                                <p class="text-[11px] text-slate-400">اعتماد STEM التعليمي الأمريكي والأيزو لإدارة جودة التعليم والتدريب.</p>
                             </td>
-                            <td class="p-4 bg-blue-950/10 space-y-2">
-                                <div class="flex flex-wrap gap-1.5">
-                                    <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[11px] font-bold">STEM.org</span>
-                                    <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[11px] font-bold">IAIDL (AI License)</span>
-                                    <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[11px] font-bold">Education Alliance Finland</span>
-                                    <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[11px] font-bold">EdTech Impact</span>
-                                    <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[11px] font-bold">ISTE Seal 2026-2028</span>
+                            <td class="p-4 bg-blue-950/10 space-y-1.5">
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[10px] font-bold">STEM.org</span>
+                                    <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[10px] font-bold">IAIDL (AI License)</span>
+                                    <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[10px] font-bold">Finland Alliance 2025</span>
+                                    <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[10px] font-bold">ISTE Seal</span>
                                 </div>
-                                <p class="text-xs text-slate-300 leading-relaxed">
-                                    أوسع محفظة اعتمادات تسويقية في المنطقة، مع شراكات حكومية بمصر ومبادرات برعاية وزارة الاتصالات ومؤسسات دولية مثل سيسكو ومايكروسوفت.
-                                </p>
+                                <p class="text-[11px] text-slate-400">أوسع محفظة اعتمادات تسويقية وشراكات حكومية مع وزارة الاتصالات ومايكروسوفت.</p>
                             </td>
                         </tr>
 
                         <!-- Row 6: Class Model & Experience -->
                         <tr class="hover:bg-slate-900/50 transition">
                             <td class="p-4 font-bold text-white bg-slate-900/30">
-                                👥 حجم المجموعة ومدة الحصة وتجربة التعليم
+                                👥 حجم المجموعة وزمن الحصة
                             </td>
-                            <td class="p-4 bg-orange-950/10 border-x border-orange-500/10 text-xs space-y-1">
-                                <p>• <strong class="text-white">حجم المجموعة:</strong> مجموعات صغيرة مركزة (4 طلاب، وتعديل مستهدف لـ 5-6 طلاب كحد أقصى).</p>
-                                <p>• <strong class="text-white">مدة الجلسة:</strong> 1.5 ساعة (90 دقيقة) تضمن التوازن بين الشرح والتطبيق العملي.</p>
-                                <p>• <strong class="text-white">التجربة:</strong> تركيب يدوي فيزيائي ومشاريع تفاعلية وتواصل عبر المنصة والجروبات الرسمية.</p>
+                            <td class="p-4 bg-orange-950/10 border-x border-orange-500/10 text-xs">
+                                <p class="font-bold text-white">• 4 طلاب (مستهدف 5-6 طلاب كحد أقصى)</p>
+                                <p class="text-slate-300">• مدة الحصة: <strong class="text-orange-400">1.5 ساعة (90 دقيقة)</strong></p>
+                                <p class="text-[11px] text-slate-400">• تطبيق يدوي بالكيتات + متابعة بالجروب والمنصة.</p>
                             </td>
-                            <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10 text-xs space-y-1">
-                                <p>• <strong class="text-white">حجم المجموعة:</strong> مجموعات صغيرة ومتوسطة (4 إلى 8 طلاب حسب المستوى).</p>
-                                <p>• <strong class="text-white">مدة الجلسة:</strong> ساعة إلى ساعة ونصف (أسبوعياً).</p>
-                                <p>• <strong class="text-white">التجربة:</strong> منصة داخلية لمتابعة إنجازات وتكليفات الطلاب (Student Dashboard) وتقييم بعد كل حصة.</p>
+                            <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10 text-xs">
+                                <p class="font-bold text-white">• 4 إلى 8 طلاب في المجموعة</p>
+                                <p class="text-slate-300">• مدة الحصة: <strong class="text-emerald-400">1 إلى 1.5 ساعة</strong></p>
+                                <p class="text-[11px] text-slate-400">• منصة متابعة مهام وتقييم أداء بعد كل حصة.</p>
                             </td>
-                            <td class="p-4 bg-blue-950/10 text-xs space-y-1">
-                                <p>• <strong class="text-white">حجم المجموعة:</strong> 4 إلى 5 طلاب في الحصص الجماعية، أو طالب واحد (1-on-1).</p>
-                                <p>• <strong class="text-white">مدة الجلسة:</strong> 1.5 ساعة (90 دقيقة) أسبوعياً.</p>
-                                <p>• <strong class="text-white">التجربة:</strong> منصة LMS متقدمة، نظام التنبيهات، تقارير تقدم أسبوعية للأهل، وحساب ولي أمر مستقل.</p>
+                            <td class="p-4 bg-blue-950/10 text-xs">
+                                <p class="font-bold text-white">• 4 إلى 5 طلاب أو فردي (1-on-1)</p>
+                                <p class="text-slate-300">• مدة الحصة: <strong class="text-blue-400">1.5 ساعة (90 دقيقة)</strong></p>
+                                <p class="text-[11px] text-slate-400">• LMS متكامل + رصيدين تجميد ورصيدين إعادة جدولة.</p>
                             </td>
                         </tr>
                     </tbody>
@@ -369,153 +271,434 @@
             </div>
         </div>
 
-        <!-- Deep Dive Profile Cards Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- 2. IN-DEPTH CURRICULA & TRACKS BREAKDOWN (Detailed Section) -->
+        <div id="curricula-deep-dive" class="space-y-8 pt-4">
 
-            <!-- Card 1: Megaminds Academy -->
-            <div class="glass-card rounded-3xl p-6 border-2 border-orange-500/40 shadow-xl space-y-5 flex flex-col justify-between relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl pointer-events-none"></div>
-                <div>
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="px-3 py-1 rounded-full text-xs font-black bg-orange-500/20 text-orange-400 border border-orange-500/30">
-                            أكاديميتنا 🚀
-                        </span>
-                        <span class="text-xs text-slate-400 font-bold">Kids & Robotics</span>
+            <!-- Section Header -->
+            <div class="rounded-3xl bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 border border-indigo-500/30 p-6 md:p-8 shadow-2xl">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="text-3xl">📚</span>
+                    <div>
+                        <h2 class="text-2xl md:text-3xl font-black text-white">
+                            التحليل التفصيلي للمناهج والمسارات التعليمية (Curricula & Learning Tracks)
+                        </h2>
+                        <p class="text-xs md:text-sm text-indigo-300 mt-1 font-medium">
+                            تفكيك تفصيلي ودقيق لمحتوى المناهج، الأدوات واللغات المستعملة، التقسيمات العمرية، والمشاريع التطبيقية لكل أكاديمية
+                        </p>
                     </div>
-
-                    <h3 class="text-xl font-black text-white">Megaminds Academy</h3>
-                    <p class="text-xs text-slate-300 leading-relaxed mt-2">
-                        الأكاديمية المتخصصة في الدمج الفريد بين البرمجة النظرية والروبوتكس التطبيقي الفعلي بالأردوينو والكيتات الذكية، مع توفير تجربة تعليمية ممتعة وسعر اقتصادي في متناول الأسر العربية.
-                    </p>
-
-                    <div class="mt-4 space-y-3 pt-3 border-t border-slate-800 text-xs">
-                        <div>
-                            <span class="font-bold text-orange-300 block mb-1">🌟 أبرز نقاط القوة (Strengths):</span>
-                            <ul class="list-disc pr-4 space-y-1 text-slate-300">
-                                <li><strong>الهاردوير والروبوتكس التطبيقي:</strong> تفوق كاسح على المنافسين بمشاريع حقيقية (Smart Home, Smart Car, Radar Gate).</li>
-                                <li><strong>السعر التنافسي والمرونة:</strong> اشتراكات شهرية ميسرة بعيداً عن أعباء الدفع لـ 6 أشهر مقدماً.</li>
-                                <li><strong>سعة المجموعات الصغيرة:</strong> تركيز عالٍ على استيعاب كل طفل وتفريد التعليم.</li>
-                                <li><strong>كتيبات ومحتوى تفاعلي:</strong> توفير منصات تفاعلية وكتيبات للتعلم الذاتي.</li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <span class="font-bold text-amber-300 block mb-1">🎯 أولويات التطوير (Action Items):</span>
-                            <ul class="list-disc pr-4 space-y-1 text-slate-400">
-                                <li>الحصول على اعتماد دولي رسمي (مثل STEM.org) لرفع القوة التسويقية.</li>
-                                <li>تفعيل نظام التقييمات الآلية الذكية والـ Forms (المهمة رقم 17).</li>
-                                <li>إتاحة مسارات اشتراك ربع سنوية وسنوية مع خيارات تقسيط ميسرة.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pt-4 border-t border-slate-800">
-                    <a href="https://megaminds-academy.com/" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-extrabold text-xs transition flex items-center justify-center gap-2 shadow-lg shadow-orange-600/20">
-                        زيارة موقع Megaminds Academy 🌐
-                    </a>
                 </div>
             </div>
 
-            <!-- Card 2: 3C Coding School -->
-            <div class="glass-card rounded-3xl p-6 border border-emerald-500/30 shadow-xl space-y-5 flex flex-col justify-between relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
-                <div>
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="px-3 py-1 rounded-full text-xs font-black bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                            المنافس الثاني 💻
-                        </span>
-                        <span class="text-xs text-slate-400 font-bold">تأسست 2015</span>
-                    </div>
-
-                    <h3 class="text-xl font-black text-white">3C Coding School</h3>
-                    <p class="text-xs text-slate-300 leading-relaxed mt-2">
-                        مدرسة تكنولوجية عريقة تأسست في مصر عام 2015 ونجحت في جذب استثمارات دولية للتوسع بالسعودية، وتركز على بناء العقلية البرمجية وريادة الأعمال وتطوير الويب والأمن السيبراني.
-                    </p>
-
-                    <div class="mt-4 space-y-3 pt-3 border-t border-slate-800 text-xs">
-                        <div>
-                            <span class="font-bold text-emerald-300 block mb-1">🌟 أبرز نقاط القوة (Strengths):</span>
-                            <ul class="list-disc pr-4 space-y-1 text-slate-300">
-                                <li><strong>الاعتمادات الموثوقة:</strong> حاصلة على اعتماد STEM.org الأمريكي وشهادة ISO 21001.</li>
-                                <li><strong>الخبرة والسمعة الطويلة:</strong> أقدمية في السوق المصري منذ عام 2015.</li>
-                                <li><strong>تنوع المناهج البرمجية:</strong> من لغات Scratch حتى Full-Stack Web والأمن السيبراني.</li>
-                                <li><strong>تمويل واستثمار قوي:</strong> جولة استثمارية 3M$ لدعم المنصة والتوسع الإقليمي.</li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <span class="font-bold text-rose-300 block mb-1">⚠️ نقاط الضعف والمحدوديات (Weaknesses):</span>
-                            <ul class="list-disc pr-4 space-y-1 text-slate-400">
-                                <li><strong>غياب شفافية التسعير:</strong> إخفاء الأسعار وإلزام ولي الأمر بملء فورم وانتظار المبيعات.</li>
-                                <li><strong>ضعف مسار الروبوتكس التطبيقي:</strong> الاعتماد شبه التام على البرمجة النظرية والشاشات.</li>
-                                <li><strong>تحديات في الدومين:</strong> مشاكل تقنية حديثة في بعض نطاقات الموقع البديلة.</li>
-                            </ul>
-                        </div>
-                    </div>
+            <!-- Part A: Age-Stage Curriculum Matrix -->
+            <div class="glass-card rounded-3xl border border-slate-800 p-6 shadow-xl space-y-5">
+                <div class="border-b border-slate-800 pb-3">
+                    <h3 class="text-lg md:text-xl font-black text-white flex items-center gap-2">
+                        <span>🧒</span> جدول توزيع المناهج والمسارات بحسب الفئات العمرية (Age Stages Matrix)
+                    </h3>
+                    <p class="text-xs text-slate-400 mt-0.5">مقارنة ما يدرسه الطفل في كل مرحلة سنية بين الأكاديميات الثلاث</p>
                 </div>
 
-                <div class="pt-4 border-t border-slate-800">
-                    <a href="https://3cschool.net/" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-emerald-600 text-white font-extrabold text-xs transition flex items-center justify-center gap-2 border border-slate-700">
-                        زيارة موقع 3C Coding School 🌐
-                    </a>
+                <div class="overflow-x-auto custom-scrollbar">
+                    <table class="w-full text-right text-xs md:text-sm border-collapse">
+                        <thead>
+                            <tr class="bg-slate-900/90 text-slate-200 border-b border-slate-800 text-xs">
+                                <th class="p-3.5 rounded-tr-2xl w-40 font-black">المرحلة السنية</th>
+                                <th class="p-3.5 bg-orange-950/20 border-x border-orange-500/20 text-orange-300 font-black">Megaminds Academy</th>
+                                <th class="p-3.5 bg-emerald-950/20 border-l border-emerald-500/20 text-emerald-300 font-black">3C Coding School</th>
+                                <th class="p-3.5 bg-blue-950/20 rounded-tl-2xl text-blue-300 font-black">iSchool Tech</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800 text-slate-300 font-medium text-xs">
+                            <!-- Junior Stage -->
+                            <tr class="hover:bg-slate-900/40 transition">
+                                <td class="p-4 font-bold text-amber-300 bg-slate-900/40">
+                                    <div class="text-sm font-black text-white mb-0.5">مرحلة الصغار (Junior)</div>
+                                    <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-bold text-[11px]">6 - 9 سنوات</span>
+                                    <p class="text-[10px] text-slate-400 mt-1">بناء التفكير المنطقي والارتباط بالتقنية</p>
+                                </td>
+                                <td class="p-4 bg-orange-950/10 border-x border-orange-500/10 space-y-2">
+                                    <div class="font-bold text-white text-xs">🤖 مسار Robot Junior + PictoBlox:</div>
+                                    <ul class="list-disc pr-4 space-y-1 text-slate-300 text-[11px]">
+                                        <li><strong>برمجة بالبلوكس (Block Coding):</strong> استخدام منصة PictoBlox وسكراتش لإنشاء قصص وألعاب متحركة وتطبيق مفاهيم الحلقات والشروط.</li>
+                                        <li><strong>إلكترونيات مبسطة وحقيقية:</strong> تركيب فيزيائي خفيف: إشارة المرور الذكية وبوابة الرادار (Traffic Light & Radar Gate).</li>
+                                        <li><strong>مشاريع تفاعلية محببة:</strong> الحصالة الذكية (Smart Piggy Bank)، المروحة الذكية وكشاف الأمان، والروبوت العازف الراقص.</li>
+                                        <li><strong>ميزة الكيت الفيزيائي:</strong> يركب الطفل الأسلاك والسيرفو والحساسات بيده دون تعقيد ميكانيكي.</li>
+                                    </ul>
+                                </td>
+                                <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10 space-y-2">
+                                    <div class="font-bold text-white text-xs">💻 مسار البرمجة المرئية التأسيسية:</div>
+                                    <ul class="list-disc pr-4 space-y-1 text-slate-300 text-[11px]">
+                                        <li><strong>Scratch 3.0:</strong> تصميم ألعاب 2D ورسوم متحركة وتعلم التفكير التتابعي وحل المشكلات.</li>
+                                        <li><strong>MIT App Inventor (المرحلة التمهيدية):</strong> بناء واجهات تفاعلية لألعاب وتطبيقات مبسطة.</li>
+                                        <li><strong>أنشطة التفكير المنطقي:</strong> ألغاز خوارزمية بدون كتابة أكواد نصية.</li>
+                                        <li><strong>البيئة:</strong> تعلم رقمي على شاشة الحاسوب حصراً دون مكونات هاردوير فيزيائية.</li>
+                                    </ul>
+                                </td>
+                                <td class="p-4 bg-blue-950/10 space-y-2">
+                                    <div class="font-bold text-white text-xs">🎮 مستويان K-12 مقسمان بالسن:</div>
+                                    <ul class="list-disc pr-4 space-y-1 text-slate-300 text-[11px]">
+                                        <li><strong>المستوى 1 (6-7 سنوات): Code to Craft in Minecraft:</strong> استغلال بيئة ماينكرافت لتعلم أوامر الكود، الإحداثيات، والبناء الخوارزمي الممتع.</li>
+                                        <li><strong>المستوى 2 (8-9 سنوات): صنّاع الألعاب والذكاء الاصطناعي:</strong> برمجة ألعاب تفاعلية وبناء مساعد ذكي وتدريب نماذج بسيطة.</li>
+                                        <li><strong>البيئة:</strong> بيئة برمجية سحابية جاذبة بصرياً دون أي تعامل مع روبوتات أو قطع إلكترونية.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <!-- Teens Stage -->
+                            <tr class="hover:bg-slate-900/40 transition">
+                                <td class="p-4 font-bold text-emerald-300 bg-slate-900/40">
+                                    <div class="text-sm font-black text-white mb-0.5">مرحلة اليافعين (Teens)</div>
+                                    <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold text-[11px]">10 - 13 سنة</span>
+                                    <p class="text-[10px] text-slate-400 mt-1">الانتقال للبرمجة النصية والأنظمة الذكية</p>
+                                </td>
+                                <td class="p-4 bg-orange-950/10 border-x border-orange-500/10 space-y-2">
+                                    <div class="font-bold text-white text-xs">⚡ أردوينو وهاردوير + بايثون ومحركات الألعاب:</div>
+                                    <ul class="list-disc pr-4 space-y-1 text-slate-300 text-[11px]">
+                                        <li><strong>كورس أساسيات الروبوتكس المتقدم (Robot Senior):</strong> لوحة Arduino Uno، لغة C++، قراءة الحساسات (Ultrasonic, IR, LDR)، والتحكم بالمحركات والسيرفو على Breadboard.</li>
+                                        <li><strong>كورس البيت الذكي (Smart Home IoT):</strong> أنظمة الأتمتة، وحدات الترحيل (Relays)، والإنذار والتحكم اللاسلكي.</li>
+                                        <li><strong>مسار بايثون للناشئين (Python Core):</strong> المتغيرات، الدوال، هياكل البيانات، ومشاريع حل المشكلات.</li>
+                                        <li><strong>تطوير الألعاب بـ Godot Engine:</strong> ألعاب 2D خفيفة وسريعة وتطوير التفكير الإبداعي.</li>
+                                    </ul>
+                                </td>
+                                <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10 space-y-2">
+                                    <div class="font-bold text-white text-xs">🐍 بايثون وتطبيقات الموبايل:</div>
+                                    <ul class="list-disc pr-4 space-y-1 text-slate-300 text-[11px]">
+                                        <li><strong>Python Track:</strong> الأساسيات البرمجية النصية، كتابة السكربتات، وتطبيقات سطح المكتب المبسطة.</li>
+                                        <li><strong>Mobile Apps Development:</strong> تطوير تطبيقات الهواتف بنظام الكتل المتقدم وربطها بقواعد بيانات سحابية (Firebase).</li>
+                                        <li><strong>مقدمة الذكاء الاصطناعي:</strong> تحليل البيانات التأسيسي والتعرف على الأنماط.</li>
+                                    </ul>
+                                </td>
+                                <td class="p-4 bg-blue-950/10 space-y-2">
+                                    <div class="font-bold text-white text-xs">📱 بايثون وتطوير تطبيقات الموبايل:</div>
+                                    <ul class="list-disc pr-4 space-y-1 text-slate-300 text-[11px]">
+                                        <li><strong>المستوى 3 (10-11 سنة): بايثون Python:</strong> تعلم أشهر لغة برمجة، الخوارزميات، الشروط والدوال وبناء أدوات تفاعلية.</li>
+                                        <li><strong>المستوى 4 (12-13 سنة): تطوير تطبيقات الموبايل:</strong> تصميم وبناء تطبيقات الهاتف المحمول وواجهات المستخدم ومشاريع تخرج.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            <!-- Senior Stage -->
+                            <tr class="hover:bg-slate-900/40 transition">
+                                <td class="p-4 font-bold text-indigo-300 bg-slate-900/40">
+                                    <div class="text-sm font-black text-white mb-0.5">مرحلة المتقدمين (Senior)</div>
+                                    <span class="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 font-bold text-[11px]">14 - 18 سنة</span>
+                                    <p class="text-[10px] text-slate-400 mt-1">الاحترافية وهندسة المشاريع الكاملة</p>
+                                </td>
+                                <td class="p-4 bg-orange-950/10 border-x border-orange-500/10 space-y-2">
+                                    <div class="font-bold text-white text-xs">🏙️ المدينة الذكية ومحرك Unity والـ AI المتقدم:</div>
+                                    <ul class="list-disc pr-4 space-y-1 text-slate-300 text-[11px]">
+                                        <li><strong>دورة المدينة الذكية (Smart City):</strong> مشاريع هندسية وتصاميم CNC وإنارة وبوابات ذكية وبنية تحتية تفاعلية.</li>
+                                        <li><strong>الذكاء الاصطناعي وتعلم الآلة (AI & ML):</strong> خوارزميات تعلم الآلة، معالجة الصور، ونماذج الرؤية الحاسوبية.</li>
+                                        <li><strong>محرك Unity 3D Expert:</strong> برمجة ألعاب ثلاثية الأبعاد بلغة C# ونقل الكورس للمستوى المتقدم.</li>
+                                        <li><strong>الموشن جرافيكس والتصميم الرقمي:</strong> برامج التصميم وإنتاج الوسائط الرقمية.</li>
+                                    </ul>
+                                </td>
+                                <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10 space-y-2">
+                                    <div class="font-bold text-white text-xs">🌐 تطوير الويب الكامل والأمن والريادة:</div>
+                                    <ul class="list-disc pr-4 space-y-1 text-slate-300 text-[11px]">
+                                        <li><strong>Full-Stack Web Development:</strong> HTML5, CSS3, JavaScript, قواعد البيانات، وبناء مواقع حية على الإنترنت.</li>
+                                        <li><strong>الأمن السيبراني (Cybersecurity):</strong> أساسيات حماية الشبكات، القرصنة الأخلاقية، وأمن المعلومات.</li>
+                                        <li><strong>مسار ريادة الأعمال والعمل الحر:</strong> تأهيل الطالب لبناء نموذج عمل تجاري لمشروعه الرقمي والبدء في سوق العمل الحر.</li>
+                                    </ul>
+                                </td>
+                                <td class="p-4 bg-blue-950/10 space-y-2">
+                                    <div class="font-bold text-white text-xs">🛡️ الويب والأمن السيبراني والواقع المعزز:</div>
+                                    <ul class="list-disc pr-4 space-y-1 text-slate-300 text-[11px]">
+                                        <li><strong>المستوى 5 (14-15 سنة): تطوير الويب والأمن السيبراني:</strong> بناء مواقع Full-Stack وحمايتها واختبار الثغرات البرمجية.</li>
+                                        <li><strong>المستوى 6 (16-18 سنة): Develop an AR Game with Unity:</strong> برمجة محرك Unity 3D بلغة C#، الحوسبة المكانية (Spatial Computing)، وألعاب الواقع المعزز AR.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
-            <!-- Card 3: iSchool Tech -->
-            <div class="glass-card rounded-3xl p-6 border border-blue-500/30 shadow-xl space-y-5 flex flex-col justify-between relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl pointer-events-none"></div>
-                <div>
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="px-3 py-1 rounded-full text-xs font-black bg-blue-500/20 text-blue-400 border border-blue-500/30">
-                            المنافس الأكبر تسويقاً 🚀
-                        </span>
-                        <span class="text-xs text-slate-400 font-bold">+130,000 طالب</span>
+            <!-- Part B: Deep-Dive Technical Tracks Comparison -->
+            <div class="glass-card rounded-3xl border border-slate-800 p-6 shadow-xl space-y-6">
+                <div class="border-b border-slate-800 pb-3">
+                    <h3 class="text-lg md:text-xl font-black text-white flex items-center gap-2">
+                        <span>🔬</span> مقارنة المسارات التخصصية الستة (The 6 Technical Tracks Compared)
+                    </h3>
+                    <p class="text-xs text-slate-400 mt-0.5">تحليل المناهج بحسب نوع العلم والتقنية: الروبوتكس، البرمجة، بايثون، الألعاب، الويب، والذكاء الاصطناعي</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                    <!-- Track 1: Robotics & Electronics -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border-2 border-orange-500/40 space-y-3 relative overflow-hidden">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-black text-orange-400 px-2.5 py-0.5 rounded-full bg-orange-500/20 border border-orange-500/30">
+                                🤖 الروبوتكس والإلكترونيات (Hardware)
+                            </span>
+                            <span class="text-xs font-bold text-emerald-400">نقطة قوة Megamind ⭐</span>
+                        </div>
+                        <h4 class="text-base font-black text-white">الروبوتكس والأنظمة المدمجة</h4>
+                        <div class="space-y-2 text-xs text-slate-300 leading-relaxed">
+                            <p>
+                                <strong class="text-orange-400">Megaminds:</strong> ريادة حصرية في تدريس الروبوتكس بكيتات فيزيائية حقيقية (Arduino Uno, Breadboard, Ultrasonic, Servo Motors, Relays, CNC) مع كورسات Smart Home و Smart City وكتيب التعلم الذاتي التفاعلي.
+                            </p>
+                            <p>
+                                <strong class="text-emerald-400">3C School:</strong> لا تقدم مسار هاردوير وروبوتكس فيزيائي مستقل، والتركيز شبه منعدم على كيتات الإلكترونيات.
+                            </p>
+                            <p>
+                                <strong class="text-blue-400">iSchool:</strong> لا تقدم أي مسارات روبوتكس أو كيتات أردوينو هاردوير؛ كافة مناهجها قائمة على السوفتوير والبرمجة السحابية فقط.
+                            </p>
+                        </div>
                     </div>
 
-                    <h3 class="text-xl font-black text-white">iSchool Tech</h3>
-                    <p class="text-xs text-slate-300 leading-relaxed mt-2">
-                        المنصة الأكثر تمويلاً وانتشاراً إقليمياً في الشرق الأوسط وشمال أفريقيا، ذات آلة تسويقية ضخمة، وحزم اعتمادات دولية واسعة، وباقات اشتراك معلنة مسبقاً بنظام الكورسات الربع سنوية.
-                    </p>
+                    <!-- Track 2: Visual & Block Programming -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-black text-amber-400 px-2.5 py-0.5 rounded-full bg-amber-500/20 border border-amber-500/30">
+                                🧱 البرمجة المرئية والبلوكس
+                            </span>
+                            <span class="text-xs text-slate-400">للأعمار 6 - 9 سنوات</span>
+                        </div>
+                        <h4 class="text-base font-black text-white">سكراتش، بيكتوبلوكس وماينكرافت</h4>
+                        <div class="space-y-2 text-xs text-slate-300 leading-relaxed">
+                            <p>
+                                <strong class="text-orange-400">Megaminds:</strong> استخدام PictoBlox لربط البلوكس بالهاردوير والذكاء الاصطناعي، وسكراتش لصناعة الألعاب والقصص.
+                            </p>
+                            <p>
+                                <strong class="text-emerald-400">3C School:</strong> اعتماد Scratch 3.0 كأساس لبناء الألعاب والتفكير المنطقي، متبوعاً بـ App Inventor.
+                            </p>
+                            <p>
+                                <strong class="text-blue-400">iSchool:</strong> توظيف جذاب للغاية لمنصة Minecraft (Code to Craft) لجذب شغف الأطفال، متبوعاً بمسار صناع الألعاب والـ AI بالبلوكس.
+                            </p>
+                        </div>
+                    </div>
 
-                    <div class="mt-4 space-y-3 pt-3 border-t border-slate-800 text-xs">
+                    <!-- Track 3: Python & Algorithms -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-black text-emerald-400 px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/30">
+                                🐍 بايثون وحل المشكلات
+                            </span>
+                            <span class="text-xs text-slate-400">للأعمار 10 - 14 سنة</span>
+                        </div>
+                        <h4 class="text-base font-black text-white">لغة بايثون والخوارزميات</h4>
+                        <div class="space-y-2 text-xs text-slate-300 leading-relaxed">
+                            <p>
+                                <strong class="text-orange-400">Megaminds:</strong> مسار بايثون مخصص يركز على الخوارزميات، حل المشكلات البرمجية، وتطبيقات الأتمتة والتحضير لمسابقات البرمجة.
+                            </p>
+                            <p>
+                                <strong class="text-emerald-400">3C School:</strong> مسار متدرج من أساسيات بايثون حتى الدوال والكائنات وهياكل البيانات وبناء أدوات سطر الأوامر.
+                            </p>
+                            <p>
+                                <strong class="text-blue-400">iSchool:</strong> مسار بايثون للأطفال 10-11 سنة يشمل بناء ألعاب نصية، أدوات تفاعلية، والمفاهيم الخوارزمية الحديثة.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Track 4: Artificial Intelligence & Machine Learning -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-black text-indigo-400 px-2.5 py-0.5 rounded-full bg-indigo-500/20 border border-indigo-500/30">
+                                🧠 الذكاء الاصطناعي وتعلم الآلة
+                            </span>
+                            <span class="text-xs text-slate-400">AI & Machine Learning</span>
+                        </div>
+                        <h4 class="text-base font-black text-white">الذكاء الاصطناعي وتطبيقاته</h4>
+                        <div class="space-y-2 text-xs text-slate-300 leading-relaxed">
+                            <p>
+                                <strong class="text-orange-400">Megaminds:</strong> مسار مخصص للـ AI & ML يشمل التعرف على الصور، Teachable Machine، وتطبيقات الرؤية الحاسوبية للناشئين.
+                            </p>
+                            <p>
+                                <strong class="text-emerald-400">3C School:</strong> مسار الذكاء الاصطناعي وتحليل البيانات وبناء نماذج التصنيف وتطبيقات الشات بوت التفاعلية.
+                            </p>
+                            <p>
+                                <strong class="text-blue-400">iSchool:</strong> دمج مبكر للذكاء الاصطناعي للأعمار 8-9 سنوات في مسار صناع الألعاب، ومسارات متقدمة، مع الحصول على اعتماد رخصة IAIDL.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Track 5: Game Development Engines -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-black text-purple-400 px-2.5 py-0.5 rounded-full bg-purple-500/20 border border-purple-500/30">
+                                🎮 محركات تطوير الألعاب
+                            </span>
+                            <span class="text-xs text-slate-400">Godot & Unity 3D & AR</span>
+                        </div>
+                        <h4 class="text-base font-black text-white">محركات الألعاب والواقع المعزز</h4>
+                        <div class="space-y-2 text-xs text-slate-300 leading-relaxed">
+                            <p>
+                                <strong class="text-orange-400">Megaminds:</strong> التميز باعتماد محرك Godot خفيف الوزن للألعاب ثنائية الأبعاد، ونقل محرك Unity 3D للمرحلة المتقدمة لطلاب المستوى الثالث.
+                            </p>
+                            <p>
+                                <strong class="text-emerald-400">3C School:</strong> تصميم ألعاب ثنائية الأبعاد عبر محركات ويب ومحركات برمجية بصرية دون التركيز على محركات ثلاثية الأبعاد احترافية.
+                            </p>
+                            <p>
+                                <strong class="text-blue-400">iSchool:</strong> مسار متقدم متخصص لألعاب الواقع المعزز (AR Game Dev) باستخدام محرك Unity ولغة C# للشباب 16-18 سنة.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Track 6: Web, Mobile & Cyber -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-black text-cyan-400 px-2.5 py-0.5 rounded-full bg-cyan-500/20 border border-cyan-500/30">
+                                🌐 الويب، الموبايل والأمن
+                            </span>
+                            <span class="text-xs text-slate-400">Web, Mobile & Cyber</span>
+                        </div>
+                        <h4 class="text-base font-black text-white">تطوير الويب والأمن وريادة الأعمال</h4>
+                        <div class="space-y-2 text-xs text-slate-300 leading-relaxed">
+                            <p>
+                                <strong class="text-orange-400">Megaminds:</strong> تقديم دورات موشن جرافيك وتصميم رقمي موازية، مع تخطيط إدراج مسارات الويب الحديثة.
+                            </p>
+                            <p>
+                                <strong class="text-emerald-400">3C School:</strong> تفوق في مسار الويب Full-Stack (HTML/CSS/JS/Backend)، وتطبيقات الهواتف، والأمن السيبراني، ومسار ريادة الأعمال والعمل الحر.
+                            </p>
+                            <p>
+                                <strong class="text-blue-400">iSchool:</strong> مسار تطبيقات الموبايل (12-13 سنة)، ومسار تطوير الويب والأمن السيبراني (14-15 سنة) بمشاريع حقيقية.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Part C: Comprehensive Academy Curricula Profiles -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+                <!-- Profile 1: Megaminds Detailed Curricula -->
+                <div class="glass-card rounded-3xl p-6 border-2 border-orange-500/40 shadow-xl space-y-4">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
                         <div>
-                            <span class="font-bold text-blue-300 block mb-1">🌟 أبرز نقاط القوة (Strengths):</span>
-                            <ul class="list-disc pr-4 space-y-1 text-slate-300">
-                                <li><strong>ترسانة اعتمادات دولية:</strong> STEM.org, IAIDL, Finland EdTech, ISTE, EdTech Impact.</li>
-                                <li><strong>منظومة LMS ومتابعة فائقة:</strong> تطبيق ولي أمر، تقارير دورية، ورصيد تجميد وإعادة جدولة.</li>
-                                <li><strong>تدرج منهجي K-12 دقيق:</strong> ربط كل مرحلة عمرية بأدوات محببة (Minecraft, Unity AR).</li>
-                                <li><strong>تسويق هائل وتسهيلات دفع:</strong> شراكات تقسيط بنكية وحصص تجريبية مجانية.</li>
-                            </ul>
+                            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-black bg-orange-500/20 text-orange-400 border border-orange-500/30">
+                                مناهج Megamind بالتفصيل 🚀
+                            </span>
+                            <h4 class="text-lg font-black text-white mt-1">Megaminds Academy</h4>
+                        </div>
+                        <span class="text-2xl">🤖</span>
+                    </div>
+
+                    <div class="space-y-3 text-xs text-slate-300">
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1">
+                            <strong class="text-orange-300 block">1. كورس Robot Junior (6-9 سنوات):</strong>
+                            <p>برمجة بالبلوكس (PictoBlox) + 4 مشاريع مبسطة خفيفة بدون تعقيد ميكانيكي: إشارة المرور وبوابة الرادار، الحصالة الذكية، المروحة الذكية، وروبوت الموسيقى والرقص.</p>
                         </div>
 
-                        <div>
-                            <span class="font-bold text-rose-300 block mb-1">⚠️ نقاط الضعف والمحدوديات (Weaknesses):</span>
-                            <ul class="list-disc pr-4 space-y-1 text-slate-400">
-                                <li><strong>الأسعار المرتفعة جداً:</strong> 6,600 ج.م لـ 3 شهور تمثل عبئاً مالياً ثقيلاً على معظم الأسر المصرية.</li>
-                                <li><strong>اشتراط باقات طويلة:</strong> لا يوجد خيار الاشتراك الشهري المرن لتقليل المخاطرة المالية.</li>
-                                <li><strong>انعدام الروبوتكس الحقيقي:</strong> تعليم البرمجة يتم عبر شاشات الحاسوب دون كيتات تركيب هاردوير.</li>
-                            </ul>
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1">
+                            <strong class="text-orange-300 block">2. كورس Robot Senior (10-14 سنة):</strong>
+                            <p>هندسة أردوينو كاملة بلغة C++، قراءة الحساسات التناظرية والرقمية، شاشات LCD، قيادة المحركات بالـ Motor Drivers، وتوصيل الدوائر على Breadboard.</p>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1">
+                            <strong class="text-orange-300 block">3. كورس البيت الذكي Smart Home (10-15 سنة):</strong>
+                            <p>تطبيقات إنترنت الأشياء (IoT)، التحكم بالإنارة والمراوح عبر البلوتوث والواي فاي، إنذار تسريب الغاز، وأنظمة الأمان والحماية الذكية.</p>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1">
+                            <strong class="text-orange-300 block">4. كورس المدينة الذكية Smart City (متقدم):</strong>
+                            <p>مشاريع عمرانية تفاعلية متقدمة، تركيب قطع خشبية CNC، بوابات أوتوماتيكية، إشارات ذكية، وأنظمة مراقبة المدن الحديثة.</p>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1">
+                            <strong class="text-orange-300 block">5. مسارات البرمجة، الألعاب والـ AI:</strong>
+                            <p>بايثون للمبتدئين والمتقدمين، محرك Godot 2D/3D، محرك Unity للمستوى الثالث، وخوارزميات الذكاء الاصطناعي والرؤية الحاسوبية.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="pt-4 border-t border-slate-800">
-                    <a href="https://ischooltech.com/" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-blue-600 text-white font-extrabold text-xs transition flex items-center justify-center gap-2 border border-slate-700">
-                        زيارة موقع iSchool Tech 🌐
-                    </a>
+                <!-- Profile 2: 3C School Detailed Curricula -->
+                <div class="glass-card rounded-3xl p-6 border border-emerald-500/30 shadow-xl space-y-4">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <div>
+                            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-black bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                                مناهج 3C School بالتفصيل 💻
+                            </span>
+                            <h4 class="text-lg font-black text-white mt-1">3C Coding School</h4>
+                        </div>
+                        <span class="text-2xl">🎓</span>
+                    </div>
+
+                    <div class="space-y-3 text-xs text-slate-300">
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1">
+                            <strong class="text-emerald-300 block">1. مسار Visual Coding (المبتدئين):</strong>
+                            <p>تعليم مفاهيم التفكير الخوارزمي من خلال سكراتش 3.0، وتطوير ألعاب وتطبيقات مبسطة عبر MIT App Inventor للأطفال 6-9 سنوات.</p>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1">
+                            <strong class="text-emerald-300 block">2. مسار Python & Problem Solving:</strong>
+                            <p>بايثون للمستويات المتوسطة والمتقدمة، معالجة النصوص، الخوارزميات، وبناء مشاريع حقيقية لاختبار الكود وحل المشكلات الحياتية.</p>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1">
+                            <strong class="text-emerald-300 block">3. مسار Web Development (Full-Stack):</strong>
+                            <p>تصميم وتطوير المواقع التفاعلية: HTML5 و CSS3 لتصميم الواجهات، JavaScript للتفاعل، وربط السيرفر وقواعد البيانات.</p>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1">
+                            <strong class="text-emerald-300 block">4. مسار الذكاء الاصطناعي والأمن السيبراني:</strong>
+                            <p>مفاهيم تعلم الآلة والتعامل مع البيانات الضخمة، وأسس حماية الخصوصية الرقمية واختبار الأمان السيبراني للشبكات.</p>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1">
+                            <strong class="text-emerald-300 block">5. مسار ريادة الأعمال والعمل الحر:</strong>
+                            <p>مسار فريد يهدف لتحويل مشاريع الطلاب البرمجية إلى منتجات قابلة للتسويق، وتعليم مهارات الفريلانسينج والعرض Pitching للناشئين.</p>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Profile 3: iSchool Detailed Curricula -->
+                <div class="glass-card rounded-3xl p-6 border border-blue-500/30 shadow-xl space-y-4">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <div>
+                            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-black bg-blue-500/20 text-blue-400 border border-blue-500/30">
+                                مناهج iSchool بالتفصيل 🌐
+                            </span>
+                            <h4 class="text-lg font-black text-white mt-1">iSchool Tech</h4>
+                        </div>
+                        <span class="text-2xl">🚀</span>
+                    </div>
+
+                    <div class="space-y-3 text-xs text-slate-300">
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1">
+                            <strong class="text-blue-300 block">1. Code to Craft in Minecraft (6-7 سنوات):</strong>
+                            <p>تحويل وقت اللعب إلى تعلم عبر منصة Minecraft Education، لتعليم المنطق التتابعي، الحلقات، واستكشاف العوالم البرمجية.</p>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1">
+                            <strong class="text-blue-300 block">2. صنّاع الألعاب والذكاء الاصطناعي (8-9 سنوات):</strong>
+                            <p>تصميم ألعاب ثنائية الأبعاد بالبلوكس وبناء مساعد ذكي خاص واستكشاف مفاهيم تدريب نماذج الذكاء الاصطناعي المبسطة.</p>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1">
+                            <strong class="text-blue-300 block">3. لغة بايثون Python (10-11 سنة):</strong>
+                            <p>تعلم الكتابة النصية للكود، المتغيرات، الدوال، المنطق الشرطي، وبناء ألعاب نصية وتطبيقات عملية متدرجة الصعوبة.</p>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1">
+                            <strong class="text-blue-300 block">4. تطوير تطبيقات الموبايل (12-13 سنة):</strong>
+                            <p>بناء وتصميم أول تطبيق هاتف ذكي، واجهات المستخدم UI/UX، وتوصيل التطبيقات بقواعد البيانات السحابية.</p>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1">
+                            <strong class="text-blue-300 block">5. تطوير الويب والأمن السيبراني (14-15 سنة):</strong>
+                            <p>بناء مواقع وتطبيقات ويب متكاملة Full-Stack والتعرف على ثغرات المواقع وأساسيات الأمن السيبراني وطرق الحماية.</p>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1">
+                            <strong class="text-blue-300 block">6. ألعاب الواقع المعزز Unity AR (16-18 سنة):</strong>
+                            <p>دخول عالم الحوسبة المكانية Spatial Computing وألعاب الواقع المعزز AR باستخدام محرك Unity الاحترافي ولغة #C.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
 
-        <!-- Strategic Recommendations for Megamind Academy -->
+        <!-- 3. STRATEGIC RECOMMENDATIONS FOR MEGAMIND ACADEMY -->
         <div class="glass-card rounded-3xl border border-orange-500/30 p-6 md:p-8 shadow-2xl space-y-6">
             <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
                 <span class="text-2xl p-2 rounded-2xl bg-orange-600/20 text-orange-400 border border-orange-500/30">💡</span>
                 <div>
                     <h3 class="text-lg md:text-xl font-black text-white">التوصيات الاستراتيجية والفرص التنافسية لـ Megaminds Academy</h3>
-                    <p class="text-xs text-slate-400">خارطة طريق تنفيذية مقترحة للإدارة التعليمية والقيادة (CEO & Educational Director) لاقتناص الحصة السوقية</p>
+                    <p class="text-xs text-slate-400">خارطة طريق تنفيذية مقترحة للإدارة التعليمية والقيادة (CEO & Educational Director) بناءً على تفكيك المناهج</p>
                 </div>
             </div>
 
@@ -587,7 +770,7 @@
     <!-- Footer -->
     <footer class="bg-slate-900 border-t border-slate-800 text-slate-500 text-xs py-6 mt-auto">
         <div class="max-w-7xl mx-auto px-4 text-center space-y-2">
-            <p>دراسة مقارنة الأكاديميات التقنية • تم إعداد التقرير الميداني والتحليلي لصالح الإدارة التعليمية والقيادة التنفيذية</p>
+            <p>دراسة مقارنة المناهج والأكاديميات التقنية • تم إعداد التقرير الميداني والتحليلي لصالح الإدارة التعليمية والقيادة التنفيذية</p>
             <p class="text-slate-600">Megamind Academy © 2026 • جميع الحقوق محفوظة</p>
         </div>
     </footer>
