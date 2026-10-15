@@ -58,11 +58,14 @@
             </div>
 
             <div class="flex items-center gap-3 text-xs font-bold">
-                <a href="#curricula-deep-dive" class="px-3 py-2 rounded-xl bg-indigo-950/80 text-indigo-300 hover:bg-indigo-900 border border-indigo-700/40 transition flex items-center gap-1.5">
-                    💻 تفاصيل مسارات البرمجة
+                <a href="#tracks-benchmark" class="px-3 py-2 rounded-xl bg-orange-950/80 text-orange-300 hover:bg-orange-900 border border-orange-700/40 transition flex items-center gap-1.5">
+                    📋 مقارنة المسارات الرسمية (11 مسار)
+                </a>
+                <a href="#age-matrix" class="px-3 py-2 rounded-xl bg-indigo-950/80 text-indigo-300 hover:bg-indigo-900 border border-indigo-700/40 transition flex items-center gap-1.5">
+                    🧒 الكورسات بالسن
                 </a>
                 <a href="./index.html" class="px-3.5 py-2 rounded-xl bg-slate-800 text-slate-200 hover:bg-slate-700 border border-slate-700 transition flex items-center gap-1.5">
-                    📌 لوحة التحكم الرئيسية
+                    📌 لوحة التحكم
                 </a>
                 <button onclick="window.print()" class="px-3.5 py-2 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-extrabold transition shadow-lg shadow-orange-600/20 flex items-center gap-1.5">
                     🖨️ طباعة التقرير
@@ -452,8 +455,307 @@
                 </div>
             </div>
 
-            <!-- Age-Stage Programming Matrix (Pure Bullet Points) -->
-            <div class="glass-card rounded-3xl border border-slate-800 p-6 shadow-xl space-y-5">
+            <!-- 2.1 OFFICIAL EDUCATIONAL TRACKS BENCHMARK (المسارات المنشورة في المواقع الرسمية) -->
+            <div id="tracks-benchmark" class="glass-card rounded-3xl border border-slate-800 p-6 shadow-xl space-y-5">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 border-b border-slate-800 pb-3">
+                    <div class="flex items-center gap-2.5">
+                        <span class="text-2xl">📋</span>
+                        <div>
+                            <h3 class="text-lg md:text-xl font-black text-white">
+                                جدول مقارنة المسارات التعليمية المنشورة في المواقع الرسمية
+                            </h3>
+                            <p class="text-xs text-slate-400 mt-0.5">مقارنة شاملة لمدى توفر المسارات الـ 11 وتفاصيلها على المواقع الإلكترونية للأكاديميات الثلاث</p>
+                        </div>
+                    </div>
+                    <span class="text-xs font-bold px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700 w-fit">
+                        11 مساراً تعليمياً
+                    </span>
+                </div>
+
+                <!-- Methodology Disclaimer -->
+                <div class="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-200 text-xs leading-relaxed flex items-start gap-3">
+                    <span class="text-xl shrink-0 mt-0.5">⚠️</span>
+                    <div>
+                        <strong class="font-bold text-amber-300 block mb-0.5">تنويه منهجي:</strong>
+                        المقارنة التالية مبنية على المسارات المنشورة في المواقع الرسمية، وليس على مراجعة كل درس داخل كل كورس. لذلك، وجود مسار لا يعني بالضرورة أن محتواه أو مستواه مطابق لدى الأكاديميات الثلاث.
+                    </div>
+                </div>
+
+                <!-- Table -->
+                <div class="overflow-x-auto custom-scrollbar">
+                    <table class="w-full text-right text-xs md:text-sm border-collapse">
+                        <thead>
+                            <tr class="bg-slate-900/90 text-slate-200 border-b border-slate-800 text-xs">
+                                <th class="p-3.5 rounded-tr-2xl w-52 font-black">المسار التعليمي</th>
+                                <th class="p-3.5 bg-orange-950/20 border-x border-orange-500/20 text-orange-300 font-black">
+                                    <div class="flex items-center gap-2">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-orange-500 inline-block"></span>
+                                        <span>Mega Minds Academy</span>
+                                    </div>
+                                </th>
+                                <th class="p-3.5 bg-emerald-950/20 border-l border-emerald-500/20 text-emerald-300 font-black">
+                                    <div class="flex items-center gap-2">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
+                                        <span>3C Coding School</span>
+                                    </div>
+                                </th>
+                                <th class="p-3.5 bg-blue-950/20 rounded-tl-2xl text-blue-300 font-black">
+                                    <div class="flex items-center gap-2">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-blue-500 inline-block"></span>
+                                        <span>iSchool</span>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800 text-slate-300 font-medium text-xs">
+                            <!-- 1. البرمجة المرئية للأطفال -->
+                            <tr class="hover:bg-slate-900/40 transition">
+                                <td class="p-3.5 font-bold text-white bg-slate-900/40">
+                                    🧱 البرمجة المرئية للأطفال
+                                </td>
+                                <td class="p-3.5 bg-orange-950/10 border-x border-orange-500/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-orange-500/20 text-orange-300 font-bold text-xs inline-flex items-center gap-1">
+                                        PictoBlox
+                                    </span>
+                                </td>
+                                <td class="p-3.5 bg-emerald-950/10 border-l border-emerald-500/10">
+                                    <span class="text-slate-300">
+                                        <strong class="text-emerald-400">Scratch</strong> وأدوات أخرى بحسب المستوى
+                                    </span>
+                                </td>
+                                <td class="p-3.5 bg-blue-950/10">
+                                    <span class="text-slate-300">
+                                        <strong class="text-blue-400">Minecraft</strong> وأدوات برمجة مناسبة للسن
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <!-- 2. Python -->
+                            <tr class="hover:bg-slate-900/40 transition">
+                                <td class="p-3.5 font-bold text-white bg-slate-900/40">
+                                    🐍 Python
+                                </td>
+                                <td class="p-3.5 bg-orange-950/10 border-x border-orange-500/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
+                                        ✓ متوفر
+                                    </span>
+                                </td>
+                                <td class="p-3.5 bg-emerald-950/10 border-l border-emerald-500/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
+                                        ✓ متوفر
+                                    </span>
+                                </td>
+                                <td class="p-3.5 bg-blue-950/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
+                                        ✓ متوفر
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <!-- 3. الذكاء الاصطناعي وMachine Learning -->
+                            <tr class="hover:bg-slate-900/40 transition">
+                                <td class="p-3.5 font-bold text-white bg-slate-900/40">
+                                    🧠 الذكاء الاصطناعي وMachine Learning
+                                </td>
+                                <td class="p-3.5 bg-orange-950/10 border-x border-orange-500/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
+                                        ✓ متوفر
+                                    </span>
+                                </td>
+                                <td class="p-3.5 bg-emerald-950/10 border-l border-emerald-500/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
+                                        ✓ متوفر
+                                    </span>
+                                </td>
+                                <td class="p-3.5 bg-blue-950/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
+                                        ✓ متوفر
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <!-- 4. تصميم وبرمجة الألعاب -->
+                            <tr class="hover:bg-slate-900/40 transition">
+                                <td class="p-3.5 font-bold text-white bg-slate-900/40">
+                                    🎮 تصميم وبرمجة الألعاب
+                                </td>
+                                <td class="p-3.5 bg-orange-950/10 border-x border-orange-500/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
+                                        ✓ متوفر
+                                    </span>
+                                </td>
+                                <td class="p-3.5 bg-emerald-950/10 border-l border-emerald-500/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
+                                        ✓ متوفر
+                                    </span>
+                                </td>
+                                <td class="p-3.5 bg-blue-950/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
+                                        ✓ متوفر
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <!-- 5. تطوير الألعاب ثلاثية الأبعاد -->
+                            <tr class="hover:bg-slate-900/40 transition">
+                                <td class="p-3.5 font-bold text-white bg-slate-900/40">
+                                    🕹️ تطوير الألعاب ثلاثية الأبعاد
+                                </td>
+                                <td class="p-3.5 bg-orange-950/10 border-x border-orange-500/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-orange-500/20 text-orange-300 font-bold text-xs inline-flex items-center gap-1">
+                                        Godot ومسارات ألعاب
+                                    </span>
+                                </td>
+                                <td class="p-3.5 bg-emerald-950/10 border-l border-emerald-500/10">
+                                    <span class="text-slate-300">
+                                        <strong class="text-emerald-400">3D Coding</strong> وألعاب متقدمة
+                                    </span>
+                                </td>
+                                <td class="p-3.5 bg-blue-950/10">
+                                    <span class="text-slate-300">
+                                        <strong class="text-blue-400">Unity وC#</strong> ضمن مسارات متقدمة
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <!-- 6. تطبيقات الموبايل -->
+                            <tr class="hover:bg-slate-900/40 transition">
+                                <td class="p-3.5 font-bold text-white bg-slate-900/40">
+                                    📱 تطبيقات الموبايل
+                                </td>
+                                <td class="p-3.5 bg-orange-950/10 border-x border-orange-500/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
+                                        ✓ متوفر
+                                    </span>
+                                </td>
+                                <td class="p-3.5 bg-emerald-950/10 border-l border-emerald-500/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
+                                        ✓ متوفر
+                                    </span>
+                                </td>
+                                <td class="p-3.5 bg-blue-950/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
+                                        ✓ متوفر
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <!-- 7. تطوير الويب -->
+                            <tr class="hover:bg-slate-900/40 transition">
+                                <td class="p-3.5 font-bold text-white bg-slate-900/40">
+                                    🌐 تطوير الويب
+                                </td>
+                                <td class="p-3.5 bg-orange-950/10 border-x border-orange-500/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-orange-500/20 text-orange-300 font-bold text-xs inline-flex items-center gap-1">
+                                        Back-end ومسارات برمجية
+                                    </span>
+                                </td>
+                                <td class="p-3.5 bg-emerald-950/10 border-l border-emerald-500/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
+                                        Web Development
+                                    </span>
+                                </td>
+                                <td class="p-3.5 bg-blue-950/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-blue-500/20 text-blue-300 font-bold text-xs inline-flex items-center gap-1">
+                                        Web Development
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <!-- 8. UI/UX Design -->
+                            <tr class="hover:bg-slate-900/40 transition">
+                                <td class="p-3.5 font-bold text-white bg-slate-900/40">
+                                    🎨 UI/UX Design
+                                </td>
+                                <td class="p-3.5 bg-orange-950/10 border-x border-orange-500/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
+                                        ✓ متوفر
+                                    </span>
+                                </td>
+                                <td class="p-3.5 bg-emerald-950/10 border-l border-emerald-500/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
+                                        ✓ متوفر
+                                    </span>
+                                </td>
+                                <td class="p-3.5 bg-blue-950/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
+                                        ✓ متوفر
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <!-- 9. الروبوتكس -->
+                            <tr class="hover:bg-slate-900/40 transition">
+                                <td class="p-3.5 font-bold text-white bg-slate-900/40">
+                                    🤖 الروبوتكس
+                                </td>
+                                <td class="p-3.5 bg-orange-950/10 border-x border-orange-500/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-orange-500/20 text-orange-300 font-bold text-xs inline-flex items-center gap-1">
+                                        ✓ مسار تعليمي واضح
+                                    </span>
+                                </td>
+                                <td class="p-3.5 bg-emerald-950/10 border-l border-emerald-500/10 text-slate-400">
+                                    <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-400 text-xs inline-block">
+                                        لم يتضح مسار روبوتكس مستقل من الصفحات التي راجعتها
+                                    </span>
+                                </td>
+                                <td class="p-3.5 bg-blue-950/10 text-slate-400">
+                                    <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-400 text-xs inline-block">
+                                        لم يتضح مسار روبوتكس مستقل من الصفحات التي راجعتها
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <!-- 10. Flutter -->
+                            <tr class="hover:bg-slate-900/40 transition">
+                                <td class="p-3.5 font-bold text-white bg-slate-900/40">
+                                    📱 Flutter
+                                </td>
+                                <td class="p-3.5 bg-orange-950/10 border-x border-orange-500/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
+                                        ✓ متوفر
+                                    </span>
+                                </td>
+                                <td class="p-3.5 bg-emerald-950/10 border-l border-emerald-500/10 text-slate-400">
+                                    <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-400 text-xs inline-block">
+                                        لم يتأكد كمسار مستقل من الموقع
+                                    </span>
+                                </td>
+                                <td class="p-3.5 bg-blue-950/10 text-slate-400">
+                                    <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-400 text-xs inline-block">
+                                        لم يتأكد كمسار مستقل من الصفحات الرئيسية
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <!-- 11. الأمن السيبراني -->
+                            <tr class="hover:bg-slate-900/40 transition">
+                                <td class="p-3.5 font-bold text-white bg-slate-900/40">
+                                    🛡️ الأمن السيبراني
+                                </td>
+                                <td class="p-3.5 bg-orange-950/10 border-x border-orange-500/10">
+                                    <span class="px-2.5 py-1 rounded-full bg-orange-500/20 text-orange-300 font-bold text-xs inline-flex items-center gap-1">
+                                        Cyber Security وNetwork & Hacking
+                                    </span>
+                                </td>
+                                <td class="p-3.5 bg-emerald-950/10 border-l border-emerald-500/10 text-slate-400">
+                                    <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-400 text-xs inline-block">
+                                        لم يتضح مسار مستقل من الصفحات التي راجعتها
+                                    </span>
+                                </td>
+                                <td class="p-3.5 bg-blue-950/10 text-slate-400">
+                                    <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-400 text-xs inline-block">
+                                        لم يتضح مسار مستقل من الصفحات التي راجعتها
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 2.2 Age-Stage Programming Matrix (Pure Bullet Points) -->
+            <div id="age-matrix" class="glass-card rounded-3xl border border-slate-800 p-6 shadow-xl space-y-5">
                 <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
                     <div>
                         <h3 class="text-lg md:text-xl font-black text-white flex items-center gap-2">
