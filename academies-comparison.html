@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دراسة مقارنة مناهج البرمجة للأطفال - Megamind vs 3C School vs iSchool</title>
+    <title>دراسة مقارنة الأكاديميات - Mega Minds vs 3C School vs iSchool</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Cairo -->
@@ -11,327 +11,224 @@
     <style>
         body {
             font-family: 'Cairo', sans-serif;
-            background-color: #0b1120;
-            color: #f8fafc;
+            background-color: #f8fafc;
+            color: #1e293b;
         }
         .custom-scrollbar::-webkit-scrollbar {
             width: 6px;
             height: 6px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
-            background: #0f172a;
+            background: #f1f5f9;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #334155;
+            background: #cbd5e1;
             border-radius: 4px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
             background: #ea580c;
         }
-        .glass-card {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .clean-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
         }
         .hover-card:hover {
             transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
             transition: all 0.2s ease-in-out;
         }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased selection:bg-orange-500 selection:text-white">
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased selection:bg-orange-500 selection:text-white">
 
-    <!-- Header Navigation -->
-    <header class="bg-slate-900/95 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50 shadow-2xl">
+    <!-- Header Navigation (Clean Light Theme) -->
+    <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50 shadow-xs">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-col md:flex-row items-center justify-between gap-4">
             <div class="flex items-center gap-3">
-                <a href="./index.html" class="w-10 h-10 rounded-xl bg-orange-600/20 text-orange-400 hover:bg-orange-600 hover:text-white flex items-center justify-center font-bold text-lg border border-orange-500/30 transition shadow-inner" title="العودة للوحة التحكم">
+                <a href="./index.html" class="w-10 h-10 rounded-xl bg-orange-50 text-orange-600 hover:bg-orange-600 hover:text-white flex items-center justify-center font-bold text-lg border border-orange-200 transition shadow-xs" title="العودة للوحة التحكم">
                     ➔
                 </a>
                 <div>
                     <div class="flex items-center gap-2">
-                        <h1 class="text-lg md:text-xl font-black text-white tracking-tight">Megamind Academy</h1>
-                        <span class="bg-blue-500/20 text-blue-300 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full border border-blue-400/30">Programming Curricula Benchmark 💻</span>
+                        <h1 class="text-lg md:text-xl font-black text-slate-900 tracking-tight">Mega Minds Academy</h1>
+                        <span class="bg-orange-100 text-orange-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full border border-orange-200">الدراسة المقارنة الشاملة 📊</span>
                     </div>
-                    <p class="text-xs text-slate-400 font-medium mt-0.5">مقارنة مناهج ومسارات البرمجة فقط (Coding & Software Tracks): Megaminds vs 3C Coding School vs iSchool</p>
+                    <p class="text-xs text-slate-500 font-medium mt-0.5">تحليل المسارات والمناهج والاعتمادات الرسمية: Mega Minds vs 3C Coding School vs iSchool</p>
                 </div>
             </div>
 
-            <div class="flex items-center gap-3 text-xs font-bold">
-                <a href="#tracks-benchmark" class="px-3 py-2 rounded-xl bg-orange-950/80 text-orange-300 hover:bg-orange-900 border border-orange-700/40 transition flex items-center gap-1.5">
-                    📋 مقارنة المسارات الرسمية (11 مسار)
+            <div class="flex flex-wrap items-center gap-2 text-xs font-bold">
+                <a href="#master-benchmark" class="px-3 py-1.5 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200 transition">
+                    🏛️ المقارنة المؤسسية
                 </a>
-                <a href="#age-matrix" class="px-3 py-2 rounded-xl bg-indigo-950/80 text-indigo-300 hover:bg-indigo-900 border border-indigo-700/40 transition flex items-center gap-1.5">
-                    🧒 الكورسات بالسن
+                <a href="#tracks-benchmark" class="px-3 py-1.5 rounded-xl bg-orange-50 text-orange-700 hover:bg-orange-100 border border-orange-200 transition">
+                    📋 المسارات الرسمية (11 مسار)
                 </a>
-                <a href="./index.html" class="px-3.5 py-2 rounded-xl bg-slate-800 text-slate-200 hover:bg-slate-700 border border-slate-700 transition flex items-center gap-1.5">
+                <a href="#curricula-in-depth" class="px-3 py-1.5 rounded-xl bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200 transition">
+                    🔬 تحليل مناهج 3C و iSchool
+                </a>
+                <a href="#strategic-recommendations" class="px-3 py-1.5 rounded-xl bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200 transition">
+                    💡 التوصيات الاستراتيجية
+                </a>
+                <a href="./index.html" class="px-3 py-1.5 rounded-xl bg-slate-800 text-white hover:bg-slate-700 transition">
                     📌 لوحة التحكم
                 </a>
-                <button onclick="window.print()" class="px-3.5 py-2 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-extrabold transition shadow-lg shadow-orange-600/20 flex items-center gap-1.5">
-                    🖨️ طباعة التقرير
+                <button onclick="window.print()" class="px-3 py-1.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-extrabold transition shadow-sm">
+                    🖨️ طباعة
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- Main Content Container: Direct Start with Comparison Table without intro -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-8 flex-1">
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 flex-1">
 
-        <!-- 1. MASTER COMPARISON TABLE (Direct on Top - Pure Programming Focus) -->
-        <div class="glass-card rounded-3xl border border-slate-800 p-6 shadow-2xl space-y-5">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+        <!-- 1. MASTER BENCHMARK TABLE (Clean Light Style - Ages, Accreditations & Group Size Only) -->
+        <div id="master-benchmark" class="clean-card rounded-3xl p-6 md:p-8 space-y-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 pb-4">
                 <div>
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold border border-blue-500/20 mb-2">
-                        <span>💻</span> جدول المقارنة المعيارية لمناهج البرمجة والتطوير (Software & Coding Only)
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold border border-blue-200 mb-2">
+                        <span>🏛️</span> جدول المقارنة المؤسسية المعتمدة
                     </div>
-                    <h2 class="text-xl md:text-2xl font-black text-white tracking-tight">
-                        مقارنة مسارات البرمجة: Megaminds Academy vs 3C Coding School vs iSchool Tech
+                    <h2 class="text-xl md:text-2xl font-black text-slate-900 tracking-tight">
+                        مقارنة الفئات العمرية، الاعتمادات والشهادات، ونظام المجموعات
                     </h2>
-                    <p class="text-xs text-slate-400 mt-1">مقارنة معيارية شاملة تركز حصرياً على البرمجة، بايثون، محركات الألعاب، الذكاء الاصطناعي، والأسعار والاعتمادات</p>
+                    <p class="text-xs text-slate-500 mt-1">مقارنة مركزة لأهم الركائز المؤسسية بين الأكاديميات الثلاث دون تفاصيل إضافية مشتتة</p>
                 </div>
-                <div class="flex flex-wrap items-center gap-2">
-                    <span class="text-xs font-bold px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+                <div class="flex items-center gap-2">
+                    <span class="text-xs font-bold px-3 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
                         تحديث معتمد: أكتوبر 2026
                     </span>
-                    <a href="#curricula-deep-dive" class="text-xs font-extrabold px-3 py-1 rounded-full bg-orange-600 hover:bg-orange-500 text-white transition">
-                        تفاصيل مناهج البرمجة بالسن ↓
-                    </a>
                 </div>
             </div>
 
             <div class="overflow-x-auto custom-scrollbar">
                 <table class="w-full text-right text-xs md:text-sm border-collapse">
                     <thead>
-                        <tr class="bg-slate-900/90 text-slate-200 border-b border-slate-800 text-xs">
+                        <tr class="bg-slate-100/80 text-slate-700 border-b border-slate-200 text-xs">
                             <th class="p-4 rounded-tr-2xl w-44 font-black">وجه المقارنة</th>
-                            <th class="p-4 bg-orange-950/20 border-x border-orange-500/20 text-orange-300 font-black">
+                            <th class="p-4 bg-orange-50/60 border-x border-orange-200/60 text-orange-800 font-black">
                                 <div class="flex items-center gap-2">
                                     <span class="w-2.5 h-2.5 rounded-full bg-orange-500 inline-block"></span>
-                                    <span>Megaminds Academy (البرمجة)</span>
+                                    <span>Mega Minds Academy</span>
                                 </div>
                             </th>
-                            <th class="p-4 bg-emerald-950/20 border-l border-emerald-500/20 text-emerald-300 font-black">
+                            <th class="p-4 bg-emerald-50/60 border-l border-emerald-200/60 text-emerald-800 font-black">
                                 <div class="flex items-center gap-2">
                                     <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
                                     <span>3C Coding School</span>
                                 </div>
                             </th>
-                            <th class="p-4 bg-blue-950/20 rounded-tl-2xl text-blue-300 font-black">
+                            <th class="p-4 bg-blue-50/60 rounded-tl-2xl text-blue-800 font-black">
                                 <div class="flex items-center gap-2">
                                     <span class="w-2.5 h-2.5 rounded-full bg-blue-500 inline-block"></span>
-                                    <span>iSchool Tech</span>
+                                    <span>iSchool</span>
                                 </div>
                             </th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-slate-800 text-slate-300 font-medium">
-                        <!-- Row 1: Website & Origin -->
-                        <tr class="hover:bg-slate-900/50 transition">
-                            <td class="p-4 font-bold text-white bg-slate-900/30">
-                                🌐 الموقع وتاريخ التأسيس
-                            </td>
-                            <td class="p-4 bg-orange-950/10 border-x border-orange-500/10">
-                                <a href="https://megaminds-academy.com/" target="_blank" rel="noopener noreferrer" class="text-orange-400 font-bold hover:underline inline-flex items-center gap-1">
-                                    megaminds-academy.com ↗
-                                </a>
-                                <p class="text-[11px] text-slate-400 mt-1">تأسست في مصر مع توسع سريع نحو الخليج العربي عبر منصات تعلم برمجية تفاعلية حديثة.</p>
-                            </td>
-                            <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10">
-                                <a href="https://3cschool.net/" target="_blank" rel="noopener noreferrer" class="text-emerald-400 font-bold hover:underline inline-flex items-center gap-1">
-                                    3cschool.net ↗
-                                </a>
-                                <p class="text-[11px] text-slate-400 mt-1">تأسست عام 2015 في مصر على يد م. حسام حسني وأحمد خلاف، مع توسع بالسعودية واستثمار 3M$.</p>
-                            </td>
-                            <td class="p-4 bg-blue-950/10">
-                                <a href="https://ischooltech.com/" target="_blank" rel="noopener noreferrer" class="text-blue-400 font-bold hover:underline inline-flex items-center gap-1">
-                                    ischooltech.com ↗
-                                </a>
-                                <p class="text-[11px] text-slate-400 mt-1">تأسست عام 2018 في مصر، الكيان الأكبر استثمارياً وتمويلياً بـ 8+ دول عربية.</p>
-                            </td>
-                        </tr>
-
-                        <!-- Row 2: Target Age Groups -->
-                        <tr class="hover:bg-slate-900/50 transition">
-                            <td class="p-4 font-bold text-white bg-slate-900/30">
+                    <tbody class="divide-y divide-slate-200 text-slate-700 font-medium text-xs">
+                        <!-- Row 1: Target Age Groups -->
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-4 font-bold text-slate-900 bg-slate-50/60">
                                 👶 الفئات العمرية المستهدفة
                             </td>
-                            <td class="p-4 bg-orange-950/10 border-x border-orange-500/10">
-                                <span class="px-2.5 py-1 rounded-md bg-orange-500/20 text-orange-300 font-bold text-xs">6 - 18 سنة</span>
-                                <p class="text-[11px] text-slate-400 mt-1.5">مقسمة لمراحل Junior (بلوكس)، Teens (بايثون وجودو)، و Advanced (Unity و AI).</p>
+                            <td class="p-4 bg-orange-50/20 border-x border-orange-100 space-y-1">
+                                <span class="px-2.5 py-1 rounded-md bg-orange-100 text-orange-800 font-black text-xs inline-block">
+                                    6 - 18 سنة
+                                </span>
+                                <p class="text-[11px] text-slate-500">مقسمة لثلاث مراحل: صغار (Junior 6-9)، يافعين (Teens 10-13)، ومتقدمين (Senior 14-18).</p>
                             </td>
-                            <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10">
-                                <span class="px-2.5 py-1 rounded-md bg-emerald-500/20 text-emerald-300 font-bold text-xs">6 - 18 سنة</span>
-                                <p class="text-[11px] text-slate-400 mt-1.5">نظام المستويات: Standard Level (المبتدئين) إلى Professional Level (المتقدمين).</p>
+                            <td class="p-4 bg-emerald-50/20 border-l border-emerald-100 space-y-1">
+                                <span class="px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800 font-black text-xs inline-block">
+                                    6 - 18 سنة
+                                </span>
+                                <p class="text-[11px] text-slate-500">نظام المستويات المتدرجة: Standard Level (المبتدئين) إلى Professional Level (المتقدمين).</p>
                             </td>
-                            <td class="p-4 bg-blue-950/10">
-                                <span class="px-2.5 py-1 rounded-md bg-blue-500/20 text-blue-300 font-bold text-xs">6 - 18 سنة</span>
-                                <p class="text-[11px] text-slate-400 mt-1.5">تحديد دقيق ثنائي السنوات: (6-7), (8-9), (10-11), (12-13), (14-15), (16-18).</p>
-                            </td>
-                        </tr>
-
-                        <!-- Row 3: Programming Curricula Summary -->
-                        <tr class="hover:bg-slate-900/50 transition">
-                            <td class="p-4 font-bold text-white bg-slate-900/30">
-                                📚 مسارات ومناهج البرمجة (حسب المراحل)
-                            </td>
-                            <td class="p-4 bg-orange-950/10 border-x border-orange-500/10 space-y-2 text-xs">
-                                <div>
-                                    <span class="text-orange-400 font-bold block mb-1">👶 مرحلة الصغار (6-9 سنوات):</span>
-                                    <ul class="list-disc pr-4 space-y-0.5 text-slate-300 text-[11px]">
-                                        <li><strong>PictoBlox & Scratch:</strong> برمجة مرئية بالبلوكس وتصميم ألعاب 2D.</li>
-                                        <li><strong>الذكاء الاصطناعي (AI Blocks):</strong> التعرف على الوجوه والإيماءات بالكاميرا.</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <span class="text-orange-400 font-bold block mb-1">🧒 مرحلة اليافعين (10-13 سنة):</span>
-                                    <ul class="list-disc pr-4 space-y-0.5 text-slate-300 text-[11px]">
-                                        <li><strong>Python Core:</strong> لغة بايثون النصية وحل المشكلات (Problem Solving).</li>
-                                        <li><strong>محرك Godot:</strong> صناعة ألعاب 2D/3D وكتابة سكربتات الحركة.</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <span class="text-orange-400 font-bold block mb-1">🧑 مرحلة المتقدمين (14-18 سنة):</span>
-                                    <ul class="list-disc pr-4 space-y-0.5 text-slate-300 text-[11px]">
-                                        <li><strong>Unity 3D:</strong> برمجة ألعاب 3D متقدمة بلغة #C.</li>
-                                        <li><strong>AI & ML + ميديا:</strong> نماذج تعلم الآلة وموشن جرافيكس رقمي.</li>
-                                    </ul>
-                                </div>
-                            </td>
-                            <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10 space-y-2 text-xs">
-                                <div>
-                                    <span class="text-emerald-400 font-bold block mb-1">👶 مرحلة الصغار (6-9 سنوات):</span>
-                                    <ul class="list-disc pr-4 space-y-0.5 text-slate-300 text-[11px]">
-                                        <li><strong>Scratch 3.0:</strong> ألعاب وتحريك شخصيات وقصص تفاعلية.</li>
-                                        <li><strong>MIT App Inventor:</strong> واجهات تطبيقات هواتف مبسطة.</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <span class="text-emerald-400 font-bold block mb-1">🧒 مرحلة اليافعين (10-13 سنة):</span>
-                                    <ul class="list-disc pr-4 space-y-0.5 text-slate-300 text-[11px]">
-                                        <li><strong>Python Track:</strong> أساسيات الكود والدوال ومعالجة البيانات.</li>
-                                        <li><strong>تطبيقات الموبايل:</strong> برمجة تطبيقات هواتف أندرويد.</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <span class="text-emerald-400 font-bold block mb-1">🧑 مرحلة المتقدمين (14-18 سنة):</span>
-                                    <ul class="list-disc pr-4 space-y-0.5 text-slate-300 text-[11px]">
-                                        <li><strong>Full-Stack Web:</strong> مواقع كاملة (HTML/CSS/JS/DB).</li>
-                                        <li><strong>أمن سيبراني + ريادة أعمال:</strong> فحص ثغرات وسوق العمل الحر.</li>
-                                    </ul>
-                                </div>
-                            </td>
-                            <td class="p-4 bg-blue-950/10 space-y-2 text-xs">
-                                <div>
-                                    <span class="text-blue-400 font-bold block mb-1">👶 مرحلة الصغار (6-9 سنوات):</span>
-                                    <ul class="list-disc pr-4 space-y-0.5 text-slate-300 text-[11px]">
-                                        <li><strong>Minecraft Coding (6-7 س):</strong> أوامر برمجية بماينكرافت.</li>
-                                        <li><strong>صناع الألعاب والـ AI (8-9 س):</strong> ألعاب بالبلوكس ومساعد ذكي.</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <span class="text-blue-400 font-bold block mb-1">🧒 مرحلة اليافعين (10-13 سنة):</span>
-                                    <ul class="list-disc pr-4 space-y-0.5 text-slate-300 text-[11px]">
-                                        <li><strong>بايثون Python (10-11 س):</strong> ألعاب نصية وتطبيقات تفاعلية.</li>
-                                        <li><strong>تطبيقات الموبايل (12-13 س):</strong> تصميم وبرمجة تطبيقات.</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <span class="text-blue-400 font-bold block mb-1">🧑 مرحلة المتقدمين (14-18 سنة):</span>
-                                    <ul class="list-disc pr-4 space-y-0.5 text-slate-300 text-[11px]">
-                                        <li><strong>ويب وأمن سيبراني (14-15 س):</strong> مواقع واختبار ثغرات.</li>
-                                        <li><strong>Unity AR (16-18 س):</strong> ألعاب واقع معزز بلغة #C.</li>
-                                    </ul>
-                                </div>
+                            <td class="p-4 bg-blue-50/20 space-y-1">
+                                <span class="px-2.5 py-1 rounded-md bg-blue-100 text-blue-800 font-black text-xs inline-block">
+                                    6 - 18 سنة
+                                </span>
+                                <p class="text-[11px] text-slate-500">تحديد دقيق ثنائي السنوات لـ 6 مراحل: (6-7), (8-9), (10-11), (12-13), (14-15), (16-18).</p>
                             </td>
                         </tr>
 
-                        <!-- Row 4: Pricing & Packages -->
-                        <tr class="hover:bg-slate-900/50 transition">
-                            <td class="p-4 font-bold text-white bg-slate-900/30">
-                                💵 خطط أسعار كورسات البرمجة
-                            </td>
-                            <td class="p-4 bg-orange-950/10 border-x border-orange-500/10 space-y-1 text-xs">
-                                <ul class="list-disc pr-4 space-y-1 text-slate-300 text-[11px]">
-                                    <li><strong>الحصص الجماعية:</strong> ~800 إلى 1,200 ج.م شهرياً (200 - 250 ج للحصة).</li>
-                                    <li><strong>الحصص الفردية:</strong> 1,800 - 2,500 ج.م شهرياً.</li>
-                                    <li><strong>نظام الدفع:</strong> اشتراك شهري مرن بدون باقات إلزامية طويلة.</li>
-                                </ul>
-                            </td>
-                            <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10 space-y-1 text-xs">
-                                <ul class="list-disc pr-4 space-y-1 text-slate-300 text-[11px]">
-                                    <li><strong>التسعير:</strong> بعد ملء استمارة التقييم واختبار تحديد المستوى.</li>
-                                    <li><strong>متوسط السوق:</strong> ~1,200 إلى 2,200 ج.م شهرياً.</li>
-                                    <li><strong>العروض:</strong> باقات موسمية وخصومات سداد دورية.</li>
-                                </ul>
-                            </td>
-                            <td class="p-4 bg-blue-950/10 space-y-1 text-xs">
-                                <ul class="list-disc pr-4 space-y-1 text-slate-300 text-[11px]">
-                                    <li><strong>باقة 3 شهور (12 حصة):</strong> ~6,600 ج.م (~550 ج للحصة).</li>
-                                    <li><strong>باقة 6 شهور (24 حصة):</strong> ~11,900 ج.م.</li>
-                                    <li><strong>الحصص الفردية:</strong> تفوق 12,000 - 18,000 ج.م للباقة.</li>
-                                </ul>
-                            </td>
-                        </tr>
-
-                        <!-- Row 5: Accreditations -->
-                        <tr class="hover:bg-slate-900/50 transition">
-                            <td class="p-4 font-bold text-white bg-slate-900/30">
+                        <!-- Row 2: Official Accreditations & Detailed Breakdown (Full Details in Cell) -->
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-4 font-bold text-slate-900 bg-slate-50/60 align-top">
                                 🎖️ الاعتمادات والشهادات الرسمية
                             </td>
-                            <td class="p-4 bg-orange-950/10 border-x border-orange-500/10 space-y-2">
-                                <div class="bg-white rounded-xl p-2.5 border border-orange-500/30 shadow-md flex items-center justify-center max-w-[200px]">
-                                    <img src="./images/accreditation-megamind.png" alt="اعتماد Megaminds Academy - STEM.org الدولي" class="h-14 object-contain" />
+                            <!-- Mega Minds Accreditations -->
+                            <td class="p-4 bg-orange-50/20 border-x border-orange-100 space-y-3 align-top">
+                                <div class="bg-white rounded-xl p-2.5 border border-orange-200 shadow-xs flex items-center justify-center max-w-[200px]">
+                                    <img src="./images/accreditation-megamind.png" alt="اعتماد Mega Minds - STEM.org الدولي" class="h-14 object-contain" />
                                 </div>
-                                <div class="flex flex-wrap gap-1">
-                                    <span class="px-2 py-0.5 rounded bg-orange-500/20 text-orange-300 text-[10px] font-bold">اعتماد دولي: STEM.org</span>
-                                    <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[10px] font-bold">شهادة إتمام معتمدة</span>
+                                <div class="space-y-1.5">
+                                    <span class="px-2.5 py-0.5 rounded-full bg-orange-100 text-orange-800 text-[10px] font-black inline-block">
+                                        اعتماد دولي رسمي: STEM.org
+                                    </span>
+                                    <ul class="list-disc pr-4 space-y-1 text-[11px] text-slate-600 leading-relaxed">
+                                        <li>اعتماد <strong>STEM.org Accredited Trustmark</strong> الأمريكي للمناهج الرقمية والبرمجية.</li>
+                                        <li>توثيق ساعات الكود والمشاريع البرمجية وتطبيقات الـ AI والروبوتكس.</li>
+                                        <li>شهادة إتمام معتمدة تصدر لكل متدرب بعد إنجاز ومناقشة مشروع التخرج.</li>
+                                    </ul>
                                 </div>
-                                <p class="text-[11px] text-slate-400">حاصلة على اعتماد STEM.org الدولي؛ توثيق ساعات الكود والمشاريع البرمجية وتطبيقات الـ AI والتأهيل للمسابقات الدولية.</p>
                             </td>
-                            <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10 space-y-2">
-                                <div class="bg-white rounded-xl p-2.5 border border-emerald-500/30 shadow-md flex items-center justify-center max-w-[220px]">
-                                    <img src="./images/accreditation-3c.png" alt="اعتمادات 3C Coding School - STEM.org و ISO 21001" class="h-14 object-contain" />
+                            <!-- 3C School Accreditations -->
+                            <td class="p-4 bg-emerald-50/20 border-l border-emerald-100 space-y-3 align-top">
+                                <div class="bg-white rounded-xl p-2.5 border border-emerald-200 shadow-xs flex items-center justify-center max-w-[210px]">
+                                    <img src="./images/accreditation-3c.png" alt="اعتمادات 3C School - STEM.org و ISO 21001" class="h-14 object-contain" />
                                 </div>
-                                <div class="flex flex-wrap gap-1">
-                                    <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[10px] font-bold">STEM.org Accredited</span>
-                                    <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[10px] font-bold">ISO 21001 Certified</span>
+                                <div class="space-y-1.5">
+                                    <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-black inline-block">
+                                        اعتمادان دوليان (STEM + ISO)
+                                    </span>
+                                    <ul class="list-disc pr-4 space-y-1 text-[11px] text-slate-600 leading-relaxed">
+                                        <li>اعتماد <strong>STEM.org Educational Product</strong> الأمريكي لجودة المحتوى التعليمي.</li>
+                                        <li>شهادة نظام إدارة جودة المؤسسات التعليمية <strong>ISO 21001:2018</strong>.</li>
+                                        <li>توثيق ساعات التدريب للمسارات البرمجية وإصدار شهادات إتمام.</li>
+                                    </ul>
                                 </div>
-                                <p class="text-[11px] text-slate-400">اعتمادان دوليان: اعتماد STEM.org التعليمي الأمريكي وشهادة نظام إدارة جودة التعليم ISO 21001.</p>
                             </td>
-                            <td class="p-4 bg-blue-950/10 space-y-2">
-                                <div class="bg-white rounded-xl p-2.5 border border-blue-500/30 shadow-md flex items-center justify-center">
-                                    <img src="./images/accreditation-ischool.png" alt="اعتمادات iSchool Tech الدولية الخمسة" class="h-14 w-full object-contain" />
+                            <!-- iSchool Accreditations -->
+                            <td class="p-4 bg-blue-50/20 space-y-3 align-top">
+                                <div class="bg-white rounded-xl p-2.5 border border-blue-200 shadow-xs flex items-center justify-center">
+                                    <img src="./images/accreditation-ischool.png" alt="اعتمادات iSchool الخمسة" class="h-14 w-full object-contain" />
                                 </div>
-                                <div class="flex flex-wrap gap-1">
-                                    <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[10px] font-bold">ISTE Seal</span>
-                                    <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[10px] font-bold">EdTech Impact</span>
-                                    <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[10px] font-bold">Finland 2025</span>
-                                    <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[10px] font-bold">IAIDL</span>
-                                    <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[10px] font-bold">STEM.org</span>
+                                <div class="space-y-1.5">
+                                    <span class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 text-[10px] font-black inline-block">
+                                        محفظة خماسية من الاعتمادات والشراكات
+                                    </span>
+                                    <ul class="list-disc pr-4 space-y-1 text-[11px] text-slate-600 leading-relaxed">
+                                        <li>خاتم المعايير الأمريكية <strong>ISTE Seal</strong> + تقييم <strong>EdTech Impact</strong>.</li>
+                                        <li>تحالف التعليم الفنلندي <strong>Education Alliance Finland 2025</strong>.</li>
+                                        <li>رخصة الذكاء الاصطناعي <strong>IAIDL</strong> + اعتماد <strong>STEM.org</strong>.</li>
+                                        <li>شراكات حكومية وبروتوكولات مع وزارة الاتصالات المصرية ومايكروسوفت.</li>
+                                    </ul>
                                 </div>
-                                <p class="text-[11px] text-slate-400">محفظة تضم 5 اعتمادات دولية وشراكات حكومية مع وزارة الاتصالات ومايكروسوفت.</p>
                             </td>
                         </tr>
 
-                        <!-- Row 6: Class Model & Experience -->
-                        <tr class="hover:bg-slate-900/50 transition">
-                            <td class="p-4 font-bold text-white bg-slate-900/30">
-                                👥 حجم المجموعة وزمن الحصة البرمجية
+                        <!-- Row 3: Group Size & Session Model -->
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-4 font-bold text-slate-900 bg-slate-50/60 align-top">
+                                👥 حجم المجموعات وزمن الحصة
                             </td>
-                            <td class="p-4 bg-orange-950/10 border-x border-orange-500/10 text-xs">
-                                <p class="font-bold text-white">• 4 طلاب (مستهدف 5-6 طلاب كحد أقصى)</p>
-                                <p class="text-slate-300">• مدة الحصة: <strong class="text-orange-400">1.5 ساعة (90 دقيقة)</strong></p>
-                                <p class="text-[11px] text-slate-400">• كتابة كود مباشرة، تحكم تفاعلي بالشاشة، ومتابعة فورية للمشاريع.</p>
+                            <td class="p-4 bg-orange-50/20 border-x border-orange-100 text-xs space-y-1 align-top">
+                                <p class="font-bold text-slate-900">• 4 طلاب (مستهدف 5-6 طلاب كحد أقصى)</p>
+                                <p class="text-slate-600">• مدة الحصة: <strong class="text-orange-600 font-bold">1.5 ساعة (90 دقيقة)</strong></p>
+                                <p class="text-[11px] text-slate-500">• كتابة كود مباشرة، تحكم تفاعلي بالشاشة، ومتابعة فورية للمشاريع.</p>
                             </td>
-                            <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10 text-xs">
-                                <p class="font-bold text-white">• 5 طلاب كحد أقصى للجروب</p>
-                                <p class="text-slate-300">• مدة الحصة: <strong class="text-emerald-400">ساعتان أسبوعياً</strong></p>
-                                <p class="text-[11px] text-slate-400">• تدريب تفاعلي ومتابعة تطبيقية مستمرة للمشاريع.</p>
+                            <td class="p-4 bg-emerald-50/20 border-l border-emerald-100 text-xs space-y-1 align-top">
+                                <p class="font-bold text-slate-900">• 5 طلاب كحد أقصى للجروب</p>
+                                <p class="text-slate-600">• مدة الحصة: <strong class="text-emerald-700 font-bold">ساعتان أسبوعياً</strong></p>
+                                <p class="text-[11px] text-slate-500">• تدريب تفاعلي ومتابعة تطبيقية مستمرة للمشاريع.</p>
                             </td>
-                            <td class="p-4 bg-blue-950/10 text-xs">
-                                <p class="font-bold text-white">• 4 إلى 5 طلاب أو فردي (1-on-1)</p>
-                                <p class="text-slate-300">• مدة الحصة: <strong class="text-blue-400">1.5 ساعة (90 دقيقة)</strong></p>
-                                <p class="text-[11px] text-slate-400">• LMS متكامل + رصيدين تجميد ورصيدين إعادة جدولة.</p>
+                            <td class="p-4 bg-blue-50/20 text-xs space-y-1 align-top">
+                                <p class="font-bold text-slate-900">• 4 إلى 5 طلاب أو فردي (1-on-1)</p>
+                                <p class="text-slate-600">• مدة الحصة: <strong class="text-blue-700 font-bold">1.5 ساعة (90 دقيقة)</strong></p>
+                                <p class="text-[11px] text-slate-500">• نظام LMS متكامل + رصيد تجميد الجلسات وإعادة الجدولة.</p>
                             </td>
                         </tr>
                     </tbody>
@@ -339,876 +236,672 @@
             </div>
         </div>
 
-        <!-- 1.5 ACCREDITATIONS & CERTIFICATES SHOWCASE (Visual Cards) -->
-        <div class="glass-card rounded-3xl border border-slate-800 p-6 shadow-xl space-y-5">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-3">
+        <!-- 2. OFFICIAL EDUCATIONAL TRACKS BENCHMARK TABLE (With Highlights for Missing/Unmatched Tracks) -->
+        <div id="tracks-benchmark" class="clean-card rounded-3xl p-6 md:p-8 space-y-5">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 border-b border-slate-100 pb-3">
                 <div class="flex items-center gap-2.5">
-                    <span class="text-2xl">🎖️</span>
+                    <span class="text-2xl">📋</span>
                     <div>
-                        <h3 class="text-lg md:text-xl font-black text-white">
-                            المقارنة البصرية للأختام والاعتمادات الرسمية (Accreditations & Badges Showcase)
+                        <h3 class="text-lg md:text-xl font-black text-slate-900">
+                            جدول مقارنة المسارات التعليمية المنشورة في المواقع الرسمية
                         </h3>
-                        <p class="text-xs text-slate-400 mt-0.5">استعراض الأختام والشارات الدولية المعتمدة لدى كل أكاديمية وموقعها التنافسي</p>
+                        <p class="text-xs text-slate-500 mt-0.5">مقارنة توفر وتفاصيل الـ 11 مساراً تعليمياً مع تظليل العناصر غير المتوفرة في Mega Minds باللون الأحمر لدراسة إضافتها</p>
                     </div>
                 </div>
-                <span class="text-xs font-bold px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700 w-fit">
-                    أختام رسمية موثقة
-                </span>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-rose-50 text-rose-700 border border-rose-200">
+                        🔴 أحمر: غير متاح بـ Mega Minds (قيد الدراسة)
+                    </span>
+                    <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+                        🟢 أخضر: متوفر ومعتمد
+                    </span>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                <!-- Megaminds Card -->
-                <div class="p-5 rounded-2xl bg-gradient-to-b from-orange-950/20 to-slate-900/60 border border-orange-500/30 space-y-4 flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-1 rounded-md bg-orange-500/20 text-orange-300 text-xs font-black">
-                                Megaminds Academy
-                            </span>
-                            <span class="text-[11px] text-orange-400 font-bold">اعتماد دولي معتمد</span>
-                        </div>
-                        <div class="bg-white rounded-2xl p-4 border border-orange-500/20 shadow-md flex items-center justify-center min-h-[120px]">
-                            <img src="./images/accreditation-megamind.png" alt="اعتماد Megaminds Academy STEM.org الدولي" class="max-h-24 w-auto object-contain hover:scale-105 transition duration-300" />
-                        </div>
-                        <div class="space-y-1.5">
-                            <h4 class="text-white font-bold text-sm">ختم الاعتماد الدولي STEM.org</h4>
-                            <ul class="list-disc pr-4 space-y-1 text-slate-300 text-xs">
-                                <li>اعتماد <strong>STEM.org Accredited Trustmark</strong> الأمريكي.</li>
-                                <li>توثيق ساعات الكود والمشاريع البرمجية وتطبيقات الـ AI.</li>
-                                <li>شهادة إتمام معتمدة تصدر للطالب بنهاية كل مستوى.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-400">
-                        ✔️ متوافق مع المعايير الدولية لتعليم البرمجة والعلوم والتكنولوجيا
-                    </div>
+            <!-- Methodology Disclaimer Box -->
+            <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 text-xs leading-relaxed flex items-start gap-3">
+                <span class="text-xl shrink-0 mt-0.5">⚠️</span>
+                <div>
+                    <strong class="font-bold text-amber-950 block mb-0.5">تنويه منهجي:</strong>
+                    المقارنة التالية مبنية على المسارات المنشورة في المواقع الرسمية، وليس على مراجعة كل درس داخل كل كورس. لذلك، وجود مسار لا يعني بالضرورة أن محتواه أو مستواه مطابق لدى الأكاديميات الثلاث.
                 </div>
+            </div>
 
-                <!-- 3C School Card -->
-                <div class="p-5 rounded-2xl bg-gradient-to-b from-emerald-950/20 to-slate-900/60 border border-emerald-500/30 space-y-4 flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-1 rounded-md bg-emerald-500/20 text-emerald-300 text-xs font-black">
-                                3C Coding School
-                            </span>
-                            <span class="text-[11px] text-emerald-400 font-bold">اعتمادان دوليان</span>
-                        </div>
-                        <div class="bg-white rounded-2xl p-4 border border-emerald-500/20 shadow-md flex items-center justify-center min-h-[120px]">
-                            <img src="./images/accreditation-3c.png" alt="اعتمادات 3C Coding School STEM.org و ISO 21001" class="max-h-24 w-auto object-contain hover:scale-105 transition duration-300" />
-                        </div>
-                        <div class="space-y-1.5">
-                            <h4 class="text-white font-bold text-sm">STEM.org + ISO 21001</h4>
-                            <ul class="list-disc pr-4 space-y-1 text-slate-300 text-xs">
-                                <li>اعتماد <strong>STEM.org Educational Product</strong> الأمريكي.</li>
-                                <li>شهادة نظام إدارة جودة التعليم <strong>ISO 21001:2018</strong>.</li>
-                                <li>توثيق رقمي لمسارات الويب والبرمجة النصية.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-400">
-                        ✔️ جودة تنظيمية معتمدة دولياً ومناهج موثقة
-                    </div>
-                </div>
+            <!-- Tracks Comparison Table -->
+            <div class="overflow-x-auto custom-scrollbar">
+                <table class="w-full text-right text-xs md:text-sm border-collapse">
+                    <thead>
+                        <tr class="bg-slate-100/90 text-slate-700 border-b border-slate-200 text-xs">
+                            <th class="p-3.5 rounded-tr-2xl w-52 font-black">المسار التعليمي</th>
+                            <th class="p-3.5 bg-orange-50/70 border-x border-orange-200/60 text-orange-900 font-black">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-orange-500 inline-block"></span>
+                                    <span>Mega Minds Academy (الأساس)</span>
+                                </div>
+                            </th>
+                            <th class="p-3.5 bg-emerald-50/70 border-l border-emerald-200/60 text-emerald-900 font-black">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
+                                    <span>3C Coding School</span>
+                                </div>
+                            </th>
+                            <th class="p-3.5 bg-blue-50/70 rounded-tl-2xl text-blue-900 font-black">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-blue-500 inline-block"></span>
+                                    <span>iSchool</span>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 text-slate-700 font-medium text-xs">
+                        <!-- 1. البرمجة المرئية للأطفال -->
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-3.5 font-bold text-slate-900 bg-slate-50/60">
+                                🧱 البرمجة المرئية للأطفال
+                            </td>
+                            <td class="p-3.5 bg-orange-50/20 border-x border-orange-100">
+                                <span class="px-2.5 py-1 rounded-full bg-orange-100 text-orange-800 font-bold text-xs inline-flex items-center gap-1">
+                                    PictoBlox
+                                </span>
+                            </td>
+                            <td class="p-3.5 bg-emerald-50/20 border-l border-emerald-100">
+                                <span><strong class="text-emerald-700">Scratch</strong> وأدوات أخرى بحسب المستوى</span>
+                            </td>
+                            <td class="p-3.5 bg-blue-50/20">
+                                <span><strong class="text-blue-700">Minecraft</strong> وأدوات برمجة مناسبة للسن</span>
+                                <span class="block mt-1 text-[10px] text-rose-600 font-bold bg-rose-50 px-2 py-0.5 rounded border border-rose-200 w-fit">
+                                    ⚠️ ماينكرافت غير متاحة بـ Mega Minds للتكلفة
+                                </span>
+                            </td>
+                        </tr>
 
-                <!-- iSchool Card -->
-                <div class="p-5 rounded-2xl bg-gradient-to-b from-blue-950/20 to-slate-900/60 border border-blue-500/30 space-y-4 flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-1 rounded-md bg-blue-500/20 text-blue-300 text-xs font-black">
-                                iSchool Tech
-                            </span>
-                            <span class="text-[11px] text-blue-400 font-bold">5 اعتمادات وشراكات</span>
-                        </div>
-                        <div class="bg-white rounded-2xl p-4 border border-blue-500/20 shadow-md flex items-center justify-center min-h-[120px]">
-                            <img src="./images/accreditation-ischool.png" alt="اعتمادات وشراكات iSchool Tech الدولية الخمسة" class="max-h-20 w-full object-contain hover:scale-105 transition duration-300" />
-                        </div>
-                        <div class="space-y-1.5">
-                            <h4 class="text-white font-bold text-sm">محفظة الاعتمادات الخماسية</h4>
-                            <ul class="list-disc pr-4 space-y-1 text-slate-300 text-xs">
-                                <li>خاتم <strong>ISTE Seal</strong> الأمريكي + منصة <strong>EdTech Impact</strong>.</li>
-                                <li>تحالف التعليم الفنلندي <strong>Finland Alliance 2025</strong>.</li>
-                                <li>رخصة الذكاء الاصطناعي <strong>IAIDL</strong> + اعتماد <strong>STEM.org</strong>.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-400">
-                        ✔️ أوسع رافعة تسويقية دولية وشراكات وزارية موسعة
-                    </div>
-                </div>
+                        <!-- 2. Python -->
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-3.5 font-bold text-slate-900 bg-slate-50/60">
+                                🐍 Python
+                            </td>
+                            <td class="p-3.5 bg-orange-50/20 border-x border-orange-100">
+                                <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs inline-flex items-center gap-1">
+                                    ✓ متوفر
+                                </span>
+                            </td>
+                            <td class="p-3.5 bg-emerald-50/20 border-l border-emerald-100">
+                                <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs inline-flex items-center gap-1">
+                                    ✓ متوفر
+                                </span>
+                            </td>
+                            <td class="p-3.5 bg-blue-50/20">
+                                <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs inline-flex items-center gap-1">
+                                    ✓ متوفر
+                                </span>
+                            </td>
+                        </tr>
+
+                        <!-- 3. الذكاء الاصطناعي وMachine Learning -->
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-3.5 font-bold text-slate-900 bg-slate-50/60">
+                                🧠 الذكاء الاصطناعي وMachine Learning
+                            </td>
+                            <td class="p-3.5 bg-orange-50/20 border-x border-orange-100">
+                                <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs inline-flex items-center gap-1">
+                                    ✓ متوفر
+                                </span>
+                            </td>
+                            <td class="p-3.5 bg-emerald-50/20 border-l border-emerald-100">
+                                <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs inline-flex items-center gap-1">
+                                    ✓ متوفر
+                                </span>
+                            </td>
+                            <td class="p-3.5 bg-blue-50/20">
+                                <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs inline-flex items-center gap-1">
+                                    ✓ متوفر
+                                </span>
+                            </td>
+                        </tr>
+
+                        <!-- 4. تصميم وبرمجة الألعاب -->
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-3.5 font-bold text-slate-900 bg-slate-50/60">
+                                🎮 تصميم وبرمجة الألعاب
+                            </td>
+                            <td class="p-3.5 bg-orange-50/20 border-x border-orange-100">
+                                <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs inline-flex items-center gap-1">
+                                    ✓ متوفر
+                                </span>
+                            </td>
+                            <td class="p-3.5 bg-emerald-50/20 border-l border-emerald-100">
+                                <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs inline-flex items-center gap-1">
+                                    ✓ متوفر
+                                </span>
+                            </td>
+                            <td class="p-3.5 bg-blue-50/20">
+                                <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs inline-flex items-center gap-1">
+                                    ✓ متوفر
+                                </span>
+                            </td>
+                        </tr>
+
+                        <!-- 5. تطوير الألعاب ثلاثية الأبعاد -->
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-3.5 font-bold text-slate-900 bg-slate-50/60">
+                                🕹️ تطوير الألعاب ثلاثية الأبعاد
+                            </td>
+                            <td class="p-3.5 bg-orange-50/20 border-x border-orange-100">
+                                <span class="px-2.5 py-1 rounded-full bg-orange-100 text-orange-800 font-bold text-xs inline-flex items-center gap-1">
+                                    Godot ومسارات ألعاب
+                                </span>
+                            </td>
+                            <td class="p-3.5 bg-emerald-50/20 border-l border-emerald-100">
+                                <span><strong class="text-emerald-700">3D Coding</strong> وألعاب متقدمة</span>
+                            </td>
+                            <td class="p-3.5 bg-blue-50/20">
+                                <span><strong class="text-blue-700">Unity وC#</strong> ضمن مسارات متقدمة</span>
+                            </td>
+                        </tr>
+
+                        <!-- 6. تطبيقات الموبايل -->
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-3.5 font-bold text-slate-900 bg-slate-50/60">
+                                📱 تطبيقات الموبايل
+                            </td>
+                            <td class="p-3.5 bg-orange-50/20 border-x border-orange-100">
+                                <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs inline-flex items-center gap-1">
+                                    ✓ متوفر
+                                </span>
+                            </td>
+                            <td class="p-3.5 bg-emerald-50/20 border-l border-emerald-100">
+                                <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs inline-flex items-center gap-1">
+                                    ✓ متوفر
+                                </span>
+                            </td>
+                            <td class="p-3.5 bg-blue-50/20">
+                                <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs inline-flex items-center gap-1">
+                                    ✓ متوفر
+                                </span>
+                            </td>
+                        </tr>
+
+                        <!-- 7. تطوير الويب -->
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-3.5 font-bold text-slate-900 bg-slate-50/60">
+                                🌐 تطوير الويب
+                            </td>
+                            <td class="p-3.5 bg-orange-50/20 border-x border-orange-100">
+                                <span class="px-2.5 py-1 rounded-full bg-orange-100 text-orange-800 font-bold text-xs inline-flex items-center gap-1">
+                                    Back-end (Laravel) ومسارات برمجية
+                                </span>
+                            </td>
+                            <td class="p-3.5 bg-emerald-50/20 border-l border-emerald-100">
+                                <span class="font-bold text-slate-800">Web Development (HTML/CSS + Flask)</span>
+                                <span class="block mt-1 text-[10px] text-rose-600 font-bold bg-rose-50 px-2 py-0.5 rounded border border-rose-200 w-fit">
+                                    ⚠️ Flask غير موجود بـ Mega Minds (نستخدم Laravel)
+                                </span>
+                            </td>
+                            <td class="p-3.5 bg-blue-50/20">
+                                <span class="px-2.5 py-1 rounded-full bg-blue-100 text-blue-800 font-bold text-xs inline-flex items-center gap-1">
+                                    Web Development
+                                </span>
+                            </td>
+                        </tr>
+
+                        <!-- 8. UI/UX Design -->
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-3.5 font-bold text-slate-900 bg-slate-50/60">
+                                🎨 UI/UX Design
+                            </td>
+                            <td class="p-3.5 bg-orange-50/20 border-x border-orange-100">
+                                <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs inline-flex items-center gap-1">
+                                    ✓ متوفر
+                                </span>
+                            </td>
+                            <td class="p-3.5 bg-emerald-50/20 border-l border-emerald-100">
+                                <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs inline-flex items-center gap-1">
+                                    ✓ متوفر
+                                </span>
+                            </td>
+                            <td class="p-3.5 bg-blue-50/20">
+                                <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs inline-flex items-center gap-1">
+                                    ✓ متوفر
+                                </span>
+                            </td>
+                        </tr>
+
+                        <!-- 9. الروبوتكس (Major Mega Minds Advantage) -->
+                        <tr class="hover:bg-slate-50 transition bg-orange-50/30">
+                            <td class="p-3.5 font-black text-orange-950 bg-orange-100/40">
+                                🤖 الروبوتكس (نقطة التميز الكبرى ⭐)
+                            </td>
+                            <td class="p-3.5 bg-orange-100/60 border-x border-orange-300">
+                                <span class="px-3 py-1 rounded-full bg-orange-600 text-white font-black text-xs inline-flex items-center gap-1 shadow-xs">
+                                    ⭐ مسار تعليمي واضح ومستقل
+                                </span>
+                                <span class="block mt-1 text-[11px] text-orange-900 font-bold">ميزة تنافسية حصرية تتفرد بها Mega Minds عن المنصتين</span>
+                            </td>
+                            <td class="p-3.5 bg-emerald-50/20 border-l border-emerald-100 text-slate-500">
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-500 text-xs inline-block border border-slate-200">
+                                    لم يتضح مسار روبوتكس مستقل من الصفحات التي راجعتها
+                                </span>
+                            </td>
+                            <td class="p-3.5 bg-blue-50/20 text-slate-500">
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-500 text-xs inline-block border border-slate-200">
+                                    لم يتضح مسار روبوتكس مستقل من الصفحات التي راجعتها
+                                </span>
+                            </td>
+                        </tr>
+
+                        <!-- 10. Flutter -->
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-3.5 font-bold text-slate-900 bg-slate-50/60">
+                                📱 Flutter
+                            </td>
+                            <td class="p-3.5 bg-orange-50/20 border-x border-orange-100">
+                                <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs inline-flex items-center gap-1">
+                                    ✓ متوفر
+                                </span>
+                            </td>
+                            <td class="p-3.5 bg-emerald-50/20 border-l border-emerald-100 text-slate-500">
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-500 text-xs inline-block border border-slate-200">
+                                    لم يتأكد كمسار مستقل من الموقع
+                                </span>
+                            </td>
+                            <td class="p-3.5 bg-blue-50/20 text-slate-500">
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-500 text-xs inline-block border border-slate-200">
+                                    لم يتأكد كمسار مستقل من الصفحات الرئيسية
+                                </span>
+                            </td>
+                        </tr>
+
+                        <!-- 11. الأمن السيبراني -->
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-3.5 font-bold text-slate-900 bg-slate-50/60">
+                                🛡️ الأمن السيبراني
+                            </td>
+                            <td class="p-3.5 bg-orange-50/20 border-x border-orange-100">
+                                <span class="px-2.5 py-1 rounded-full bg-orange-100 text-orange-800 font-bold text-xs inline-flex items-center gap-1">
+                                    Cyber Security وNetwork & Hacking
+                                </span>
+                            </td>
+                            <td class="p-3.5 bg-emerald-50/20 border-l border-emerald-100 text-slate-500">
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-500 text-xs inline-block border border-slate-200">
+                                    لم يتضح مسار مستقل من الصفحات التي راجعتها
+                                </span>
+                            </td>
+                            <td class="p-3.5 bg-blue-50/20 text-slate-500">
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-500 text-xs inline-block border border-slate-200">
+                                    لم يتضح مسار مستقل من الصفحات التي راجعتها
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
-        <!-- 2. IN-DEPTH PROGRAMMING CURRICULA & TRACKS BREAKDOWN (Direct Bullet Points) -->
-        <div id="curricula-deep-dive" class="space-y-8 pt-4">
+        <!-- 3. IN-DEPTH CURRICULA BREAKDOWN (3C Coding School & iSchool ONLY) -->
+        <div id="curricula-in-depth" class="space-y-6">
 
-            <!-- Section Header -->
-            <div class="rounded-3xl bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 border border-indigo-500/30 p-6 md:p-8 shadow-2xl">
+            <!-- Section Title -->
+            <div class="clean-card rounded-3xl p-6 bg-gradient-to-r from-slate-900 to-slate-800 text-white border-0 shadow-lg">
                 <div class="flex items-center gap-3">
-                    <span class="text-3xl">💻</span>
+                    <span class="text-3xl">🔬</span>
                     <div>
-                        <h2 class="text-2xl md:text-3xl font-black text-white">
-                            مقارنة كورسات ومسارات البرمجة بحسب المراحل العمرية (Curricula By Age Stages)
+                        <h2 class="text-xl md:text-2xl font-black">
+                            التحليل التفصيلي لمناهج 3C Coding School و iSchool ومقارنتها بـ Mega Minds
                         </h2>
-                        <p class="text-xs md:text-sm text-indigo-300 mt-1 font-medium">
-                            استعراض مباشر ومحدد بنقاط واضحة للكورسات والأدوات والتقنيات التي يدرسها الطالب في كل مرحلة سنية بالأكاديميات الثلاث بدون تفاصيل زائدة
+                        <p class="text-xs md:text-sm text-slate-300 mt-1 font-medium">
+                            تحليل ميداني دقيق للمسارات والأدوات الحقيقية وكشف الأدوات الدعائية مقارنة بالتدريس الفعلي
                         </p>
                     </div>
                 </div>
             </div>
 
-            <!-- 2.1 OFFICIAL EDUCATIONAL TRACKS BENCHMARK (المسارات المنشورة في المواقع الرسمية) -->
-            <div id="tracks-benchmark" class="glass-card rounded-3xl border border-slate-800 p-6 shadow-xl space-y-5">
-                <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 border-b border-slate-800 pb-3">
-                    <div class="flex items-center gap-2.5">
-                        <span class="text-2xl">📋</span>
-                        <div>
-                            <h3 class="text-lg md:text-xl font-black text-white">
-                                جدول مقارنة المسارات التعليمية المنشورة في المواقع الرسمية
-                            </h3>
-                            <p class="text-xs text-slate-400 mt-0.5">مقارنة شاملة لمدى توفر المسارات الـ 11 وتفاصيلها على المواقع الإلكترونية للأكاديميات الثلاث</p>
-                        </div>
-                    </div>
-                    <span class="text-xs font-bold px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700 w-fit">
-                        11 مساراً تعليمياً
-                    </span>
-                </div>
-
-                <!-- Methodology Disclaimer -->
-                <div class="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-200 text-xs leading-relaxed flex items-start gap-3">
-                    <span class="text-xl shrink-0 mt-0.5">⚠️</span>
-                    <div>
-                        <strong class="font-bold text-amber-300 block mb-0.5">تنويه منهجي:</strong>
-                        المقارنة التالية مبنية على المسارات المنشورة في المواقع الرسمية، وليس على مراجعة كل درس داخل كل كورس. لذلك، وجود مسار لا يعني بالضرورة أن محتواه أو مستواه مطابق لدى الأكاديميات الثلاث.
-                    </div>
-                </div>
-
-                <!-- Table -->
-                <div class="overflow-x-auto custom-scrollbar">
-                    <table class="w-full text-right text-xs md:text-sm border-collapse">
-                        <thead>
-                            <tr class="bg-slate-900/90 text-slate-200 border-b border-slate-800 text-xs">
-                                <th class="p-3.5 rounded-tr-2xl w-52 font-black">المسار التعليمي</th>
-                                <th class="p-3.5 bg-orange-950/20 border-x border-orange-500/20 text-orange-300 font-black">
-                                    <div class="flex items-center gap-2">
-                                        <span class="w-2.5 h-2.5 rounded-full bg-orange-500 inline-block"></span>
-                                        <span>Mega Minds Academy</span>
-                                    </div>
-                                </th>
-                                <th class="p-3.5 bg-emerald-950/20 border-l border-emerald-500/20 text-emerald-300 font-black">
-                                    <div class="flex items-center gap-2">
-                                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
-                                        <span>3C Coding School</span>
-                                    </div>
-                                </th>
-                                <th class="p-3.5 bg-blue-950/20 rounded-tl-2xl text-blue-300 font-black">
-                                    <div class="flex items-center gap-2">
-                                        <span class="w-2.5 h-2.5 rounded-full bg-blue-500 inline-block"></span>
-                                        <span>iSchool</span>
-                                    </div>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-800 text-slate-300 font-medium text-xs">
-                            <!-- 1. البرمجة المرئية للأطفال -->
-                            <tr class="hover:bg-slate-900/40 transition">
-                                <td class="p-3.5 font-bold text-white bg-slate-900/40">
-                                    🧱 البرمجة المرئية للأطفال
-                                </td>
-                                <td class="p-3.5 bg-orange-950/10 border-x border-orange-500/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-orange-500/20 text-orange-300 font-bold text-xs inline-flex items-center gap-1">
-                                        PictoBlox
-                                    </span>
-                                </td>
-                                <td class="p-3.5 bg-emerald-950/10 border-l border-emerald-500/10">
-                                    <span class="text-slate-300">
-                                        <strong class="text-emerald-400">Scratch</strong> وأدوات أخرى بحسب المستوى
-                                    </span>
-                                </td>
-                                <td class="p-3.5 bg-blue-950/10">
-                                    <span class="text-slate-300">
-                                        <strong class="text-blue-400">Minecraft</strong> وأدوات برمجة مناسبة للسن
-                                    </span>
-                                </td>
-                            </tr>
-
-                            <!-- 2. Python -->
-                            <tr class="hover:bg-slate-900/40 transition">
-                                <td class="p-3.5 font-bold text-white bg-slate-900/40">
-                                    🐍 Python
-                                </td>
-                                <td class="p-3.5 bg-orange-950/10 border-x border-orange-500/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
-                                        ✓ متوفر
-                                    </span>
-                                </td>
-                                <td class="p-3.5 bg-emerald-950/10 border-l border-emerald-500/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
-                                        ✓ متوفر
-                                    </span>
-                                </td>
-                                <td class="p-3.5 bg-blue-950/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
-                                        ✓ متوفر
-                                    </span>
-                                </td>
-                            </tr>
-
-                            <!-- 3. الذكاء الاصطناعي وMachine Learning -->
-                            <tr class="hover:bg-slate-900/40 transition">
-                                <td class="p-3.5 font-bold text-white bg-slate-900/40">
-                                    🧠 الذكاء الاصطناعي وMachine Learning
-                                </td>
-                                <td class="p-3.5 bg-orange-950/10 border-x border-orange-500/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
-                                        ✓ متوفر
-                                    </span>
-                                </td>
-                                <td class="p-3.5 bg-emerald-950/10 border-l border-emerald-500/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
-                                        ✓ متوفر
-                                    </span>
-                                </td>
-                                <td class="p-3.5 bg-blue-950/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
-                                        ✓ متوفر
-                                    </span>
-                                </td>
-                            </tr>
-
-                            <!-- 4. تصميم وبرمجة الألعاب -->
-                            <tr class="hover:bg-slate-900/40 transition">
-                                <td class="p-3.5 font-bold text-white bg-slate-900/40">
-                                    🎮 تصميم وبرمجة الألعاب
-                                </td>
-                                <td class="p-3.5 bg-orange-950/10 border-x border-orange-500/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
-                                        ✓ متوفر
-                                    </span>
-                                </td>
-                                <td class="p-3.5 bg-emerald-950/10 border-l border-emerald-500/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
-                                        ✓ متوفر
-                                    </span>
-                                </td>
-                                <td class="p-3.5 bg-blue-950/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
-                                        ✓ متوفر
-                                    </span>
-                                </td>
-                            </tr>
-
-                            <!-- 5. تطوير الألعاب ثلاثية الأبعاد -->
-                            <tr class="hover:bg-slate-900/40 transition">
-                                <td class="p-3.5 font-bold text-white bg-slate-900/40">
-                                    🕹️ تطوير الألعاب ثلاثية الأبعاد
-                                </td>
-                                <td class="p-3.5 bg-orange-950/10 border-x border-orange-500/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-orange-500/20 text-orange-300 font-bold text-xs inline-flex items-center gap-1">
-                                        Godot ومسارات ألعاب
-                                    </span>
-                                </td>
-                                <td class="p-3.5 bg-emerald-950/10 border-l border-emerald-500/10">
-                                    <span class="text-slate-300">
-                                        <strong class="text-emerald-400">3D Coding</strong> وألعاب متقدمة
-                                    </span>
-                                </td>
-                                <td class="p-3.5 bg-blue-950/10">
-                                    <span class="text-slate-300">
-                                        <strong class="text-blue-400">Unity وC#</strong> ضمن مسارات متقدمة
-                                    </span>
-                                </td>
-                            </tr>
-
-                            <!-- 6. تطبيقات الموبايل -->
-                            <tr class="hover:bg-slate-900/40 transition">
-                                <td class="p-3.5 font-bold text-white bg-slate-900/40">
-                                    📱 تطبيقات الموبايل
-                                </td>
-                                <td class="p-3.5 bg-orange-950/10 border-x border-orange-500/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
-                                        ✓ متوفر
-                                    </span>
-                                </td>
-                                <td class="p-3.5 bg-emerald-950/10 border-l border-emerald-500/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
-                                        ✓ متوفر
-                                    </span>
-                                </td>
-                                <td class="p-3.5 bg-blue-950/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
-                                        ✓ متوفر
-                                    </span>
-                                </td>
-                            </tr>
-
-                            <!-- 7. تطوير الويب -->
-                            <tr class="hover:bg-slate-900/40 transition">
-                                <td class="p-3.5 font-bold text-white bg-slate-900/40">
-                                    🌐 تطوير الويب
-                                </td>
-                                <td class="p-3.5 bg-orange-950/10 border-x border-orange-500/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-orange-500/20 text-orange-300 font-bold text-xs inline-flex items-center gap-1">
-                                        Back-end ومسارات برمجية
-                                    </span>
-                                </td>
-                                <td class="p-3.5 bg-emerald-950/10 border-l border-emerald-500/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
-                                        Web Development
-                                    </span>
-                                </td>
-                                <td class="p-3.5 bg-blue-950/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-blue-500/20 text-blue-300 font-bold text-xs inline-flex items-center gap-1">
-                                        Web Development
-                                    </span>
-                                </td>
-                            </tr>
-
-                            <!-- 8. UI/UX Design -->
-                            <tr class="hover:bg-slate-900/40 transition">
-                                <td class="p-3.5 font-bold text-white bg-slate-900/40">
-                                    🎨 UI/UX Design
-                                </td>
-                                <td class="p-3.5 bg-orange-950/10 border-x border-orange-500/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
-                                        ✓ متوفر
-                                    </span>
-                                </td>
-                                <td class="p-3.5 bg-emerald-950/10 border-l border-emerald-500/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
-                                        ✓ متوفر
-                                    </span>
-                                </td>
-                                <td class="p-3.5 bg-blue-950/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
-                                        ✓ متوفر
-                                    </span>
-                                </td>
-                            </tr>
-
-                            <!-- 9. الروبوتكس -->
-                            <tr class="hover:bg-slate-900/40 transition">
-                                <td class="p-3.5 font-bold text-white bg-slate-900/40">
-                                    🤖 الروبوتكس
-                                </td>
-                                <td class="p-3.5 bg-orange-950/10 border-x border-orange-500/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-orange-500/20 text-orange-300 font-bold text-xs inline-flex items-center gap-1">
-                                        ✓ مسار تعليمي واضح
-                                    </span>
-                                </td>
-                                <td class="p-3.5 bg-emerald-950/10 border-l border-emerald-500/10 text-slate-400">
-                                    <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-400 text-xs inline-block">
-                                        لم يتضح مسار روبوتكس مستقل من الصفحات التي راجعتها
-                                    </span>
-                                </td>
-                                <td class="p-3.5 bg-blue-950/10 text-slate-400">
-                                    <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-400 text-xs inline-block">
-                                        لم يتضح مسار روبوتكس مستقل من الصفحات التي راجعتها
-                                    </span>
-                                </td>
-                            </tr>
-
-                            <!-- 10. Flutter -->
-                            <tr class="hover:bg-slate-900/40 transition">
-                                <td class="p-3.5 font-bold text-white bg-slate-900/40">
-                                    📱 Flutter
-                                </td>
-                                <td class="p-3.5 bg-orange-950/10 border-x border-orange-500/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-flex items-center gap-1">
-                                        ✓ متوفر
-                                    </span>
-                                </td>
-                                <td class="p-3.5 bg-emerald-950/10 border-l border-emerald-500/10 text-slate-400">
-                                    <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-400 text-xs inline-block">
-                                        لم يتأكد كمسار مستقل من الموقع
-                                    </span>
-                                </td>
-                                <td class="p-3.5 bg-blue-950/10 text-slate-400">
-                                    <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-400 text-xs inline-block">
-                                        لم يتأكد كمسار مستقل من الصفحات الرئيسية
-                                    </span>
-                                </td>
-                            </tr>
-
-                            <!-- 11. الأمن السيبراني -->
-                            <tr class="hover:bg-slate-900/40 transition">
-                                <td class="p-3.5 font-bold text-white bg-slate-900/40">
-                                    🛡️ الأمن السيبراني
-                                </td>
-                                <td class="p-3.5 bg-orange-950/10 border-x border-orange-500/10">
-                                    <span class="px-2.5 py-1 rounded-full bg-orange-500/20 text-orange-300 font-bold text-xs inline-flex items-center gap-1">
-                                        Cyber Security وNetwork & Hacking
-                                    </span>
-                                </td>
-                                <td class="p-3.5 bg-emerald-950/10 border-l border-emerald-500/10 text-slate-400">
-                                    <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-400 text-xs inline-block">
-                                        لم يتضح مسار مستقل من الصفحات التي راجعتها
-                                    </span>
-                                </td>
-                                <td class="p-3.5 bg-blue-950/10 text-slate-400">
-                                    <span class="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-400 text-xs inline-block">
-                                        لم يتضح مسار مستقل من الصفحات التي راجعتها
-                                    </span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- 2.2 Age-Stage Programming Matrix (Pure Bullet Points) -->
-            <div id="age-matrix" class="glass-card rounded-3xl border border-slate-800 p-6 shadow-xl space-y-5">
-                <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
-                    <div>
-                        <h3 class="text-lg md:text-xl font-black text-white flex items-center gap-2">
-                            <span>🧒</span> جدول توزيع الكورسات حسب المراحل السنية (Age-Based Matrix)
+            <!-- Part A: 3C Coding School Curricula In-Depth Table -->
+            <div class="clean-card rounded-3xl p-6 md:p-8 space-y-4">
+                <div class="border-b border-slate-100 pb-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+                        <h3 class="text-lg font-black text-slate-900">
+                            1. تفاصيل مناهج وأدوات 3C Coding School ومقارنتها بـ Mega Minds
                         </h3>
-                        <p class="text-xs text-slate-400 mt-0.5">ما يتعلمه الطالب في كل مرحلة (أدوات، لغات، ومفاهيم برمجية) بنقاط مباشرة</p>
                     </div>
-                    <span class="text-xs font-bold px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700 hidden sm:inline-block">
-                        مقارنة الكورسات الميدانية
+                    <span class="text-xs font-bold px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 w-fit">
+                        تحليل الأدوات والمخرجات
                     </span>
                 </div>
 
                 <div class="overflow-x-auto custom-scrollbar">
                     <table class="w-full text-right text-xs md:text-sm border-collapse">
                         <thead>
-                            <tr class="bg-slate-900/90 text-slate-200 border-b border-slate-800 text-xs">
-                                <th class="p-3.5 rounded-tr-2xl w-44 font-black">المرحلة السنية</th>
-                                <th class="p-3.5 bg-orange-950/20 border-x border-orange-500/20 text-orange-300 font-black">
-                                    <div class="flex items-center gap-2">
-                                        <span class="w-2.5 h-2.5 rounded-full bg-orange-500 inline-block"></span>
-                                        <span>Megaminds Academy (برمجة فقط)</span>
-                                    </div>
-                                </th>
-                                <th class="p-3.5 bg-emerald-950/20 border-l border-emerald-500/20 text-emerald-300 font-black">
-                                    <div class="flex items-center gap-2">
-                                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
-                                        <span>3C Coding School</span>
-                                    </div>
-                                </th>
-                                <th class="p-3.5 bg-blue-950/20 rounded-tl-2xl text-blue-300 font-black">
-                                    <div class="flex items-center gap-2">
-                                        <span class="w-2.5 h-2.5 rounded-full bg-blue-500 inline-block"></span>
-                                        <span>iSchool Tech</span>
-                                    </div>
-                                </th>
+                            <tr class="bg-slate-100 text-slate-700 border-b border-slate-200 text-xs">
+                                <th class="p-3 w-40 font-black">المسار / التخصص</th>
+                                <th class="p-3 bg-emerald-50/80 text-emerald-900 font-black">محتوى 3C Coding School</th>
+                                <th class="p-3 bg-orange-50/80 text-orange-900 font-black">موقع Mega Minds المقابل</th>
+                                <th class="p-3 font-black">الملاحظة والمقارنة الفنية</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-slate-800 text-slate-300 font-medium text-xs">
-                            <!-- Junior Stage -->
-                            <tr class="hover:bg-slate-900/40 transition">
-                                <td class="p-4 font-bold text-amber-300 bg-slate-900/40 align-top">
-                                    <div class="text-sm font-black text-white mb-0.5">مرحلة الصغار (Junior)</div>
-                                    <span class="px-2.5 py-0.5 rounded bg-amber-500/20 text-amber-300 font-bold text-xs inline-block mb-1">6 - 9 سنوات</span>
-                                    <p class="text-[10px] text-slate-400">التفكير المنطقي والبرمجة بالبلوكس</p>
-                                </td>
-                                <td class="p-4 bg-orange-950/10 border-x border-orange-500/10 space-y-2 align-top">
-                                    <ul class="space-y-1.5 text-slate-300 text-xs">
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-orange-400 font-bold">▪</span>
-                                            <div><strong class="text-white">PictoBlox & Scratch:</strong> برمجة مرئية بالبلوكس (Block Coding) لتصميم ألعاب 2D وقصص تفاعلية.</div>
-                                        </li>
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-orange-400 font-bold">▪</span>
-                                            <div><strong class="text-white">الذكاء الاصطناعي (AI Blocks):</strong> التعرف على الوجوه، المشاعر، والإيماءات عبر الكاميرا (Teachable Machine).</div>
-                                        </li>
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-orange-400 font-bold">▪</span>
-                                            <div><strong class="text-white">المفاهيم الأساسية:</strong> التفكير المنطقي، الشروط (Conditionals)، والتكرار (Loops)، والمتغيرات.</div>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10 space-y-2 align-top">
-                                    <ul class="space-y-1.5 text-slate-300 text-xs">
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-emerald-400 font-bold">▪</span>
-                                            <div><strong class="text-white">Scratch 3.0:</strong> ألعاب ثنائية الأبعاد، تحريك شخصيات ومؤثرات صوتية.</div>
-                                        </li>
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-emerald-400 font-bold">▪</span>
-                                            <div><strong class="text-white">MIT App Inventor (مبسط):</strong> تصميم واجهات تفاعلية لأول تطبيق هاتف بسيط للأطفال.</div>
-                                        </li>
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-emerald-400 font-bold">▪</span>
-                                            <div><strong class="text-white">التفكير الحوسبي:</strong> خوارزميات وتجزئة المشكلات وحل الألغاز المنطقية.</div>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td class="p-4 bg-blue-950/10 space-y-2 align-top">
-                                    <ul class="space-y-1.5 text-slate-300 text-xs">
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-blue-400 font-bold">▪</span>
-                                            <div><strong class="text-white">Code to Craft in Minecraft (6-7 سنوات):</strong> أوامر برمجية وخوارزميات داخل عالم ماينكرافت.</div>
-                                        </li>
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-blue-400 font-bold">▪</span>
-                                            <div><strong class="text-white">صناع الألعاب (8-9 سنوات):</strong> برمجة ألعاب تفاعلية بالبلوكس.</div>
-                                        </li>
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-blue-400 font-bold">▪</span>
-                                            <div><strong class="text-white">الذكاء الاصطناعي (8-9 سنوات):</strong> تدريب نماذج ذكاء اصطناعي وبناء أول مساعد ذكي.</div>
-                                        </li>
-                                    </ul>
+                        <tbody class="divide-y divide-slate-200 text-slate-700 text-xs font-medium">
+                            <!-- UI/UX -->
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-bold text-slate-900">🎨 UI/UX Design</td>
+                                <td class="p-3 text-emerald-800 font-bold">متوفر لديهم</td>
+                                <td class="p-3 text-orange-700 font-bold">متوفر في Mega Minds</td>
+                                <td class="p-3 text-slate-500">متطابق؛ كلاهما يقدم أساسيات تصميم واجهات وتجربة المستخدم.</td>
+                            </tr>
+                            <!-- Web -->
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-bold text-slate-900">🌐 تطوير الويب (Web)</td>
+                                <td class="p-3 text-slate-800">HTML5 + CSS3 + <strong class="text-emerald-700 font-bold">Flask (Python)</strong></td>
+                                <td class="p-3 text-slate-800">تطوير الويب + <strong class="text-orange-700 font-bold">Laravel (PHP)</strong> وفلاتر</td>
+                                <td class="p-3">
+                                    <span class="text-rose-600 font-bold bg-rose-50 px-2 py-0.5 rounded border border-rose-200 inline-block">
+                                        ⚠️ لا يوجد لدينا Flask؛ وبدلاً منه نعتمد Laravel و Flutter
+                                    </span>
                                 </td>
                             </tr>
-
-                            <!-- Teens Stage -->
-                            <tr class="hover:bg-slate-900/40 transition">
-                                <td class="p-4 font-bold text-emerald-300 bg-slate-900/40 align-top">
-                                    <div class="text-sm font-black text-white mb-0.5">مرحلة اليافعين (Teens)</div>
-                                    <span class="px-2.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold text-xs inline-block mb-1">10 - 13 سنة</span>
-                                    <p class="text-[10px] text-slate-400">البرمجة النصية ومحركات الألعاب</p>
-                                </td>
-                                <td class="p-4 bg-orange-950/10 border-x border-orange-500/10 space-y-2 align-top">
-                                    <ul class="space-y-1.5 text-slate-300 text-xs">
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-orange-400 font-bold">▪</span>
-                                            <div><strong class="text-white">لغة بايثون (Python Core):</strong> كتابة كود نصي، المتغيرات، الدوال (Functions)، والقوائم (Lists & Dicts).</div>
-                                        </li>
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-orange-400 font-bold">▪</span>
-                                            <div><strong class="text-white">محرك Godot Engine:</strong> صناعة ألعاب 2D/3D وكتابة سكربتات الحركة وفيزياء الألعاب بمحرك خفيف للأطفال.</div>
-                                        </li>
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-orange-400 font-bold">▪</span>
-                                            <div><strong class="text-white">حل المشكلات (Problem Solving):</strong> تدريبات خوارزمية وتحديات كود عبر منصة المنهج التفاعلي بالويب.</div>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10 space-y-2 align-top">
-                                    <ul class="space-y-1.5 text-slate-300 text-xs">
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-emerald-400 font-bold">▪</span>
-                                            <div><strong class="text-white">مسار Python:</strong> البرمجة النصية المتدرجة، معالجة البيانات، وتطبيقات سطح المكتب.</div>
-                                        </li>
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-emerald-400 font-bold">▪</span>
-                                            <div><strong class="text-white">تطبيقات الموبايل:</strong> بناء وتصميم تطبيقات تعمل على هواتف أندرويد.</div>
-                                        </li>
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-emerald-400 font-bold">▪</span>
-                                            <div><strong class="text-white">تصحيح الأخطاء (Debugging):</strong> مهارات تتبع الأخطاء البرمجية وإصلاحها.</div>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td class="p-4 bg-blue-950/10 space-y-2 align-top">
-                                    <ul class="space-y-1.5 text-slate-300 text-xs">
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-blue-400 font-bold">▪</span>
-                                            <div><strong class="text-white">لغة بايثون Python (10-11 سنة):</strong> ألعاب نصية، الدوال، وتطبيقات عملية متدرجة.</div>
-                                        </li>
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-blue-400 font-bold">▪</span>
-                                            <div><strong class="text-white">تطوير تطبيقات الموبايل (12-13 سنة):</strong> واجهات مستخدم UI وتطبيقات هواتف كاملة متصلة بالسحابة.</div>
-                                        </li>
-                                    </ul>
+                            <!-- Games -->
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-bold text-slate-900">🎮 تطوير الألعاب (Games)</td>
+                                <td class="p-3 text-slate-800 font-bold">Godot Engine + Unity 3D</td>
+                                <td class="p-3 text-slate-800 font-bold">Godot Engine + Unity 3D</td>
+                                <td class="p-3 text-slate-500">متطابق تماماً؛ كلاهما يوظف جودو لليافعين ويونيتي للمتقدمين.</td>
+                            </tr>
+                            <!-- Graphics -->
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-bold text-slate-900">🖌️ التصميم والجرافيك</td>
+                                <td class="p-3 text-emerald-800 font-bold">متوفر كورس جرافيك</td>
+                                <td class="p-3 text-orange-700 font-bold">متوفر مسار موشن جرافيك وتصميم</td>
+                                <td class="p-3 text-slate-500">متطابق في توفير أدوات الميديا الرقمية.</td>
+                            </tr>
+                            <!-- 3D -->
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-bold text-slate-900">🕹️ التصميم والبرمجة 3D</td>
+                                <td class="p-3 text-slate-800"><strong class="text-emerald-700">Blender (3D Modeling)</strong> + 3D Coding</td>
+                                <td class="p-3 text-slate-800"><strong class="text-orange-700">3D Coding</strong> ومحركات الألعاب</td>
+                                <td class="p-3">
+                                    <span class="text-rose-600 font-bold bg-rose-50 px-2 py-0.5 rounded border border-rose-200 inline-block">
+                                        ⚠️ Blender (3D Modeling) متوفر لديهم وغير متاح لدينا
+                                    </span>
                                 </td>
                             </tr>
-
-                            <!-- Senior Stage -->
-                            <tr class="hover:bg-slate-900/40 transition">
-                                <td class="p-4 font-bold text-indigo-300 bg-slate-900/40 align-top">
-                                    <div class="text-sm font-black text-white mb-0.5">مرحلة المتقدمين (Senior)</div>
-                                    <span class="px-2.5 py-0.5 rounded bg-indigo-500/20 text-indigo-300 font-bold text-xs inline-block mb-1">14 - 18 سنة</span>
-                                    <p class="text-[10px] text-slate-400">محركات الألعاب والذكاء الاصطناعي</p>
+                            <!-- AI & ML -->
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-bold text-slate-900">🧠 AI & Machine Learning</td>
+                                <td class="p-3 text-emerald-800 font-bold">متوفر لديهم</td>
+                                <td class="p-3 text-orange-700 font-bold">متوفر في Mega Minds</td>
+                                <td class="p-3 text-slate-500">متطابق؛ يشمل تدريب النماذج والرؤية الحاسوبية.</td>
+                            </tr>
+                            <!-- Python & Data Science -->
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-bold text-slate-900">📊 بايثون وتحليل البيانات</td>
+                                <td class="p-3 text-slate-800">Python + <strong class="text-emerald-700 font-bold">Data Science</strong></td>
+                                <td class="p-3 text-slate-800">Python Core وحل المشكلات</td>
+                                <td class="p-3">
+                                    <span class="text-rose-600 font-bold bg-rose-50 px-2 py-0.5 rounded border border-rose-200 inline-block">
+                                        ⚠️ Data Science متوفر في 3C وغير متاح بـ Mega Minds (فرصة إضافة)
+                                    </span>
                                 </td>
-                                <td class="p-4 bg-orange-950/10 border-x border-orange-500/10 space-y-2 align-top">
-                                    <ul class="space-y-1.5 text-slate-300 text-xs">
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-orange-400 font-bold">▪</span>
-                                            <div><strong class="text-white">محرك الألعاب Unity 3D:</strong> برمجة ألعاب ثلاثية الأبعاد احترافية بلغة <strong class="text-orange-400">#C</strong> (لطلاب المستوى الثالث).</div>
-                                        </li>
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-orange-400 font-bold">▪</span>
-                                            <div><strong class="text-white">الذكاء الاصطناعي وتعلم الآلة (AI & ML):</strong> تدريب نماذج بالبايثون والرؤية الحاسوبية (Computer Vision).</div>
-                                        </li>
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-orange-400 font-bold">▪</span>
-                                            <div><strong class="text-white">البرمجة كائنية التوجه (OOP):</strong> Classes, Objects, Inheritance ومعماريات برمجية احترافية.</div>
-                                        </li>
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-orange-400 font-bold">▪</span>
-                                            <div><strong class="text-white">الموشن جرافيكس:</strong> تصميم وسائط وواجهات ومؤثرات رقمية للألعاب.</div>
-                                        </li>
-                                    </ul>
+                            </tr>
+                            <!-- Minecraft & Roblox (Crucial Fact Check) -->
+                            <tr class="hover:bg-slate-50 bg-amber-50/40">
+                                <td class="p-3 font-bold text-slate-900">🎮 Minecraft & Roblox</td>
+                                <td class="p-3 text-slate-800">معلنة كأيقونات وشعارات على الموقع</td>
+                                <td class="p-3 text-slate-600">غير معتمدة حالياً لارتفاع التكلفة</td>
+                                <td class="p-3">
+                                    <span class="text-amber-800 font-bold bg-amber-100 px-2.5 py-1 rounded-md border border-amber-300 inline-block">
+                                        🔍 حقيقة مؤكدة من داخل 3C: مجرد دعاية وتسويق فقط ولا تُدرّس كمسارات فعلية!
+                                    </span>
                                 </td>
-                                <td class="p-4 bg-emerald-950/10 border-l border-emerald-500/10 space-y-2 align-top">
-                                    <ul class="space-y-1.5 text-slate-300 text-xs">
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-emerald-400 font-bold">▪</span>
-                                            <div><strong class="text-white">تطوير الويب Full-Stack:</strong> بناء مواقع كاملة تفاعلية (HTML5, CSS3, JavaScript, Databases).</div>
-                                        </li>
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-emerald-400 font-bold">▪</span>
-                                            <div><strong class="text-white">الأمن السيبراني (Cybersecurity):</strong> أساسيات أمن الشبكات وفحص الثغرات والخصوصية الرقمية.</div>
-                                        </li>
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-emerald-400 font-bold">▪</span>
-                                            <div><strong class="text-white">ريادة الأعمال والعمل الحر:</strong> تحويل البرامج لمنتجات والتأهيل لسوق الفريلانسينج.</div>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td class="p-4 bg-blue-950/10 space-y-2 align-top">
-                                    <ul class="space-y-1.5 text-slate-300 text-xs">
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-blue-400 font-bold">▪</span>
-                                            <div><strong class="text-white">تطوير الويب والسيبراني (14-15 سنة):</strong> مواقع Full-Stack واختبار اختراق للويب.</div>
-                                        </li>
-                                        <li class="flex items-start gap-1.5">
-                                            <span class="text-blue-400 font-bold">▪</span>
-                                            <div><strong class="text-white">ألعاب الواقع المعزز Unity AR (16-18 سنة):</strong> ألعاب واقع معزز بلغة #C والحوسبة المكانية.</div>
-                                        </li>
-                                    </ul>
-                                </td>
+                            </tr>
+                            <!-- Mobile Apps -->
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3 font-bold text-slate-900">📱 تطبيقات الموبايل</td>
+                                <td class="p-3 text-slate-800 font-bold">MIT App Inventor + Flutter</td>
+                                <td class="p-3 text-slate-800 font-bold">تطبيقات الموبايل + Flutter</td>
+                                <td class="p-3 text-slate-500">متطابق في استهداف تطبيقات الهواتف الذكية.</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
 
-            <!-- Academy Curricula Summary Cards (Clear Points by Academy) -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-
-                <!-- Megaminds Summary Card -->
-                <div class="glass-card rounded-3xl p-6 border-2 border-orange-500/40 shadow-xl space-y-4">
-                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-                        <div>
-                            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-black bg-orange-500/20 text-orange-400 border border-orange-500/30">
-                                كورسات البرمجة المركزة 🚀
-                            </span>
-                            <h4 class="text-lg font-black text-white mt-1">Megaminds Academy</h4>
-                        </div>
-                        <span class="text-2xl">💻</span>
+            <!-- Part B: iSchool The 6 Courses In-Depth Analysis -->
+            <div class="clean-card rounded-3xl p-6 md:p-8 space-y-5">
+                <div class="border-b border-slate-100 pb-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-blue-500 inline-block"></span>
+                        <h3 class="text-lg font-black text-slate-900">
+                            2. تحليل كورسات iSchool الستة المعلنة (المحتوى والمشاريع والملاحظات النقدية)
+                        </h3>
                     </div>
-
-                    <div class="space-y-3 text-xs text-slate-300">
-                        <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-1.5">
-                            <div class="flex items-center justify-between">
-                                <span class="font-bold text-orange-300">👶 مرحلة الصغار (6-9 سنوات):</span>
-                                <span class="text-[10px] text-slate-400">Junior</span>
-                            </div>
-                            <ul class="list-disc pr-4 space-y-1 text-slate-300 text-[11px]">
-                                <li><strong>PictoBlox & Scratch:</strong> برمجة مرئية بالبلوكس وتصميم ألعاب 2D.</li>
-                                <li><strong>الذكاء الاصطناعي (AI Blocks):</strong> رؤية حاسوبية والتعرف على المشاعر والإيماءات.</li>
-                                <li><strong>أساسيات المنطق:</strong> الشروط، الحلقات، والمتغيرات.</li>
-                            </ul>
-                        </div>
-
-                        <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-1.5">
-                            <div class="flex items-center justify-between">
-                                <span class="font-bold text-orange-300">🧒 مرحلة اليافعين (10-13 سنة):</span>
-                                <span class="text-[10px] text-slate-400">Teens</span>
-                            </div>
-                            <ul class="list-disc pr-4 space-y-1 text-slate-300 text-[11px]">
-                                <li><strong>لغة بايثون (Python Core):</strong> البرمجة النصية، الدوال، والقوائم.</li>
-                                <li><strong>محرك Godot Engine:</strong> ألعاب 2D/3D خفيفة واحترافية للأطفال.</li>
-                                <li><strong>حل المشكلات (Problem Solving):</strong> تدريبات خوارزميات تفاعلية.</li>
-                            </ul>
-                        </div>
-
-                        <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-1.5">
-                            <div class="flex items-center justify-between">
-                                <span class="font-bold text-orange-300">🧑 مرحلة المتقدمين (14-18 سنة):</span>
-                                <span class="text-[10px] text-slate-400">Senior</span>
-                            </div>
-                            <ul class="list-disc pr-4 space-y-1 text-slate-300 text-[11px]">
-                                <li><strong>محرك Unity 3D:</strong> ألعاب ثلاثية الأبعاد متقدمة بلغة #C.</li>
-                                <li><strong>الذكاء الاصطناعي (AI & ML):</strong> تعلم الآلة بالبايثون والرؤية الحاسوبية.</li>
-                                <li><strong>البرمجة الكائنية (OOP) + موشن جرافيكس:</strong> معماريات برمجية وميديا.</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <span class="text-xs font-bold px-3 py-1 rounded-full bg-blue-50 text-blue-800 border border-blue-200 w-fit">
+                        6 كورسات تفصيلية
+                    </span>
                 </div>
 
-                <!-- 3C School Summary Card -->
-                <div class="glass-card rounded-3xl p-6 border border-emerald-500/30 shadow-xl space-y-4">
-                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-                        <div>
-                            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-black bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                                كورسات البرمجة المركزة 💻
-                            </span>
-                            <h4 class="text-lg font-black text-white mt-1">3C Coding School</h4>
-                        </div>
-                        <span class="text-2xl">🎓</span>
+                <!-- Critical Insight Note on iSchool Structure -->
+                <div class="p-4 rounded-2xl bg-rose-50 border border-rose-200 text-rose-900 text-xs leading-relaxed space-y-1">
+                    <div class="font-black text-rose-950 flex items-center gap-1.5 text-sm">
+                        <span>⚠️</span> ملاحظة نقدية جوهرية حول هيكل كورسات iSchool المعلنة:
                     </div>
-
-                    <div class="space-y-3 text-xs text-slate-300">
-                        <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-1.5">
-                            <div class="flex items-center justify-between">
-                                <span class="font-bold text-emerald-300">👶 مرحلة الصغار (6-9 سنوات):</span>
-                                <span class="text-[10px] text-slate-400">Standard</span>
-                            </div>
-                            <ul class="list-disc pr-4 space-y-1 text-slate-300 text-[11px]">
-                                <li><strong>Scratch 3.0:</strong> تصميم وتحريك شخصيات وألعاب ثنائية الأبعاد.</li>
-                                <li><strong>MIT App Inventor (مبسط):</strong> واجهات أول تطبيق موبايل بسيط.</li>
-                                <li><strong>التفكير الحوسبي:</strong> ألغاز منطقية وتفكيك المشكلات.</li>
-                            </ul>
-                        </div>
-
-                        <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-1.5">
-                            <div class="flex items-center justify-between">
-                                <span class="font-bold text-emerald-300">🧒 مرحلة اليافعين (10-13 سنة):</span>
-                                <span class="text-[10px] text-slate-400">Intermediate</span>
-                            </div>
-                            <ul class="list-disc pr-4 space-y-1 text-slate-300 text-[11px]">
-                                <li><strong>مسار Python:</strong> البرمجة النصية ومعالجة البيانات وسكربتات.</li>
-                                <li><strong>تطبيقات الموبايل:</strong> بناء وتصميم تطبيقات أندرويد.</li>
-                                <li><strong>تصحيح الأخطاء (Debugging):</strong> مهارات تتبع وإصلاح الأخطاء.</li>
-                            </ul>
-                        </div>
-
-                        <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-1.5">
-                            <div class="flex items-center justify-between">
-                                <span class="font-bold text-emerald-300">🧑 مرحلة المتقدمين (14-18 سنة):</span>
-                                <span class="text-[10px] text-slate-400">Professional</span>
-                            </div>
-                            <ul class="list-disc pr-4 space-y-1 text-slate-300 text-[11px]">
-                                <li><strong>Full-Stack Web:</strong> مواقع كاملة (HTML/CSS/JS/Databases).</li>
-                                <li><strong>الأمن السيبراني (Cybersecurity):</strong> حماية الشبكات وفحص الثغرات.</li>
-                                <li><strong>ريادة الأعمال والعمل الحر:</strong> تأهيل الطالب لسوق الفريلانسينج.</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <p>
+                        تعلن iSchool عن كل كورس من الكورسات الـ 6 بمدة <strong class="font-black text-rose-950">3 شهور (12 حصة فقط)</strong>، وهو طرح غريب وتسويقي بحت؛ لأن المحتوى التقني والتفاصيل المذكورة (خصوصاً في مسار الويب وتطبيقات الموبايل ويونيتي) أضخم بكثير من أن يتم استيعابها أو شرحها وتطبيقها في 12 جلسة.
+                    </p>
+                    <p>
+                        <strong>نقطة القوة التي يجب تبنيها:</strong> يركزون بقوة في كل مرحلة على إلزام الطالب بإنجاز <strong class="font-black text-rose-950">مشروع نهائي (Final Project)</strong> وعرضه في برزنتيشن لأولياء الأمور لتفادي الشكوى الشائعة من الأهل ("ابني بيحضر بس مفيش ناتج ملموس").
+                    </p>
                 </div>
 
-                <!-- iSchool Summary Card -->
-                <div class="glass-card rounded-3xl p-6 border border-blue-500/30 shadow-xl space-y-4">
-                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-                        <div>
-                            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-black bg-blue-500/20 text-blue-400 border border-blue-500/30">
-                                كورسات البرمجة المركزة 🌐
-                            </span>
-                            <h4 class="text-lg font-black text-white mt-1">iSchool Tech</h4>
+                <!-- The 6 Courses Detailed Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                    <!-- Course 1 -->
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 text-[11px] font-black">الكورس الأول (6 - 7 سنوات)</span>
+                                <span class="text-xs text-slate-400">Level 1</span>
+                            </div>
+                            <h4 class="font-black text-slate-900 text-base">Minecraft Education + Canva</h4>
+                            <ul class="list-disc pr-4 space-y-1 text-xs text-slate-600">
+                                <li><strong>المحتوى:</strong> تعليم المنطق البرمجي داخل عالم ماينكرافت + استخدام منصة Canva.</li>
+                                <li><strong>المشروع النهائي (Final Project):</strong> مشروع بناء وبرمجة داخل ماينكرافت + بوستر تقديمي على Canva.</li>
+                            </ul>
                         </div>
-                        <span class="text-2xl">🚀</span>
+                        <div class="p-2.5 rounded-xl bg-white border border-slate-200 text-[11px] text-slate-600">
+                            💡 <strong>الفكرة المكتسبة:</strong> مخرج نهائي مرئي يراه الأهل لضمان الرضا.
+                        </div>
                     </div>
 
-                    <div class="space-y-3 text-xs text-slate-300">
-                        <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-1.5">
+                    <!-- Course 2 -->
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 flex flex-col justify-between">
+                        <div class="space-y-2">
                             <div class="flex items-center justify-between">
-                                <span class="font-bold text-blue-300">👶 مرحلة الصغار (6-9 سنوات):</span>
-                                <span class="text-[10px] text-slate-400">Levels 1-2</span>
+                                <span class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 text-[11px] font-black">الكورس الثاني (8 - 9 سنوات)</span>
+                                <span class="text-xs text-slate-400">Level 2</span>
                             </div>
-                            <ul class="list-disc pr-4 space-y-1 text-slate-300 text-[11px]">
-                                <li><strong>Minecraft Coding (6-7 س):</strong> أوامر برمجية بماينكرافت.</li>
-                                <li><strong>صناع الألعاب (8-9 س):</strong> ألعاب تفاعلية بالبلوكس.</li>
-                                <li><strong>الذكاء الاصطناعي (8-9 س):</strong> تدريب نماذج ومساعد ذكي.</li>
+                            <h4 class="font-black text-slate-900 text-base">صناع الألعاب والذكاء الاصطناعي</h4>
+                            <ul class="list-disc pr-4 space-y-1 text-xs text-slate-600">
+                                <li><strong>المحتوى:</strong> أدوات برمجة بصرية وتدريب نماذج ذكاء اصطناعي تفاعلية مبسطة.</li>
+                                <li><strong>المشروع النهائي:</strong> لعبة تفاعلية كاملة من برمجة الطالب + عرض تقديمي تفاعلي للمشروع.</li>
                             </ul>
                         </div>
-
-                        <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-1.5">
-                            <div class="flex items-center justify-between">
-                                <span class="font-bold text-blue-300">🧒 مرحلة اليافعين (10-13 سنة):</span>
-                                <span class="text-[10px] text-slate-400">Levels 3-4</span>
-                            </div>
-                            <ul class="list-disc pr-4 space-y-1 text-slate-300 text-[11px]">
-                                <li><strong>لغة بايثون Python (10-11 س):</strong> ألعاب نصية وتطبيقات عملية.</li>
-                                <li><strong>تطوير تطبيقات الموبايل (12-13 س):</strong> واجهات وتطبيقات متصلة بالسحابة.</li>
-                            </ul>
-                        </div>
-
-                        <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-1.5">
-                            <div class="flex items-center justify-between">
-                                <span class="font-bold text-blue-300">🧑 مرحلة المتقدمين (14-18 سنة):</span>
-                                <span class="text-[10px] text-slate-400">Levels 5-6</span>
-                            </div>
-                            <ul class="list-disc pr-4 space-y-1 text-slate-300 text-[11px]">
-                                <li><strong>ويب وأمن سيبراني (14-15 س):</strong> مواقع Full-Stack واختبار ثغرات.</li>
-                                <li><strong>Unity AR (16-18 س):</strong> ألعاب واقع معزز بلغة #C وحوسبة مكانية.</li>
-                            </ul>
+                        <div class="p-2.5 rounded-xl bg-white border border-slate-200 text-[11px] text-slate-600">
+                            💡 <strong>الفكرة المكتسبة:</strong> دمج الـ AI المبكر مع مشروع لعبة لعرضه للأهل.
                         </div>
                     </div>
+
+                    <!-- Course 3 -->
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 text-[11px] font-black">الكورس الثالث (10 - 11 سنة)</span>
+                                <span class="text-xs text-slate-400">Level 3</span>
+                            </div>
+                            <h4 class="font-black text-slate-900 text-base">لغة بايثون وخوارزميات الكود</h4>
+                            <ul class="list-disc pr-4 space-y-1 text-xs text-slate-600">
+                                <li><strong>المحتوى:</strong> كتابة كود بايثون النصي، الجمل الشرطية، الدوال، والتفكير الخوارزمي.</li>
+                                <li><strong>المشروع النهائي:</strong> مشروع تطبيقي بالبايثون + عرض تقديمي عبر أدوات عرض تفاعلية.</li>
+                            </ul>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-white border border-slate-200 text-[11px] text-slate-600">
+                            💡 <strong>الفكرة المكتسبة:</strong> تدريب الطالب على شرح كوده بثقة (Presentation Skill).
+                        </div>
+                    </div>
+
+                    <!-- Course 4 -->
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 text-[11px] font-black">الكورس الرابع (12 - 13 سنة)</span>
+                                <span class="text-xs text-slate-400">Level 4</span>
+                            </div>
+                            <h4 class="font-black text-slate-900 text-base">تطبيقات الموبايل + بروفايل LinkedIn</h4>
+                            <ul class="list-disc pr-4 space-y-1 text-xs text-slate-600">
+                                <li><strong>المحتوى:</strong> تصميم وبرمجة تطبيقات الهواتف وربط البيانات السحابية.</li>
+                                <li class="text-blue-900 font-bold"><strong>المهارة الإضافية الذكية:</strong> إنشاء حساب رسمي للطالب على <strong>LinkedIn</strong> ونشر مشاريعه وشهاداته عليه!</li>
+                                <li><strong>المشروع النهائي:</strong> تطبيق هاتف منشور وموثق برابط مباشر على لينكد إن.</li>
+                            </ul>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-blue-50 border border-blue-200 text-[11px] text-blue-950 font-bold">
+                            ⭐ <strong>فكرة ذهبية لـ Mega Minds:</strong> توثيق شغل الطالب على LinkedIn فخر للأهل ودعاية ذاتية مجانية.
+                        </div>
+                    </div>
+
+                    <!-- Course 5 -->
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 text-[11px] font-black">الكورس الخامس (14 - 15 سنة)</span>
+                                <span class="text-xs text-slate-400">Level 5</span>
+                            </div>
+                            <h4 class="font-black text-slate-900 text-base">تطوير الويب والأمن السيبراني</h4>
+                            <ul class="list-disc pr-4 space-y-1 text-xs text-slate-600">
+                                <li><strong>المحتوى:</strong> مواقع كاملة Full-Stack + مبادئ فحص الثغرات والأمان.</li>
+                                <li class="text-rose-700"><strong>نقد فني:</strong> مستحيل استيعاب الفرونت والباك والـ APIs والثغرات في 12 سيشن!</li>
+                                <li><strong>المشروع النهائي:</strong> موقع ويب متكامل وبورتفوليو برمجيات.</li>
+                            </ul>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-white border border-slate-200 text-[11px] text-slate-600">
+                            💡 <strong>الفكرة المكتسبة:</strong> طرح واقعي وموثوق لمسار الويب بعدد حصص كافٍ.
+                        </div>
+                    </div>
+
+                    <!-- Course 6 -->
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 text-[11px] font-black">الكورس السادس (16 - 18 سنة)</span>
+                                <span class="text-xs text-slate-400">Level 6</span>
+                            </div>
+                            <h4 class="font-black text-slate-900 text-base">Unity 3D + بروفايل GitHub</h4>
+                            <ul class="list-disc pr-4 space-y-1 text-xs text-slate-600">
+                                <li><strong>المحتوى:</strong> ألعاب ثلاثية الأبعاد وواقع معزز بلغة #C.</li>
+                                <li class="text-blue-900 font-bold"><strong>المهارة الإضافية الذكية:</strong> إنشاء حساب حقيقي على <strong>GitHub</strong> ورفع أكواد المشاريع.</li>
+                                <li><strong>المشروع النهائي:</strong> 2 Final Projects (لعبة 3D احترافية + حساب GitHub موثق).</li>
+                            </ul>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-blue-50 border border-blue-200 text-[11px] text-blue-950 font-bold">
+                            ⭐ <strong>فكرة ذهبية لـ Mega Minds:</strong> إدراج GitHub الإلزامي يؤهل المتدرب للعمل الاحترافي.
+                        </div>
+                    </div>
+
                 </div>
-
             </div>
 
         </div>
 
-        <!-- 3. STRATEGIC RECOMMENDATIONS FOR MEGAMIND PROGRAMMING TRACKS -->
-        <div class="glass-card rounded-3xl border border-orange-500/30 p-6 md:p-8 shadow-2xl space-y-6">
-            <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
-                <span class="text-2xl p-2 rounded-2xl bg-orange-600/20 text-orange-400 border border-orange-500/30">💡</span>
+        <!-- 4. STRATEGIC RECOMMENDATIONS & ACTION ITEMS (Clear Light Cards - Exact User Strategy) -->
+        <div id="strategic-recommendations" class="clean-card rounded-3xl p-6 md:p-8 space-y-6">
+            <div class="flex items-center gap-3 border-b border-slate-100 pb-4">
+                <span class="text-2xl p-2 rounded-2xl bg-orange-100 text-orange-600">💡</span>
                 <div>
-                    <h3 class="text-lg md:text-xl font-black text-white">التوصيات الاستراتيجية لتطوير مسارات البرمجة في Megaminds Academy</h3>
-                    <p class="text-xs text-slate-400">خارطة طريق تنفيذية مقترحة للإدارة التعليمية والقيادة (CEO & Educational Director) لاقتناص الحصة السوقية في تعليم البرمجة</p>
+                    <h3 class="text-lg md:text-xl font-black text-slate-900">
+                        التوصيات الاستراتيجية لتطوير مسارات Mega Minds وتفوقها في السوق
+                    </h3>
+                    <p class="text-xs text-slate-500">خارطة طريق تنفيذية مقترحة للإدارة والقيادة التعليمية استناداً إلى نتائج التحليل المقارن</p>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-xs text-slate-300">
-                <!-- Rec 1 -->
-                <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-1.5">
-                    <div class="flex items-center gap-2 text-orange-400 font-bold text-sm">
-                        <span>1️⃣</span> محركات الألعاب الاحترافية (Godot & Unity)
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-xs text-slate-700">
+
+                <!-- Rec 1: Accreditations -->
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                    <div class="flex items-center gap-2 text-indigo-700 font-bold text-sm">
+                        <span>1️⃣</span> التركيز على الاعتمادات الرسمية
                     </div>
-                    <ul class="list-disc pr-4 space-y-1 text-slate-300 text-xs">
-                        <li>تسويق محرك <strong>Godot</strong> الخفيف لليافعين ومحرك <strong>Unity 3D</strong> المتقدم بلغة #C.</li>
-                        <li>إنتاج ألعاب حقيقية قابلة للنشر بدلاً من الاكتفاء بالألعاب البسيطة.</li>
+                    <ul class="list-disc pr-4 space-y-1 text-slate-600 text-xs leading-relaxed">
+                        <li>تكثيف التسويق لاعتماد <strong>STEM.org الدولي</strong> المعتمد رسمياً لدى Mega Minds.</li>
+                        <li>السعي لاستكمال شهادة إدارة جودة التعليم <strong>ISO 21001</strong> ورخصة <strong>IAIDL</strong> لمعادلة محفظة المنافسين بالكامل.</li>
                     </ul>
                 </div>
 
-                <!-- Rec 2 -->
-                <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-1.5">
-                    <div class="flex items-center gap-2 text-emerald-400 font-bold text-sm">
-                        <span>2️⃣</span> التسعير الاقتصادي والاشتراك الشهري
+                <!-- Rec 2: Robotics Advantage -->
+                <div class="p-5 rounded-2xl bg-orange-50 border border-orange-200 space-y-2">
+                    <div class="flex items-center gap-2 text-orange-800 font-black text-sm">
+                        <span>2️⃣</span> استثمار ميزة تفرد Mega Minds بالروبوتكس ⭐
                     </div>
-                    <ul class="list-disc pr-4 space-y-1 text-slate-300 text-xs">
-                        <li>طرح Megamind كـ <strong>البديل الأوفر والأذكى</strong> مقابل باقات iSchool الباهظة (6,600 ج لكل 3 شهور).</li>
-                        <li>الحفاظ على ميزة الاشتراك الشهري المرن (~800 - 1,200 ج.م) دون إلزام مالي طويل.</li>
+                    <ul class="list-disc pr-4 space-y-1 text-orange-950 text-xs leading-relaxed">
+                        <li>تتميز Mega Minds بوجود <strong>مسار روبوتكس واضح ومستقل</strong>، بينما يفتقر 3C و iSchool لمسار روبوتكس مستقل وحقيقي.</li>
+                        <li>جعل الروبوتكس الرافعة التسويقية الأولى التي تجعلنا مختلفين ومتميزين تماماً عن المنصات الأخرى.</li>
                     </ul>
                 </div>
 
-                <!-- Rec 3 -->
-                <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-1.5">
-                    <div class="flex items-center gap-2 text-indigo-400 font-bold text-sm">
-                        <span>3️⃣</span> استثمار اعتماد STEM.org والتوسع في ISO
+                <!-- Rec 3: 0% Interest Installments (Deep Dive) -->
+                <div class="p-5 rounded-2xl bg-emerald-50 border border-emerald-200 space-y-2.5">
+                    <div class="flex items-center gap-2 text-emerald-800 font-black text-sm">
+                        <span>3️⃣</span> اقتراح التقسيط بدون فوائد (0% Interest) 💳
                     </div>
-                    <ul class="list-disc pr-4 space-y-1 text-slate-300 text-xs">
-                        <li>تكثيف التسويق لاعتماد <strong>STEM.org الدولي</strong> الحاصلة عليه Megamind.</li>
-                        <li>التخطيط للحصول على شهادة جودة التعليم <strong>ISO 21001</strong> ورخصة <strong>IAIDL</strong> لمضاهاة المنافسين.</li>
+                    <ul class="list-disc pr-4 space-y-1.5 text-emerald-950 text-xs leading-relaxed">
+                        <li><strong>البُعد الشرعي والاجتماعي:</strong> تقسيط بدون فوائد منعاً لأي شبهة ربوية، وتيسيراً على أولياء الأمور غير القادرين على دفع المبالغ كاملة مقدماً.</li>
+                        <li><strong>مكسب الأكاديمية:</strong> ضمان اشتراك سنوي مستمر للطالب (High Retention) وضمان تدفقات مالية مستقرة.</li>
+                        <li><strong>تغطية التكلفة:</strong> تتحمل Mega Minds نسبة رسوم التقسيط لشركة التمويل، ونعتبرها <strong>ميزانية إعلانات ممولة واكتساب عملاء (CAC)</strong> بدلاً من هدر الميزانية على إعلانات لجلب عميل يتردد بسبب السعر الكاش.</li>
+                        <li><strong>التوقيت:</strong> إتاحة التقسيط في مواسم محددة (Back to School، العطلة الصيفية) وليس طوال العام.</li>
                     </ul>
                 </div>
 
-                <!-- Rec 4 -->
-                <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-1.5">
-                    <div class="flex items-center gap-2 text-blue-400 font-bold text-sm">
-                        <span>4️⃣</span> ميكنة بنك اختبارات البرمجة (Forms)
+                <!-- Rec 4: GitHub & LinkedIn Skills -->
+                <div class="p-5 rounded-2xl bg-blue-50 border border-blue-200 space-y-2">
+                    <div class="flex items-center gap-2 text-blue-800 font-bold text-sm">
+                        <span>4️⃣</span> تضمين مهارات GitHub و LinkedIn بالمناهج
                     </div>
-                    <ul class="list-disc pr-4 space-y-1 text-slate-300 text-xs">
-                        <li>سرعة إنجاز تكليف المحاضرين بتوليد نماذج اختبارات الـ Forms لكل مستوى.</li>
-                        <li>إصدار شهادات إتمام ذكية توثق مشاريع الكود بعد اجتياز كل اختبار.</li>
+                    <ul class="list-disc pr-4 space-y-1 text-blue-950 text-xs leading-relaxed">
+                        <li>إلزام طلاب مرحلة المتقدمين بإنشاء بروفايل حقيقي على <strong>GitHub</strong> ورفع مشاريعهم عليه.</li>
+                        <li>تدريب اليافعين على عمل بروفايل <strong>LinkedIn</strong> موثق بالشهادات والمشاريع، لخلق فخر عائلي ودعاية عضوية للأكاديمية.</li>
                     </ul>
                 </div>
 
-                <!-- Rec 5 -->
-                <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-1.5">
-                    <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
-                        <span>5️⃣</span> سياسة التجميد والجدولة المريحة
+                <!-- Rec 5: Mandatory Final Project & Showcase -->
+                <div class="p-5 rounded-2xl bg-purple-50 border border-purple-200 space-y-2">
+                    <div class="flex items-center gap-2 text-purple-800 font-bold text-sm">
+                        <span>5️⃣</span> إلزامية المشروع النهائي (Final Project & Presentation)
                     </div>
-                    <ul class="list-disc pr-4 space-y-1 text-slate-300 text-xs">
-                        <li>إعلان رصيد رسمي لتجميد الجلسات أو إعادة جدولتها عند الظروف الطارئة.</li>
-                        <li>رفع معدل احتفاظ أولياء الأمور (Retention Rate) ومضاعفة ولائهم.</li>
+                    <ul class="list-disc pr-4 space-y-1 text-purple-950 text-xs leading-relaxed">
+                        <li>إلزام كل كورس بإنتاج مخرج برمجي نهائي ملموس (لعبة، تطبيق، موقع).</li>
+                        <li>جلسة عرض تقديمي (Showcase Presentation) يحضرها ولي الأمر لمعالجة شكوى غياب النتيجة الملموسة.</li>
                     </ul>
                 </div>
 
-                <!-- Rec 6 -->
-                <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-1.5">
-                    <div class="flex items-center gap-2 text-purple-400 font-bold text-sm">
-                        <span>6️⃣</span> إضافة مسار تطوير المواقع Full-Stack
+                <!-- Rec 6: Minecraft & Roblox Policy + Curricula Verdict -->
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                    <div class="flex items-center gap-2 text-slate-800 font-bold text-sm">
+                        <span>6️⃣</span> سياسة Minecraft وخلاصة تميز المناهج
                     </div>
-                    <ul class="list-disc pr-4 space-y-1 text-slate-300 text-xs">
-                        <li>إعداد مسار تطوير المواقع الكاملة (HTML/CSS/JS) لمرحلة المتقدمين (14-18 سنة).</li>
-                        <li>سد الفجوة التنافسية أمام مسارات الويب القوية في 3C School و iSchool.</li>
+                    <ul class="list-disc pr-4 space-y-1 text-slate-600 text-xs leading-relaxed">
+                        <li>ماينكرافت في 3C مجرد دعاية، ولن نضيفها حالياً نظراً للتكلفة، والاعتماد على PictoBlox و Godot أقوى تعليمياً.</li>
+                        <li><strong>الخلاصة:</strong> لا يوجد تفوق حقيقي في المناهج لدى المنافسين، وأفكار Mega Minds أكثر عمقاً، وتطبيق التوصيات السابقة يضمن الصدارة التامة.</li>
                     </ul>
                 </div>
+
             </div>
         </div>
 
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 border-t border-slate-800 text-slate-500 text-xs py-6 mt-auto">
-        <div class="max-w-7xl mx-auto px-4 text-center space-y-2">
-            <p>دراسة مقارنة مناهج البرمجة للأكاديميات التقنية • تم إعداد التقرير الميداني والتحليلي لصالح الإدارة التعليمية والقيادة التنفيذية</p>
-            <p class="text-slate-600">Megamind Academy © 2026 • جميع الحقوق محفوظة</p>
+    <footer class="bg-white border-t border-slate-200 text-slate-500 text-xs py-6 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-1.5">
+            <p class="font-bold text-slate-700">دراسة مقارنة الأكاديميات والمناهج والاعتمادات • التقرير المعتمد للإدارة التعليمية والقيادة التنفيذية</p>
+            <p class="text-slate-400">Mega Minds Academy © 2026 • جميع الحقوق محفوظة</p>
         </div>
     </footer>
 
