@@ -85,9 +85,9 @@
             </div>
             
             <!-- Quick Progress Bar in Header -->
-            <div class="bg-slate-900/80 backdrop-blur-md p-3 rounded-2xl border border-orange-500/30 min-w-[280px]">
+            <div class="bg-slate-900/80 backdrop-blur-md p-3 rounded-2xl border border-orange-500/30 min-w-[290px]">
                 <div class="flex justify-between items-center text-xs font-bold mb-1.5">
-                    <span class="text-orange-200 flex items-center gap-1">⚡ نسبة إنجاز الخطة التنفيذية</span>
+                    <span class="text-orange-200 flex items-center gap-1" title="محسوبة على المهام النشطة فقط وتستثني المهام المعلقة">⚡ نسبة إنجاز المهام النشطة</span>
                     <span id="overall-progress-text" class="text-orange-400 font-extrabold">0%</span>
                 </div>
                 <div class="w-full bg-slate-950 rounded-full h-2.5 overflow-hidden border border-orange-900/40">
@@ -101,57 +101,70 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
 
         <!-- Executive KPI Cards -->
-        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-            <div class="bg-white p-5 rounded-2xl border border-orange-100 shadow-sm hover:shadow-md transition hover:border-orange-300">
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 mb-8">
+            <div class="bg-white p-4.5 rounded-2xl border border-orange-100 shadow-sm hover:shadow-md transition hover:border-orange-300">
                 <div class="flex items-center justify-between">
                     <div>
-                        <p class="text-xs font-bold text-orange-600 uppercase tracking-wider">إجمالي المهام</p>
+                        <p class="text-xs font-bold text-orange-600 uppercase tracking-wider">المهام النشطة</p>
                         <h3 id="kpi-total-tasks" class="text-3xl font-extrabold text-slate-800 mt-1">0</h3>
                     </div>
-                    <div class="w-12 h-12 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center text-xl font-bold border border-orange-100 shadow-inner">
+                    <div class="w-11 h-11 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center text-xl font-bold border border-orange-100 shadow-inner">
                         📌
                     </div>
                 </div>
-                <p class="text-xs text-slate-500 mt-2">خطة العمل والمسارات الأكاديمية</p>
+                <p class="text-[11px] text-slate-500 mt-2 font-medium">المهام الجارية والمكتملة</p>
             </div>
 
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition hover:border-red-300">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <p class="text-xs font-bold text-red-500 uppercase tracking-wider">المهام العاجلة</p>
-                        <h3 id="kpi-urgent-tasks" class="text-3xl font-extrabold text-red-600 mt-1">0</h3>
-                    </div>
-                    <div class="w-12 h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center text-xl font-bold border border-red-100 shadow-inner">
-                        🚨
-                    </div>
-                </div>
-                <p class="text-xs text-slate-500 mt-2">تتطلب تنفيذاً ومتابعة فورية</p>
-            </div>
-
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition hover:border-amber-300">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <p class="text-xs font-bold text-amber-600 uppercase tracking-wider">قيد التنفيذ</p>
-                        <h3 id="kpi-in-progress" class="text-3xl font-extrabold text-amber-600 mt-1">0</h3>
-                    </div>
-                    <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl font-bold border border-amber-100 shadow-inner">
-                        ⏳
-                    </div>
-                </div>
-                <p class="text-xs text-slate-500 mt-2">جاري العمل والتطوير عليها</p>
-            </div>
-
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition hover:border-emerald-300">
+            <div class="bg-white p-4.5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition hover:border-emerald-300">
                 <div class="flex items-center justify-between">
                     <div>
                         <p class="text-xs font-bold text-emerald-600 uppercase tracking-wider">المهام المكتملة</p>
                         <h3 id="kpi-completed-tasks" class="text-3xl font-extrabold text-emerald-600 mt-1">0</h3>
                     </div>
-                    <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl font-bold border border-emerald-100 shadow-inner">
+                    <div class="w-11 h-11 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl font-bold border border-emerald-100 shadow-inner">
                         ✅
                     </div>
                 </div>
-                <p class="text-xs text-slate-500 mt-2">تم إنهاؤها وتسليمها بنجاح</p>
+                <p class="text-[11px] text-slate-500 mt-2 font-medium">تم إنهاؤها بنجاح</p>
+            </div>
+
+            <div class="bg-white p-4.5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition hover:border-amber-300">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-xs font-bold text-amber-600 uppercase tracking-wider">قيد التنفيذ</p>
+                        <h3 id="kpi-in-progress" class="text-3xl font-extrabold text-amber-600 mt-1">0</h3>
+                    </div>
+                    <div class="w-11 h-11 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl font-bold border border-amber-100 shadow-inner">
+                        ⏳
+                    </div>
+                </div>
+                <p class="text-[11px] text-slate-500 mt-2 font-medium">جاري العمل عليها</p>
+            </div>
+
+            <div class="bg-white p-4.5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition hover:border-red-300">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-xs font-bold text-red-500 uppercase tracking-wider">المهام العاجلة</p>
+                        <h3 id="kpi-urgent-tasks" class="text-3xl font-extrabold text-red-600 mt-1">0</h3>
+                    </div>
+                    <div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center text-xl font-bold border border-red-100 shadow-inner">
+                        🚨
+                    </div>
+                </div>
+                <p class="text-[11px] text-slate-500 mt-2 font-medium">متابعة فورية للمهام النشطة</p>
+            </div>
+
+            <div class="bg-gradient-to-br from-amber-50/90 to-white p-4.5 rounded-2xl border border-amber-300 shadow-sm hover:shadow-md transition hover:border-amber-400">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-xs font-bold text-amber-800 uppercase tracking-wider">مهام معلقة (مترتبة)</p>
+                        <h3 id="kpi-dependent-tasks" class="text-3xl font-extrabold text-amber-900 mt-1">0</h3>
+                    </div>
+                    <div class="w-11 h-11 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl font-bold border border-amber-200 shadow-inner">
+                        🔗
+                    </div>
+                </div>
+                <p class="text-[11px] text-amber-700/90 mt-2 font-bold">مستبعدة من النسبة (حاجة على حاجة)</p>
             </div>
         </section>
 
@@ -227,7 +240,7 @@
                         <button onclick="setFilterStatus('all')" id="filter-status-all" class="px-3 py-1.5 rounded-lg bg-orange-600 text-white font-bold shadow-xs transition">الكل</button>
                         <button onclick="setFilterStatus('completed')" id="filter-status-completed" class="px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-300 hover:bg-emerald-600 hover:text-white transition font-bold">المكتملة والمعالجة ✅</button>
                         <button onclick="setFilterStatus('in_progress')" id="filter-status-in_progress" class="px-3 py-1.5 rounded-lg bg-amber-50 text-amber-800 border border-amber-300 hover:bg-amber-600 hover:text-white transition font-bold">قيد التنفيذ ⏳</button>
-                        <button onclick="setFilterStatus('pending')" id="filter-status-pending" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 border border-slate-300 hover:bg-slate-700 hover:text-white transition font-bold">في الانتظار 📋</button>
+                        <button onclick="setFilterStatus('pending')" id="filter-status-pending" class="px-3 py-1.5 rounded-lg bg-amber-50 text-amber-900 border border-amber-300 hover:bg-amber-600 hover:text-white transition font-bold">مهام معلقة (مترتبة) 🔗</button>
                     </div>
 
                     <!-- Assignee & Priority Filters -->
@@ -252,9 +265,51 @@
                 </div>
             </div>
 
-            <!-- Dynamic Tasks Grid -->
-            <div id="tasks-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- Tasks will be rendered dynamically via JavaScript -->
+            <!-- SECTION A: ACTIVE & COMPLETED TASKS SCOPE -->
+            <div id="section-active-wrapper" class="space-y-4">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 pb-3">
+                    <div class="flex items-center gap-2.5">
+                        <span class="w-8 h-8 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-sm shadow-2xs">⚡</span>
+                        <div>
+                            <h3 class="text-base font-extrabold text-slate-900">المهام التشغيلية النشطة والمنجزة (Active & Completed Scope)</h3>
+                            <p class="text-xs text-slate-500">المهام الجاري العمل عليها والمكتملة (المحتسبة حصراً ضمن نسبة الإنجاز ومؤشرات الأداء العامة)</p>
+                        </div>
+                    </div>
+                    <span id="active-tasks-badge" class="text-xs font-bold px-3 py-1 rounded-full bg-orange-50 text-orange-700 border border-orange-200 shrink-0 self-start sm:self-auto">
+                        0 مهمة نشطة
+                    </span>
+                </div>
+
+                <div id="active-tasks-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Tasks rendered dynamically via JavaScript -->
+                </div>
+            </div>
+
+            <!-- SECTION B: DEPENDENT & ON-HOLD PIPELINE (حاجة مترتبة على حاجة) -->
+            <div id="section-dependent-wrapper" class="mt-10 pt-6 border-t-2 border-dashed border-amber-300 space-y-4">
+                <div class="bg-gradient-to-r from-amber-50 via-orange-50/50 to-slate-50 p-5 rounded-2xl border border-amber-200 flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-2xs">
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-xl shrink-0 shadow-sm">
+                            🔗
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2 flex-wrap">
+                                <h3 class="text-base font-black text-amber-950">مهام معلقة ومترتبة على اكتمال مهام سابقة (حاجة مترتبة على حاجة)</h3>
+                                <span class="bg-amber-200/90 text-amber-900 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full border border-amber-300">مسار التبعيات (Dependent Pipeline)</span>
+                            </div>
+                            <p class="text-xs text-amber-900/90 mt-1 leading-relaxed">
+                                هذه المهام مؤجلة ومجمدة مؤقتاً لوجود تبعية مسبقة؛ <strong>لا تُحسب ضمن النسبة المئوية لإنجاز المهام النشطة</strong> لضمان عدالة التقييم، وتُفعّل وتنتقل تلقائياً للقسم النشط فور اكتمال المهمة المرتبطة بها.
+                            </p>
+                        </div>
+                    </div>
+                    <span id="dependent-tasks-badge" class="text-xs font-extrabold px-3 py-1.5 rounded-xl bg-white text-amber-800 border border-amber-200 shadow-xs shrink-0 self-start md:self-auto">
+                        0 مهمة معلقة
+                    </span>
+                </div>
+
+                <div id="dependent-tasks-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Dependent tasks rendered dynamically via JavaScript -->
+                </div>
             </div>
         </div>
 
@@ -1156,8 +1211,13 @@
                 time: "معلق / متوقف على الانتهاء من تعديل المناهج الأساسية ⏸️",
                 priority: "عاجل",
                 status: "pending",
-                description: "إعداد وتنظيم خطة جدولة تزامنية لإسناد مهام توليد وإعداد النماذج الاختبارية والتقييمات الخاصة بكل منهج لكبار المحاضرين (Instructors). المهمة معلقة وموقوفة مؤقتاً (On Hold) ريثما يتم الانتهاء التام من مراجعة وتعديل المناهج الأساسية واعتماد نسختها النهائية تجنباً لتوليد نماذج لمحتوى قيد التعديل والتحديث.",
-                latestUpdate: "المهمة متوقفة حالياً (On Hold): تم إيقاف جدولة وتكليف المحاضرين بنماذج الـ Forms لحين الانتهاء التام من تعديل المناهج الأساسية واعتمادها نهائياً لتفادي هدر وقت وجهد المهندسين.",
+                isDependent: true,
+                dependencyInfo: {
+                    waitingFor: "الانتهاء التام من مراجعة وتعديل المناهج الأساسية واعتماد النسخ النهائية (تاسك 8 و 18)",
+                    actionOnUnlock: "فور اعتماد المناهج ➔ يتم نقل المهمة تلقائياً للمهام النشطة وتكليف المحاضرين بنماذج Forms"
+                },
+                description: "إعداد وتنظيم خطة جدولة تزامنية لإسناد مهام توليد وإعداد النماذج الاختبارية والتقييمات الخاصة بكل منهج لكبار المحاضرين (Instructors). المهمة معلقة وموقوفة مؤقتاً لوجود تبعية مسبقة، ومستبعدة من حساب نسبة الإنجاز لتفادي خفض المؤشر لحين اعتماد المناهج.",
+                latestUpdate: "المهمة متوقفة حالياً (حاجة مترتبة على حاجة): تم تعليق جدولة وتكليف المحاضرين بنماذج الـ Forms وفصلها في مسار التبعيات لحين الانتهاء التام من تعديل المناهج الأساسية واعتمادها نهائياً.",
                 links: [],
                 attachments: []
             },
@@ -1283,9 +1343,159 @@
             updateChartsData();
         }
 
-        // Render Dynamic Tasks Grid
+        // Build Single Task Card HTML
+        function buildTaskCardHtml(task, isDependent = false) {
+            const isCompleted = task.status === 'completed';
+
+            let priorityBadge = '';
+            if (task.priority === 'عاجل') priorityBadge = '<span class="px-2.5 py-1 rounded-md text-xs font-bold bg-red-100 text-red-700 border border-red-200">عاجل 🚨</span>';
+            else if (task.priority === 'مرتفع') priorityBadge = '<span class="px-2.5 py-1 rounded-md text-xs font-bold bg-amber-100 text-amber-800 border border-amber-200">مرتفع 🔥</span>';
+            else priorityBadge = '<span class="px-2.5 py-1 rounded-md text-xs font-bold bg-blue-100 text-blue-700 border border-blue-200">متوسط 📋</span>';
+
+            let statusBadge = '';
+            if (isCompleted) {
+                statusBadge = '<span class="cursor-pointer px-3 py-1 rounded-full text-xs font-extrabold bg-emerald-600 text-white shadow-xs hover:bg-emerald-700 transition">✅ تمت المعالجة بنجاح</span>';
+            } else if (task.status === 'in_progress') {
+                statusBadge = '<span class="cursor-pointer px-3 py-1 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300 hover:bg-amber-200 transition">⏳ قيد التنفيذ</span>';
+            } else {
+                statusBadge = '<span class="cursor-pointer px-3 py-1 rounded-full text-xs font-extrabold bg-amber-100 text-amber-900 border border-amber-300 hover:bg-amber-200 transition">🔗 معلقة (مترتبة على سابقتها)</span>';
+            }
+
+            let assigneeLabel = (task.assignee === 'EducationalDirector' || task.assignee === 'Mega') ? 'المدير التعليمي (Educational Director)' : 'م. أحمد (CEO)';
+
+            let descHtml = task.description ? `<p class="text-xs text-slate-600 leading-relaxed mb-2 bg-slate-50 p-3 rounded-xl border border-slate-200/70">${task.description}</p>` : '';
+
+            // Dependency Box for dependent tasks (حاجة مترتبة على حاجة)
+            let dependencyHtml = '';
+            if (task.dependencyInfo || isDependent || task.isDependent) {
+                const dep = task.dependencyInfo || {
+                    waitingFor: "الانتهاء التام من مراجعة وتعديل المناهج الأساسية واعتماد النسخ النهائية (المهمة 8 و 18)",
+                    actionOnUnlock: "فور اكتمال تعديل المناهج ➔ يتم نقل المهمة تلقائياً للمهام النشطة وتكليف المحاضرين بنماذج Forms"
+                };
+                dependencyHtml = `
+                    <div class="mt-3 p-3.5 rounded-xl bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-300 text-amber-950 space-y-2 shadow-2xs">
+                        <div class="flex items-start gap-2 font-bold text-xs text-amber-900">
+                            <span class="text-base shrink-0">🛑</span>
+                            <div>
+                                <strong class="block text-amber-950">شرط التفعيل والتبعية المسبقة:</strong>
+                                <span class="font-normal text-amber-900">${dep.waitingFor}</span>
+                            </div>
+                        </div>
+                        <div class="pt-2 border-t border-amber-200/70 flex items-start gap-2 text-[11px] text-amber-900">
+                            <span class="text-sm shrink-0">⛓️</span>
+                            <span><strong>المسار التالي:</strong> ${dep.actionOnUnlock}</span>
+                        </div>
+                        <div class="pt-1 text-[10px] text-amber-700 font-bold flex items-center gap-1">
+                            <span>ℹ️</span> هذه المهمة مستبعدة تماماً من حساب نسبة الإنجاز لضمان عدالة قياس أداء المهام النشطة.
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Prominent Latest Update Callout Box
+            let updateBox = '';
+            if (task.latestUpdate) {
+                if (isCompleted) {
+                    updateBox = `
+                        <div class="mt-3 p-3 rounded-xl bg-emerald-100/90 border border-emerald-300 text-emerald-950 font-medium text-xs flex items-start gap-2 shadow-xs">
+                            <span class="text-base shrink-0">💡</span>
+                            <div>
+                                <strong class="font-bold text-emerald-950 block mb-0.5">الإجراء المتخذ والتحديث الأخير:</strong>
+                                <p class="text-xs leading-relaxed font-semibold text-emerald-950">${task.latestUpdate}</p>
+                            </div>
+                        </div>
+                    `;
+                } else if (task.status === 'in_progress') {
+                    updateBox = `
+                        <div class="mt-3 p-3 rounded-xl bg-amber-50/90 border border-amber-200 text-amber-950 font-medium text-xs flex items-start gap-2">
+                            <span class="text-base shrink-0">📌</span>
+                            <div>
+                                <strong class="font-bold text-amber-950 block mb-0.5">أحدث التحديثات ومسار التنفيذ:</strong>
+                                <p class="text-xs leading-relaxed text-amber-900 font-medium">${task.latestUpdate}</p>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    updateBox = `
+                        <div class="mt-3 p-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 font-medium text-xs flex items-start gap-2">
+                            <span class="text-base shrink-0">⏸️</span>
+                            <div>
+                                <strong class="font-bold text-slate-900 block mb-0.5">حالة التجميد والتعليق:</strong>
+                                <p class="text-xs leading-relaxed text-slate-700 font-medium">${task.latestUpdate}</p>
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+
+            let linksHtml = '';
+            if (task.links && task.links.length > 0) {
+                linksHtml = `
+                    <div class="mt-3 pt-2 border-t border-slate-100 space-y-1.5">
+                        <span class="text-xs font-bold text-slate-500 block">🔗 الروابط والمقترحات المرفقة:</span>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 items-center">
+                            ${task.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-center gap-1.5 text-xs font-bold text-indigo-800 bg-indigo-50 hover:bg-indigo-100 px-3 py-1.5 rounded-xl border border-indigo-200 shadow-2xs transition w-full">${l.label}</a>`).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+
+            let attachmentsHtml = '';
+            if (task.attachments && task.attachments.length > 0) {
+                attachmentsHtml = `
+                    <div class="mt-2 flex flex-wrap gap-2 items-center">
+                        <span class="text-xs font-bold text-slate-500">📎 المرفقات:</span>
+                        ${task.attachments.map(a => `<a href="${a.url}" target="_blank" download class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 px-2.5 py-1 rounded-lg border border-emerald-200/80 shadow-sm transition">📄 ${a.name} ${a.size ? `<span class="text-[10px] text-emerald-600 font-normal">(${a.size})</span>` : ''}</a>`).join('')}
+                    </div>
+                `;
+            }
+
+            let cardClass = "";
+            if (isCompleted) {
+                cardClass = "bg-gradient-to-br from-emerald-50/50 via-white to-emerald-50/20 p-5 rounded-2xl border-2 border-emerald-400 shadow-md shadow-emerald-500/5 hover:shadow-lg transition flex flex-col justify-between space-y-3";
+            } else if (isDependent || task.status === 'pending' || task.isDependent) {
+                cardClass = "bg-gradient-to-br from-amber-50/40 via-white to-orange-50/30 p-5 rounded-2xl border-2 border-dashed border-amber-300 shadow-sm hover:border-amber-400 hover:shadow-md transition flex flex-col justify-between space-y-3";
+            } else {
+                cardClass = "bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-orange-200 transition flex flex-col justify-between space-y-3";
+            }
+
+            return `
+                <div class="${cardClass}">
+                    <div>
+                        <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
+                            <span class="text-xs font-bold ${isCompleted ? 'text-emerald-800 bg-emerald-100 border border-emerald-300' : (isDependent || task.status === 'pending' ? 'text-amber-900 bg-amber-100 border border-amber-300' : 'text-slate-600 bg-slate-100 border border-slate-200/60')} px-2.5 py-0.5 rounded-lg">${task.category}</span>
+                            <span class="text-xs font-bold ${isDependent || task.status === 'pending' ? 'text-amber-900 bg-amber-50 border border-amber-200' : 'text-orange-700 bg-orange-50 border border-orange-200/80'} px-2 py-0.5 rounded-lg">⏱️ ${task.time}</span>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-sm leading-snug mb-2 flex items-center justify-between gap-2">
+                            <span>${task.title}</span>
+                            ${isCompleted ? '<span class="text-emerald-600 text-base shrink-0">✨</span>' : (isDependent || task.status === 'pending' ? '<span class="text-amber-600 text-base shrink-0">🔗</span>' : '')}
+                        </h4>
+                        ${descHtml}
+                        ${dependencyHtml}
+                        ${updateBox}
+                        ${linksHtml}
+                        ${attachmentsHtml}
+                    </div>
+
+                    <div class="pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs font-bold text-slate-600">المسؤول: ${assigneeLabel}</span>
+                            ${priorityBadge}
+                        </div>
+                        <div onclick="toggleTaskStatus(${task.id})" title="اضغط لتغيير الحالة">
+                            ${statusBadge}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Render Dynamic Tasks Grid in Two Distinct Sections
         function renderTasks() {
-            const container = document.getElementById('tasks-container');
+            const activeContainer = document.getElementById('active-tasks-container');
+            const dependentContainer = document.getElementById('dependent-tasks-container');
+            const activeWrapper = document.getElementById('section-active-wrapper');
+            const dependentWrapper = document.getElementById('section-dependent-wrapper');
             const searchVal = document.getElementById('search-input').value.toLowerCase().trim();
             const priorityVal = document.getElementById('priority-select').value;
 
@@ -1302,137 +1512,91 @@
                 return matchesAssignee && matchesPriority && matchesStatus && matchesSearch;
             });
 
-            // Group / Sort: Completed tasks placed at the top when viewing 'all'
+            // Split into Active Scope and Dependent / On-Hold Pipeline
+            let activeList = filtered.filter(t => t.status !== 'pending' && !t.isDependent);
+            let dependentList = filtered.filter(t => t.status === 'pending' || t.isDependent);
+
+            // Group / Sort Active tasks: Completed tasks placed at the top when viewing 'all'
             if (activeStatusFilter === 'all') {
-                filtered.sort((a, b) => {
+                activeList.sort((a, b) => {
                     if (a.status === 'completed' && b.status !== 'completed') return -1;
                     if (a.status !== 'completed' && b.status === 'completed') return 1;
                     return a.id - b.id;
                 });
             }
 
-            if (filtered.length === 0) {
-                container.innerHTML = `
-                    <div class="col-span-full bg-white p-8 rounded-2xl border border-slate-200 text-center text-slate-500">
-                        لا توجد مهام مطابقة للشروط المحددة.
-                    </div>
-                `;
-                return;
-            }
+            // Update Section Badges
+            const activeBadge = document.getElementById('active-tasks-badge');
+            if (activeBadge) activeBadge.innerText = `${activeList.length} مهمة نشطة`;
 
-            container.innerHTML = filtered.map(task => {
-                const isCompleted = task.status === 'completed';
+            const depBadge = document.getElementById('dependent-tasks-badge');
+            if (depBadge) depBadge.innerText = `${dependentList.length} مهمة معلقة (مترتبة)`;
 
-                let priorityBadge = '';
-                if (task.priority === 'عاجل') priorityBadge = '<span class="px-2.5 py-1 rounded-md text-xs font-bold bg-red-100 text-red-700 border border-red-200">عاجل 🚨</span>';
-                else if (task.priority === 'مرتفع') priorityBadge = '<span class="px-2.5 py-1 rounded-md text-xs font-bold bg-amber-100 text-amber-800 border border-amber-200">مرتفع 🔥</span>';
-                else priorityBadge = '<span class="px-2.5 py-1 rounded-md text-xs font-bold bg-blue-100 text-blue-700 border border-blue-200">متوسط 📋</span>';
-
-                let statusBadge = '';
-                if (isCompleted) statusBadge = '<span class="cursor-pointer px-3 py-1 rounded-full text-xs font-extrabold bg-emerald-600 text-white shadow-xs hover:bg-emerald-700 transition">✅ تمت المعالجة بنجاح</span>';
-                else if (task.status === 'in_progress') statusBadge = '<span class="cursor-pointer px-3 py-1 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300 hover:bg-amber-200 transition">⏳ قيد التنفيذ</span>';
-                else statusBadge = '<span class="cursor-pointer px-3 py-1 rounded-full text-xs font-extrabold bg-slate-100 text-slate-700 border border-slate-300 hover:bg-slate-200 transition">📋 في الانتظار</span>';
-
-                let assigneeLabel = (task.assignee === 'EducationalDirector' || task.assignee === 'Mega') ? 'المدير التعليمي (Educational Director)' : 'م. أحمد (CEO)';
-
-                let descHtml = task.description ? `<p class="text-xs text-slate-600 leading-relaxed mb-2 bg-slate-50 p-3 rounded-xl border border-slate-200/70">${task.description}</p>` : '';
-
-                // Prominent Latest Update Callout Box
-                let updateBox = '';
-                if (task.latestUpdate) {
-                    if (isCompleted) {
-                        updateBox = `
-                            <div class="mt-3 p-3 rounded-xl bg-emerald-100/90 border border-emerald-300 text-emerald-950 font-medium text-xs flex items-start gap-2 shadow-xs">
-                                <span class="text-base shrink-0">💡</span>
-                                <div>
-                                    <strong class="font-bold text-emerald-950 block mb-0.5">الإجراء المتخذ والتحديث الأخير:</strong>
-                                    <p class="text-xs leading-relaxed font-semibold text-emerald-950">${task.latestUpdate}</p>
-                                </div>
-                            </div>
-                        `;
-                    } else {
-                        updateBox = `
-                            <div class="mt-3 p-3 rounded-xl bg-amber-50/90 border border-amber-200 text-amber-950 font-medium text-xs flex items-start gap-2">
-                                <span class="text-base shrink-0">📌</span>
-                                <div>
-                                    <strong class="font-bold text-amber-950 block mb-0.5">أحدث التحديثات ومسار التنفيذ:</strong>
-                                    <p class="text-xs leading-relaxed text-amber-900 font-medium">${task.latestUpdate}</p>
-                                </div>
+            // Render Active Section
+            if (activeList.length === 0) {
+                if (activeStatusFilter === 'pending') {
+                    if (activeWrapper) activeWrapper.classList.add('hidden');
+                } else {
+                    if (activeWrapper) activeWrapper.classList.remove('hidden');
+                    if (activeContainer) {
+                        activeContainer.innerHTML = `
+                            <div class="col-span-full bg-white p-8 rounded-2xl border border-slate-200 text-center text-slate-500 text-xs">
+                                لا توجد مهام نشطة مطابقة لشروط البحث أو التصفية الحالية.
                             </div>
                         `;
                     }
                 }
-
-                let linksHtml = '';
-                if (task.links && task.links.length > 0) {
-                    linksHtml = `
-                        <div class="mt-3 pt-2 border-t border-slate-100 space-y-1.5">
-                            <span class="text-xs font-bold text-slate-500 block">🔗 الروابط والمقترحات المرفقة:</span>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 items-center">
-                                ${task.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-center gap-1.5 text-xs font-bold text-indigo-800 bg-indigo-50 hover:bg-indigo-100 px-3 py-1.5 rounded-xl border border-indigo-200 shadow-2xs transition w-full">${l.label}</a>`).join('')}
-                            </div>
-                        </div>
-                    `;
+            } else {
+                if (activeWrapper) activeWrapper.classList.remove('hidden');
+                if (activeContainer) {
+                    activeContainer.innerHTML = activeList.map(task => buildTaskCardHtml(task, false)).join('');
                 }
+            }
 
-                let attachmentsHtml = '';
-                if (task.attachments && task.attachments.length > 0) {
-                    attachmentsHtml = `
-                        <div class="mt-2 flex flex-wrap gap-2 items-center">
-                            <span class="text-xs font-bold text-slate-500">📎 المرفقات:</span>
-                            ${task.attachments.map(a => `<a href="${a.url}" target="_blank" download class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 px-2.5 py-1 rounded-lg border border-emerald-200/80 shadow-sm transition">📄 ${a.name} ${a.size ? `<span class="text-[10px] text-emerald-600 font-normal">(${a.size})</span>` : ''}</a>`).join('')}
-                        </div>
-                    `;
+            // Render Dependent Section (حاجة مترتبة على حاجة)
+            if (dependentList.length === 0) {
+                if (activeStatusFilter === 'completed' || activeStatusFilter === 'in_progress') {
+                    if (dependentWrapper) dependentWrapper.classList.add('hidden');
+                } else {
+                    if (dependentWrapper) dependentWrapper.classList.remove('hidden');
+                    if (dependentContainer) {
+                        dependentContainer.innerHTML = `
+                            <div class="col-span-full bg-white p-6 rounded-2xl border border-slate-200 text-center text-slate-500 text-xs">
+                                لا توجد مهام معلقة أو مترتبة حالياً.
+                            </div>
+                        `;
+                    }
                 }
-
-                const cardClass = isCompleted
-                    ? "bg-gradient-to-br from-emerald-50/50 via-white to-emerald-50/20 p-5 rounded-2xl border-2 border-emerald-400 shadow-md shadow-emerald-500/5 hover:shadow-lg transition flex flex-col justify-between space-y-3"
-                    : "bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-orange-200 transition flex flex-col justify-between space-y-3";
-
-                return `
-                    <div class="${cardClass}">
-                        <div>
-                            <div class="flex items-center justify-between mb-2">
-                                <span class="text-xs font-bold ${isCompleted ? 'text-emerald-800 bg-emerald-100 border border-emerald-300' : 'text-slate-600 bg-slate-100 border border-slate-200/60'} px-2.5 py-0.5 rounded-lg">${task.category}</span>
-                                <span class="text-xs font-bold text-orange-700 bg-orange-50 border border-orange-200/80 px-2 py-0.5 rounded-lg">⏱️ ${task.time}</span>
-                            </div>
-                            <h4 class="font-bold text-slate-800 text-sm leading-snug mb-2 flex items-center justify-between gap-2">
-                                <span>${task.title}</span>
-                                ${isCompleted ? '<span class="text-emerald-600 text-base shrink-0">✨</span>' : ''}
-                            </h4>
-                            ${descHtml}
-                            ${updateBox}
-                            ${linksHtml}
-                            ${attachmentsHtml}
-                        </div>
-
-                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
-                            <div class="flex items-center gap-2">
-                                <span class="text-xs font-bold text-slate-600">المسؤول: ${assigneeLabel}</span>
-                                ${priorityBadge}
-                            </div>
-                            <div onclick="toggleTaskStatus(${task.id})" title="اضغط لتغيير الحالة">
-                                ${statusBadge}
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }).join('');
+            } else {
+                if (dependentWrapper) dependentWrapper.classList.remove('hidden');
+                if (dependentContainer) {
+                    dependentContainer.innerHTML = dependentList.map(task => buildTaskCardHtml(task, true)).join('');
+                }
+            }
         }
 
-        // Update KPIs and Progress
+        // Update KPIs and Progress (Excluding dependent/pending tasks from active percentage calculation)
         function updateKPIs() {
-            const total = tasksState.length;
-            const urgent = tasksState.filter(t => t.priority === 'عاجل').length;
-            const inProgress = tasksState.filter(t => t.status === 'in_progress').length;
-            const completed = tasksState.filter(t => t.status === 'completed').length;
+            // Active scope: all tasks EXCEPT pending / dependent tasks
+            const activeTasks = tasksState.filter(t => t.status !== 'pending' && !t.isDependent);
+            const dependentTasks = tasksState.filter(t => t.status === 'pending' || t.isDependent);
 
-            document.getElementById('kpi-total-tasks').innerText = total;
+            const totalActive = activeTasks.length;
+            const completed = activeTasks.filter(t => t.status === 'completed').length;
+            const inProgress = activeTasks.filter(t => t.status === 'in_progress').length;
+            const urgent = activeTasks.filter(t => t.priority === 'عاجل').length;
+            const dependentCount = dependentTasks.length;
+
+            document.getElementById('kpi-total-tasks').innerText = totalActive;
             document.getElementById('kpi-urgent-tasks').innerText = urgent;
             document.getElementById('kpi-in-progress').innerText = inProgress;
             document.getElementById('kpi-completed-tasks').innerText = completed;
+            if (document.getElementById('kpi-dependent-tasks')) {
+                document.getElementById('kpi-dependent-tasks').innerText = dependentCount;
+            }
 
-            const percent = total > 0 ? Math.round((completed / total) * 100) : 0;
+            // Calculation based exclusively on active tasks:
+            const percent = totalActive > 0 ? Math.round((completed / totalActive) * 100) : 0;
             document.getElementById('overall-progress-text').innerText = `${percent}%`;
             document.getElementById('overall-progress-bar').style.width = `${percent}%`;
         }
@@ -1527,13 +1691,14 @@
         }
 
         function getAssigneeChartData() {
-            const ahmedCount = tasksState.filter(t => t.assignee === 'Ahmed').length;
-            const directorCount = tasksState.filter(t => t.assignee === 'EducationalDirector' || t.assignee === 'Mega').length;
+            const activeTasks = tasksState.filter(t => t.status !== 'pending' && !t.isDependent);
+            const ahmedCount = activeTasks.filter(t => t.assignee === 'Ahmed').length;
+            const directorCount = activeTasks.filter(t => t.assignee === 'EducationalDirector' || t.assignee === 'Mega').length;
 
             return {
                 labels: ['م. أحمد (CEO)', 'المدير التعليمي (Educational Director)'],
                 datasets: [{
-                    label: 'عدد المهام',
+                    label: 'المهام النشطة',
                     data: [ahmedCount, directorCount],
                     backgroundColor: ['#0284c7', '#4f46e5'],
                     borderRadius: 8
@@ -1542,9 +1707,10 @@
         }
 
         function getPriorityChartData() {
-            const urgent = tasksState.filter(t => t.priority === 'عاجل').length;
-            const high = tasksState.filter(t => t.priority === 'مرتفع').length;
-            const medium = tasksState.filter(t => t.priority === 'متوسط').length;
+            const activeTasks = tasksState.filter(t => t.status !== 'pending' && !t.isDependent);
+            const urgent = activeTasks.filter(t => t.priority === 'عاجل').length;
+            const high = activeTasks.filter(t => t.priority === 'مرتفع').length;
+            const medium = activeTasks.filter(t => t.priority === 'متوسط').length;
 
             return {
                 labels: ['عاجل 🚨', 'مرتفع 🔥', 'متوسط 📋'],
