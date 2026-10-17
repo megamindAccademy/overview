@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطة تعديل مدة الجلسات (1.5 ساعة) وسعة المجموعات (5-6 أطفال) - Mega Minds Academy</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        .clean-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+        }
+        .hover-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+            transition: all 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased selection:bg-orange-500 selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50 shadow-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <a href="./index.html" class="w-10 h-10 rounded-xl bg-orange-50 text-orange-600 hover:bg-orange-600 hover:text-white flex items-center justify-center font-bold text-lg border border-orange-200 transition shadow-xs" title="العودة للوحة التحكم">
+                    ➔
+                </a>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <h1 class="text-lg md:text-xl font-black text-slate-900 tracking-tight">Mega Minds Academy</h1>
+                        <span class="bg-amber-100 text-amber-800 text-[11px] font-extrabold px-2.5 py-0.5 rounded-full border border-amber-200">وثيقة السياسات والتشغيل ⏱️</span>
+                    </div>
+                    <p class="text-xs text-slate-500 font-medium mt-0.5">خطة التطبيق المرحلي لزمن الجلسات (ساعة ونصف) وسعة المجموعات (5-6 أطفال) وتفادي الضغط المزدوج</p>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-2 text-xs font-bold">
+                <a href="#dilemma" class="px-3 py-1.5 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200 transition">
+                    ⚖️ معضلة الضغط المزدوج
+                </a>
+                <a href="#stages" class="px-3 py-1.5 rounded-xl bg-orange-50 text-orange-700 hover:bg-orange-100 border border-orange-200 transition">
+                    👶 Junior مقابل Expert 💻
+                </a>
+                <a href="#roadmap" class="px-3 py-1.5 rounded-xl bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200 transition">
+                    🗓️ مراحل التحول (نموذج رمضان)
+                </a>
+                <a href="#audit-matrix" class="px-3 py-1.5 rounded-xl bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200 transition">
+                    📊 مصفوفة المقارنة والقرارات
+                </a>
+                <a href="./index.html" class="px-3 py-1.5 rounded-xl bg-slate-800 text-white hover:bg-slate-700 transition">
+                    📌 لوحة المهام
+                </a>
+                <button onclick="window.print()" class="px-3 py-1.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-extrabold transition shadow-sm">
+                    🖨️ طباعة
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 flex-1">
+
+        <!-- Hero Banner: The Core Strategy -->
+        <div class="clean-card rounded-3xl p-6 md:p-8 bg-gradient-to-br from-white via-orange-50/30 to-amber-50/40 border-orange-200 space-y-4">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div class="space-y-1">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-orange-800 text-xs font-extrabold border border-orange-200">
+                        <span>🎯</span> التوجيه الاستراتيجي المعتمد للإدارة التعليمية
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">
+                        إعادة هيكلة زمن الجلسات وسعة المجموعات بمنهجية تدريجية مستندة للبيانات
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-600 leading-relaxed max-w-4xl pt-1">
+                        الانتقال المنظم من ساعتين إلى <strong>ساعة ونصف (90 دقيقة)</strong> مع سعة <strong>5 إلى 6 طلاب</strong>، عبر تطبيق داخلي مرن لمدة شهر (شبيه بنموذج رمضان) لرصد المشاكل الواقعية في المناهج وتفادي التعديل العشوائي أو إرهاق المهندسين والطلاب.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-2 shrink-0 md:text-left">
+                    <div class="bg-white px-4 py-3 rounded-2xl border border-slate-200 shadow-xs text-center">
+                        <span class="block text-[11px] font-semibold text-slate-500">حالة الخطة</span>
+                        <span class="font-extrabold text-amber-600 text-sm">⏳ قيد الإعداد والتجربة الداخلية</span>
+                    </div>
+                    <div class="bg-white px-4 py-3 rounded-2xl border border-slate-200 shadow-xs text-center">
+                        <span class="block text-[11px] font-semibold text-slate-500">المدة التجريبية</span>
+                        <span class="font-extrabold text-slate-800 text-sm">شهر تجريبي داخلي (30 يوماً)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 1. THE DOUBLE LOAD DILEMMA (معضلة الضغط المزدوج) -->
+        <div id="dilemma" class="clean-card rounded-3xl p-6 md:p-8 space-y-6">
+            <div class="border-b border-slate-100 pb-4">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-50 text-rose-700 text-xs font-bold border border-rose-200 mb-2">
+                    <span>⚖️</span> تشخيص التحدي التشغيلي والأكاديمي
+                </div>
+                <h3 class="text-xl md:text-2xl font-black text-slate-900">
+                    معضلة "الضغط المزدوج" (Double Load) ولماذا نرفض التعديل النظري العشوائي؟
+                </h3>
+                <p class="text-xs text-slate-500 mt-1">فهم أبعاد التغيير وحماية عمق المناهج ومخرجات التعلم</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <!-- Point 1 -->
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2.5">
+                    <div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-700 flex items-center justify-center font-black text-lg">
+                        1
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-sm">المناهج مصممة ومبنية لساعتين كاملتين</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        جميع المسارات والمقررات الحالية (سلايدات، شروحات، تمارين كودينج، ومشاريع مصغرة) كُتبت على أساس <strong>120 دقيقة</strong> كاملة. تقليص 25% من الوقت دون تعديل مدروس يهدد بقطع أجزاء جوهرية من الدرس.
+                    </p>
+                </div>
+
+                <!-- Point 2 -->
+                <div class="p-5 rounded-2xl bg-rose-50 border border-rose-200 space-y-2.5">
+                    <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center font-black text-lg">
+                        2
+                    </div>
+                    <h4 class="font-bold text-rose-900 text-sm">الضغط المزدوج (وقت أقل + طلاب أكثر)</h4>
+                    <p class="text-xs text-rose-950 leading-relaxed">
+                        إذا قمنا في وقت واحد بتقليص الجلسة إلى 1.5 ساعة ورفع أو تثبيت الطلاب عند 5-6 أطفال، سيتعرض المهندس لـ <strong>Double Load</strong> مفاجئ، مما قد يدفعه للاستعجال وإهمال المتابعة الدقيقة لكل طفل.
+                    </p>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="p-5 rounded-2xl bg-emerald-50 border border-emerald-200 space-y-2.5">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-black text-lg">
+                        3
+                    </div>
+                    <h4 class="font-bold text-emerald-900 text-sm">تجنب التعديل "الوهمي" دون رصد واقعي</h4>
+                    <p class="text-xs text-emerald-950 leading-relaxed">
+                        لا يصح الدخول في تعديل كل المناهج نظرياً على الورق وتقليل محتواها عشوائياً. الحل العلمي هو <strong>رصد المشاكل الواقعية في الميدان أولاً</strong> ثم التدخل الجراحي فقط في الدروس المزدحمة فعلياً.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Callout: Why Ramadan Model is the Reference -->
+            <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 flex items-start gap-3">
+                <span class="text-2xl">💡</span>
+                <div class="text-xs leading-relaxed space-y-1">
+                    <p class="font-bold text-amber-900">الاسترشاد بتجربة "شهر رمضان المبارك":</p>
+                    <p class="text-amber-800">
+                        في رمضان تم تقليص الجلسات إلى ساعة ونصف بنجاح كبير، وأثبتت التجربة الميدانية أن هناك عدداً كبيراً من المهندسين الأكفاء يستطيعون بالفعل إكمال محتوى الحصة كاملاً في 90 دقيقة دون أدنى خلل، بينما تظهر المشاكل فقط في دروس معينة دسمة، وهذا ما سنركز عليه.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. STAGE SENSITIVITY: JUNIOR VS EXPERT TRACKS (خصوصية المراحل) -->
+        <div id="stages" class="clean-card rounded-3xl p-6 md:p-8 space-y-6">
+            <div class="border-b border-slate-100 pb-4">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold border border-blue-200 mb-2">
+                    <span>👥</span> التمايز الأكاديمي والعمري
+                </div>
+                <h3 class="text-xl md:text-2xl font-black text-slate-900">
+                    تحليل خصوصية المراحل: تحدي مرحلة الجونيور مقابل مرحلة المتقدمين (Expert Track)
+                </h3>
+                <p class="text-xs text-slate-500 mt-1">لماذا لا يمكن معاملة كل الفئات العمرية بنفس المسطرة الواحدة؟</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Junior Track Card -->
+                <div class="p-6 rounded-2xl bg-blue-50/50 border border-blue-200 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">👶</span>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-base">مرحلة الجونيور (Junior Track: 6 - 9 سنوات)</h4>
+                                <span class="text-[11px] text-blue-700 font-semibold">المقررات: PictoBlox, Scratch Jr, Visual Logic</span>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-full bg-blue-100 text-blue-800 font-extrabold text-xs">حساسية مرتفعة ⚠️</span>
+                    </div>
+
+                    <div class="space-y-2 text-xs text-slate-700 leading-relaxed">
+                        <p class="font-bold text-slate-900">🔍 طبيعة الصعوبة والمشكلة الميدانية:</p>
+                        <ul class="list-disc pr-4 space-y-1.5 text-slate-600">
+                            <li>الأطفال في هذا السن يحتاجون <strong>اهتماماً ورعاية فردية وتفرغاً لكل طفل على حدة</strong> (مساعدة في فتح البرنامج، حركة الماوس، حل تعليق الشاشة، إعادة الشرح بأسلوب مبسط).</li>
+                            <li>مع 5 إلى 6 أطفال في 90 دقيقة، سيكون نصيب كل طفل من المتابعة الفردية نحو <strong>12 إلى 15 دقيقة فقط</strong>، وهو ما قد يشعر أولياء الأمور بعدم كفاية الاهتمام.</li>
+                        </ul>
+
+                        <div class="p-3 bg-white rounded-xl border border-blue-200 text-blue-900 space-y-1">
+                            <span class="font-bold text-xs">🛠️ الحل التشغيلي المقترح:</span>
+                            <p class="text-[11px] leading-relaxed">
+                                • الإبقاء على سعة مجموعات الجونيور في حدود <strong>4 إلى 5 أطفال فقط كحد أقصى</strong> (عدم تجاوز 5).<br>
+                                • تبسيط المهام التطبيقية في الجلسة ونقل أجزاء الاستكشاف الإضافية للمنصة كمهام اختيارية ممتعة.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expert Track Card -->
+                <div class="p-6 rounded-2xl bg-purple-50/50 border border-purple-200 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">💻</span>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-base">مرحلة المتقدمين (Expert Track: 13+ سنة)</h4>
+                                <span class="text-[11px] text-purple-700 font-semibold">المقررات: Advanced Python, Godot, Web Full-Stack, AI</span>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-full bg-purple-100 text-purple-800 font-extrabold text-xs">كثافة تقنية 🧠</span>
+                    </div>
+
+                    <div class="space-y-2 text-xs text-slate-700 leading-relaxed">
+                        <p class="font-bold text-slate-900">🔍 طبيعة الصعوبة والمشكلة الميدانية:</p>
+                        <ul class="list-disc pr-4 space-y-1.5 text-slate-600">
+                            <li>المحتوى البرمجي متقدم ودسم للغاية (Advanced Logic, Syntax, Debugging Errors, Engine Physics).</li>
+                            <li>خطأ برمجي واحد (Syntax / Logic Bug) لدى طالبين أو ثلاثة قد يبتلع نصف ساعة من وقت الجلسة، مما يجعل إنهاء الـ Curriculum في 90 دقيقة أمراً مستحيلاً دون حل المشاكل.</li>
+                        </ul>
+
+                        <div class="p-3 bg-white rounded-xl border border-purple-200 text-purple-900 space-y-1">
+                            <span class="font-bold text-xs">🛠️ الحل التشغيلي المقترح:</span>
+                            <p class="text-[11px] leading-relaxed">
+                                • فرز وحصر الدروس المزدحمة بالأكواد لتقسيمها على جلستين بدلاً من جلسة واحدة (Modular Splitting).<br>
+                                • استخدام استراتيجية "الكود الهيكلي الجاهز" (Boilerplate Code) وتوجيه وقت الطالب لجوهر المنطق بدلاً من كتابة كل شيء من الصفر.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Foundation & Explorer Note -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between flex-wrap gap-3">
+                <div class="flex items-center gap-2">
+                    <span class="text-lg">✅</span>
+                    <span class="text-xs font-bold text-slate-800">المرحلتان الأساسية والمتوسطة (Foundation & Explorer - 9 إلى 12 سنة):</span>
+                    <span class="text-xs text-slate-600">أكثر المراحل جاهزية وسلاسة في استيعاب نظام (1.5 ساعة + 5-6 أطفال) دون تعديلات معقدة.</span>
+                </div>
+                <span class="text-[11px] font-bold text-emerald-700 bg-emerald-100 px-2.5 py-0.5 rounded-full">جاهزية تشغيلية عالية</span>
+            </div>
+        </div>
+
+        <!-- 3. GRADUAL ROADMAP: THE 3-PHASE PLAN (خطة العمل المرحلية) -->
+        <div id="roadmap" class="clean-card rounded-3xl p-6 md:p-8 space-y-6">
+            <div class="border-b border-slate-100 pb-4">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-200 mb-2">
+                    <span>🗓️</span> خارطة الطريق التنفيذية
+                </div>
+                <h3 class="text-xl md:text-2xl font-black text-slate-900">
+                    مراحل التحول التدريجي: من التجربة الداخلية المرنة إلى الإعلان الرسمي العام
+                </h3>
+                <p class="text-xs text-slate-500 mt-1">آلية التنفيذ العملية خطوة بخطوة لضمان ثبات الجودة ورضا أولياء الأمور</p>
+            </div>
+
+            <div class="relative border-r-2 border-orange-200 mr-4 pr-6 space-y-8">
+
+                <!-- Step 1 -->
+                <div class="relative">
+                    <div class="absolute -right-9 top-0.5 w-6 h-6 rounded-full bg-orange-600 text-white flex items-center justify-center text-xs font-bold ring-4 ring-orange-100">
+                        1
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs space-y-2">
+                        <div class="flex items-center justify-between flex-wrap gap-2">
+                            <h4 class="font-extrabold text-slate-900 text-sm">المرحلة الأولى: التطبيق الداخلي المرن (لمدة شهر كامل)</h4>
+                            <span class="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 font-bold text-xs">داخلي فقط (دون إبلاغ أولياء الأمور)</span>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            • التوجيه الداخلي للمهندسين بأن <strong>المستهدف الأساسي لكل جلسة هو ساعة ونصف (90 دقيقة)</strong>.<br>
+                            • <strong>صمام الأمان والمرونة التشغيلية:</strong> إذا احتاج المهندس إلى وقت إضافي لإكمال التطبيق أو حل مشاكل الطلاب حتى ساعتين، فالأمر متاح تماماً دون أي لوم أو ضغط تشغيلي.<br>
+                            • الهدف هو إشاعة ثقافة إدارة الوقت بسلاسة واكتشاف قدرة كل مهندس على تلخيص وإدارة الجلسة.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative">
+                    <div class="absolute -right-9 top-0.5 w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold ring-4 ring-blue-100">
+                        2
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs space-y-2">
+                        <div class="flex items-center justify-between flex-wrap gap-2">
+                            <h4 class="font-extrabold text-slate-900 text-sm">المرحلة الثانية: استمارة رصد وحصر اختناقات المناهج (Curricula Audit)</h4>
+                            <span class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 font-bold text-xs">رصد ميداني وتدقيق بيانات</span>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            • تدشين سجل أسبوعي أو استمارة سريعة لكل مهندس بعد الجلسة لتسجيل الملاحظات:<br>
+                            &nbsp;&nbsp;&nbsp;1. هل أنهيت في 1.5 ساعة أم احتجت لساعتين؟<br>
+                            &nbsp;&nbsp;&nbsp;2. ما هو الدرس المحدد أو الكونسيبت الذي استهلك وقتاً طويلاً؟<br>
+                            &nbsp;&nbsp;&nbsp;3. ما هي مقترحاتك لتسهيل أو تخفيف هذا الدرس تحديداً؟<br>
+                            • فرز البيانات لحصر الدروس التي تحتاج فعلياً لتدخل جراحي أو تقسيم أو تخفيف (Actionable Curricula Tweaks).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative">
+                    <div class="absolute -right-9 top-0.5 w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold ring-4 ring-emerald-100">
+                        3
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs space-y-2">
+                        <div class="flex items-center justify-between flex-wrap gap-2">
+                            <h4 class="font-extrabold text-slate-900 text-sm">المرحلة الثالثة: التعديل الفعلي والاعتماد العام لأولياء الأمور</h4>
+                            <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs">إعلان رسمي واستقرار تشغيلي</span>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            • تعديل المحتوى في الدروس المزدحمة المحددة فقط وتوفير قوالب دعم ومشاريع منزلية واضحة.<br>
+                            • بعد التأكد التام من استقرار كل المناهج ضمن إطار الـ 90 دقيقة دون أدنى خلل، يتم <strong>إعلان وتثبيت مدة الجلسة (ساعة ونصف) رسمياً لولي الأمر</strong> وبناء جداول المواعيد والمجموعات الجديدة عليها بثقة تامة.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 4. OPERATIONAL DECISION MATRIX (مصفوفة القرارات والمقارنة) -->
+        <div id="audit-matrix" class="clean-card rounded-3xl p-6 md:p-8 space-y-6">
+            <div class="border-b border-slate-100 pb-4">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold border border-slate-200 mb-2">
+                    <span>📊</span> مصفوفة المقارنة المعيارية للخيارات
+                </div>
+                <h3 class="text-xl md:text-2xl font-black text-slate-900">
+                    مصفوفة المقارنة التشغيلية: الوضع الحالي vs الوضع التجريبي vs الوضع النهائي
+                </h3>
+                <p class="text-xs text-slate-500 mt-1">تحديد الفروق الجوهرية والآثار التشغيلية والأكاديمية لكل مرحلة</p>
+            </div>
+
+            <div class="overflow-x-auto custom-scrollbar">
+                <table class="w-full text-right text-xs border-collapse">
+                    <thead>
+                        <tr class="bg-slate-100/80 text-slate-700 border-b border-slate-200">
+                            <th class="p-3.5 font-extrabold rounded-r-xl">وجه المقارنة</th>
+                            <th class="p-3.5 font-extrabold">الوضع السابق (Past Baseline)</th>
+                            <th class="p-3.5 font-extrabold bg-amber-50/70 text-amber-900">المرحلة الانتقالية الحالية (1 Month Pilot)</th>
+                            <th class="p-3.5 font-extrabold bg-emerald-50/70 text-emerald-900 rounded-l-xl">الوضع النهائي المستهدف (Target Rollout)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr class="hover:bg-slate-50/50 transition">
+                            <td class="p-3.5 font-bold text-slate-800">مدة الجلسة الرسمية</td>
+                            <td class="p-3.5 text-slate-600">ساعتان (120 دقيقة)</td>
+                            <td class="p-3.5 bg-amber-50/30 font-bold text-amber-900">
+                                90 دقيقة أساسية (مع مرونة حتى 120 دقيقة)
+                            </td>
+                            <td class="p-3.5 bg-emerald-50/30 font-bold text-emerald-900">
+                                ساعة ونصف ثابتة (90 دقيقة)
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50/50 transition">
+                            <td class="p-3.5 font-bold text-slate-800">حجم المجموعة (Junior)</td>
+                            <td class="p-3.5 text-slate-600">مفتوح / غير محدد بدقة</td>
+                            <td class="p-3.5 bg-amber-50/30 font-bold text-amber-900">
+                                4 إلى 5 أطفال كحد أقصى (لضمان الرعاية الفردية)
+                            </td>
+                            <td class="p-3.5 bg-emerald-50/30 font-bold text-emerald-900">
+                                4 إلى 5 أطفال معتمد وثابت
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50/50 transition">
+                            <td class="p-3.5 font-bold text-slate-800">حجم المجموعة (باقي المراحل)</td>
+                            <td class="p-3.5 text-slate-600">6 إلى 8 طلاب</td>
+                            <td class="p-3.5 bg-amber-50/30 font-bold text-amber-900">
+                                5 إلى 6 طلاب
+                            </td>
+                            <td class="p-3.5 bg-emerald-50/30 font-bold text-emerald-900">
+                                5 إلى 6 طلاب بحد أقصى صارم
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50/50 transition">
+                            <td class="p-3.5 font-bold text-slate-800">حالة المناهج وتعديلها</td>
+                            <td class="p-3.5 text-slate-600">مصممة بالكامل لساعتين</td>
+                            <td class="p-3.5 bg-amber-50/30 font-bold text-amber-900">
+                                الاحتفاظ بالمناهج + حصر الاختناقات الميدانية
+                            </td>
+                            <td class="p-3.5 bg-emerald-50/30 font-bold text-emerald-900">
+                                مناهج رشيقة ومحدثة تناسب الـ 90 دقيقة تماماً
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50/50 transition">
+                            <td class="p-3.5 font-bold text-slate-800">إشعار ولي الأمر</td>
+                            <td class="p-3.5 text-slate-600">يعلم أن الجلسة ساعتان</td>
+                            <td class="p-3.5 bg-amber-50/30 text-slate-600">
+                                داخلي فقط بدون إعلان خارجي لتفادي الارتباك
+                            </td>
+                            <td class="p-3.5 bg-emerald-50/30 font-bold text-emerald-900">
+                                إعلان رسمي شفاف وموثق بمزايا التركيز
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50/50 transition">
+                            <td class="p-3.5 font-bold text-slate-800">درجة إرهاق المهندس والطالب</td>
+                            <td class="p-3.5 text-rose-600 font-bold">مرتفعة (تشتت في آخر نصف ساعة)</td>
+                            <td class="p-3.5 bg-amber-50/30 text-amber-800 font-medium">متوسطة (قيد التعود والتنسيق)</td>
+                            <td class="p-3.5 bg-emerald-50/30 text-emerald-700 font-bold">منخفضة جداً (أعلى تركيز وإنتاجية)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 5. INTERACTIVE BOTTLENECK AUDIT FORM PROTOTYPE (نموذج حصر مشاكل المناهج للمهندسين) -->
+        <div class="clean-card rounded-3xl p-6 md:p-8 space-y-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 pb-4">
+                <div>
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-50 text-orange-700 text-xs font-bold border border-orange-200 mb-2">
+                        <span>📝</span> نموذج العمل الميداني (Instructor Logging Prototype)
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-black text-slate-900">
+                        نموذج رصد تقييم المحاضر للجلسة والمنهج (نموذج تجريبي تفاعلي)
+                    </h3>
+                    <p class="text-xs text-slate-500 mt-1">النموذج الذي سيستخدمه المحاضرون أسبوعياً لتوثيق مدى ملاءمة وقت الجلسة للمحتوى</p>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-slate-100 text-slate-600">
+                    أداة جمع البيانات الميدانية 📋
+                </span>
+            </div>
+
+            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">اسم المحاضر / المهندس</label>
+                        <input type="text" id="log-instructor" placeholder="مثال: م. أحمد عبد الله" class="w-full text-xs p-2.5 rounded-xl border border-slate-300 bg-white focus:outline-none focus:border-orange-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">المسار والمرحلة</label>
+                        <select id="log-track" class="w-full text-xs p-2.5 rounded-xl border border-slate-300 bg-white focus:outline-none focus:border-orange-500">
+                            <option value="junior">Junior Track (PictoBlox / Visual)</option>
+                            <option value="foundation">Foundation Track (Python Basics)</option>
+                            <option value="explorer">Explorer Track (Godot / Web)</option>
+                            <option value="expert">Expert Track (Advanced Python / AI / Unity)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">عدد الطلاب الفعلي بالجلسة</label>
+                        <input type="number" id="log-students" placeholder="5" min="1" max="10" class="w-full text-xs p-2.5 rounded-xl border border-slate-300 bg-white focus:outline-none focus:border-orange-500">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">الزمن الفعلي المستغرق بالجلسة</label>
+                        <div class="grid grid-cols-3 gap-2">
+                            <button type="button" onclick="selectDuration('90')" id="dur-90" class="dur-btn p-2 rounded-xl border border-slate-300 bg-white text-xs font-bold text-slate-700 hover:border-orange-500">
+                                90 دقيقة (كافية تماماً)
+                            </button>
+                            <button type="button" onclick="selectDuration('105')" id="dur-105" class="dur-btn p-2 rounded-xl border border-slate-300 bg-white text-xs font-bold text-slate-700 hover:border-orange-500">
+                                105 دقيقة (مضغوطة)
+                            </button>
+                            <button type="button" onclick="selectDuration('120')" id="dur-120" class="dur-btn p-2 rounded-xl border border-slate-300 bg-white text-xs font-bold text-slate-700 hover:border-orange-500">
+                                120 دقيقة (لم تكفِ 90 دقيقة)
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">الدرس أو الكونسيبت الذي سبب تأخيراً (إن وجد)</label>
+                        <input type="text" id="log-topic" placeholder="مثال: سيشن Functions مع تمرين الآلة الحاسبة" class="w-full text-xs p-2.5 rounded-xl border border-slate-300 bg-white focus:outline-none focus:border-orange-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">توصية المحاضر الأكاديمية لهذا الدرس</label>
+                    <textarea id="log-notes" rows="2" placeholder="اكتب ملاحظاتك: هل يحتاج الدرس إلى تقسيمه لجلستين؟ هل يحتاج لتخفيف الأمثلة؟ أو تجهيز كود جاهز لتوفير وقت الكتابة؟" class="w-full text-xs p-2.5 rounded-xl border border-slate-300 bg-white focus:outline-none focus:border-orange-500"></textarea>
+                </div>
+
+                <div class="flex justify-end gap-2">
+                    <button type="button" onclick="submitLogRecord()" class="px-5 py-2 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs shadow-xs transition">
+                        ➕ تسجيل الملاحظة في جدول الرصد
+                    </button>
+                </div>
+            </div>
+
+            <!-- Realtime Logs Table -->
+            <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                    <h4 class="font-bold text-slate-800 text-xs">سجل الملاحظات الميدانية المرصودة (أمثلة ونماذج واقعية):</h4>
+                    <span id="log-count" class="text-[11px] font-bold text-slate-500">3 ملاحظات مسجلة</span>
+                </div>
+                <div class="overflow-x-auto custom-scrollbar">
+                    <table class="w-full text-right text-xs border border-slate-200 rounded-xl overflow-hidden">
+                        <thead class="bg-slate-100 text-slate-700 font-bold">
+                            <tr>
+                                <th class="p-2.5">المحاضر</th>
+                                <th class="p-2.5">المسار والمرحلة</th>
+                                <th class="p-2.5">الطلاب</th>
+                                <th class="p-2.5">الزمن الفعلي</th>
+                                <th class="p-2.5">الدرس المعني</th>
+                                <th class="p-2.5">التوصية المقترحة</th>
+                            </tr>
+                        </thead>
+                        <tbody id="logs-tbody" class="divide-y divide-slate-100 bg-white">
+                            <tr>
+                                <td class="p-2.5 font-bold text-slate-800">م. سارة أحمد</td>
+                                <td class="p-2.5 text-blue-700 font-semibold">Junior Track</td>
+                                <td class="p-2.5">6 أطفال</td>
+                                <td class="p-2.5 text-rose-600 font-bold">120 دقيقة</td>
+                                <td class="p-2.5">PictoBlox AI Recognition</td>
+                                <td class="p-2.5 text-slate-600">العدد 6 مع أطفال 7 سنوات استهلك وقتاً طويلاً لضبط الكاميرا لكل طفل. يفضل تقليص العدد لـ 4 أطفال.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2.5 font-bold text-slate-800">م. عمر حسن</td>
+                                <td class="p-2.5 text-emerald-700 font-semibold">Foundation Track</td>
+                                <td class="p-2.5">5 أطفال</td>
+                                <td class="p-2.5 text-emerald-600 font-bold">90 دقيقة</td>
+                                <td class="p-2.5">Python Variables & Loops</td>
+                                <td class="p-2.5 text-slate-600">الوقت كان كافياً جداً والشرح والتطبيق انتهيا بدقة في 85 دقيقة والطلاب كانوا في كامل تركيزهم.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2.5 font-bold text-slate-800">م. زياد طارق</td>
+                                <td class="p-2.5 text-purple-700 font-semibold">Expert Track</td>
+                                <td class="p-2.5">5 أطفال</td>
+                                <td class="p-2.5 text-amber-600 font-bold">105 دقيقة</td>
+                                <td class="p-2.5">Godot 2D Physics Bodies</td>
+                                <td class="p-2.5 text-slate-600">درس الـ Collision والـ Signals دسم ويحتاج فصله إلى شقين أو توفير Boilerplate للمشهد لتوفير 20 دقيقة.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. EXECUTIVE SUMMARY & NEXT STEPS (الخلاصة والتوصيات التنفيذية) -->
+        <div class="clean-card rounded-3xl p-6 md:p-8 bg-slate-900 text-white space-y-6">
+            <div class="border-b border-slate-800 pb-4">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-500/20 text-orange-400 text-xs font-bold border border-orange-500/30 mb-2">
+                    <span>📌</span> التوصيات وخطة التحرك الفوري
+                </div>
+                <h3 class="text-xl md:text-2xl font-black text-white">
+                    القرارات المعتمدة لبدء تطبيق خطة الساعة ونصف التدريجية
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs leading-relaxed">
+                <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-2">
+                    <div class="flex items-center gap-2 font-bold text-orange-400 text-sm">
+                        <span>1️⃣</span> البدء الفوري بنظام "رمضان الداخلي" (1 Month Pilot)
+                    </div>
+                    <p class="text-slate-300">
+                        التوجيه لجميع المحاضرين بأن المستهدف هو 90 دقيقة، مع السماح التام بالوصول لساعتين دون مساءلة عند الحاجة، وذلك لمدة 30 يوماً متتالية.
+                    </p>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-2">
+                    <div class="flex items-center gap-2 font-bold text-orange-400 text-sm">
+                        <span>2️⃣</span> تثبيت خصوصية مرحلة الجونيور (4 - 5 أطفال كحد أقصى)
+                    </div>
+                    <p class="text-slate-300">
+                        استثناء مجموعات الصغار من سعة الـ 6 طلاب مؤقتاً، وتحديد سعتها بين 4 إلى 5 أطفال فقط لضمان تفرغ المحاضر لكل طفل والحفاظ على ثقة أولياء الأمور.
+                    </p>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-2">
+                    <div class="flex items-center gap-2 font-bold text-orange-400 text-sm">
+                        <span>3️⃣</span> تفعيل استمارة حصر التعثرات والدروس المزدحمة
+                    </div>
+                    <p class="text-slate-300">
+                        جمع تقارير أسبوعية من المحاضرين لحصر الدروس التي واجهت ضيق وقت، لتحديد ما يحتاج لتقسيم أو قوالب كود جاهزة (Boilerplates) قبل تعديل المناهج رسمياً.
+                    </p>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-2">
+                    <div class="flex items-center gap-2 font-bold text-orange-400 text-sm">
+                        <span>4️⃣</span> تأجيل الإعلان الخارجي لأولياء الأمور لحين ثبات النظام
+                    </div>
+                    <p class="text-slate-300">
+                        عدم إخطار أولياء الأمور بأي تخفيض في زمن الجلسة حالياً، والانتظار حتى انتهاء الشهر التجريبي ومعالجة الملاحظات، لتسويق الـ 90 دقيقة كميزة تركيز وكفاءة متقدمة.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-2 flex flex-wrap items-center justify-between gap-3 border-t border-slate-800">
+                <span class="text-xs text-slate-400">الإدارة التعليمية • Mega Minds Academy 2026</span>
+                <a href="./index.html" class="px-5 py-2 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs transition">
+                    العودة للوحة المهام الرئيسية ➔
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 text-slate-500 text-xs py-6 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-1.5">
+            <p class="font-bold text-slate-700">وثيقة السياسات التعليمية والتشغيلية • مراجعة زمن الجلسات وسعة المجموعات</p>
+            <p class="text-slate-400">Mega Minds Academy © 2026 • جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        let selectedDuration = '90';
+
+        function selectDuration(dur) {
+            selectedDuration = dur;
+            document.querySelectorAll('.dur-btn').forEach(btn => {
+                btn.classList.remove('bg-orange-600', 'text-white', 'border-orange-600');
+                btn.classList.add('bg-white', 'text-slate-700', 'border-slate-300');
+            });
+            const activeBtn = document.getElementById(`dur-${dur}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white', 'text-slate-700', 'border-slate-300');
+                activeBtn.classList.add('bg-orange-600', 'text-white', 'border-orange-600');
+            }
+        }
+
+        // Initialize duration button
+        selectDuration('90');
+
+        function submitLogRecord() {
+            const instructor = document.getElementById('log-instructor').value.trim() || 'م. غير محدد';
+            const trackSelect = document.getElementById('log-track');
+            const trackText = trackSelect.options[trackSelect.selectedIndex].text;
+            const students = document.getElementById('log-students').value || '5';
+            const topic = document.getElementById('log-topic').value.trim() || 'درس برمجة عام';
+            const notes = document.getElementById('log-notes').value.trim() || 'لا توجد ملاحظات إضافية مسجلة.';
+
+            let durBadge = '';
+            if (selectedDuration === '90') {
+                durBadge = '<span class="text-emerald-600 font-bold">90 دقيقة</span>';
+            } else if (selectedDuration === '105') {
+                durBadge = '<span class="text-amber-600 font-bold">105 دقيقة</span>';
+            } else {
+                durBadge = '<span class="text-rose-600 font-bold">120 دقيقة</span>';
+            }
+
+            const tbody = document.getElementById('logs-tbody');
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td class="p-2.5 font-bold text-slate-800">${instructor}</td>
+                <td class="p-2.5 text-slate-700 font-semibold">${trackText}</td>
+                <td class="p-2.5">${students} أطفال</td>
+                <td class="p-2.5">${durBadge}</td>
+                <td class="p-2.5">${topic}</td>
+                <td class="p-2.5 text-slate-600">${notes}</td>
+            `;
+
+            tbody.prepend(tr);
+
+            // Clear inputs
+            document.getElementById('log-topic').value = '';
+            document.getElementById('log-notes').value = '';
+
+            const count = tbody.querySelectorAll('tr').length;
+            document.getElementById('log-count').innerText = `${count} ملاحظات مسجلة`;
+
+            alert('تم تسجيل الملاحظة بنجاح وإضافتها لسجل التدقيق الميداني!');
+        }
+    </script>
+</body>
+</html>
