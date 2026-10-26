@@ -482,15 +482,20 @@
                 </div>
 
                 <!-- Card 11: Exam Forms & Instructor Assignment -->
-                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-slate-400 transition space-y-2">
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs font-bold text-slate-700 bg-slate-100 px-2.5 py-1 rounded-md border border-slate-300">⏸️ متوقف على تعديل المناهج الأساسية</span>
-                        <span class="text-xl">📝</span>
+                <div class="bg-white p-5 rounded-2xl border border-emerald-300 shadow-sm hover:border-emerald-400 transition space-y-2 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="text-xs font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">✅ تم إنجاز بنك الاختبارات (في انتظار توجيهات بقية المناهج)</span>
+                            <span class="text-xl">📝</span>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-sm">بنك اختبارات المناهج وتكليف المحاضرين (Megaminds Exam Bank)</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed mt-1">
+                            اكتمل إعداد بنك الاختبارات التفاعلي الشامل لـ 7 كورسات (105 أسئلة ثنائية اللغة عربي/إنجليزي بنماذج الإجابات وتوزيع الدرجات)، والمهمة معتمدة (Done) في انتظار معلومات أو توجيهات إضافية (Order) لاستكمال بقية المناهج.
+                        </p>
                     </div>
-                    <h4 class="font-bold text-slate-800 text-sm">جدولة وتكليف المحاضرين (Instructors) بتوليد اختبارات الـ Forms</h4>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        المهمة معلقة ومؤجلة حالياً (On Hold): تم إيقاف جدولة تكليف المحاضرين بإعداد اختبارات Forms لحين الانتهاء التام من تعديل المناهج الأساسية واعتماد النسخ النهائية لتفادي هدر المجهود.
-                    </p>
+                    <a href="./megaminds-exam-bank.html" target="_blank" rel="noopener noreferrer" class="mt-2 text-xs font-bold text-indigo-800 bg-indigo-50 hover:bg-indigo-100 px-3 py-1.5 rounded-xl border border-indigo-200 shadow-2xs transition flex items-center justify-center gap-1.5 w-full">
+                        📝 استعراض بنك الاختبارات التفاعلي (Megaminds Exam Bank)
+                    </a>
                 </div>
 
                 <!-- Card 12: Junior Curricula Audit & Overhaul -->
@@ -1128,7 +1133,12 @@
                 status: "completed",
                 description: "بناء وتفعيل نظام الاختبار الإلزامي المعمم لكافة كورسات المنصة: (1) واجهة أسئلة اختيار من متعدد (MCQ)، (2) تصحيح تلقائي وعرض الدرجة والنسبة المئوية، (3) توجيه ذكي للأخطاء وإظهار الدروس الواجب مراجعتها، (4) ربط نتيجة الاجتياز بإصدار شهادة التخرج الذكية. تم دمج وتفعيل هذا النظام بالكامل داخل المنصة الجديدة.",
                 latestUpdate: "تم إنجاز التاسك واكتمالها بنجاح! تم تضمين وتفعيل نظام الاختبار الإلزامي وإصدار الشهادات والتصحيح الآلي المباشر بالكامل داخل المنصة الجديدة.",
-                links: [],
+                links: [
+                    {
+                        label: "📝 استعراض بنك أسئلة الاختبارات التفاعلي (Megaminds Exam Bank)",
+                        url: "./megaminds-exam-bank.html"
+                    }
+                ],
                 attachments: []
             },
             {
@@ -1218,20 +1228,21 @@
             },
             {
                 id: 17,
-                title: "جدولة وتكليف المحاضرين (Instructors) بتوليد وإعداد اختبارات المناهج على هيئة Forms لتفعيلها بالمنصة",
+                title: "جدولة وتكليف المحاضرين (Instructors) وإعداد بنك اختبارات المناهج (Megaminds Exam Bank)",
                 assignee: "EducationalDirector",
                 category: "تطوير المناهج والمنصة",
-                time: "معلق / متوقف على الانتهاء من تعديل المناهج الأساسية ⏸️",
+                time: "تم إنجاز بنك الاختبارات (في انتظار توجيهات بقية المناهج) ✅",
                 priority: "عاجل",
-                status: "pending",
-                isDependent: true,
-                dependencyInfo: {
-                    waitingFor: "الانتهاء التام من مراجعة وتعديل المناهج الأساسية واعتماد النسخ النهائية (تاسك 8 و 18)",
-                    actionOnUnlock: "فور اعتماد المناهج ➔ يتم نقل المهمة تلقائياً للمهام النشطة وتكليف المحاضرين بنماذج Forms"
-                },
-                description: "إعداد وتنظيم خطة جدولة تزامنية لإسناد مهام توليد وإعداد النماذج الاختبارية والتقييمات الخاصة بكل منهج لكبار المحاضرين (Instructors). المهمة معلقة وموقوفة مؤقتاً لوجود تبعية مسبقة، ومستبعدة من حساب نسبة الإنجاز لتفادي خفض المؤشر لحين اعتماد المناهج.",
-                latestUpdate: "المهمة متوقفة حالياً (حاجة مترتبة على حاجة): تم تعليق جدولة وتكليف المحاضرين بنماذج الـ Forms وفصلها في مسار التبعيات لحين الانتهاء التام من تعديل المناهج الأساسية واعتمادها نهائياً.",
-                links: [],
+                status: "completed",
+                isDependent: false,
+                description: "إعداد وتجهيز بنك الاختبارات الموحد والشامل لكورسات الأكاديمية (Megaminds Exam Bank): يتضمن أسئلة اختيار من متعدد ثنائية اللغة (عربي / إنجليزي)، قراءة وتتبع الأكواد، وتحديد مستويات الصعوبة مع نماذج الإجابات وتوزيع الدرجات لـ 7 كورسات (105 أسئلة). المهمة معتمدة ومنجزة (Done)، ونحن بانتظار معلومات أو أمر جديد (Order) لاستكمال بنك الاختبارات لبقية المناهج.",
+                latestUpdate: "تم إنجاز المهمة بنجاح (Done)! تم توفير وتضمين ملف بنك الاختبارات التفاعلي الشامل (Megaminds Exam Bank) الذي يغطي 7 كورسات بـ 105 سؤالاً ثنائي اللغة مع نماذج الإجابات، والمهمة مكتملة حالياً ونحن في انتظار معلومات أو توجيهات إضافية (Order) لتكملة بقية المناهج.",
+                links: [
+                    {
+                        label: "📝 استعراض بنك الاختبارات التفاعلي الشامل (Megaminds Exam Bank)",
+                        url: "./megaminds-exam-bank.html"
+                    }
+                ],
                 attachments: []
             },
             {
